@@ -1,0 +1,7944 @@
+{
+  "rankings": [
+    {
+      "country": {},
+      "id": 339,
+      "points": 1843.73,
+      "previousPoints": 1843.73,
+      "previousRanking": 1,
+      "ranking": 1,
+      "rankingClass": "team",
+      "rowName": "Argentina",
+      "team": {
+        "country": {
+          "alpha2": "AR",
+          "name": "Argentina"
+        },
+        "gender": "M",
+        "id": 4819,
+        "name": "Argentina",
+        "nameCode": "ARG",
+        "national": true,
+        "ranking": 1,
+        "shortName": "Argentina",
+        "slug": "argentina",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#66ccff",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 592273
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 340,
+      "points": 1843.54,
+      "previousPoints": 1843.54,
+      "previousRanking": 2,
+      "ranking": 2,
+      "rankingClass": "team",
+      "rowName": "France",
+      "team": {
+        "country": {
+          "alpha2": "FR",
+          "name": "France"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4481,
+        "name": "France",
+        "nameCode": "FRA",
+        "national": true,
+        "ranking": 2,
+        "shortName": "France",
+        "slug": "france",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#01509e",
+          "secondary": "#e30613",
+          "text": "#e30613"
+        },
+        "type": 0,
+        "userCount": 405047
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 331,
+      "points": 1828.27,
+      "previousPoints": 1828.27,
+      "previousRanking": 3,
+      "ranking": 3,
+      "rankingClass": "team",
+      "rowName": "Brazil",
+      "team": {
+        "country": {
+          "alpha2": "BR",
+          "name": "Brazil"
+        },
+        "gender": "M",
+        "id": 4748,
+        "name": "Brazil",
+        "nameCode": "BRA",
+        "national": true,
+        "ranking": 3,
+        "shortName": "Brazil",
+        "slug": "brazil",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffff00",
+          "secondary": "#009933",
+          "text": "#009933"
+        },
+        "type": 0,
+        "userCount": 569134
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 342,
+      "points": 1797.39,
+      "previousPoints": 1797.39,
+      "previousRanking": 4,
+      "ranking": 4,
+      "rankingClass": "team",
+      "rowName": "England",
+      "team": {
+        "country": {
+          "alpha2": "EN",
+          "name": "England"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4713,
+        "name": "England",
+        "nameCode": "ENG",
+        "national": true,
+        "ranking": 4,
+        "shortName": "England",
+        "slug": "england",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#cc0000",
+          "text": "#cc0000"
+        },
+        "type": 0,
+        "userCount": 325663
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 341,
+      "points": 1788.55,
+      "previousPoints": 1788.55,
+      "previousRanking": 5,
+      "ranking": 5,
+      "rankingClass": "team",
+      "rowName": "Belgium",
+      "team": {
+        "country": {
+          "alpha2": "BE",
+          "name": "Belgium"
+        },
+        "gender": "M",
+        "id": 4717,
+        "name": "Belgium",
+        "nameCode": "BEL",
+        "national": true,
+        "ranking": 5,
+        "shortName": "Belgium",
+        "slug": "belgium",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0033",
+          "secondary": "#000000",
+          "text": "#000000"
+        },
+        "type": 0,
+        "userCount": 193388
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 351,
+      "points": 1742.55,
+      "previousPoints": 1742.55,
+      "previousRanking": 6,
+      "ranking": 6,
+      "rankingClass": "team",
+      "rowName": "Croatia",
+      "team": {
+        "country": {
+          "alpha2": "HR",
+          "name": "Croatia"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4715,
+        "name": "Croatia",
+        "nameCode": "CRO",
+        "national": true,
+        "ranking": 6,
+        "shortName": "Croatia",
+        "slug": "croatia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 225976
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 343,
+      "points": 1731.23,
+      "previousPoints": 1731.23,
+      "previousRanking": 7,
+      "ranking": 7,
+      "rankingClass": "team",
+      "rowName": "Netherlands",
+      "team": {
+        "country": {
+          "alpha2": "NL",
+          "name": "Netherlands"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4705,
+        "name": "Netherlands",
+        "nameCode": "NED",
+        "national": true,
+        "ranking": 7,
+        "shortName": "Netherlands",
+        "slug": "netherlands",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff6600",
+          "secondary": "#281fe0",
+          "text": "#281fe0"
+        },
+        "type": 0,
+        "userCount": 213643
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 344,
+      "points": 1726.58,
+      "previousPoints": 1726.58,
+      "previousRanking": 8,
+      "ranking": 8,
+      "rankingClass": "team",
+      "rowName": "Italy",
+      "team": {
+        "country": {
+          "alpha2": "IT",
+          "name": "Italy"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4707,
+        "name": "Italy",
+        "nameCode": "ITA",
+        "national": true,
+        "ranking": 8,
+        "shortName": "Italy",
+        "slug": "italy",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#0066ff",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 276165
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 345,
+      "points": 1718.25,
+      "previousPoints": 1718.25,
+      "previousRanking": 9,
+      "ranking": 9,
+      "rankingClass": "team",
+      "rowName": "Portugal",
+      "team": {
+        "country": {
+          "alpha2": "PT",
+          "name": "Portugal"
+        },
+        "gender": "M",
+        "id": 4704,
+        "name": "Portugal",
+        "nameCode": "POR",
+        "national": true,
+        "ranking": 9,
+        "shortName": "Portugal",
+        "slug": "portugal",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#cc0000",
+          "secondary": "#66cc66",
+          "text": "#66cc66"
+        },
+        "type": 0,
+        "userCount": 433013
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 346,
+      "points": 1703.45,
+      "previousPoints": 1703.45,
+      "previousRanking": 10,
+      "ranking": 10,
+      "rankingClass": "team",
+      "rowName": "Spain",
+      "team": {
+        "country": {
+          "alpha2": "ES",
+          "name": "Spain"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4698,
+        "name": "Spain",
+        "nameCode": "ESP",
+        "national": true,
+        "ranking": 10,
+        "shortName": "Spain",
+        "slug": "spain",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#cc0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 330831
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 354,
+      "points": 1674.48,
+      "previousPoints": 1673.34,
+      "previousRanking": 11,
+      "ranking": 11,
+      "rankingClass": "team",
+      "rowName": "USA",
+      "team": {
+        "country": {
+          "alpha2": "US",
+          "name": "USA"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4724,
+        "name": "USA",
+        "nameCode": "USA",
+        "national": true,
+        "ranking": 11,
+        "shortName": "USA",
+        "slug": "usa",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#ff0000",
+          "text": "#ff0000"
+        },
+        "type": 0,
+        "userCount": 75555
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 347,
+      "points": 1665.59,
+      "previousPoints": 1639.19,
+      "previousRanking": 14,
+      "ranking": 12,
+      "rankingClass": "team",
+      "rowName": "Mexico",
+      "team": {
+        "country": {
+          "alpha2": "MX",
+          "name": "Mexico"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4781,
+        "name": "Mexico",
+        "nameCode": "MEX",
+        "national": true,
+        "ranking": 12,
+        "shortName": "Mexico",
+        "slug": "mexico",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#1a4d3e",
+          "secondary": "#960000",
+          "text": "#960000"
+        },
+        "type": 0,
+        "userCount": 99194
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 353,
+      "points": 1661.12,
+      "previousPoints": 1661.12,
+      "previousRanking": 12,
+      "ranking": 13,
+      "rankingClass": "team",
+      "rowName": "Switzerland",
+      "team": {
+        "country": {
+          "alpha2": "CH",
+          "name": "Switzerland"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4699,
+        "name": "Switzerland",
+        "nameCode": "SUI",
+        "national": true,
+        "ranking": 13,
+        "shortName": "Switzerland",
+        "slug": "switzerland",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 86414
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 352,
+      "points": 1655.5,
+      "previousPoints": 1655.5,
+      "previousRanking": 13,
+      "ranking": 14,
+      "rankingClass": "team",
+      "rowName": "Morocco",
+      "team": {
+        "country": {
+          "alpha2": "MA",
+          "name": "Morocco"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4778,
+        "name": "Morocco",
+        "nameCode": "MAR",
+        "national": true,
+        "ranking": 14,
+        "shortName": "Morocco",
+        "slug": "morocco",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#006600",
+          "text": "#006600"
+        },
+        "type": 0,
+        "userCount": 171751
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 355,
+      "points": 1636.32,
+      "previousPoints": 1636.32,
+      "previousRanking": 15,
+      "ranking": 15,
+      "rankingClass": "team",
+      "rowName": "Germany",
+      "team": {
+        "country": {
+          "alpha2": "DE",
+          "name": "Germany"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4711,
+        "name": "Germany",
+        "nameCode": "GER",
+        "national": true,
+        "ranking": 15,
+        "shortName": "Germany",
+        "slug": "germany",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#000000",
+          "text": "#000000"
+        },
+        "type": 0,
+        "userCount": 274209
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 348,
+      "points": 1633.13,
+      "previousPoints": 1633.13,
+      "previousRanking": 16,
+      "ranking": 16,
+      "rankingClass": "team",
+      "rowName": "Uruguay",
+      "team": {
+        "country": {
+          "alpha2": "UY",
+          "name": "Uruguay"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4725,
+        "name": "Uruguay",
+        "nameCode": "URU",
+        "national": true,
+        "ranking": 16,
+        "shortName": "Uruguay",
+        "slug": "uruguay",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#7eacfe",
+          "secondary": "#000000",
+          "text": "#000000"
+        },
+        "type": 0,
+        "userCount": 96635
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 349,
+      "points": 1624.91,
+      "previousPoints": 1624.91,
+      "previousRanking": 17,
+      "ranking": 17,
+      "rankingClass": "team",
+      "rowName": "Colombia",
+      "team": {
+        "country": {
+          "alpha2": "CO",
+          "name": "Colombia"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4820,
+        "name": "Colombia",
+        "nameCode": "COL",
+        "national": true,
+        "ranking": 17,
+        "shortName": "Colombia",
+        "slug": "colombia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffd808",
+          "secondary": "#000066",
+          "text": "#000066"
+        },
+        "type": 0,
+        "userCount": 62808
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 356,
+      "points": 1612.61,
+      "previousPoints": 1612.61,
+      "previousRanking": 18,
+      "ranking": 18,
+      "rankingClass": "team",
+      "rowName": "Senegal",
+      "team": {
+        "country": {
+          "alpha2": "SN",
+          "name": "Senegal"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4739,
+        "name": "Senegal",
+        "nameCode": "SEN",
+        "national": true,
+        "ranking": 18,
+        "shortName": "Senegal",
+        "slug": "senegal",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#047151",
+          "text": "#047151"
+        },
+        "type": 0,
+        "userCount": 102687
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 350,
+      "points": 1597.37,
+      "previousPoints": 1597.37,
+      "previousRanking": 19,
+      "ranking": 19,
+      "rankingClass": "team",
+      "rowName": "Denmark",
+      "team": {
+        "country": {
+          "alpha2": "DK",
+          "name": "Denmark"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4476,
+        "name": "Denmark",
+        "nameCode": "DEN",
+        "national": true,
+        "ranking": 19,
+        "shortName": "Denmark",
+        "slug": "denmark",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#cc0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 87747
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 357,
+      "points": 1595.96,
+      "previousPoints": 1595.96,
+      "previousRanking": 20,
+      "ranking": 20,
+      "rankingClass": "team",
+      "rowName": "Japan",
+      "team": {
+        "country": {
+          "alpha2": "JP",
+          "name": "Japan"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4770,
+        "name": "Japan",
+        "nameCode": "JPN",
+        "national": true,
+        "ranking": 20,
+        "shortName": "Japan",
+        "slug": "japan",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#000080",
+          "secondary": "#ed1b24",
+          "text": "#ed1b24"
+        },
+        "type": 0,
+        "userCount": 66968
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 335,
+      "points": 1561.2,
+      "previousPoints": 1561.2,
+      "previousRanking": 21,
+      "ranking": 21,
+      "rankingClass": "team",
+      "rowName": "Peru",
+      "team": {
+        "country": {
+          "alpha2": "PE",
+          "name": "Peru"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4790,
+        "name": "Peru",
+        "nameCode": "PER",
+        "national": true,
+        "ranking": 21,
+        "shortName": "Peru",
+        "slug": "peru",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#cc0000",
+          "text": "#cc0000"
+        },
+        "type": 0,
+        "userCount": 39449
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 360,
+      "points": 1556.59,
+      "previousPoints": 1556.59,
+      "previousRanking": 22,
+      "ranking": 22,
+      "rankingClass": "team",
+      "rowName": "Iran",
+      "team": {
+        "country": {
+          "alpha2": "IR",
+          "name": "Iran"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4766,
+        "name": "Iran",
+        "nameCode": "IRI",
+        "national": true,
+        "ranking": 22,
+        "shortName": "Iran",
+        "slug": "iran",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#cc0000",
+          "text": "#cc0000"
+        },
+        "type": 0,
+        "userCount": 50360
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 359,
+      "points": 1547.11,
+      "previousPoints": 1547.11,
+      "previousRanking": 23,
+      "ranking": 23,
+      "rankingClass": "team",
+      "rowName": "Sweden",
+      "team": {
+        "country": {
+          "alpha2": "SE",
+          "name": "Sweden"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4688,
+        "name": "Sweden",
+        "nameCode": "SWE",
+        "national": true,
+        "ranking": 23,
+        "shortName": "Sweden",
+        "slug": "sweden",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffcc00",
+          "secondary": "#0000ff",
+          "text": "#0000ff"
+        },
+        "type": 0,
+        "userCount": 43757
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 434,
+      "points": 1541.25,
+      "previousPoints": 1541.25,
+      "previousRanking": 24,
+      "ranking": 24,
+      "rankingClass": "team",
+      "rowName": "Ukraine",
+      "team": {
+        "country": {
+          "alpha2": "UA",
+          "name": "Ukraine"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4701,
+        "name": "Ukraine",
+        "nameCode": "UKR",
+        "national": true,
+        "ranking": 24,
+        "shortName": "Ukraine",
+        "slug": "ukraine",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffcc00",
+          "secondary": "#0033ff",
+          "text": "#0033ff"
+        },
+        "type": 0,
+        "userCount": 34445
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 437,
+      "points": 1539.03,
+      "previousPoints": 1539.03,
+      "previousRanking": 25,
+      "ranking": 25,
+      "rankingClass": "team",
+      "rowName": "Serbia",
+      "team": {
+        "country": {
+          "alpha2": "RS",
+          "name": "Serbia"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 6355,
+        "name": "Serbia",
+        "nameCode": "SRB",
+        "national": true,
+        "ranking": 25,
+        "shortName": "Serbia",
+        "slug": "serbia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0033",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 98350
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 358,
+      "points": 1536.99,
+      "previousPoints": 1536.99,
+      "previousRanking": 26,
+      "ranking": 26,
+      "rankingClass": "team",
+      "rowName": "Poland",
+      "team": {
+        "country": {
+          "alpha2": "PL",
+          "name": "Poland"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4703,
+        "name": "Poland",
+        "nameCode": "POL",
+        "national": true,
+        "ranking": 26,
+        "shortName": "Poland",
+        "slug": "poland",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#ff0000",
+          "text": "#ff0000"
+        },
+        "type": 0,
+        "userCount": 125119
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 435,
+      "points": 1530.45,
+      "previousPoints": 1530.45,
+      "previousRanking": 27,
+      "ranking": 27,
+      "rankingClass": "team",
+      "rowName": "Australia",
+      "team": {
+        "country": {
+          "alpha2": "AU",
+          "name": "Australia"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4741,
+        "name": "Australia",
+        "nameCode": "AUS",
+        "national": true,
+        "ranking": 27,
+        "shortName": "Australia",
+        "slug": "australia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffcc00",
+          "secondary": "#2d324b",
+          "text": "#2d324b"
+        },
+        "type": 0,
+        "userCount": 49468
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 361,
+      "points": 1529.3,
+      "previousPoints": 1529.3,
+      "previousRanking": 28,
+      "ranking": 28,
+      "rankingClass": "team",
+      "rowName": "South Korea",
+      "team": {
+        "country": {
+          "alpha2": "KR",
+          "name": "South Korea"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4735,
+        "name": "South Korea",
+        "nameCode": "KOR",
+        "national": true,
+        "ranking": 28,
+        "shortName": "South Korea",
+        "slug": "south-korea",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#0000ff",
+          "text": "#0000ff"
+        },
+        "type": 0,
+        "userCount": 56237
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 441,
+      "points": 1528.06,
+      "previousPoints": 1528.06,
+      "previousRanking": 29,
+      "ranking": 29,
+      "rankingClass": "team",
+      "rowName": "Austria",
+      "team": {
+        "country": {
+          "alpha2": "AT",
+          "name": "Austria"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4718,
+        "name": "Austria",
+        "nameCode": "AUT",
+        "national": true,
+        "ranking": 29,
+        "shortName": "Austria",
+        "slug": "austria",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 31936
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 449,
+      "points": 1520.24,
+      "previousPoints": 1520.24,
+      "previousRanking": 30,
+      "ranking": 30,
+      "rankingClass": "team",
+      "rowName": "Scotland",
+      "team": {
+        "country": {
+          "alpha2": "SX",
+          "name": "Scotland"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4695,
+        "name": "Scotland",
+        "nameCode": "SCO",
+        "national": true,
+        "ranking": 30,
+        "shortName": "Scotland",
+        "slug": "scotland",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#00005e",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 29604
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 438,
+      "points": 1516.66,
+      "previousPoints": 1516.66,
+      "previousRanking": 31,
+      "ranking": 31,
+      "rankingClass": "team",
+      "rowName": "Tunisia",
+      "team": {
+        "country": {
+          "alpha2": "TN",
+          "name": "Tunisia"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4729,
+        "name": "Tunisia",
+        "nameCode": "TUN",
+        "national": true,
+        "ranking": 31,
+        "shortName": "Tunisia",
+        "slug": "tunisia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 59688
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 433,
+      "points": 1511.31,
+      "previousPoints": 1511.31,
+      "previousRanking": 32,
+      "ranking": 32,
+      "rankingClass": "team",
+      "rowName": "Chile",
+      "team": {
+        "country": {
+          "alpha2": "CL",
+          "name": "Chile"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4754,
+        "name": "Chile",
+        "nameCode": "CHI",
+        "national": true,
+        "ranking": 32,
+        "shortName": "Chile",
+        "slug": "chile",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#3300cc",
+          "text": "#3300cc"
+        },
+        "type": 0,
+        "userCount": 39384
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 447,
+      "points": 1511.23,
+      "previousPoints": 1511.23,
+      "previousRanking": 33,
+      "ranking": 33,
+      "rankingClass": "team",
+      "rowName": "Algeria",
+      "team": {
+        "country": {
+          "alpha2": "DZ",
+          "name": "Algeria"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4691,
+        "name": "Algeria",
+        "nameCode": "DZA",
+        "national": true,
+        "ranking": 33,
+        "shortName": "Algeria",
+        "slug": "algeria",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#23bc55",
+          "text": "#23bc55"
+        },
+        "type": 0,
+        "userCount": 75071
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 446,
+      "points": 1509.89,
+      "previousPoints": 1509.89,
+      "previousRanking": 34,
+      "ranking": 34,
+      "rankingClass": "team",
+      "rowName": "Egypt",
+      "team": {
+        "country": {
+          "alpha2": "EG",
+          "name": "Egypt"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4758,
+        "name": "Egypt",
+        "nameCode": "EGY",
+        "national": true,
+        "ranking": 34,
+        "shortName": "Egypt",
+        "slug": "egypt",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#f00000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 118691
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 436,
+      "points": 1506.04,
+      "previousPoints": 1506.04,
+      "previousRanking": 35,
+      "ranking": 35,
+      "rankingClass": "team",
+      "rowName": "Wales",
+      "team": {
+        "country": {
+          "alpha2": "WA",
+          "name": "Wales"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4702,
+        "name": "Wales",
+        "nameCode": "WAL",
+        "national": true,
+        "ranking": 35,
+        "shortName": "Wales",
+        "slug": "wales",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#00813c",
+          "text": "#00813c"
+        },
+        "type": 0,
+        "userCount": 58215
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 443,
+      "points": 1504.57,
+      "previousPoints": 1504.57,
+      "previousRanking": 36,
+      "ranking": 36,
+      "rankingClass": "team",
+      "rowName": "Hungary",
+      "team": {
+        "country": {
+          "alpha2": "HU",
+          "name": "Hungary"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4709,
+        "name": "Hungary",
+        "nameCode": "HUN",
+        "national": true,
+        "ranking": 36,
+        "shortName": "Hungary",
+        "slug": "hungary",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#c61e29",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 37655
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 445,
+      "points": 1503.69,
+      "previousPoints": 1503.69,
+      "previousRanking": 37,
+      "ranking": 37,
+      "rankingClass": "team",
+      "rowName": "Czech Republic",
+      "team": {
+        "country": {
+          "alpha2": "CZ",
+          "name": "Czech Republic"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4714,
+        "name": "Czech Republic",
+        "nameCode": "CZE",
+        "national": true,
+        "ranking": 37,
+        "shortName": "Czech Republic",
+        "slug": "czech-republic",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#cc0000",
+          "secondary": "#025095",
+          "text": "#025095"
+        },
+        "type": 0,
+        "userCount": 26577
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 444,
+      "points": 1495.53,
+      "previousPoints": 1495.53,
+      "previousRanking": 38,
+      "ranking": 38,
+      "rankingClass": "team",
+      "rowName": "Russia",
+      "team": {
+        "country": {
+          "alpha2": "RU",
+          "name": "Russia"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4694,
+        "name": "Russia",
+        "nameCode": "RUS",
+        "national": true,
+        "ranking": 38,
+        "shortName": "Russia",
+        "slug": "russia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#e20000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 28079
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 442,
+      "points": 1486.48,
+      "previousPoints": 1486.48,
+      "previousRanking": 39,
+      "ranking": 39,
+      "rankingClass": "team",
+      "rowName": "Nigeria",
+      "team": {
+        "country": {
+          "alpha2": "NG",
+          "name": "Nigeria"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4785,
+        "name": "Nigeria",
+        "nameCode": "NGR",
+        "national": true,
+        "ranking": 39,
+        "shortName": "Nigeria",
+        "slug": "nigeria",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#39b54a",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 56218
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 448,
+      "points": 1486.47,
+      "previousPoints": 1486.47,
+      "previousRanking": 40,
+      "ranking": 40,
+      "rankingClass": "team",
+      "rowName": "Ecuador",
+      "team": {
+        "country": {
+          "alpha2": "EC",
+          "name": "Ecuador"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4757,
+        "name": "Ecuador",
+        "nameCode": "ECU",
+        "national": true,
+        "ranking": 40,
+        "shortName": "Ecuador",
+        "slug": "ecuador",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffff00",
+          "secondary": "#000063",
+          "text": "#000063"
+        },
+        "type": 0,
+        "userCount": 61977
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 451,
+      "points": 1484.47,
+      "previousPoints": 1484.47,
+      "previousRanking": 41,
+      "ranking": 41,
+      "rankingClass": "team",
+      "rowName": "Turkey",
+      "team": {
+        "country": {
+          "alpha2": "TR",
+          "name": "Turkey"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4700,
+        "name": "Turkey",
+        "nameCode": "TUR",
+        "national": true,
+        "ranking": 41,
+        "shortName": "Turkey",
+        "slug": "turkey",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#ff0000",
+          "text": "#ff0000"
+        },
+        "type": 0,
+        "userCount": 72922
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 440,
+      "points": 1470.97,
+      "previousPoints": 1470.97,
+      "previousRanking": 43,
+      "ranking": 42,
+      "rankingClass": "team",
+      "rowName": "Cameroon",
+      "team": {
+        "country": {
+          "alpha2": "CM",
+          "name": "Cameroon"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4751,
+        "name": "Cameroon",
+        "nameCode": "CMR",
+        "national": true,
+        "ranking": 42,
+        "shortName": "Cameroon",
+        "slug": "cameroon",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#006633",
+          "secondary": "#d01124",
+          "text": "#d01124"
+        },
+        "type": 0,
+        "userCount": 54425
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 452,
+      "points": 1458.58,
+      "previousPoints": 1454.12,
+      "previousRanking": 45,
+      "ranking": 43,
+      "rankingClass": "team",
+      "rowName": "Canada",
+      "team": {
+        "country": {
+          "alpha2": "CA",
+          "name": "Canada"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4752,
+        "name": "Canada",
+        "nameCode": "CAN",
+        "national": true,
+        "ranking": 43,
+        "shortName": "Canada",
+        "slug": "canada",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 43111
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 450,
+      "points": 1458.47,
+      "previousPoints": 1458.47,
+      "previousRanking": 44,
+      "ranking": 44,
+      "rankingClass": "team",
+      "rowName": "Norway",
+      "team": {
+        "country": {
+          "alpha2": "NO",
+          "name": "Norway"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4475,
+        "name": "Norway",
+        "nameCode": "NOR",
+        "national": true,
+        "ranking": 44,
+        "shortName": "Norway",
+        "slug": "norway",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ef2b2d",
+          "secondary": "#001f5b",
+          "text": "#001f5b"
+        },
+        "type": 0,
+        "userCount": 39099
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 377,
+      "points": 1453.94,
+      "previousPoints": 1399.23,
+      "previousRanking": 57,
+      "ranking": 45,
+      "rankingClass": "team",
+      "rowName": "Panama",
+      "team": {
+        "country": {
+          "alpha2": "PA",
+          "name": "Panama"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 5164,
+        "name": "Panama",
+        "nameCode": "PAN",
+        "national": true,
+        "ranking": 45,
+        "shortName": "Panama",
+        "slug": "panama",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#cc0000",
+          "secondary": "#005293",
+          "text": "#005293"
+        },
+        "type": 0,
+        "userCount": 16032
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 439,
+      "points": 1453.56,
+      "previousPoints": 1478.3,
+      "previousRanking": 42,
+      "ranking": 46,
+      "rankingClass": "team",
+      "rowName": "Costa Rica",
+      "team": {
+        "country": {
+          "alpha2": "CR",
+          "name": "Costa Rica"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4756,
+        "name": "Costa Rica",
+        "nameCode": "CRC",
+        "national": true,
+        "ranking": 46,
+        "shortName": "Costa Rica",
+        "slug": "costa-rica",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ed1c24",
+          "secondary": "#2366b3",
+          "text": "#2366b3"
+        },
+        "type": 0,
+        "userCount": 37658
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 362,
+      "points": 1447.05,
+      "previousPoints": 1447.05,
+      "previousRanking": 46,
+      "ranking": 47,
+      "rankingClass": "team",
+      "rowName": "Slovakia",
+      "team": {
+        "country": {
+          "alpha2": "SK",
+          "name": "Slovakia"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4697,
+        "name": "Slovakia",
+        "nameCode": "SVK",
+        "national": true,
+        "ranking": 47,
+        "shortName": "Slovakia",
+        "slug": "slovakia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#3333ff",
+          "text": "#3333ff"
+        },
+        "type": 0,
+        "userCount": 16498
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 372,
+      "points": 1443.98,
+      "previousPoints": 1443.98,
+      "previousRanking": 47,
+      "ranking": 48,
+      "rankingClass": "team",
+      "rowName": "Romania",
+      "team": {
+        "country": {
+          "alpha2": "RO",
+          "name": "Romania"
+        },
+        "gender": "M",
+        "id": 4477,
+        "name": "Romania",
+        "nameCode": "ROU",
+        "national": true,
+        "ranking": 48,
+        "shortName": "Romania",
+        "slug": "romania",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#f7bd00",
+          "secondary": "#ff0000",
+          "text": "#ff0000"
+        },
+        "type": 0,
+        "userCount": 22559
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 366,
+      "points": 1442.64,
+      "previousPoints": 1442.64,
+      "previousRanking": 48,
+      "ranking": 49,
+      "rankingClass": "team",
+      "rowName": "Paraguay",
+      "team": {
+        "country": {
+          "alpha2": "PY",
+          "name": "Paraguay"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4789,
+        "name": "Paraguay",
+        "nameCode": "PAR",
+        "national": true,
+        "ranking": 49,
+        "shortName": "Paraguay",
+        "slug": "paraguay",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#045ca3",
+          "text": "#045ca3"
+        },
+        "type": 0,
+        "userCount": 18807
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 371,
+      "points": 1441.06,
+      "previousPoints": 1441.06,
+      "previousRanking": 49,
+      "ranking": 50,
+      "rankingClass": "team",
+      "rowName": "Greece",
+      "team": {
+        "country": {
+          "alpha2": "GR",
+          "name": "Greece"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4710,
+        "name": "Greece",
+        "nameCode": "GRE",
+        "national": true,
+        "ranking": 50,
+        "shortName": "Greece",
+        "slug": "greece",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#005bae",
+          "text": "#005bae"
+        },
+        "type": 0,
+        "userCount": 53227
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 365,
+      "points": 1438.01,
+      "previousPoints": 1438.01,
+      "previousRanking": 50,
+      "ranking": 51,
+      "rankingClass": "team",
+      "rowName": "Mali",
+      "team": {
+        "country": {
+          "alpha2": "ML",
+          "name": "Mali"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4831,
+        "name": "Mali",
+        "nameCode": "MLI",
+        "national": true,
+        "ranking": 51,
+        "shortName": "Mali",
+        "slug": "mali",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#fefe00",
+          "secondary": "#d63835",
+          "text": "#d63835"
+        },
+        "type": 0,
+        "userCount": 17586
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 367,
+      "points": 1433.38,
+      "previousPoints": 1433.38,
+      "previousRanking": 51,
+      "ranking": 52,
+      "rankingClass": "team",
+      "rowName": "Ivory Coast",
+      "team": {
+        "country": {
+          "alpha2": "CI",
+          "name": "Ivory Coast"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4768,
+        "name": "Ivory Coast",
+        "nameCode": "CIV",
+        "national": true,
+        "ranking": 52,
+        "shortName": "Ivory Coast",
+        "slug": "ivory-coast",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#f77f00",
+          "secondary": "#009e60",
+          "text": "#009e60"
+        },
+        "type": 0,
+        "userCount": 29799
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 368,
+      "points": 1426.26,
+      "previousPoints": 1426.26,
+      "previousRanking": 52,
+      "ranking": 53,
+      "rankingClass": "team",
+      "rowName": "Ireland",
+      "team": {
+        "country": {
+          "alpha2": "IE",
+          "name": "Ireland"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4693,
+        "name": "Ireland",
+        "nameCode": "IRL",
+        "national": true,
+        "ranking": 53,
+        "shortName": "Ireland",
+        "slug": "ireland",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#139442",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 23797
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 369,
+      "points": 1421.46,
+      "previousPoints": 1421.46,
+      "previousRanking": 53,
+      "ranking": 54,
+      "rankingClass": "team",
+      "rowName": "Saudi Arabia",
+      "team": {
+        "country": {
+          "alpha2": "SA",
+          "name": "Saudi Arabia"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4834,
+        "name": "Saudi Arabia",
+        "nameCode": "KSA",
+        "national": true,
+        "ranking": 54,
+        "shortName": "Saudi Arabia",
+        "slug": "saudi-arabia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#008000",
+          "text": "#008000"
+        },
+        "type": 0,
+        "userCount": 63045
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 364,
+      "points": 1419.47,
+      "previousPoints": 1419.47,
+      "previousRanking": 54,
+      "ranking": 55,
+      "rankingClass": "team",
+      "rowName": "Finland",
+      "team": {
+        "country": {
+          "alpha2": "FI",
+          "name": "Finland"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4712,
+        "name": "Finland",
+        "nameCode": "FIN",
+        "national": true,
+        "ranking": 55,
+        "shortName": "Finland",
+        "slug": "finland",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#0066b3",
+          "text": "#0066b3"
+        },
+        "type": 0,
+        "userCount": 18967
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 370,
+      "points": 1419.18,
+      "previousPoints": 1419.18,
+      "previousRanking": 55,
+      "ranking": 56,
+      "rankingClass": "team",
+      "rowName": "Burkina Faso",
+      "team": {
+        "country": {
+          "alpha2": "BF",
+          "name": "Burkina Faso"
+        },
+        "gender": "M",
+        "id": 4749,
+        "name": "Burkina Faso",
+        "nameCode": "BUR",
+        "national": true,
+        "ranking": 56,
+        "shortName": "Burkina Faso",
+        "slug": "burkina-faso",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#008000",
+          "secondary": "#fc0303",
+          "text": "#fc0303"
+        },
+        "type": 0,
+        "userCount": 13270
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 363,
+      "points": 1417.23,
+      "previousPoints": 1417.23,
+      "previousRanking": 56,
+      "ranking": 57,
+      "rankingClass": "team",
+      "rowName": "Venezuela",
+      "team": {
+        "country": {
+          "alpha2": "VE",
+          "name": "Venezuela"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4722,
+        "name": "Venezuela",
+        "nameCode": "VEN",
+        "national": true,
+        "ranking": 57,
+        "shortName": "Venezuela",
+        "slug": "venezuela",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#aa0f39",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 17995
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 453,
+      "points": 1409.73,
+      "previousPoints": 1367.83,
+      "previousRanking": 63,
+      "ranking": 58,
+      "rankingClass": "team",
+      "rowName": "Jamaica",
+      "team": {
+        "country": {
+          "alpha2": "JM",
+          "name": "Jamaica"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4769,
+        "name": "Jamaica",
+        "nameCode": "JAM",
+        "national": true,
+        "ranking": 58,
+        "shortName": "Jamaica",
+        "slug": "jamaica",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffff00",
+          "secondary": "#33a64f",
+          "text": "#33a64f"
+        },
+        "type": 0,
+        "userCount": 11769
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 376,
+      "points": 1395.57,
+      "previousPoints": 1393.52,
+      "previousRanking": 58,
+      "ranking": 59,
+      "rankingClass": "team",
+      "rowName": "Qatar",
+      "team": {
+        "country": {
+          "alpha2": "QA",
+          "name": "Qatar"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4792,
+        "name": "Qatar",
+        "nameCode": "QAT",
+        "national": true,
+        "ranking": 59,
+        "shortName": "Qatar",
+        "slug": "qatar",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#660000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 43013
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 374,
+      "points": 1391.13,
+      "previousPoints": 1391.13,
+      "previousRanking": 59,
+      "ranking": 60,
+      "rankingClass": "team",
+      "rowName": "Ghana",
+      "team": {
+        "country": {
+          "alpha2": "GH",
+          "name": "Ghana"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4764,
+        "name": "Ghana",
+        "nameCode": "GHA",
+        "national": true,
+        "ranking": 60,
+        "shortName": "Ghana",
+        "slug": "ghana",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffff00",
+          "text": "#ffff00"
+        },
+        "type": 0,
+        "userCount": 102381
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 378,
+      "points": 1391.04,
+      "previousPoints": 1391.04,
+      "previousRanking": 60,
+      "ranking": 61,
+      "rankingClass": "team",
+      "rowName": "Slovenia",
+      "team": {
+        "country": {
+          "alpha2": "SI",
+          "name": "Slovenia"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4484,
+        "name": "Slovenia",
+        "nameCode": "SLO",
+        "national": true,
+        "ranking": 61,
+        "shortName": "Slovenia",
+        "slug": "slovenia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#153d96",
+          "text": "#153d96"
+        },
+        "type": 0,
+        "userCount": 16959
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 373,
+      "points": 1381.1,
+      "previousPoints": 1381.1,
+      "previousRanking": 61,
+      "ranking": 62,
+      "rankingClass": "team",
+      "rowName": "Bosnia & Herzegovina",
+      "team": {
+        "country": {
+          "alpha2": "BA",
+          "name": "Bosnia & Herzegovina"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4479,
+        "name": "Bosnia & Herzegovina",
+        "nameCode": "BIH",
+        "national": true,
+        "ranking": 62,
+        "shortName": "Bosnia & Herzegovina",
+        "slug": "bosnia-and-herzegovina",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#2d4a99",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 24708
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 456,
+      "points": 1368.25,
+      "previousPoints": 1369.49,
+      "previousRanking": 62,
+      "ranking": 63,
+      "rankingClass": "team",
+      "rowName": "South Africa",
+      "team": {
+        "country": {
+          "alpha2": "ZA",
+          "name": "South Africa"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4736,
+        "name": "South Africa",
+        "nameCode": "RSA",
+        "national": true,
+        "ranking": 63,
+        "shortName": "South Africa",
+        "slug": "south-africa",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffd800",
+          "secondary": "#008040",
+          "text": "#008040"
+        },
+        "type": 0,
+        "userCount": 16392
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 375,
+      "points": 1361.17,
+      "previousPoints": 1361.17,
+      "previousRanking": 64,
+      "ranking": 64,
+      "rankingClass": "team",
+      "rowName": "Northern Ireland",
+      "team": {
+        "country": {
+          "alpha2": "NX",
+          "name": "Northern Ireland"
+        },
+        "gender": "M",
+        "id": 4786,
+        "name": "Northern Ireland",
+        "nameCode": "NIR",
+        "national": true,
+        "ranking": 64,
+        "shortName": "Northern Ireland",
+        "slug": "northern-ireland",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#1c9239",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 10518
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 455,
+      "points": 1357.39,
+      "previousPoints": 1357.39,
+      "previousRanking": 65,
+      "ranking": 65,
+      "rankingClass": "team",
+      "rowName": "Albania",
+      "team": {
+        "country": {
+          "alpha2": "AL",
+          "name": "Albania"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4690,
+        "name": "Albania",
+        "nameCode": "ALB",
+        "national": true,
+        "ranking": 65,
+        "shortName": "Albania",
+        "slug": "albania",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#e41e20",
+          "secondary": "#000000",
+          "text": "#000000"
+        },
+        "type": 0,
+        "userCount": 20637
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 384,
+      "points": 1354.65,
+      "previousPoints": 1354.65,
+      "previousRanking": 66,
+      "ranking": 66,
+      "rankingClass": "team",
+      "rowName": "Cape Verde",
+      "team": {
+        "country": {
+          "alpha2": "CV",
+          "name": "Cape Verde"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4753,
+        "name": "Cape Verde",
+        "nameCode": "CPV",
+        "national": true,
+        "ranking": 66,
+        "shortName": "Cape Verde",
+        "slug": "cape-verde",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#21418e",
+          "secondary": "#ff0000",
+          "text": "#ff0000"
+        },
+        "type": 0,
+        "userCount": 7728
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 379,
+      "points": 1352.98,
+      "previousPoints": 1352.98,
+      "previousRanking": 67,
+      "ranking": 67,
+      "rankingClass": "team",
+      "rowName": "Iceland",
+      "team": {
+        "country": {
+          "alpha2": "IS",
+          "name": "Iceland"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4708,
+        "name": "Iceland",
+        "nameCode": "ISL",
+        "national": true,
+        "ranking": 67,
+        "shortName": "Iceland",
+        "slug": "iceland",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#0033ff",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 15000
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 454,
+      "points": 1350.53,
+      "previousPoints": 1350.53,
+      "previousRanking": 68,
+      "ranking": 68,
+      "rankingClass": "team",
+      "rowName": "North Macedonia",
+      "team": {
+        "country": {
+          "alpha2": "MK",
+          "name": "North Macedonia"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4777,
+        "name": "North Macedonia",
+        "nameCode": "MKD",
+        "national": true,
+        "ranking": 68,
+        "shortName": "North Macedonia",
+        "slug": "north-macedonia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffff00",
+          "text": "#ffff00"
+        },
+        "type": 0,
+        "userCount": 14425
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 385,
+      "points": 1350.11,
+      "previousPoints": 1350.11,
+      "previousRanking": 69,
+      "ranking": 69,
+      "rankingClass": "team",
+      "rowName": "DR Congo",
+      "team": {
+        "country": {
+          "alpha2": "CD",
+          "name": "DR Congo"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4823,
+        "name": "DR Congo",
+        "nameCode": "COD",
+        "national": true,
+        "ranking": 69,
+        "shortName": "DR Congo",
+        "slug": "dr-congo",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#007fff",
+          "secondary": "#f8181e",
+          "text": "#f8181e"
+        },
+        "type": 0,
+        "userCount": 16028
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 457,
+      "points": 1345.21,
+      "previousPoints": 1345.21,
+      "previousRanking": 70,
+      "ranking": 70,
+      "rankingClass": "team",
+      "rowName": "Iraq",
+      "team": {
+        "country": {
+          "alpha2": "IQ",
+          "name": "Iraq"
+        },
+        "gender": "M",
+        "id": 4767,
+        "name": "Iraq",
+        "nameCode": "IRQ",
+        "national": true,
+        "ranking": 70,
+        "shortName": "Iraq",
+        "slug": "iraq",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#108f5b",
+          "text": "#108f5b"
+        },
+        "type": 0,
+        "userCount": 12852
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 381,
+      "points": 1343.45,
+      "previousPoints": 1343.45,
+      "previousRanking": 71,
+      "ranking": 71,
+      "rankingClass": "team",
+      "rowName": "Montenegro",
+      "team": {
+        "country": {
+          "alpha2": "ME",
+          "name": "Montenegro"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 7139,
+        "name": "Montenegro",
+        "nameCode": "MNE",
+        "national": true,
+        "ranking": 71,
+        "shortName": "Montenegro",
+        "slug": "montenegro",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#cc0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 11621
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 382,
+      "points": 1336.28,
+      "previousPoints": 1336.28,
+      "previousRanking": 72,
+      "ranking": 72,
+      "rankingClass": "team",
+      "rowName": "United Arab Emirates",
+      "team": {
+        "country": {
+          "alpha2": "AE",
+          "name": "United Arab Emirates"
+        },
+        "gender": "M",
+        "id": 4727,
+        "name": "United Arab Emirates",
+        "nameCode": "UAE",
+        "national": true,
+        "ranking": 72,
+        "shortName": "UAE",
+        "slug": "united-arab-emirates",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#00732f",
+          "text": "#00732f"
+        },
+        "type": 0,
+        "userCount": 7617
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 387,
+      "points": 1332.45,
+      "previousPoints": 1332.45,
+      "previousRanking": 73,
+      "ranking": 73,
+      "rankingClass": "team",
+      "rowName": "Oman",
+      "team": {
+        "country": {
+          "alpha2": "OM",
+          "name": "Oman"
+        },
+        "gender": "M",
+        "id": 4787,
+        "name": "Oman",
+        "nameCode": "OMN",
+        "national": true,
+        "ranking": 73,
+        "shortName": "Oman",
+        "slug": "oman",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 7175
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 389,
+      "points": 1327.58,
+      "previousPoints": 1327.58,
+      "previousRanking": 74,
+      "ranking": 74,
+      "rankingClass": "team",
+      "rowName": "Uzbekistan",
+      "team": {
+        "country": {
+          "alpha2": "UZ",
+          "name": "Uzbekistan"
+        },
+        "gender": "M",
+        "id": 4723,
+        "name": "Uzbekistan",
+        "nameCode": "UZB",
+        "national": true,
+        "ranking": 74,
+        "shortName": "Uzbekistan",
+        "slug": "uzbekistan",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#0080ff",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 6463
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 386,
+      "points": 1325.47,
+      "previousPoints": 1317.64,
+      "previousRanking": 76,
+      "ranking": 75,
+      "rankingClass": "team",
+      "rowName": "El Salvador",
+      "team": {
+        "country": {
+          "alpha2": "SV",
+          "name": "El Salvador"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4825,
+        "name": "El Salvador",
+        "nameCode": "ESA",
+        "national": true,
+        "ranking": 75,
+        "shortName": "El Salvador",
+        "slug": "el-salvador",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#3300ff",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 9592
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 388,
+      "points": 1323.81,
+      "previousPoints": 1323.81,
+      "previousRanking": 75,
+      "ranking": 76,
+      "rankingClass": "team",
+      "rowName": "Israel",
+      "team": {
+        "country": {
+          "alpha2": "IL",
+          "name": "Israel"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4480,
+        "name": "Israel",
+        "nameCode": "ISR",
+        "national": true,
+        "ranking": 76,
+        "shortName": "Israel",
+        "slug": "israel",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#7bafde",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 12168
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 383,
+      "points": 1315.48,
+      "previousPoints": 1315.48,
+      "previousRanking": 77,
+      "ranking": 77,
+      "rankingClass": "team",
+      "rowName": "Bulgaria",
+      "team": {
+        "country": {
+          "alpha2": "BG",
+          "name": "Bulgaria"
+        },
+        "gender": "M",
+        "id": 4716,
+        "name": "Bulgaria",
+        "nameCode": "BUL",
+        "national": true,
+        "ranking": 77,
+        "shortName": "Bulgaria",
+        "slug": "bulgaria",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#00924a",
+          "text": "#00924a"
+        },
+        "type": 0,
+        "userCount": 17336
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 390,
+      "points": 1312.8,
+      "previousPoints": 1312.8,
+      "previousRanking": 78,
+      "ranking": 78,
+      "rankingClass": "team",
+      "rowName": "Georgia",
+      "team": {
+        "country": {
+          "alpha2": "GE",
+          "name": "Georgia"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4763,
+        "name": "Georgia",
+        "nameCode": "GEO",
+        "national": true,
+        "ranking": 78,
+        "shortName": "Georgia",
+        "slug": "georgia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#ff0000",
+          "text": "#ff0000"
+        },
+        "type": 0,
+        "userCount": 13115
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 393,
+      "points": 1309.23,
+      "previousPoints": 1296.42,
+      "previousRanking": 81,
+      "ranking": 79,
+      "rankingClass": "team",
+      "rowName": "Honduras",
+      "team": {
+        "country": {
+          "alpha2": "HN",
+          "name": "Honduras"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4827,
+        "name": "Honduras",
+        "nameCode": "HON",
+        "national": true,
+        "ranking": 79,
+        "shortName": "Honduras",
+        "slug": "honduras",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#4579a8",
+          "text": "#4579a8"
+        },
+        "type": 0,
+        "userCount": 12105
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 392,
+      "points": 1304.78,
+      "previousPoints": 1304.78,
+      "previousRanking": 79,
+      "ranking": 80,
+      "rankingClass": "team",
+      "rowName": "China",
+      "team": {
+        "country": {
+          "alpha2": "CN",
+          "name": "China"
+        },
+        "gender": "M",
+        "id": 4755,
+        "name": "China",
+        "nameCode": "CHN",
+        "national": true,
+        "ranking": 80,
+        "shortName": "China",
+        "slug": "china",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#fff100",
+          "text": "#fff100"
+        },
+        "type": 0,
+        "userCount": 6690
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 459,
+      "points": 1296.75,
+      "previousPoints": 1296.75,
+      "previousRanking": 80,
+      "ranking": 81,
+      "rankingClass": "team",
+      "rowName": "Guinea",
+      "team": {
+        "country": {
+          "alpha2": "GN",
+          "name": "Guinea"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4826,
+        "name": "Guinea",
+        "nameCode": "GUI",
+        "national": true,
+        "ranking": 81,
+        "shortName": "Guinea",
+        "slug": "guinea",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#fcf200",
+          "text": "#fcf200"
+        },
+        "type": 0,
+        "userCount": 15733
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 460,
+      "points": 1296.26,
+      "previousPoints": 1296.26,
+      "previousRanking": 82,
+      "ranking": 82,
+      "rankingClass": "team",
+      "rowName": "Jordan",
+      "team": {
+        "country": {
+          "alpha2": "JO",
+          "name": "Jordan"
+        },
+        "gender": "M",
+        "id": 4771,
+        "name": "Jordan",
+        "nameCode": "JOR",
+        "national": true,
+        "ranking": 82,
+        "shortName": "Jordan",
+        "slug": "jordan",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#ff0000",
+          "text": "#ff0000"
+        },
+        "type": 0,
+        "userCount": 6824
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 458,
+      "points": 1295.09,
+      "previousPoints": 1295.09,
+      "previousRanking": 83,
+      "ranking": 83,
+      "rankingClass": "team",
+      "rowName": "Bolivia",
+      "team": {
+        "country": {
+          "alpha2": "BO",
+          "name": "Bolivia"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4746,
+        "name": "Bolivia",
+        "nameCode": "BOL",
+        "national": true,
+        "ranking": 83,
+        "shortName": "Bolivia",
+        "slug": "bolivia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#136353",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 11042
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 464,
+      "points": 1293.77,
+      "previousPoints": 1290.2,
+      "previousRanking": 84,
+      "ranking": 84,
+      "rankingClass": "team",
+      "rowName": "Zambia",
+      "team": {
+        "country": {
+          "alpha2": "ZM",
+          "name": "Zambia"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4720,
+        "name": "Zambia",
+        "nameCode": "ZAM",
+        "national": true,
+        "ranking": 84,
+        "shortName": "Zambia",
+        "slug": "zambia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#088754",
+          "secondary": "#ff6000",
+          "text": "#ff6000"
+        },
+        "type": 0,
+        "userCount": 13861
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 391,
+      "points": 1285.25,
+      "previousPoints": 1285.25,
+      "previousRanking": 85,
+      "ranking": 85,
+      "rankingClass": "team",
+      "rowName": "Gabon",
+      "team": {
+        "country": {
+          "alpha2": "GA",
+          "name": "Gabon"
+        },
+        "gender": "M",
+        "id": 4761,
+        "name": "Gabon",
+        "nameCode": "GAB",
+        "national": true,
+        "ranking": 85,
+        "shortName": "Gabon",
+        "slug": "gabon",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#fef101",
+          "secondary": "#0f22ca",
+          "text": "#0f22ca"
+        },
+        "type": 0,
+        "userCount": 7673
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 461,
+      "points": 1282.05,
+      "previousPoints": 1282.05,
+      "previousRanking": 86,
+      "ranking": 86,
+      "rankingClass": "team",
+      "rowName": "Bahrain",
+      "team": {
+        "country": {
+          "alpha2": "BH",
+          "name": "Bahrain"
+        },
+        "gender": "M",
+        "id": 5161,
+        "name": "Bahrain",
+        "nameCode": "BHR",
+        "national": true,
+        "ranking": 86,
+        "shortName": "Bahrain",
+        "slug": "bahrain",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 4208
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 463,
+      "points": 1272.64,
+      "previousPoints": 1275.96,
+      "previousRanking": 87,
+      "ranking": 87,
+      "rankingClass": "team",
+      "rowName": "Haiti",
+      "team": {
+        "country": {
+          "alpha2": "HT",
+          "name": "Haiti"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 7229,
+        "name": "Haiti",
+        "nameCode": "HAI",
+        "national": true,
+        "ranking": 87,
+        "shortName": "Haiti",
+        "slug": "haiti",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#3b5aa3",
+          "secondary": "#be0027",
+          "text": "#be0027"
+        },
+        "type": 0,
+        "userCount": 34132
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 462,
+      "points": 1267.87,
+      "previousPoints": 1267.87,
+      "previousRanking": 88,
+      "ranking": 88,
+      "rankingClass": "team",
+      "rowName": "Curacao",
+      "team": {
+        "country": {
+          "alpha2": "CW",
+          "name": "Curacao"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 55827,
+        "name": "Cura\u00e7ao",
+        "nameCode": "CUR",
+        "national": true,
+        "ranking": 88,
+        "shortName": "Cura\u00e7ao",
+        "slug": "curacao",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#004990",
+          "secondary": "#000fff",
+          "text": "#000fff"
+        },
+        "type": 0,
+        "userCount": 5188
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 468,
+      "points": 1262.72,
+      "previousPoints": 1262.72,
+      "previousRanking": 89,
+      "ranking": 89,
+      "rankingClass": "team",
+      "rowName": "Luxembourg",
+      "team": {
+        "country": {
+          "alpha2": "LU",
+          "name": "Luxembourg"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4478,
+        "name": "Luxembourg",
+        "nameCode": "LUX",
+        "national": true,
+        "ranking": 89,
+        "shortName": "Luxembourg",
+        "slug": "luxembourg",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 10029
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 471,
+      "points": 1252.6,
+      "previousPoints": 1252.6,
+      "previousRanking": 90,
+      "ranking": 90,
+      "rankingClass": "team",
+      "rowName": "Armenia",
+      "team": {
+        "country": {
+          "alpha2": "AM",
+          "name": "Armenia"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4740,
+        "name": "Armenia",
+        "nameCode": "ARM",
+        "national": true,
+        "ranking": 90,
+        "shortName": "Armenia",
+        "slug": "armenia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#cc0000",
+          "secondary": "#ef7b00",
+          "text": "#ef7b00"
+        },
+        "type": 0,
+        "userCount": 11454
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 474,
+      "points": 1251.83,
+      "previousPoints": 1251.83,
+      "previousRanking": 91,
+      "ranking": 91,
+      "rankingClass": "team",
+      "rowName": "Equatorial Guinea",
+      "team": {
+        "country": {
+          "alpha2": "GQ",
+          "name": "Equatorial Guinea"
+        },
+        "gender": "M",
+        "id": 8032,
+        "name": "Equatorial Guinea",
+        "nameCode": "GEQ",
+        "national": true,
+        "ranking": 91,
+        "shortName": "Equatorial Guinea",
+        "slug": "equatorial-guinea",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0033",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 5349
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 465,
+      "points": 1250.32,
+      "previousPoints": 1250.32,
+      "previousRanking": 92,
+      "ranking": 92,
+      "rankingClass": "team",
+      "rowName": "Uganda",
+      "team": {
+        "country": {
+          "alpha2": "UG",
+          "name": "Uganda"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4726,
+        "name": "Uganda",
+        "nameCode": "UGA",
+        "national": true,
+        "ranking": 92,
+        "shortName": "Uganda",
+        "slug": "uganda",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0606",
+          "secondary": "#f4f300",
+          "text": "#f4f300"
+        },
+        "type": 0,
+        "userCount": 8168
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 467,
+      "points": 1248.13,
+      "previousPoints": 1248.13,
+      "previousRanking": 93,
+      "ranking": 93,
+      "rankingClass": "team",
+      "rowName": "Benin",
+      "team": {
+        "country": {
+          "alpha2": "BJ",
+          "name": "Benin"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4744,
+        "name": "Benin",
+        "nameCode": "BEN",
+        "national": true,
+        "ranking": 93,
+        "shortName": "Benin",
+        "slug": "benin",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffff00",
+          "secondary": "#2d8d65",
+          "text": "#2d8d65"
+        },
+        "type": 0,
+        "userCount": 8247
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 466,
+      "points": 1241.62,
+      "previousPoints": 1241.62,
+      "previousRanking": 94,
+      "ranking": 94,
+      "rankingClass": "team",
+      "rowName": "Syria",
+      "team": {
+        "country": {
+          "alpha2": "SY",
+          "name": "Syria"
+        },
+        "gender": "M",
+        "id": 4731,
+        "name": "Syria",
+        "nameCode": "SYR",
+        "national": true,
+        "ranking": 94,
+        "shortName": "Syria",
+        "slug": "syria",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 13622
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 472,
+      "points": 1238.23,
+      "previousPoints": 1238.23,
+      "previousRanking": 95,
+      "ranking": 95,
+      "rankingClass": "team",
+      "rowName": "Vietnam",
+      "team": {
+        "country": {
+          "alpha2": "VN",
+          "name": "Vietnam"
+        },
+        "gender": "M",
+        "id": 7050,
+        "name": "Vietnam",
+        "nameCode": "VIE",
+        "national": true,
+        "ranking": 95,
+        "shortName": "Vietnam",
+        "slug": "vietnam",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffff00",
+          "text": "#ffff00"
+        },
+        "type": 0,
+        "userCount": 14714
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 469,
+      "points": 1233.02,
+      "previousPoints": 1233.02,
+      "previousRanking": 96,
+      "ranking": 96,
+      "rankingClass": "team",
+      "rowName": "Palestine",
+      "team": {
+        "country": {
+          "alpha2": "PS",
+          "name": "Palestine"
+        },
+        "gender": "M",
+        "id": 4788,
+        "name": "Palestine",
+        "nameCode": "PSE",
+        "national": true,
+        "ranking": 96,
+        "shortName": "Palestine",
+        "slug": "palestine",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 4551
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 470,
+      "points": 1224.8,
+      "previousPoints": 1224.8,
+      "previousRanking": 97,
+      "ranking": 97,
+      "rankingClass": "team",
+      "rowName": "Kyrgyzstan",
+      "team": {
+        "country": {
+          "alpha2": "KG",
+          "name": "Kyrgyzstan"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 7930,
+        "name": "Kyrgyzstan",
+        "nameCode": "KGZ",
+        "national": true,
+        "ranking": 97,
+        "shortName": "Kyrgyzstan",
+        "slug": "kyrgyzstan",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 2332
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 473,
+      "points": 1212.28,
+      "previousPoints": 1212.28,
+      "previousRanking": 98,
+      "ranking": 98,
+      "rankingClass": "team",
+      "rowName": "Belarus",
+      "team": {
+        "country": {
+          "alpha2": "BY",
+          "name": "Belarus"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4743,
+        "name": "Belarus",
+        "nameCode": "BLR",
+        "national": true,
+        "ranking": 98,
+        "shortName": "Belarus",
+        "slug": "belarus",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#fe0503",
+          "text": "#fe0503"
+        },
+        "type": 0,
+        "userCount": 7288
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 482,
+      "points": 1208.69,
+      "previousPoints": 1204.9,
+      "previousRanking": 100,
+      "ranking": 99,
+      "rankingClass": "team",
+      "rowName": "India",
+      "team": {
+        "country": {
+          "alpha2": "IN",
+          "name": "India"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4828,
+        "name": "India",
+        "nameCode": "IND",
+        "national": true,
+        "ranking": 99,
+        "shortName": "India",
+        "slug": "india",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#00b8ff",
+          "secondary": "#ff4500",
+          "text": "#ff4500"
+        },
+        "type": 0,
+        "userCount": 28605
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 476,
+      "points": 1205.77,
+      "previousPoints": 1201.74,
+      "previousRanking": 102,
+      "ranking": 100,
+      "rankingClass": "team",
+      "rowName": "Lebanon",
+      "team": {
+        "country": {
+          "alpha2": "LB",
+          "name": "Lebanon"
+        },
+        "gender": "M",
+        "id": 4774,
+        "name": "Lebanon",
+        "nameCode": "LBN",
+        "national": true,
+        "ranking": 100,
+        "shortName": "Lebanon",
+        "slug": "lebanon",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 10346
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 479,
+      "points": 1205.18,
+      "previousPoints": 1205.18,
+      "previousRanking": 99,
+      "ranking": 101,
+      "rankingClass": "team",
+      "rowName": "Mauritania",
+      "team": {
+        "country": {
+          "alpha2": "MR",
+          "name": "Mauritania"
+        },
+        "gender": "M",
+        "id": 4779,
+        "name": "Mauritania",
+        "nameCode": "MRT",
+        "national": true,
+        "ranking": 101,
+        "shortName": "Mauritania",
+        "slug": "mauritania",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#008000",
+          "secondary": "#ffdf00",
+          "text": "#ffdf00"
+        },
+        "type": 0,
+        "userCount": 7120
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 480,
+      "points": 1199.74,
+      "previousPoints": 1203.28,
+      "previousRanking": 101,
+      "ranking": 102,
+      "rankingClass": "team",
+      "rowName": "Trinidad and Tobago",
+      "team": {
+        "country": {
+          "alpha2": "TT",
+          "name": "Trinidad and Tobago"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 5162,
+        "name": "Trinidad and Tobago",
+        "nameCode": "TTO",
+        "national": true,
+        "ranking": 102,
+        "shortName": "Trinidad and Tobago",
+        "slug": "trinidad-and-tobago",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#cc0000",
+          "secondary": "#000000",
+          "text": "#000000"
+        },
+        "type": 0,
+        "userCount": 3427
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 481,
+      "points": 1199.04,
+      "previousPoints": 1199.04,
+      "previousRanking": 103,
+      "ranking": 103,
+      "rankingClass": "team",
+      "rowName": "New Zealand",
+      "team": {
+        "country": {
+          "alpha2": "NZ",
+          "name": "New Zealand"
+        },
+        "gender": "M",
+        "id": 4784,
+        "name": "New Zealand",
+        "nameCode": "NZL",
+        "national": true,
+        "ranking": 103,
+        "shortName": "New Zealand",
+        "slug": "new-zealand",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#000000",
+          "text": "#000000"
+        },
+        "type": 0,
+        "userCount": 5151
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 488,
+      "points": 1198.24,
+      "previousPoints": 1198.24,
+      "previousRanking": 104,
+      "ranking": 104,
+      "rankingClass": "team",
+      "rowName": "Kazakhstan",
+      "team": {
+        "country": {
+          "alpha2": "KZ",
+          "name": "Kazakhstan"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4772,
+        "name": "Kazakhstan",
+        "nameCode": "KAZ",
+        "national": true,
+        "ranking": 104,
+        "shortName": "Kazakhstan",
+        "slug": "kazakhstan",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#fec50c",
+          "secondary": "#4578d7",
+          "text": "#4578d7"
+        },
+        "type": 0,
+        "userCount": 11121
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 477,
+      "points": 1191.07,
+      "previousPoints": 1191.07,
+      "previousRanking": 105,
+      "ranking": 105,
+      "rankingClass": "team",
+      "rowName": "Kenya",
+      "team": {
+        "country": {
+          "alpha2": "KE",
+          "name": "Kenya"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4773,
+        "name": "Kenya",
+        "nameCode": "KEN",
+        "national": true,
+        "ranking": 105,
+        "shortName": "Kenya",
+        "slug": "kenya",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#1fa369",
+          "text": "#1fa369"
+        },
+        "type": 0,
+        "userCount": 6033
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 475,
+      "points": 1190.63,
+      "previousPoints": 1190.63,
+      "previousRanking": 106,
+      "ranking": 106,
+      "rankingClass": "team",
+      "rowName": "Congo Republic",
+      "team": {
+        "country": {
+          "alpha2": "CG",
+          "name": "Congo Republic"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 8040,
+        "name": "Congo Republic",
+        "nameCode": "COG",
+        "national": true,
+        "ranking": 106,
+        "shortName": "Congo Republic",
+        "slug": "congo-republic",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 4676
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 404,
+      "points": 1186.71,
+      "previousPoints": 1166.6,
+      "previousRanking": 116,
+      "ranking": 107,
+      "rankingClass": "team",
+      "rowName": "Guatemala",
+      "team": {
+        "country": {
+          "alpha2": "GT",
+          "name": "Guatemala"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 5163,
+        "name": "Guatemala",
+        "nameCode": "GUA",
+        "national": true,
+        "ranking": 107,
+        "shortName": "Guatemala",
+        "slug": "guatemala",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#9ecde7",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 8342
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 478,
+      "points": 1186.09,
+      "previousPoints": 1186.09,
+      "previousRanking": 107,
+      "ranking": 108,
+      "rankingClass": "team",
+      "rowName": "Madagascar",
+      "team": {
+        "country": {
+          "alpha2": "MG",
+          "name": "Madagascar"
+        },
+        "gender": "M",
+        "id": 8035,
+        "name": "Madagascar",
+        "nameCode": "MAD",
+        "national": true,
+        "ranking": 108,
+        "shortName": "Madagascar",
+        "slug": "madagascar",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#009933",
+          "secondary": "#ff0000",
+          "text": "#ff0000"
+        },
+        "type": 0,
+        "userCount": 7194
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 483,
+      "points": 1179.69,
+      "previousPoints": 1179.69,
+      "previousRanking": 108,
+      "ranking": 109,
+      "rankingClass": "team",
+      "rowName": "Kosovo",
+      "team": {
+        "country": {
+          "alpha2": "XK",
+          "name": "Kosovo"
+        },
+        "gender": "M",
+        "id": 154426,
+        "name": "Kosovo",
+        "nameCode": "KOS",
+        "national": true,
+        "ranking": 109,
+        "shortName": "Kosovo",
+        "slug": "kosovo",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#244aa5",
+          "secondary": "#f8cc22",
+          "text": "#f8cc22"
+        },
+        "type": 0,
+        "userCount": 15809
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 484,
+      "points": 1179.54,
+      "previousPoints": 1179.54,
+      "previousRanking": 109,
+      "ranking": 110,
+      "rankingClass": "team",
+      "rowName": "Tajikistan",
+      "team": {
+        "country": {
+          "alpha2": "TJ",
+          "name": "Tajikistan"
+        },
+        "gender": "M",
+        "id": 23488,
+        "name": "Tajikistan",
+        "nameCode": "TJK",
+        "national": true,
+        "ranking": 110,
+        "shortName": "Tajikistan",
+        "slug": "tajikistan",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 2882
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 485,
+      "points": 1179.3,
+      "previousPoints": 1179.3,
+      "previousRanking": 110,
+      "ranking": 111,
+      "rankingClass": "team",
+      "rowName": "Estonia",
+      "team": {
+        "country": {
+          "alpha2": "EE",
+          "name": "Estonia"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4759,
+        "name": "Estonia",
+        "nameCode": "EST",
+        "national": true,
+        "ranking": 111,
+        "shortName": "Estonia",
+        "slug": "estonia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#0066cc",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 8652
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 403,
+      "points": 1178.93,
+      "previousPoints": 1178.93,
+      "previousRanking": 111,
+      "ranking": 112,
+      "rankingClass": "team",
+      "rowName": "Guinea-Bissau",
+      "team": {
+        "country": {
+          "alpha2": "GW",
+          "name": "Guinea-Bissau"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 23478,
+        "name": "Guinea-Bissau",
+        "nameCode": "GBS",
+        "national": true,
+        "ranking": 112,
+        "shortName": "Guinea-Bissau",
+        "slug": "guinea-bissau",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#116f36",
+          "text": "#116f36"
+        },
+        "type": 0,
+        "userCount": 6175
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 487,
+      "points": 1174.37,
+      "previousPoints": 1174.37,
+      "previousRanking": 113,
+      "ranking": 113,
+      "rankingClass": "team",
+      "rowName": "Thailand",
+      "team": {
+        "country": {
+          "alpha2": "TH",
+          "name": "Thailand"
+        },
+        "gender": "M",
+        "id": 4730,
+        "name": "Thailand",
+        "nameCode": "THA",
+        "national": true,
+        "ranking": 113,
+        "shortName": "Thailand",
+        "slug": "thailand",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#241d4f",
+          "secondary": "#ed1c24",
+          "text": "#ed1c24"
+        },
+        "type": 0,
+        "userCount": 11740
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 399,
+      "points": 1172.41,
+      "previousPoints": 1175.14,
+      "previousRanking": 112,
+      "ranking": 114,
+      "rankingClass": "team",
+      "rowName": "Namibia",
+      "team": {
+        "country": {
+          "alpha2": "NA",
+          "name": "Namibia"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4832,
+        "name": "Namibia",
+        "nameCode": "NAM",
+        "national": true,
+        "ranking": 114,
+        "shortName": "Namibia",
+        "slug": "namibia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#002d5f",
+          "text": "#002d5f"
+        },
+        "type": 0,
+        "userCount": 4601
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 380,
+      "points": 1169.96,
+      "previousPoints": 1169.96,
+      "previousRanking": 115,
+      "ranking": 115,
+      "rankingClass": "team",
+      "rowName": "North Korea",
+      "team": {
+        "country": {
+          "alpha2": "KP",
+          "name": "North Korea"
+        },
+        "gender": "M",
+        "id": 5369,
+        "name": "North Korea",
+        "nameCode": "DPR",
+        "national": true,
+        "ranking": 115,
+        "shortName": "North Korea",
+        "slug": "north-korea",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ff0000",
+          "text": "#ff0000"
+        },
+        "type": 0,
+        "userCount": 1076
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 402,
+      "points": 1169.07,
+      "previousPoints": 1170.76,
+      "previousRanking": 114,
+      "ranking": 116,
+      "rankingClass": "team",
+      "rowName": "Angola",
+      "team": {
+        "country": {
+          "alpha2": "AO",
+          "name": "Angola"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4692,
+        "name": "Angola",
+        "nameCode": "ANG",
+        "national": true,
+        "ranking": 116,
+        "shortName": "Angola",
+        "slug": "angola",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffff00",
+          "text": "#ffff00"
+        },
+        "type": 0,
+        "userCount": 9316
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 400,
+      "points": 1164.25,
+      "previousPoints": 1165.85,
+      "previousRanking": 117,
+      "ranking": 117,
+      "rankingClass": "team",
+      "rowName": "Mozambique",
+      "team": {
+        "country": {
+          "alpha2": "MZ",
+          "name": "Mozambique"
+        },
+        "gender": "M",
+        "id": 4783,
+        "name": "Mozambique",
+        "nameCode": "MOZ",
+        "national": true,
+        "ranking": 117,
+        "shortName": "Mozambique",
+        "slug": "mozambique",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffff00",
+          "text": "#ffff00"
+        },
+        "type": 0,
+        "userCount": 6657
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 486,
+      "points": 1163.73,
+      "previousPoints": 1163.73,
+      "previousRanking": 118,
+      "ranking": 118,
+      "rankingClass": "team",
+      "rowName": "Cyprus",
+      "team": {
+        "country": {
+          "alpha2": "CY",
+          "name": "Cyprus"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4482,
+        "name": "Cyprus",
+        "nameCode": "CYP",
+        "national": true,
+        "ranking": 118,
+        "shortName": "Cyprus",
+        "slug": "cyprus",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#285c9f",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 12331
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 490,
+      "points": 1159.82,
+      "previousPoints": 1159.82,
+      "previousRanking": 119,
+      "ranking": 119,
+      "rankingClass": "team",
+      "rowName": "Gambia",
+      "team": {
+        "country": {
+          "alpha2": "GM",
+          "name": "Gambia"
+        },
+        "gender": "M",
+        "id": 4762,
+        "name": "Gambia",
+        "nameCode": "GAM",
+        "national": true,
+        "ranking": 119,
+        "shortName": "Gambia",
+        "slug": "gambia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#be0a0a",
+          "secondary": "#33a650",
+          "text": "#33a650"
+        },
+        "type": 0,
+        "userCount": 6161
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 401,
+      "points": 1156.11,
+      "previousPoints": 1156.11,
+      "previousRanking": 120,
+      "ranking": 120,
+      "rankingClass": "team",
+      "rowName": "Sierra Leone",
+      "team": {
+        "country": {
+          "alpha2": "SL",
+          "name": "Sierra Leone"
+        },
+        "gender": "M",
+        "id": 4737,
+        "name": "Sierra Leone",
+        "nameCode": "SLE",
+        "national": true,
+        "ranking": 120,
+        "shortName": "Sierra Leone",
+        "slug": "sierra-leone",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#7bafde",
+          "secondary": "#1e9d44",
+          "text": "#1e9d44"
+        },
+        "type": 0,
+        "userCount": 5423
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 405,
+      "points": 1143.22,
+      "previousPoints": 1143.22,
+      "previousRanking": 121,
+      "ranking": 121,
+      "rankingClass": "team",
+      "rowName": "Azerbaijan",
+      "team": {
+        "country": {
+          "alpha2": "AZ",
+          "name": "Azerbaijan"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4742,
+        "name": "Azerbaijan",
+        "nameCode": "AZE",
+        "national": true,
+        "ranking": 121,
+        "shortName": "Azerbaijan",
+        "slug": "azerbaijan",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#0071b8",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 14455
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 491,
+      "points": 1140.88,
+      "previousPoints": 1140.88,
+      "previousRanking": 122,
+      "ranking": 122,
+      "rankingClass": "team",
+      "rowName": "Togo",
+      "team": {
+        "country": {
+          "alpha2": "TG",
+          "name": "Togo"
+        },
+        "gender": "M",
+        "id": 4836,
+        "name": "Togo",
+        "nameCode": "TOG",
+        "national": true,
+        "ranking": 122,
+        "shortName": "Togo",
+        "slug": "togo",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffff00",
+          "secondary": "#5cb640",
+          "text": "#5cb640"
+        },
+        "type": 0,
+        "userCount": 4850
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 408,
+      "points": 1140.65,
+      "previousPoints": 1133.17,
+      "previousRanking": 126,
+      "ranking": 123,
+      "rankingClass": "team",
+      "rowName": "Malawi",
+      "team": {
+        "country": {
+          "alpha2": "MW",
+          "name": "Malawi"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 8043,
+        "name": "Malawi",
+        "nameCode": "MAW",
+        "national": true,
+        "ranking": 123,
+        "shortName": "Malawi",
+        "slug": "malawi",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#5abb5f",
+          "text": "#5abb5f"
+        },
+        "type": 0,
+        "userCount": 7001
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 494,
+      "points": 1138.79,
+      "previousPoints": 1138.79,
+      "previousRanking": 123,
+      "ranking": 124,
+      "rankingClass": "team",
+      "rowName": "Tanzania",
+      "team": {
+        "country": {
+          "alpha2": "TZ",
+          "name": "Tanzania"
+        },
+        "gender": "M",
+        "id": 4835,
+        "name": "Tanzania",
+        "nameCode": "TAN",
+        "national": true,
+        "ranking": 124,
+        "shortName": "Tanzania",
+        "slug": "tanzania",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#1400c7",
+          "secondary": "#000000",
+          "text": "#000000"
+        },
+        "type": 0,
+        "userCount": 13426
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 489,
+      "points": 1138.56,
+      "previousPoints": 1138.56,
+      "previousRanking": 124,
+      "ranking": 125,
+      "rankingClass": "team",
+      "rowName": "Zimbabwe",
+      "team": {
+        "country": {
+          "alpha2": "ZW",
+          "name": "Zimbabwe"
+        },
+        "gender": "M",
+        "id": 4719,
+        "name": "Zimbabwe",
+        "nameCode": "ZIM",
+        "national": true,
+        "ranking": 125,
+        "shortName": "Zimbabwe",
+        "slug": "zimbabwe",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#eade00",
+          "secondary": "#269d2f",
+          "text": "#269d2f"
+        },
+        "type": 0,
+        "userCount": 3641
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 496,
+      "points": 1133.5,
+      "previousPoints": 1133.5,
+      "previousRanking": 125,
+      "ranking": 126,
+      "rankingClass": "team",
+      "rowName": "Central African Republic",
+      "team": {
+        "country": {
+          "alpha2": "CF",
+          "name": "Central African Republic"
+        },
+        "gender": "M",
+        "id": 23470,
+        "name": "Central African Republic",
+        "nameCode": "CAF",
+        "national": true,
+        "ranking": 126,
+        "shortName": "Central African Republic",
+        "slug": "central-african-republic",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#0000e0",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 4604
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 338,
+      "points": 1130.75,
+      "previousPoints": 1130.75,
+      "previousRanking": 127,
+      "ranking": 127,
+      "rankingClass": "team",
+      "rowName": "Libya",
+      "team": {
+        "country": {
+          "alpha2": "LY",
+          "name": "Libya"
+        },
+        "gender": "M",
+        "id": 4775,
+        "name": "Libya",
+        "nameCode": "LBA",
+        "national": true,
+        "ranking": 127,
+        "shortName": "Libya",
+        "slug": "libya",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#eb0000",
+          "secondary": "#000000",
+          "text": "#000000"
+        },
+        "type": 0,
+        "userCount": 6073
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 406,
+      "points": 1129.67,
+      "previousPoints": 1129.67,
+      "previousRanking": 128,
+      "ranking": 128,
+      "rankingClass": "team",
+      "rowName": "Niger",
+      "team": {
+        "country": {
+          "alpha2": "NE",
+          "name": "Niger"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 8031,
+        "name": "Niger",
+        "nameCode": "NIG",
+        "national": true,
+        "ranking": 128,
+        "shortName": "Niger",
+        "slug": "niger",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff8000",
+          "secondary": "#1d9641",
+          "text": "#1d9641"
+        },
+        "type": 0,
+        "userCount": 6733
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 407,
+      "points": 1126.3,
+      "previousPoints": 1126.3,
+      "previousRanking": 129,
+      "ranking": 129,
+      "rankingClass": "team",
+      "rowName": "Faroe Islands",
+      "team": {
+        "country": {
+          "alpha2": "FO",
+          "name": "Faroe Islands"
+        },
+        "gender": "M",
+        "id": 4760,
+        "name": "Faroe Islands",
+        "nameCode": "FRO",
+        "national": true,
+        "ranking": 129,
+        "shortName": "Faroe Islands",
+        "slug": "faroe-islands",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#0000ff",
+          "text": "#0000ff"
+        },
+        "type": 0,
+        "userCount": 6974
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 493,
+      "points": 1119.99,
+      "previousPoints": 1122.82,
+      "previousRanking": 130,
+      "ranking": 130,
+      "rankingClass": "team",
+      "rowName": "Comoros",
+      "team": {
+        "country": {
+          "alpha2": "KM",
+          "name": "Comoros"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 23494,
+        "name": "Comoros",
+        "nameCode": "COM",
+        "national": true,
+        "ranking": 130,
+        "shortName": "Comoros",
+        "slug": "comoros",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#037a36",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 5189
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 492,
+      "points": 1116.21,
+      "previousPoints": 1116.21,
+      "previousRanking": 131,
+      "ranking": 131,
+      "rankingClass": "team",
+      "rowName": "Sudan",
+      "team": {
+        "country": {
+          "alpha2": "SD",
+          "name": "Sudan"
+        },
+        "gender": "M",
+        "id": 4734,
+        "name": "Sudan",
+        "nameCode": "SDN",
+        "national": true,
+        "ranking": 131,
+        "shortName": "Sudan",
+        "slug": "sudan",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 5805
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 495,
+      "points": 1107.51,
+      "previousPoints": 1107.51,
+      "previousRanking": 132,
+      "ranking": 132,
+      "rankingClass": "team",
+      "rowName": "Antigua and Barbuda",
+      "team": {
+        "country": {
+          "alpha2": "AG",
+          "name": "Antigua and Barbuda"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 21805,
+        "name": "Antigua and Barbuda",
+        "nameCode": "ANT",
+        "national": true,
+        "ranking": 132,
+        "shortName": "Antigua and Barbuda",
+        "slug": "antigua-and-barbuda",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#feeb01",
+          "secondary": "#e60000",
+          "text": "#e60000"
+        },
+        "type": 0,
+        "userCount": 768
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 499,
+      "points": 1097.61,
+      "previousPoints": 1097.61,
+      "previousRanking": 133,
+      "ranking": 133,
+      "rankingClass": "team",
+      "rowName": "Solomon Islands",
+      "team": {
+        "country": {
+          "alpha2": "SB",
+          "name": "Solomon Islands"
+        },
+        "gender": "M",
+        "id": 23471,
+        "name": "Solomon Islands",
+        "nameCode": "SOL",
+        "national": true,
+        "ranking": 133,
+        "shortName": "Solomon Islands",
+        "slug": "solomon-islands",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#003300",
+          "secondary": "#fffb3d",
+          "text": "#fffb3d"
+        },
+        "type": 0,
+        "userCount": 1227
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 497,
+      "points": 1096.19,
+      "previousPoints": 1096.19,
+      "previousRanking": 134,
+      "ranking": 134,
+      "rankingClass": "team",
+      "rowName": "Latvia",
+      "team": {
+        "country": {
+          "alpha2": "LV",
+          "name": "Latvia"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4706,
+        "name": "Latvia",
+        "nameCode": "LAT",
+        "national": true,
+        "ranking": 134,
+        "shortName": "Latvia",
+        "slug": "latvia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#9f2c36",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 7614
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 498,
+      "points": 1095.66,
+      "previousPoints": 1095.66,
+      "previousRanking": 135,
+      "ranking": 135,
+      "rankingClass": "team",
+      "rowName": "Philippines",
+      "team": {
+        "country": {
+          "alpha2": "PH",
+          "name": "Philippines"
+        },
+        "gender": "M",
+        "id": 4791,
+        "name": "Philippines",
+        "nameCode": "PHI",
+        "national": true,
+        "ranking": 135,
+        "shortName": "Philippines",
+        "slug": "philippines",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#0000ff",
+          "text": "#0000ff"
+        },
+        "type": 0,
+        "userCount": 3576
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 507,
+      "points": 1091.57,
+      "previousPoints": 1091.57,
+      "previousRanking": 137,
+      "ranking": 136,
+      "rankingClass": "team",
+      "rowName": "Malaysia",
+      "team": {
+        "country": {
+          "alpha2": "MY",
+          "name": "Malaysia"
+        },
+        "gender": "M",
+        "id": 6912,
+        "name": "Malaysia",
+        "nameCode": "MAS",
+        "national": true,
+        "ranking": 136,
+        "shortName": "Malaysia",
+        "slug": "malaysia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#000000",
+          "secondary": "#ffff00",
+          "text": "#ffff00"
+        },
+        "type": 0,
+        "userCount": 14028
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 510,
+      "points": 1090.42,
+      "previousPoints": 1084.34,
+      "previousRanking": 141,
+      "ranking": 137,
+      "rankingClass": "team",
+      "rowName": "Kuwait",
+      "team": {
+        "country": {
+          "alpha2": "KW",
+          "name": "Kuwait"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 5368,
+        "name": "Kuwait",
+        "nameCode": "KUW",
+        "national": true,
+        "ranking": 137,
+        "shortName": "Kuwait",
+        "slug": "kuwait",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#0033ff",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 5059
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 394,
+      "points": 1089.77,
+      "previousPoints": 1089.77,
+      "previousRanking": 138,
+      "ranking": 138,
+      "rankingClass": "team",
+      "rowName": "Turkmenistan",
+      "team": {
+        "country": {
+          "alpha2": "TM",
+          "name": "Turkmenistan"
+        },
+        "gender": "M",
+        "id": 4728,
+        "name": "Turkmenistan",
+        "nameCode": "TKM",
+        "national": true,
+        "ranking": 138,
+        "shortName": "Turkmenistan",
+        "slug": "turkmenistan",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#2ba82c",
+          "secondary": "#a0001e",
+          "text": "#a0001e"
+        },
+        "type": 0,
+        "userCount": 2418
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 500,
+      "points": 1089.46,
+      "previousPoints": 1089.46,
+      "previousRanking": 139,
+      "ranking": 139,
+      "rankingClass": "team",
+      "rowName": "Rwanda",
+      "team": {
+        "country": {
+          "alpha2": "RW",
+          "name": "Rwanda"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 8037,
+        "name": "Rwanda",
+        "nameCode": "RWA",
+        "national": true,
+        "ranking": 139,
+        "shortName": "Rwanda",
+        "slug": "rwanda",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#f4f400",
+          "secondary": "#00b000",
+          "text": "#00b000"
+        },
+        "type": 0,
+        "userCount": 3887
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 503,
+      "points": 1085.06,
+      "previousPoints": 1085.06,
+      "previousRanking": 140,
+      "ranking": 140,
+      "rankingClass": "team",
+      "rowName": "Burundi",
+      "team": {
+        "country": {
+          "alpha2": "BI",
+          "name": "Burundi"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4750,
+        "name": "Burundi",
+        "nameCode": "BDI",
+        "national": true,
+        "ranking": 140,
+        "shortName": "Burundi",
+        "slug": "burundi",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#00a04d",
+          "text": "#00a04d"
+        },
+        "type": 0,
+        "userCount": 2745
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 504,
+      "points": 1076.11,
+      "previousPoints": 1076.11,
+      "previousRanking": 142,
+      "ranking": 141,
+      "rankingClass": "team",
+      "rowName": "Nicaragua",
+      "team": {
+        "country": {
+          "alpha2": "NI",
+          "name": "Nicaragua"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 21817,
+        "name": "Nicaragua",
+        "nameCode": "NCA",
+        "national": true,
+        "ranking": 141,
+        "shortName": "Nicaragua",
+        "slug": "nicaragua",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#333ebd",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 3826
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 501,
+      "points": 1074.47,
+      "previousPoints": 1074.47,
+      "previousRanking": 143,
+      "ranking": 142,
+      "rankingClass": "team",
+      "rowName": "Ethiopia",
+      "team": {
+        "country": {
+          "alpha2": "ET",
+          "name": "Ethiopia"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 8036,
+        "name": "Ethiopia",
+        "nameCode": "ETH",
+        "national": true,
+        "ranking": 142,
+        "shortName": "Ethiopia",
+        "slug": "ethiopia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#339900",
+          "secondary": "#ffdd00",
+          "text": "#ffdd00"
+        },
+        "type": 0,
+        "userCount": 7371
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 502,
+      "points": 1073.57,
+      "previousPoints": 1073.57,
+      "previousRanking": 144,
+      "ranking": 143,
+      "rankingClass": "team",
+      "rowName": "Suriname",
+      "team": {
+        "country": {
+          "alpha2": "SR",
+          "name": "Suriname"
+        },
+        "gender": "M",
+        "id": 21822,
+        "name": "Suriname",
+        "nameCode": "SUR",
+        "national": true,
+        "ranking": 143,
+        "shortName": "Suriname",
+        "slug": "suriname",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#008000",
+          "text": "#008000"
+        },
+        "type": 0,
+        "userCount": 2791
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 506,
+      "points": 1069.97,
+      "previousPoints": 1069.97,
+      "previousRanking": 145,
+      "ranking": 144,
+      "rankingClass": "team",
+      "rowName": "Lithuania",
+      "team": {
+        "country": {
+          "alpha2": "LT",
+          "name": "Lithuania"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4776,
+        "name": "Lithuania",
+        "nameCode": "LTU",
+        "national": true,
+        "ranking": 144,
+        "shortName": "Lithuania",
+        "slug": "lithuania",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#fcd91e",
+          "secondary": "#316b3e",
+          "text": "#316b3e"
+        },
+        "type": 0,
+        "userCount": 7855
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 395,
+      "points": 1066.81,
+      "previousPoints": 1092.03,
+      "previousRanking": 136,
+      "ranking": 145,
+      "rankingClass": "team",
+      "rowName": "Saint Kitts and Nevis",
+      "team": {
+        "country": {
+          "alpha2": "KN",
+          "name": "Saint Kitts and Nevis"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 21819,
+        "name": "Saint Kitts and Nevis",
+        "nameCode": "KNA",
+        "national": true,
+        "ranking": 145,
+        "shortName": "St. Kitts And Nevis",
+        "slug": "saint-kitts-and-nevis",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#008000",
+          "text": "#008000"
+        },
+        "type": 0,
+        "userCount": 1891
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 505,
+      "points": 1058.19,
+      "previousPoints": 1058.82,
+      "previousRanking": 146,
+      "ranking": 146,
+      "rankingClass": "team",
+      "rowName": "Eswatini",
+      "team": {
+        "country": {
+          "alpha2": "SZ",
+          "name": "Eswatini"
+        },
+        "gender": "M",
+        "id": 4733,
+        "name": "Eswatini",
+        "nameCode": "ESW",
+        "national": true,
+        "ranking": 146,
+        "shortName": "Eswatini",
+        "slug": "eswatini",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#3f48cc",
+          "secondary": "#ffd540",
+          "text": "#ffd540"
+        },
+        "type": 0,
+        "userCount": 2475
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 511,
+      "points": 1054.31,
+      "previousPoints": 1052.37,
+      "previousRanking": 147,
+      "ranking": 147,
+      "rankingClass": "team",
+      "rowName": "Botswana",
+      "team": {
+        "country": {
+          "alpha2": "BW",
+          "name": "Botswana"
+        },
+        "gender": "M",
+        "id": 4747,
+        "name": "Botswana",
+        "nameCode": "BOT",
+        "national": true,
+        "ranking": 147,
+        "shortName": "Botswana",
+        "slug": "botswana",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#00a2e8",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 2831
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 512,
+      "points": 1049.94,
+      "previousPoints": 1049.94,
+      "previousRanking": 148,
+      "ranking": 148,
+      "rankingClass": "team",
+      "rowName": "Liberia",
+      "team": {
+        "country": {
+          "alpha2": "LR",
+          "name": "Liberia"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 8034,
+        "name": "Liberia",
+        "nameCode": "LBR",
+        "national": true,
+        "ranking": 148,
+        "shortName": "Liberia",
+        "slug": "liberia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#3333ff",
+          "secondary": "#ff0000",
+          "text": "#ff0000"
+        },
+        "type": 0,
+        "userCount": 3066
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 508,
+      "points": 1049.74,
+      "previousPoints": 1049.74,
+      "previousRanking": 149,
+      "ranking": 149,
+      "rankingClass": "team",
+      "rowName": "Hong Kong",
+      "team": {
+        "country": {
+          "alpha2": "HK",
+          "name": "Hong Kong"
+        },
+        "gender": "M",
+        "id": 4765,
+        "name": "Hong Kong",
+        "nameCode": "HKG",
+        "national": true,
+        "ranking": 149,
+        "shortName": "Hong Kong",
+        "slug": "hong-kong",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 3635
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 513,
+      "points": 1047.46,
+      "previousPoints": 1047.46,
+      "previousRanking": 150,
+      "ranking": 150,
+      "rankingClass": "team",
+      "rowName": "Indonesia",
+      "team": {
+        "country": {
+          "alpha2": "ID",
+          "name": "Indonesia"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4829,
+        "name": "Indonesia",
+        "nameCode": "INA",
+        "national": true,
+        "ranking": 150,
+        "shortName": "Indonesia",
+        "slug": "indonesia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ce1126",
+          "secondary": "#ce1126",
+          "text": "#ce1126"
+        },
+        "type": 0,
+        "userCount": 33907
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 509,
+      "points": 1038.68,
+      "previousPoints": 1035.1,
+      "previousRanking": 152,
+      "ranking": 151,
+      "rankingClass": "team",
+      "rowName": "Lesotho",
+      "team": {
+        "country": {
+          "alpha2": "LS",
+          "name": "Lesotho"
+        },
+        "gender": "M",
+        "id": 8033,
+        "name": "Lesotho",
+        "nameCode": "LES",
+        "national": true,
+        "ranking": 151,
+        "shortName": "Lesotho",
+        "slug": "lesotho",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#0000ff",
+          "secondary": "#008000",
+          "text": "#008000"
+        },
+        "type": 0,
+        "userCount": 3001
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 514,
+      "points": 1036.74,
+      "previousPoints": 1036.74,
+      "previousRanking": 151,
+      "ranking": 152,
+      "rankingClass": "team",
+      "rowName": "Dominican Republic",
+      "team": {
+        "country": {
+          "alpha2": "DO",
+          "name": "Dominican Republic"
+        },
+        "gender": "M",
+        "id": 21813,
+        "name": "Dominican Republic",
+        "nameCode": "DOM",
+        "national": true,
+        "ranking": 152,
+        "shortName": "Dominican Republic",
+        "slug": "dominican-republic",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#0000ff",
+          "text": "#0000ff"
+        },
+        "type": 0,
+        "userCount": 1925
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 519,
+      "points": 1028.18,
+      "previousPoints": 1028.18,
+      "previousRanking": 153,
+      "ranking": 153,
+      "rankingClass": "team",
+      "rowName": "Chinese Taipei",
+      "team": {
+        "country": {
+          "alpha2": "TW",
+          "name": "Chinese Taipei"
+        },
+        "gender": "M",
+        "id": 5937,
+        "name": "Chinese Taipei",
+        "nameCode": "TPE",
+        "national": true,
+        "ranking": 153,
+        "shortName": "Chinese Taipei",
+        "slug": "chinese-taipei",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#0000ff",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 1523
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 515,
+      "points": 1022.3,
+      "previousPoints": 1022.3,
+      "previousRanking": 155,
+      "ranking": 154,
+      "rankingClass": "team",
+      "rowName": "Andorra",
+      "team": {
+        "country": {
+          "alpha2": "AD",
+          "name": "Andorra"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4818,
+        "name": "Andorra",
+        "nameCode": "AND",
+        "national": true,
+        "ranking": 154,
+        "shortName": "Andorra",
+        "slug": "andorra",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#cc0000",
+          "secondary": "#0054a9",
+          "text": "#0054a9"
+        },
+        "type": 0,
+        "userCount": 6190
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 518,
+      "points": 1021.85,
+      "previousPoints": 1024.72,
+      "previousRanking": 154,
+      "ranking": 155,
+      "rankingClass": "team",
+      "rowName": "Maldives",
+      "team": {
+        "country": {
+          "alpha2": "MV",
+          "name": "Maldives"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 6911,
+        "name": "Maldives",
+        "nameCode": "MDV",
+        "national": true,
+        "ranking": 155,
+        "shortName": "Maldives",
+        "slug": "maldives",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ed1b24",
+          "secondary": "#009849",
+          "text": "#009849"
+        },
+        "type": 0,
+        "userCount": 2232
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 516,
+      "points": 1020.37,
+      "previousPoints": 1020.37,
+      "previousRanking": 156,
+      "ranking": 156,
+      "rankingClass": "team",
+      "rowName": "Yemen",
+      "team": {
+        "country": {
+          "alpha2": "YE",
+          "name": "Yemen"
+        },
+        "gender": "M",
+        "id": 4721,
+        "name": "Yemen",
+        "nameCode": "YEM",
+        "national": true,
+        "ranking": 156,
+        "shortName": "Yemen",
+        "slug": "yemen",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 1964
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 517,
+      "points": 1020.32,
+      "previousPoints": 1020.32,
+      "previousRanking": 157,
+      "ranking": 157,
+      "rankingClass": "team",
+      "rowName": "Afghanistan",
+      "team": {
+        "country": {
+          "alpha2": "AF",
+          "name": "Afghanistan"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4689,
+        "name": "Afghanistan",
+        "nameCode": "AFG",
+        "national": true,
+        "ranking": 157,
+        "shortName": "Afghanistan",
+        "slug": "afghanistan",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#313131",
+          "text": "#313131"
+        },
+        "type": 0,
+        "userCount": 2792
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 522,
+      "points": 1014.78,
+      "previousPoints": 1014.78,
+      "previousRanking": 158,
+      "ranking": 158,
+      "rankingClass": "team",
+      "rowName": "Singapore",
+      "team": {
+        "country": {
+          "alpha2": "SG",
+          "name": "Singapore"
+        },
+        "gender": "M",
+        "id": 4738,
+        "name": "Singapore",
+        "nameCode": "SIN",
+        "national": true,
+        "ranking": 158,
+        "shortName": "Singapore",
+        "slug": "singapore",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 4140
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 520,
+      "points": 1003.28,
+      "previousPoints": 1003.28,
+      "previousRanking": 159,
+      "ranking": 159,
+      "rankingClass": "team",
+      "rowName": "Papua New Guinea",
+      "team": {
+        "country": {
+          "alpha2": "PG",
+          "name": "Papua New Guinea"
+        },
+        "gender": "M",
+        "id": 23495,
+        "name": "Papua New Guinea",
+        "nameCode": "PNG",
+        "national": true,
+        "ranking": 159,
+        "shortName": "Papua New Guinea",
+        "slug": "papua-new-guinea",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ed1c24",
+          "secondary": "#000000",
+          "text": "#000000"
+        },
+        "type": 0,
+        "userCount": 1094
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 521,
+      "points": 1000.26,
+      "previousPoints": 1000.26,
+      "previousRanking": 160,
+      "ranking": 160,
+      "rankingClass": "team",
+      "rowName": "Myanmar",
+      "team": {
+        "country": {
+          "alpha2": "MM",
+          "name": "Myanmar"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 23484,
+        "name": "Myanmar",
+        "nameCode": "MYA",
+        "national": true,
+        "ranking": 160,
+        "shortName": "Myanmar",
+        "slug": "myanmar",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#fbed26",
+          "text": "#fbed26"
+        },
+        "type": 0,
+        "userCount": 3177
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 523,
+      "points": 995.58,
+      "previousPoints": 995.58,
+      "previousRanking": 161,
+      "ranking": 161,
+      "rankingClass": "team",
+      "rowName": "New Caledonia",
+      "team": {
+        "country": {
+          "alpha2": "NC",
+          "name": "New Caledonia"
+        },
+        "gender": "M",
+        "id": 8045,
+        "name": "New Caledonia",
+        "nameCode": "NCL",
+        "national": true,
+        "ranking": 161,
+        "shortName": "New Caledonia",
+        "slug": "new-caledonia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#9d9fa2",
+          "secondary": "#ed1c24",
+          "text": "#ed1c24"
+        },
+        "type": 0,
+        "userCount": 421
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 396,
+      "points": 995.11,
+      "previousPoints": 995.11,
+      "previousRanking": 162,
+      "ranking": 162,
+      "rankingClass": "team",
+      "rowName": "French Polynesia",
+      "team": {
+        "country": {
+          "alpha2": "PF",
+          "name": "French Polynesia"
+        },
+        "gender": "M",
+        "id": 23477,
+        "name": "Tahiti",
+        "nameCode": "TAH",
+        "national": true,
+        "ranking": 162,
+        "shortName": "Tahiti",
+        "slug": "tahiti",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 491
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 409,
+      "points": 993.8,
+      "previousPoints": 993.8,
+      "previousRanking": 163,
+      "ranking": 163,
+      "rankingClass": "team",
+      "rowName": "Puerto Rico",
+      "team": {
+        "country": {
+          "alpha2": "PR",
+          "name": "Puerto Rico"
+        },
+        "gender": "M",
+        "id": 21818,
+        "name": "Puerto Rico",
+        "nameCode": "PUR",
+        "national": true,
+        "ranking": 163,
+        "shortName": "Puerto Rico",
+        "slug": "puerto-rico",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#0920f0",
+          "text": "#0920f0"
+        },
+        "type": 0,
+        "userCount": 1541
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 423,
+      "points": 990.73,
+      "previousPoints": 990.73,
+      "previousRanking": 164,
+      "ranking": 164,
+      "rankingClass": "team",
+      "rowName": "Moldova",
+      "team": {
+        "country": {
+          "alpha2": "MD",
+          "name": "Moldova"
+        },
+        "gender": "M",
+        "id": 4782,
+        "name": "Moldova",
+        "nameCode": "MDA",
+        "national": true,
+        "ranking": 164,
+        "shortName": "Moldova",
+        "slug": "moldova",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#000099",
+          "secondary": "#ffbc00",
+          "text": "#ffbc00"
+        },
+        "type": 0,
+        "userCount": 8095
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 525,
+      "points": 986.44,
+      "previousPoints": 986.44,
+      "previousRanking": 165,
+      "ranking": 165,
+      "rankingClass": "team",
+      "rowName": "Vanuatu",
+      "team": {
+        "country": {
+          "alpha2": "VU",
+          "name": "Vanuatu"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 8046,
+        "name": "Vanuatu",
+        "nameCode": "VAN",
+        "national": true,
+        "ranking": 165,
+        "shortName": "Vanuatu",
+        "slug": "vanuatu",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#cea62f",
+          "secondary": "#3d9e3d",
+          "text": "#3d9e3d"
+        },
+        "type": 0,
+        "userCount": 834
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 398,
+      "points": 984.05,
+      "previousPoints": 984.05,
+      "previousRanking": 167,
+      "ranking": 166,
+      "rankingClass": "team",
+      "rowName": "Barbados",
+      "team": {
+        "country": {
+          "alpha2": "BB",
+          "name": "Barbados"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 21808,
+        "name": "Barbados",
+        "nameCode": "BAR",
+        "national": true,
+        "ranking": 166,
+        "shortName": "Barbados",
+        "slug": "barbados",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffd700",
+          "secondary": "#0000a0",
+          "text": "#0000a0"
+        },
+        "type": 0,
+        "userCount": 739
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 397,
+      "points": 983.35,
+      "previousPoints": 983.35,
+      "previousRanking": 168,
+      "ranking": 167,
+      "rankingClass": "team",
+      "rowName": "South Sudan",
+      "team": {
+        "country": {
+          "alpha2": "SS",
+          "name": "South Sudan"
+        },
+        "gender": "M",
+        "id": 88508,
+        "name": "South Sudan",
+        "nameCode": "SSD",
+        "national": true,
+        "ranking": 167,
+        "shortName": "South Sudan",
+        "slug": "south-sudan",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ed1c24",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 2490
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 420,
+      "points": 981.69,
+      "previousPoints": 981.69,
+      "previousRanking": 169,
+      "ranking": 168,
+      "rankingClass": "team",
+      "rowName": "Guyana",
+      "team": {
+        "country": {
+          "alpha2": "GY",
+          "name": "Guyana"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 22113,
+        "name": "Guyana",
+        "nameCode": "GUY",
+        "national": true,
+        "ranking": 168,
+        "shortName": "Guyana",
+        "slug": "guyana",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#359336",
+          "secondary": "#fff200",
+          "text": "#fff200"
+        },
+        "type": 0,
+        "userCount": 1412
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 524,
+      "points": 980.48,
+      "previousPoints": 980.48,
+      "previousRanking": 170,
+      "ranking": 169,
+      "rankingClass": "team",
+      "rowName": "Fiji",
+      "team": {
+        "country": {
+          "alpha2": "FJ",
+          "name": "Fiji"
+        },
+        "gender": "M",
+        "id": 8044,
+        "name": "Fiji",
+        "nameCode": "FIJ",
+        "national": true,
+        "ranking": 169,
+        "shortName": "Fiji",
+        "slug": "fiji",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffffff",
+          "secondary": "#3366ff",
+          "text": "#3366ff"
+        },
+        "type": 0,
+        "userCount": 538
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 421,
+      "points": 978.91,
+      "previousPoints": 978.91,
+      "previousRanking": 171,
+      "ranking": 170,
+      "rankingClass": "team",
+      "rowName": "Saint Lucia",
+      "team": {
+        "country": {
+          "alpha2": "LC",
+          "name": "Saint Lucia"
+        },
+        "gender": "M",
+        "id": 21820,
+        "name": "Saint Lucia",
+        "nameCode": "LCA",
+        "national": true,
+        "ranking": 170,
+        "shortName": "Saint Lucia",
+        "slug": "saint-lucia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#0093d6",
+          "secondary": "#ffe600",
+          "text": "#ffe600"
+        },
+        "type": 0,
+        "userCount": 1531
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 336,
+      "points": 972.86,
+      "previousPoints": 972.86,
+      "previousRanking": 172,
+      "ranking": 171,
+      "rankingClass": "team",
+      "rowName": "Malta",
+      "team": {
+        "country": {
+          "alpha2": "MT",
+          "name": "Malta"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4483,
+        "name": "Malta",
+        "nameCode": "MLT",
+        "national": true,
+        "ranking": 171,
+        "shortName": "Malta",
+        "slug": "malta",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 9409
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 526,
+      "points": 968.29,
+      "previousPoints": 984.84,
+      "previousRanking": 166,
+      "ranking": 172,
+      "rankingClass": "team",
+      "rowName": "Cuba",
+      "team": {
+        "country": {
+          "alpha2": "CU",
+          "name": "Cuba"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4824,
+        "name": "Cuba",
+        "nameCode": "CUB",
+        "national": true,
+        "ranking": 172,
+        "shortName": "Cuba",
+        "slug": "cuba",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ed1c24",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 7557
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 419,
+      "points": 966.27,
+      "previousPoints": 966.27,
+      "previousRanking": 173,
+      "ranking": 173,
+      "rankingClass": "team",
+      "rowName": "Bermuda",
+      "team": {
+        "country": {
+          "alpha2": "BM",
+          "name": "Bermuda"
+        },
+        "gender": "M",
+        "id": 4745,
+        "name": "Bermuda",
+        "nameCode": "BER",
+        "national": true,
+        "ranking": 173,
+        "shortName": "Bermuda",
+        "slug": "bermuda",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#0000ff",
+          "text": "#0000ff"
+        },
+        "type": 0,
+        "userCount": 1300
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 422,
+      "points": 960.77,
+      "previousPoints": 960.77,
+      "previousRanking": 174,
+      "ranking": 174,
+      "rankingClass": "team",
+      "rowName": "Grenada",
+      "team": {
+        "country": {
+          "alpha2": "GD",
+          "name": "Grenada"
+        },
+        "gender": "M",
+        "id": 21814,
+        "name": "Grenada",
+        "nameCode": "GRN",
+        "national": true,
+        "ranking": 174,
+        "shortName": "Grenada",
+        "slug": "grenada",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#0d813c",
+          "secondary": "#fff200",
+          "text": "#fff200"
+        },
+        "type": 0,
+        "userCount": 1088
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 424,
+      "points": 958.05,
+      "previousPoints": 959.36,
+      "previousRanking": 175,
+      "ranking": 175,
+      "rankingClass": "team",
+      "rowName": "Nepal",
+      "team": {
+        "country": {
+          "alpha2": "NP",
+          "name": "Nepal"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 23489,
+        "name": "Nepal",
+        "nameCode": "NEP",
+        "national": true,
+        "ranking": 175,
+        "shortName": "Nepal",
+        "slug": "nepal",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff2600",
+          "secondary": "#2e56c8",
+          "text": "#2e56c8"
+        },
+        "type": 0,
+        "userCount": 8843
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 426,
+      "points": 942.97,
+      "previousPoints": 942.97,
+      "previousRanking": 176,
+      "ranking": 176,
+      "rankingClass": "team",
+      "rowName": "Cambodia",
+      "team": {
+        "country": {
+          "alpha2": "KH",
+          "name": "Cambodia"
+        },
+        "gender": "M",
+        "id": 7929,
+        "name": "Cambodia",
+        "nameCode": "CAM",
+        "national": true,
+        "ranking": 176,
+        "shortName": "Cambodia",
+        "slug": "cambodia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#090148",
+          "secondary": "#ef0e12",
+          "text": "#ef0e12"
+        },
+        "type": 0,
+        "userCount": 3782
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 425,
+      "points": 939.96,
+      "previousPoints": 939.96,
+      "previousRanking": 177,
+      "ranking": 177,
+      "rankingClass": "team",
+      "rowName": "Belize",
+      "team": {
+        "country": {
+          "alpha2": "BZ",
+          "name": "Belize"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 21809,
+        "name": "Belize",
+        "nameCode": "BIZ",
+        "national": true,
+        "ranking": 177,
+        "shortName": "Belize",
+        "slug": "belize",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#2366b3",
+          "secondary": "#e2001a",
+          "text": "#e2001a"
+        },
+        "type": 0,
+        "userCount": 702
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 427,
+      "points": 938.28,
+      "previousPoints": 938.28,
+      "previousRanking": 178,
+      "ranking": 178,
+      "rankingClass": "team",
+      "rowName": "Saint Vincent and the Grenadines",
+      "team": {
+        "country": {
+          "alpha2": "VC",
+          "name": "Saint Vincent and the Grenadines"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 21821,
+        "name": "Saint Vincent and the Grenadines",
+        "nameCode": "VCT",
+        "national": true,
+        "ranking": 178,
+        "shortName": "Saint Vincent and the Grenadines",
+        "slug": "saint-vincent-and-the-grenadines",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffff00",
+          "secondary": "#008000",
+          "text": "#008000"
+        },
+        "type": 0,
+        "userCount": 656
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 428,
+      "points": 938.02,
+      "previousPoints": 938.02,
+      "previousRanking": 179,
+      "ranking": 179,
+      "rankingClass": "team",
+      "rowName": "Montserrat",
+      "team": {
+        "country": {
+          "alpha2": "MS",
+          "name": "Montserrat"
+        },
+        "gender": "M",
+        "id": 21815,
+        "name": "Montserrat",
+        "nameCode": "MSR",
+        "national": true,
+        "ranking": 179,
+        "shortName": "Montserrat",
+        "slug": "montserrat",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#008800",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 1055
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 410,
+      "points": 936.09,
+      "previousPoints": 936.03,
+      "previousRanking": 180,
+      "ranking": 180,
+      "rankingClass": "team",
+      "rowName": "Mauritius",
+      "team": {
+        "country": {
+          "alpha2": "MU",
+          "name": "Mauritius"
+        },
+        "gender": "M",
+        "id": 4780,
+        "name": "Mauritius",
+        "nameCode": "MRI",
+        "national": true,
+        "ranking": 180,
+        "shortName": "Mauritius",
+        "slug": "mauritius",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#e32219",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 1553
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 337,
+      "points": 930.22,
+      "previousPoints": 930.22,
+      "previousRanking": 181,
+      "ranking": 181,
+      "rankingClass": "team",
+      "rowName": "Chad",
+      "team": {
+        "country": {
+          "alpha2": "TD",
+          "name": "Chad"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 8039,
+        "name": "Chad",
+        "nameCode": "CHA",
+        "national": true,
+        "ranking": 181,
+        "shortName": "Chad",
+        "slug": "chad",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#0000ff",
+          "secondary": "#ffff00",
+          "text": "#ffff00"
+        },
+        "type": 0,
+        "userCount": 532
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 411,
+      "points": 913.68,
+      "previousPoints": 913.68,
+      "previousRanking": 182,
+      "ranking": 182,
+      "rankingClass": "team",
+      "rowName": "Macao",
+      "team": {
+        "country": {
+          "alpha2": "MO",
+          "name": "Macao"
+        },
+        "gender": "M",
+        "id": 23492,
+        "name": "Macau",
+        "nameCode": "MAC",
+        "national": true,
+        "ranking": 182,
+        "shortName": "Macau",
+        "slug": "macau",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#268936",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 506
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 429,
+      "points": 908.71,
+      "previousPoints": 908.71,
+      "previousRanking": 183,
+      "ranking": 183,
+      "rankingClass": "team",
+      "rowName": "Mongolia",
+      "team": {
+        "country": {
+          "alpha2": "MN",
+          "name": "Mongolia"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 23496,
+        "name": "Mongolia",
+        "nameCode": "MGL",
+        "national": true,
+        "ranking": 183,
+        "shortName": "Mongolia",
+        "slug": "mongolia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 1748
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 430,
+      "points": 904.88,
+      "previousPoints": 904.88,
+      "previousRanking": 185,
+      "ranking": 184,
+      "rankingClass": "team",
+      "rowName": "Dominica",
+      "team": {
+        "country": {
+          "alpha2": "DM",
+          "name": "Dominica"
+        },
+        "gender": "M",
+        "id": 21812,
+        "name": "Dominica",
+        "nameCode": "DMA",
+        "national": true,
+        "ranking": 184,
+        "shortName": "Dominica",
+        "slug": "dominica",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#22b14c",
+          "secondary": "#e5232b",
+          "text": "#e5232b"
+        },
+        "type": 0,
+        "userCount": 414
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 431,
+      "points": 900.65,
+      "previousPoints": 906.36,
+      "previousRanking": 184,
+      "ranking": 185,
+      "rankingClass": "team",
+      "rowName": "Bhutan",
+      "team": {
+        "country": {
+          "alpha2": "BT",
+          "name": "Bhutan"
+        },
+        "gender": "M",
+        "id": 191564,
+        "name": "Bhutan",
+        "nameCode": "BHU",
+        "national": true,
+        "ranking": 185,
+        "shortName": "Bhutan",
+        "slug": "bhutan",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff4e12",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 930
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 412,
+      "points": 900.27,
+      "previousPoints": 900.27,
+      "previousRanking": 187,
+      "ranking": 186,
+      "rankingClass": "team",
+      "rowName": "American Samoa",
+      "team": {
+        "country": {
+          "alpha2": "AS",
+          "name": "American Samoa"
+        },
+        "gender": "M",
+        "id": 23476,
+        "name": "American Samoa",
+        "nameCode": "ASA",
+        "national": true,
+        "ranking": 186,
+        "shortName": "American Samoa",
+        "slug": "american-samoa",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#0000ff",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 239
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 527,
+      "points": 900.07,
+      "previousPoints": 900.07,
+      "previousRanking": 187,
+      "ranking": 186,
+      "rankingClass": "team",
+      "rowName": "Sao Tome and Principe",
+      "team": {
+        "country": {
+          "alpha2": "ST",
+          "name": "Sao Tome and Principe"
+        },
+        "gender": "M",
+        "id": 33813,
+        "name": "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "nameCode": "STP",
+        "national": true,
+        "ranking": 186,
+        "shortName": "S\u00e3o Tom\u00e9 and Pr\u00edncipe",
+        "slug": "sao-tome-and-principe",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffff00",
+          "secondary": "#008000",
+          "text": "#008000"
+        },
+        "type": 0,
+        "userCount": 1621
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 528,
+      "points": 899.58,
+      "previousPoints": 899.58,
+      "previousRanking": 188,
+      "ranking": 187,
+      "rankingClass": "team",
+      "rowName": "Laos",
+      "team": {
+        "country": {
+          "alpha2": "LA",
+          "name": "Laos"
+        },
+        "gender": "M",
+        "id": 23486,
+        "name": "Laos",
+        "nameCode": "LAO",
+        "national": true,
+        "ranking": 187,
+        "shortName": "Laos",
+        "slug": "laos",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#dc1400",
+          "secondary": "#081064",
+          "text": "#081064"
+        },
+        "type": 0,
+        "userCount": 1824
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 332,
+      "points": 899.33,
+      "previousPoints": 899.33,
+      "previousRanking": 189,
+      "ranking": 188,
+      "rankingClass": "team",
+      "rowName": "Cook Islands",
+      "team": {
+        "country": {
+          "alpha2": "CK",
+          "name": "Cook Islands"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 23475,
+        "name": "Cook Islands",
+        "nameCode": "COK",
+        "national": true,
+        "ranking": 188,
+        "shortName": "Cook Islands",
+        "slug": "cook-islands",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#008040",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 298
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 530,
+      "points": 892.44,
+      "previousPoints": 889.5,
+      "previousRanking": 192,
+      "ranking": 189,
+      "rankingClass": "team",
+      "rowName": "Bangladesh",
+      "team": {
+        "country": {
+          "alpha2": "BD",
+          "name": "Bangladesh"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 6080,
+        "name": "Bangladesh",
+        "nameCode": "BAN",
+        "national": true,
+        "ranking": 189,
+        "shortName": "Bangladesh",
+        "slug": "bangladesh",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#10a230",
+          "secondary": "#ff0000",
+          "text": "#ff0000"
+        },
+        "type": 0,
+        "userCount": 28476
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 333,
+      "points": 894.26,
+      "previousPoints": 894.26,
+      "previousRanking": 190,
+      "ranking": 190,
+      "rankingClass": "team",
+      "rowName": "Samoa",
+      "team": {
+        "country": {
+          "alpha2": "WS",
+          "name": "Samoa"
+        },
+        "gender": "M",
+        "id": 23473,
+        "name": "Samoa",
+        "nameCode": "SAM",
+        "national": true,
+        "ranking": 190,
+        "shortName": "Samoa",
+        "slug": "samoa",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#0021ff",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 249
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 529,
+      "points": 891.12,
+      "previousPoints": 891.12,
+      "previousRanking": 191,
+      "ranking": 190,
+      "rankingClass": "team",
+      "rowName": "Brunei",
+      "team": {
+        "country": {
+          "alpha2": "BN",
+          "name": "Brunei"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 23491,
+        "name": "Brunei Darussalam",
+        "nameCode": "BRU",
+        "national": true,
+        "ranking": 190,
+        "shortName": "Brunei",
+        "slug": "brunei-darussalam",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffd000",
+          "secondary": "#048a41",
+          "text": "#048a41"
+        },
+        "type": 0,
+        "userCount": 1152
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 531,
+      "points": 889.2,
+      "previousPoints": 889.2,
+      "previousRanking": 193,
+      "ranking": 191,
+      "rankingClass": "team",
+      "rowName": "Djibouti",
+      "team": {
+        "country": {
+          "alpha2": "DJ",
+          "name": "Djibouti"
+        },
+        "gender": "M",
+        "id": 8042,
+        "name": "Djibouti",
+        "nameCode": "DJI",
+        "national": true,
+        "ranking": 191,
+        "shortName": "Djibouti",
+        "slug": "djibouti",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#6ab1e7",
+          "secondary": "#0d0c0c",
+          "text": "#0d0c0c"
+        },
+        "type": 0,
+        "userCount": 1283
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 534,
+      "points": 860.45,
+      "previousPoints": 860.45,
+      "previousRanking": 195,
+      "ranking": 192,
+      "rankingClass": "team",
+      "rowName": "East Timor",
+      "team": {
+        "country": {
+          "alpha2": "TL",
+          "name": "East Timor"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 23497,
+        "name": "East Timor",
+        "nameCode": "TLS",
+        "national": true,
+        "ranking": 192,
+        "shortName": "East Timor",
+        "slug": "east-timor",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#be0505",
+          "secondary": "#f4d934",
+          "text": "#f4d934"
+        },
+        "type": 0,
+        "userCount": 567
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 532,
+      "points": 859.83,
+      "previousPoints": 859.83,
+      "previousRanking": 197,
+      "ranking": 193,
+      "rankingClass": "team",
+      "rowName": "Cayman Islands",
+      "team": {
+        "country": {
+          "alpha2": "KY",
+          "name": "Cayman Islands"
+        },
+        "gender": "M",
+        "id": 21811,
+        "name": "Cayman Islands",
+        "nameCode": "CAY",
+        "national": true,
+        "ranking": 193,
+        "shortName": "Cayman Islands",
+        "slug": "cayman-islands",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#000081",
+          "text": "#000081"
+        },
+        "type": 0,
+        "userCount": 652
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 536,
+      "points": 856.71,
+      "previousPoints": 860.13,
+      "previousRanking": 196,
+      "ranking": 194,
+      "rankingClass": "team",
+      "rowName": "Seychelles",
+      "team": {
+        "country": {
+          "alpha2": "SC",
+          "name": "Seychelles"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 8038,
+        "name": "Seychelles",
+        "nameCode": "SEY",
+        "national": true,
+        "ranking": 194,
+        "shortName": "Seychelles",
+        "slug": "seychelles",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 1644
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 334,
+      "points": 861.81,
+      "previousPoints": 861.81,
+      "previousRanking": 194,
+      "ranking": 194,
+      "rankingClass": "team",
+      "rowName": "Tonga",
+      "team": {
+        "country": {
+          "alpha2": "TO",
+          "name": "Tonga"
+        },
+        "gender": "M",
+        "id": 23474,
+        "name": "Tonga",
+        "nameCode": "TGA",
+        "national": true,
+        "ranking": 194,
+        "shortName": "Tonga",
+        "slug": "tonga",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 300
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 538,
+      "points": 855.56,
+      "previousPoints": 855.56,
+      "previousRanking": 198,
+      "ranking": 195,
+      "rankingClass": "team",
+      "rowName": "Eritrea",
+      "team": {
+        "country": {
+          "alpha2": "ER",
+          "name": "Eritrea"
+        },
+        "gender": "M",
+        "id": 8041,
+        "name": "Eritrea",
+        "nameCode": "ERI",
+        "national": true,
+        "ranking": 195,
+        "shortName": "Eritrea",
+        "slug": "eritrea",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#33a64f",
+          "secondary": "#ff0000",
+          "text": "#ff0000"
+        },
+        "type": 0,
+        "userCount": 487
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 541,
+      "points": 854.72,
+      "previousPoints": 854.72,
+      "previousRanking": 199,
+      "ranking": 196,
+      "rankingClass": "team",
+      "rowName": "Somalia",
+      "team": {
+        "country": {
+          "alpha2": "SO",
+          "name": "Somalia"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 23472,
+        "name": "Somalia",
+        "nameCode": "SOM",
+        "national": true,
+        "ranking": 196,
+        "shortName": "Somalia",
+        "slug": "somalia",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#75aadb",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 1646
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 540,
+      "points": 852.87,
+      "previousPoints": 852.87,
+      "previousRanking": 200,
+      "ranking": 197,
+      "rankingClass": "team",
+      "rowName": "Bahamas",
+      "team": {
+        "country": {
+          "alpha2": "BS",
+          "name": "Bahamas"
+        },
+        "gender": "M",
+        "id": 21807,
+        "name": "Bahamas",
+        "nameCode": "BAH",
+        "national": true,
+        "ranking": 197,
+        "shortName": "Bahamas",
+        "slug": "bahamas",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#f3ba12",
+          "secondary": "#53c9fb",
+          "text": "#53c9fb"
+        },
+        "type": 0,
+        "userCount": 596
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 537,
+      "points": 851.64,
+      "previousPoints": 851.64,
+      "previousRanking": 202,
+      "ranking": 198,
+      "rankingClass": "team",
+      "rowName": "Gibraltar",
+      "team": {
+        "country": {
+          "alpha2": "GI",
+          "name": "Gibraltar"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 129264,
+        "name": "Gibraltar",
+        "nameCode": "GIB",
+        "national": true,
+        "ranking": 198,
+        "shortName": "Gibraltar",
+        "slug": "gibraltar",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#cc0000",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 7013
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 539,
+      "points": 850.88,
+      "previousPoints": 850.88,
+      "previousRanking": 203,
+      "ranking": 199,
+      "rankingClass": "team",
+      "rowName": "Aruba",
+      "team": {
+        "country": {
+          "alpha2": "AW",
+          "name": "Aruba"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 21806,
+        "name": "Aruba",
+        "nameCode": "ARU",
+        "national": true,
+        "ranking": 199,
+        "shortName": "Aruba",
+        "slug": "aruba",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffd600",
+          "secondary": "#5aa4d3",
+          "text": "#5aa4d3"
+        },
+        "type": 0,
+        "userCount": 637
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 535,
+      "points": 848.82,
+      "previousPoints": 848.82,
+      "previousRanking": 204,
+      "ranking": 200,
+      "rankingClass": "team",
+      "rowName": "Liechtenstein",
+      "team": {
+        "country": {
+          "alpha2": "LI",
+          "name": "Liechtenstein"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4830,
+        "name": "Liechtenstein",
+        "nameCode": "LIE",
+        "national": true,
+        "ranking": 200,
+        "shortName": "Liechtenstein",
+        "slug": "liechtenstein",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#3a5aa3",
+          "secondary": "#c40000",
+          "text": "#c40000"
+        },
+        "type": 0,
+        "userCount": 7230
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 533,
+      "points": 847.67,
+      "previousPoints": 852.13,
+      "previousRanking": 201,
+      "ranking": 201,
+      "rankingClass": "team",
+      "rowName": "Pakistan",
+      "team": {
+        "country": {
+          "alpha2": "PK",
+          "name": "Pakistan"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 6081,
+        "name": "Pakistan",
+        "nameCode": "PAK",
+        "national": true,
+        "ranking": 201,
+        "shortName": "Pakistan",
+        "slug": "pakistan",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#007f4b",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 3821
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 414,
+      "points": 839.39,
+      "previousPoints": 839.39,
+      "previousRanking": 205,
+      "ranking": 202,
+      "rankingClass": "team",
+      "rowName": "Turks and Caicos Islands",
+      "team": {
+        "country": {
+          "alpha2": "TC",
+          "name": "Turks and Caicos Islands"
+        },
+        "gender": "M",
+        "id": 21823,
+        "name": "Turks and Caicos Islands",
+        "nameCode": "TCA",
+        "national": true,
+        "ranking": 202,
+        "shortName": "Turks and Caicos Islands",
+        "slug": "turks-and-caicos-islands",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#0000ff",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 721
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 413,
+      "points": 838.33,
+      "previousPoints": 838.33,
+      "previousRanking": 206,
+      "ranking": 203,
+      "rankingClass": "team",
+      "rowName": "Guam",
+      "team": {
+        "country": {
+          "alpha2": "GU",
+          "name": "Guam"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 23493,
+        "name": "Guam",
+        "nameCode": "GUM",
+        "national": true,
+        "ranking": 203,
+        "shortName": "Guam",
+        "slug": "guam",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#000049",
+          "secondary": "#800000",
+          "text": "#800000"
+        },
+        "type": 0,
+        "userCount": 541
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 415,
+      "points": 825.25,
+      "previousPoints": 825.25,
+      "previousRanking": 207,
+      "ranking": 204,
+      "rankingClass": "team",
+      "rowName": "Sri Lanka",
+      "team": {
+        "country": {
+          "alpha2": "LK",
+          "name": "Sri Lanka"
+        },
+        "gender": "M",
+        "id": 23487,
+        "name": "Sri Lanka",
+        "nameCode": "SRI",
+        "national": true,
+        "ranking": 204,
+        "shortName": "Sri Lanka",
+        "slug": "sri-lanka",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ffc90e",
+          "secondary": "#880015",
+          "text": "#880015"
+        },
+        "type": 0,
+        "userCount": 1100
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 416,
+      "points": 816.59,
+      "previousPoints": 816.59,
+      "previousRanking": 208,
+      "ranking": 205,
+      "rankingClass": "team",
+      "rowName": "US Virgin Islands",
+      "team": {
+        "country": {
+          "alpha2": "VI",
+          "name": "US Virgin Islands"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 21803,
+        "name": "US Virgin Islands",
+        "nameCode": "VIR",
+        "national": true,
+        "ranking": 205,
+        "shortName": "US Virgin Islands",
+        "slug": "us-virgin-islands",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#0000ff",
+          "secondary": "#fff200",
+          "text": "#fff200"
+        },
+        "type": 0,
+        "userCount": 725
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 417,
+      "points": 804.11,
+      "previousPoints": 804.11,
+      "previousRanking": 209,
+      "ranking": 206,
+      "rankingClass": "team",
+      "rowName": "British Virgin Islands",
+      "team": {
+        "country": {
+          "alpha2": "VG",
+          "name": "British Virgin Islands"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 21810,
+        "name": "British Virgin Islands",
+        "nameCode": "IVB",
+        "national": true,
+        "ranking": 206,
+        "shortName": "British Virgin Islands",
+        "slug": "british-virgin-islands",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#064600",
+          "secondary": "#fef300",
+          "text": "#fef300"
+        },
+        "type": 0,
+        "userCount": 633
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 418,
+      "points": 785.69,
+      "previousPoints": 785.69,
+      "previousRanking": 210,
+      "ranking": 207,
+      "rankingClass": "team",
+      "rowName": "Anguilla",
+      "team": {
+        "country": {
+          "alpha2": "AI",
+          "name": "Anguilla"
+        },
+        "gender": "M",
+        "id": 21804,
+        "name": "Anguilla",
+        "nameCode": "AIA",
+        "national": true,
+        "ranking": 207,
+        "shortName": "Anguilla",
+        "slug": "anguilla",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#ff6600",
+          "secondary": "#262cf9",
+          "text": "#262cf9"
+        },
+        "type": 0,
+        "userCount": 812
+      },
+      "type": 2
+    },
+    {
+      "country": {},
+      "id": 432,
+      "points": 753.11,
+      "previousPoints": 753.11,
+      "previousRanking": 211,
+      "ranking": 208,
+      "rankingClass": "team",
+      "rowName": "San Marino",
+      "team": {
+        "country": {
+          "alpha2": "SM",
+          "name": "San Marino"
+        },
+        "disabled": false,
+        "gender": "M",
+        "id": 4833,
+        "name": "San Marino",
+        "nameCode": "SMR",
+        "national": true,
+        "ranking": 208,
+        "shortName": "San Marino",
+        "slug": "san-marino",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        },
+        "teamColors": {
+          "primary": "#0387cc",
+          "secondary": "#ffffff",
+          "text": "#ffffff"
+        },
+        "type": 0,
+        "userCount": 11382
+      },
+      "type": 2
+    }
+  ],
+  "updatedAtTimestamp": 1694185205
+}

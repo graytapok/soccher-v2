@@ -1,0 +1,235 @@
+{
+  "event": {
+    "awayScore": {
+      "current": 1,
+      "display": 1,
+      "normaltime": 1,
+      "period1": 1,
+      "period2": 0
+    },
+    "awayTeam": {
+      "country": {
+        "alpha2": "IT",
+        "name": "Italy"
+      },
+      "disabled": false,
+      "foundationDate": {},
+      "foundationDateTimestamp": -2265753600,
+      "fullName": "Italy",
+      "gender": "M",
+      "id": 4707,
+      "manager": {
+        "country": {
+          "alpha2": "IT",
+          "name": "Italy"
+        },
+        "id": 786459,
+        "name": "Luciano Spalletti",
+        "shortName": "L. Spalletti",
+        "slug": "luciano-spalletti"
+      },
+      "name": "Italy",
+      "nameCode": "ITA",
+      "national": true,
+      "ranking": 9,
+      "shortName": "Italy",
+      "slug": "italy",
+      "sport": {
+        "id": 1,
+        "name": "Football",
+        "slug": "football"
+      },
+      "subTeams": [],
+      "teamColors": {
+        "primary": "#0066ff",
+        "secondary": "#ffffff",
+        "text": "#ffffff"
+      },
+      "type": 0,
+      "userCount": 298504
+    },
+    "changes": {
+      "changeTimestamp": 1697575225,
+      "changes": [
+        "status.code",
+        "status.description",
+        "status.type"
+      ]
+    },
+    "crowdsourcingDataDisplayEnabled": false,
+    "crowdsourcingEnabled": false,
+    "currentPeriodStartTimestamp": 1697572314,
+    "customId": "hUbsnUb",
+    "defaultPeriodCount": 2,
+    "defaultPeriodLength": 45,
+    "detailId": 1,
+    "endTimestamp": 1697572314,
+    "fanRatingEvent": false,
+    "finalResultOnly": false,
+    "hasEventPlayerHeatMap": true,
+    "hasEventPlayerStatistics": true,
+    "hasGlobalHighlights": true,
+    "homeScore": {
+      "current": 3,
+      "display": 3,
+      "normaltime": 3,
+      "period1": 1,
+      "period2": 2
+    },
+    "homeTeam": {
+      "country": {
+        "alpha2": "EN",
+        "name": "England"
+      },
+      "disabled": false,
+      "foundationDate": {},
+      "foundationDateTimestamp": -3350851200,
+      "fullName": "England",
+      "gender": "M",
+      "id": 4713,
+      "manager": {
+        "country": {
+          "alpha2": "EN",
+          "name": "England"
+        },
+        "id": 808,
+        "name": "Gareth Southgate",
+        "shortName": "G. Southgate",
+        "slug": "gareth-southgate"
+      },
+      "name": "England",
+      "nameCode": "ENG",
+      "national": true,
+      "ranking": 4,
+      "shortName": "England",
+      "slug": "england",
+      "sport": {
+        "id": 1,
+        "name": "Football",
+        "slug": "football"
+      },
+      "subTeams": [],
+      "teamColors": {
+        "primary": "#ffffff",
+        "secondary": "#cc0000",
+        "text": "#cc0000"
+      },
+      "type": 0,
+      "userCount": 353445,
+      "venue": {
+        "city": {
+          "name": "London"
+        },
+        "country": {
+          "alpha2": "EN",
+          "name": "England"
+        },
+        "id": 8,
+        "stadium": {
+          "capacity": 90000,
+          "name": "Wembley Stadium"
+        }
+      }
+    },
+    "id": 10752547,
+    "referee": {
+      "country": {
+        "alpha2": "FR",
+        "name": "France"
+      },
+      "games": 369,
+      "id": 52599,
+      "name": "Clement Turpin",
+      "redCards": 74,
+      "slug": "clement-turpin",
+      "sport": {
+        "id": 1,
+        "name": "Football",
+        "slug": "football"
+      },
+      "yellowCards": 1291,
+      "yellowRedCards": 29
+    },
+    "roundInfo": {
+      "round": 8
+    },
+    "season": {
+      "editor": false,
+      "id": 46599,
+      "name": "European Championship 2024, Qualification",
+      "seasonCoverageInfo": {},
+      "year": "2024"
+    },
+    "seasonStatisticsType": "overall",
+    "showTotoPromo": false,
+    "slug": "england-italy",
+    "startTimestamp": 1697568300,
+    "status": {
+      "code": 100,
+      "description": "Ended",
+      "type": "finished"
+    },
+    "time": {
+      "currentPeriodStartTimestamp": 1697572314,
+      "injuryTime1": 3,
+      "injuryTime2": 3
+    },
+    "tournament": {
+      "category": {
+        "flag": "europe",
+        "id": 1465,
+        "name": "Europe",
+        "slug": "europe",
+        "sport": {
+          "id": 1,
+          "name": "Football",
+          "slug": "football"
+        }
+      },
+      "competitionType": 1,
+      "id": 4510,
+      "name": "European Championship, Qualification Group C",
+      "priority": 525,
+      "slug": "european-championship-qualification-group-c",
+      "uniqueTournament": {
+        "category": {
+          "flag": "europe",
+          "id": 1465,
+          "name": "Europe",
+          "slug": "europe",
+          "sport": {
+            "id": 1,
+            "name": "Football",
+            "slug": "football"
+          }
+        },
+        "country": {},
+        "crowdsourcingEnabled": false,
+        "displayInverseHomeAwayTeams": false,
+        "hasEventPlayerStatistics": true,
+        "hasPerformanceGraphFeature": false,
+        "id": 27,
+        "name": "European Championship, Qualification",
+        "primaryColorHex": "#182026",
+        "secondaryColorHex": "#730000",
+        "slug": "european-championship-qualification",
+        "userCount": 217966
+      }
+    },
+    "venue": {
+      "city": {
+        "name": "London"
+      },
+      "country": {
+        "alpha2": "EN",
+        "name": "England"
+      },
+      "id": 8,
+      "stadium": {
+        "capacity": 90000,
+        "name": "Wembley Stadium"
+      }
+    },
+    "winnerCode": 1
+  }
+}

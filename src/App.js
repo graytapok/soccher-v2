@@ -1,24 +1,33 @@
-import { useState, useEffect } from "react";
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useEffect, useState } from "react";
+import Navbar from "./components/Navbar";
+import "./components/styles/index.css";
 
 function App() {
-  const [currentTime, setCurrentTime] = useState(0);
+  const [isUserAuthenticated, setIsUserAuthenticated] = useState(false);
 
   useEffect(() => {
-    fetch('/index').then(res => res.json()).then(data => {
-      setCurrentTime(data.time);
-    });
+    fetch("/index")
+      .then((res) => res.json())
+      .then((data) => {
+        setIsUserAuthenticated(data.auth);
+        console.log(data);
+      });
   }, []);
 
+  /* const redirectTo = (link) => {
+    window.location.replace(`/${link}`);
+  }; */
+
+  console.log(isUserAuthenticated);
+
   return (
-    <div className="App">
-      <header className="App-header">
-
-        ... no changes in this part ...
-
-        <p>The current time is {currentTime}.</p>
-      </header>
-    </div>
+    <Router>
+      <Navbar auth={isUserAuthenticated} />
+      <Routes>
+        <Route exact path="/" />
+      </Routes>
+    </Router>
   );
 }
 
