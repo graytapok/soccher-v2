@@ -21,6 +21,7 @@
     padding: 20px;
     margin-bottom: 0px;
     justify-content: center;
+    gap: 20px;
 }
 
 .navbar .nav_links {
@@ -61,18 +62,14 @@
     background-color: rgb(var(--primary));
 }
 
-.navbar .nav_links a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-.current-link {
-    color: #baada7;
-}
-
 .navbar .nav_links a:hover {
     color: white;
     text-shadow: 0 0 20px #fff;
+}
+
+.navbar .nav_links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
 }
 
 .navbar .nav_btns {
@@ -80,85 +77,15 @@
     flex-direction: row;
     align-items: center;
     list-style-type: none;
+    margin-right: 13px;
     gap: 13px;
+    margin-left: auto;
 }
 
 .navbar .nav_btns li {
     list-style-type: none;
     font-size: 25px;
 }
-
-.navbar .right {
-    margin-left: auto;
-}
-
-.navbar .nav_btn {
-    text-decoration: none;
-    transition: all 0.4s ease 0s;
-    padding: 10px;
-    width: 0px;
-    padding-left: 15px;
-    padding-right: 15px;
-    color: rgba(255, 255, 255, 0.5);
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.navbar .nav_btn:hover {
-    background-color: var(--hover_color_1);
-    border-color: var(--hover_color_1);
-    box-shadow: 0 0 20px 5px var(--hover_color_1);
-    color: white;
-}
-
-.navbar .log {
-    position: relative;
-    border-color: rgb(var(--green_button));
-    color: rgb(var(--green_button));
-}
-
-.navbar .nav_btn.log:hover {
-    background-color: rgb(var(--green_button));
-    border-color: rgb(var(--green_button));
-    box-shadow: 0 0 20px 5px rgb(var(--green_button));
-}
-
-
-#danger {
-    margin: 0px;
-    color: rgb(var(--red_button));
-    border-color: rgb(var(--red_button));
-}
-
-.navbar #danger:hover {
-    color: white;
-    background-color: rgb(var(--red_button));
-    box-shadow: 0 0 20px 5px rgb(var(--red_button));
-}
-
-.navbar .drp {
-    padding: 10px;
-    padding-left: 18px;
-    padding-right: 18px;
-}
-
-.navbar .drp:hover {
-    background-color: var(--hover_bg_color);
-    border-color: var(--hover_bg_color);
-    box-shadow: 0 0 20px 5px var(--hover_bg_color);
-    color: white;
-}
-
-.navbar .loop {
-    padding: 10px;
-    padding-left: 14px;
-    padding-right: 14px;
-}
-
-
-
-
 
 /* Dropdown */
 .dropdown {

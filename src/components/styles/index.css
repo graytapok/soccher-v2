@@ -10,15 +10,16 @@
     --hover_color_2: #4c4c4d;
     --navbar_color: #26292B; /*#171717,#202225 */
     --heading_color: rgb(56, 56, 56);
-    --links_color: rgba(255, 255, 255, 0.7);
-    --block_color: #8f8f8f;
-    --border_light: rgba(255, 255, 255, 0.7);
+    --border: rgba(255, 255, 255, 0.7);
+    --border_2: rgba(128, 128, 128, 0.7);
     --transparent: rgba(255, 255, 255, 0);
     --primary: 95, 122, 219;
-    --secondary: 128, 128, 128;
+    --secondary: 145, 145, 145;
     --success: 78, 186, 35;
     --danger: 186, 35, 35;
     --warning: 250, 179, 0;
+    --light: 255, 255, 255;
+    --radius: 0.6rem;
 }
 
 body {
@@ -40,10 +41,6 @@ body {
 
 a {
     text-decoration: none;
-}
-
-i {
-    font-size: 25px;
 }
 
 [class^="icon-"], [class*=" icon-"] {

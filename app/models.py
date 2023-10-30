@@ -12,17 +12,10 @@ class User(UserMixin, db.Model):
     email = db.Column(db.String(121), index=True, unique=True)
     password_hash = db.Column(db.String(128))
     about_me = db.Column(db.String(141))
-    last_seen = db.Column(db.DateTime, default=datetime.utcnow)
     fav_matches = db.relationship("FollowedMatch", backref="user", lazy="dynamic")
 
     def __repr__(self):
         return '<User {}>'.format(self.username)
-
-    def set_password(self, password):
-        self.password_hash = generate_password_hash(password)
-
-    def check_password(self, password):
-        return check_password_hash(self.password_hash, password)
 
     def check_correct_input(self):
         pass

@@ -1,35 +1,54 @@
-from flask import Flask, render_template, flash, redirect, url_for, request
 from flask_login import login_user, logout_user, login_required, current_user
+from flask import Flask, render_template, flash, redirect, url_for, request
 
-from app import app, db, login
 from app.forms.register_form import RegistrationForm
+from app.sending import send_registration_email
 from app.forms.login_form import LoginForm
 from app.models import User, FollowedMatch
-from app.sending import send_registration_email
+from app import app, db, login
 
+from email_validator import validate_email, EmailNotValidError
 from datetime import *
-import os
 import json
+import os
+
+@app.route("/auth", methods=["GET"])
+def auth():
+    return {"auth": current_user.is_authenticated}
 
 @app.route("/login", methods=["GET", "POST"])
-@app.route("/login/<incorrect>", methods=["GET", "POST"])
-def login(incorrect=None):
+def login():
+    correct_input = False
     if current_user.is_authenticated:
-        return redirect(url_for('index'))
-    form = LoginForm()
-    if form.validate_on_submit():
-        user = User.query.filter_by(username=form.username.data).first()
-        if user is None or not user.check_password(form.password.data):
-            return redirect(url_for("login", incorrect="incorrect"))
-        login_user(user, remember=form.remember_me.data)
-        return redirect(url_for("index"))
-    return {} # render_template('auth/login.html', title='Log In', form=form, user=current_user, incorrect=incorrect)
+        print("user auth")
+        return {"auth": True}
+    if request.method == "POST":
+        username_email = request.json['username_email']
+        password = request.json['password']
+        remember_me = request.json['remember_me']
 
-@app.route('/logout')
+        print([username_email, password, remember_me])
+
+        try:
+            v = validate_email(username_email)
+            email = v["email"]
+            user = User.query.filter_by(email=username_email).first()
+        except EmailNotValidError:
+            user = User.query.filter_by(username=username_email).first()
+
+        if user is None or user.password_hash == password:
+            correct_input = False
+        else:
+            login_user(user, remember=remember_me)
+            correct_input = True
+    return {"correct_input": correct_input} # render_template('auth/login.html', title='Log In', form=form, user=current_user, incorrect=incorrect)
+
+@app.route('/logout', methods=["GET"])
 @login_required
 def logout():
     logout_user()
-    return {} # redirect(url_for('index'))
+    print("user loggout")
+    return {"logged_out": True} # redirect(url_for('index'))
 
 @app.route("/register", methods=["GET", "POST"])
 def register():
