@@ -1,4 +1,4 @@
-/* Navbar CSS */
+/* Navbar  */
 
 .navbar {
     padding: 0px;
@@ -11,6 +11,7 @@
     background-color: var(--navbar_color) ;
     vertical-align: middle;
     height: 87px;
+    z-index: 999;
 }
 
 .navbar .logo {
@@ -26,29 +27,32 @@
 
 .navbar .nav_links {
     display: flex;
+    flex-direction: row;
+    align-items: center;
     padding-left: 0px;
+    list-style-type: none;
+    padding-left: 10px;
+    user-select: none;
 }
 
 .navbar .nav_links li {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    font-size: 25px;
+    margin-top: 3px;
+    vertical-align: middle;
     padding-right: 20px;
-    padding-left: 20px;
 }
 
-.navbar .nav_links a {
-    vertical-align: middle;
+.navbar .nav_links span {
     position: relative;
-    transition: all 0.3s ease 0s;
+    display: inline-block;
+    vertical-align: middle;
     text-decoration: none;
-    transition: 0.5s;
+    font-size: 25px;
+    transition: all 0.3s ease 0s;
     color: rgba(255, 255, 255, 0.5);
     cursor: pointer;
 }
 
-.navbar .nav_links a::after {
+.navbar .nav_links span::after {
     position: absolute;
     content: "";
     width: 100%;
@@ -62,14 +66,14 @@
     background-color: rgb(var(--primary));
 }
 
-.navbar .nav_links a:hover {
-    color: white;
-    text-shadow: 0 0 20px #fff;
-}
-
-.navbar .nav_links a:hover::after {
+.navbar .nav_links span:hover::after {
     transform: scaleX(1);
     transform-origin: left;
+}
+
+.navbar .nav_links span:hover {
+    color: white;
+    text-shadow: 0 0 20px #fff;
 }
 
 .navbar .nav_btns {
@@ -80,6 +84,7 @@
     margin-right: 13px;
     gap: 13px;
     margin-left: auto;
+    z-index: 999;
 }
 
 .navbar .nav_btns li {
@@ -87,59 +92,72 @@
     font-size: 25px;
 }
 
+
 /* Dropdown */
 .dropdown {
     position: relative;
     display: block;
+    right: 110px;
     user-select: none;
+    z-index: 0;
 }
 
 .dropdown .menu {
     position: absolute;
-    display: none;
-    width: 242px;
-    padding: 10px;
-    margin-top: 70px;
+    display: block;
+    width: 210px;
+    padding: 13px;
+    padding-top: 0;
+    margin-top: 79px;
     margin-right: 110px;
     left: -201px;
-    background-color: #2d2d2e;
+    background-color: var(--navbar_color);
     border: 2px solid var(--border_light);
-    border-radius: 10px;
+    border-radius: 0 0 var(--radius) var(--radius);
     color: white;
     transition: all 0.3s;
 }
 
 .dropdown .menu li {
+    display: flex;
     width: 100%;
     color: white;
     transition: all 0.3s ease 0s;
     padding-top: 0px;
-    margin: 0px;
+    margin: 10px 0 0 0;
+    border-radius: 0.3rem;
+    position: relative;
+    outline: 2px solid rgb(var(--secondary));
 }
 
-.dropdown ul li i[style] {
+.dropdown ul li i {
     position: absolute;
-    right: 20px;
-    top: 20px;
+    right: 10px;
+    top: 10px;
     z-index: 0;
+    color: rgb(var(--secondary));
 }
 
-.dropdown .menu li a {
-    color: white;
+.dropdown .menu li .label {
+    display: block;
+    padding: 6px 15px;
+    text-decoration: none;
+    color: rgb(var(--secondary));
     transition: all 0.3s ease 0s;
     border-radius: 10px;
 }
 
-.dropdown .menu li a:hover {
-    background-color: var(--hover_bg_color_2);
+.dropdown .menu li:hover {
+    background-color: rgba(var(--primary), 0.8);
+    box-shadow: 0 0 10px 1px rgba(var(--primary), 0.8);
     color: white;
+    cursor: pointer;
+    outline: transparent;
 }
 
-.dropdown > ul a {
-  display: block;
-  padding: 6px 15px;
-  text-decoration: none;
-  color: #333;
+.dropdown .menu li:hover .label, 
+.dropdown .menu li:hover i {
+    color: white;
 }
 
 #mode {

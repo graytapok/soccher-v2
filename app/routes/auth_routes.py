@@ -14,7 +14,22 @@ import os
 
 @app.route("/auth", methods=["GET"])
 def auth():
-    return {"auth": current_user.is_authenticated}
+    if current_user.is_authenticated:
+        return {
+            "auth": current_user.is_authenticated, 
+            "name": current_user.username, 
+            "id": current_user.id,
+            "email": current_user.email,
+            "followed_matches": FollowedMatch.query.filter_by(user_id=current_user.id).all()
+        }
+    else:
+        return {
+            "auth": current_user.is_authenticated, 
+            "name": "", 
+            "id": "",
+            "email": "",
+            "fav_matches": ""
+        }
 
 @app.route("/login", methods=["GET", "POST"])
 def login():

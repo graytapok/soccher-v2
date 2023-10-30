@@ -1,10 +1,9 @@
-import React, { forceUpdate } from "react";
+import React, { useContext, useState } from "react";
 import Button from "./Button";
 import "./styles/Navbar.css";
-import { AuthData } from "../navigation/AuthWrapper";
 import useAuth from "../hooks/useAuth";
-import { Route } from "react-router-dom";
-import { nav } from "../navigation/navigation";
+import { Context } from "../App";
+import { redirect } from "react-router-dom";
 
 const Logo = () => {
   return (
@@ -15,31 +14,26 @@ const Logo = () => {
   );
 };
 
-const Links = ({ auth }) => {
-  /* const { user } = AuthData();  */
+const Links = () => {
+  const { user } = useContext(Context);
   return (
     <ul className="nav_links">
       <li>
-        <a href="/">Home</a>
+        <span onClick={() => (window.location.href = "/")}>Home</span>
       </li>
-      {auth === true ? (
+      {user.auth === true ? (
         <li>
-          <a href="/my_profile">My Profile</a>
+          <span onClick={() => (window.location.href = "/my_profile")}>
+            My Profile
+          </span>
         </li>
       ) : null}
     </ul>
   );
 };
 
-const Buttons = ({ auth }) => {
-  // const { user, logout } = AuthData();
-  const logout = () => {
-    fetch(`/logout`, { method: "GET" })
-      .then((response) => response.json())
-      .then((res) =>
-        res.logged_out ? (window.location.href = "/") : console.log("Error")
-      );
-  };
+const Buttons = ({ showDropdown, toggleDropdown }) => {
+  const { user, logout } = useContext(Context);
   return (
     <ul className="nav_btns">
       <li>
@@ -48,11 +42,22 @@ const Buttons = ({ auth }) => {
         </Button>
       </li>
       <li>
-        <Button size="nav_icon" variant="secondary" outline>
-          <i id="drp_icon" className="fa-solid fa-bars" />
+        <Button
+          onClick={() => {
+            toggleDropdown();
+          }}
+          size="nav_icon"
+          variant="secondary"
+          outline
+        >
+          {showDropdown ? (
+            <i className="fa-regular fa-circle-xmark"></i>
+          ) : (
+            <i className="fa-solid fa-bars" />
+          )}
         </Button>
       </li>
-      {auth === true ? (
+      {user.auth === true ? (
         <li>
           <Button size="icon" variant="danger" onClick={logout} outline>
             <i className="fa-solid fa-right-from-bracket"></i>
@@ -72,15 +77,49 @@ const Buttons = ({ auth }) => {
   );
 };
 
-const Dropdown = () => {};
+const DropdownMenu = ({ showDropdown }) => {
+  const { darkMode, toggleDarkMode } = useContext(Context);
+  const style = {
+    display: showDropdown ? "block" : "none",
+  };
+  return (
+    <div style={style} className="dropdown">
+      <ul className="menu">
+        <li>
+          <a className="label" href="/settings">
+            Settings
+          </a>
+          <i className="fa-solid fa-sliders" />
+        </li>
+        <li
+          onClick={() => {
+            toggleDarkMode();
+          }}
+        >
+          <span className="label">{darkMode ? "Dark Mode" : "Light Mode"}</span>
+          <i
+            style={darkMode ? { transform: "scaleX(-1)" } : null}
+            id="darkmode_icon"
+            className="fa-solid fa-circle-half-stroke"
+          />
+        </li>
+      </ul>
+    </div>
+  );
+};
 
 function Navbar() {
-  const auth = useAuth();
+  const [showDropdown, setShowDropdown] = useState(false);
+
+  const toggleDropdown = () => {
+    setShowDropdown((prevShowDropdown) => !prevShowDropdown);
+  };
   return (
     <header className="navbar">
       <Logo />
-      <Links auth={auth} />
-      <Buttons auth={auth} />
+      <Links />
+      <Buttons showDropdown={showDropdown} toggleDropdown={toggleDropdown} />
+      <DropdownMenu showDropdown={showDropdown} />
     </header>
   );
 }

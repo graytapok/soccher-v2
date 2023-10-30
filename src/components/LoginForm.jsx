@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Button from "./Button";
 import bcrypt from "bcryptjs";
-/* import { AuthData } from "../navigation/AuthWrapper"; */
+import { Context } from "../App";
 import "./styles/LoginForm.css";
 
-function LoginForm({ correct = false }) {
-  /* const { login } = AuthData(); */
+function LoginForm() {
+  const { login } = useContext(Context);
 
   const [loginFormData, setLoginFormData] = useState({
     username_email: "",
@@ -13,7 +13,7 @@ function LoginForm({ correct = false }) {
     remember_me: false,
   });
 
-  const [correctInput, setCorrectInput] = useState(false);
+  const [inCorrectInput, setInCorrectInput] = useState(true);
 
   const changeData = (event) => {
     const { id, value, type, checked } = event.target;
@@ -23,7 +23,7 @@ function LoginForm({ correct = false }) {
     }));
   };
 
-  const loginUser = async (event) => {
+  const loginUser = (event) => {
     event.preventDefault();
     setLoginFormData((p) => ({
       ...p,
@@ -38,8 +38,11 @@ function LoginForm({ correct = false }) {
     })
       .then((response) => response.json())
       .then((data) =>
-        data.correct_input ? (window.location.href = "/") : console.log("sad")
+        data.correct_input || data.auth
+          ? (window.location.href = "/")
+          : setInCorrectInput(true)
       );
+    login();
   };
 
   return (
@@ -51,7 +54,7 @@ function LoginForm({ correct = false }) {
             id="username_email"
             onChange={changeData}
             placeholder="Username or E-Mail"
-            className={"input_box " + correct}
+            className={"input_box " + inCorrectInput}
             type="text"
           />
           <i style={{ color: "#fff" }} className="fa-solid fa-user"></i>
@@ -61,7 +64,7 @@ function LoginForm({ correct = false }) {
             id="password"
             onChange={changeData}
             placeholder="Password"
-            className={"input_box " + correct}
+            className={"input_box " + inCorrectInput}
             type="password"
           />
           <i style={{ color: "#fff" }} className="fa-solid fa-lock"></i>
@@ -71,8 +74,8 @@ function LoginForm({ correct = false }) {
             <input onClick={changeData} id="remember_me" type="checkbox" />
             <label htmlFor="remember_me">Remember Me</label>
           </div>
-          {correct ? null : (
-            <p className="message">Username or passwort is not corretct!</p>
+          {inCorrectInput ? null : (
+            <p className="message">Username or passwort is not correct!</p>
           )}
         </div>
         <Button
