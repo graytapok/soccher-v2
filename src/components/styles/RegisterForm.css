@@ -1,0 +1,122 @@
+/* register form */
+
+.register_wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--navbar_color);
+    padding: 50px;
+    width: 500px;
+    min-width: 350px;
+    max-width: 50%;
+    border: 2px solid var(--border_light);
+    border-radius: 30px;
+}
+
+.register_wrapper .title {
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    margin: 0px;
+    margin-bottom: 20px;
+    padding: 0px;
+}
+
+.register_wrapper .register_form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.register_wrapper .register_form div {
+    position: relative;
+    margin-top: 20px;
+}
+
+.register_wrapper .register_form div span  {
+    color: rgba(var(--danger), .7);
+    font-size: 15px;
+    margin-bottom: -10px;
+}
+
+.register_wrapper .input_box {
+    position: relative;
+    padding: 0 20% 0 4%;
+    width: 75.5%;
+    height: 50px;
+    font-size: 16px;
+    background: transparent;
+    outline: none;
+    color: white;
+    transition: all 0.3s ease 0s;
+    border: 2px solid rgba(255, 255, 255,  .3);
+    border-radius: 10px;
+}
+
+.register_wrapper .false {
+    border-color: rgba(var(--danger), .7);
+}
+
+.register_wrapper .input_box:focus, .input_box:hover {
+    border-color: white;
+    color: white;
+}
+
+.register_wrapper .input_box::placeholder {
+    color: rgba(255, 255, 255,  .3);
+}
+
+.register_wrapper i {
+    position: absolute;
+    top: 19px;
+    right: 18px;
+    z-index: -1;
+}
+
+#email_icon {
+    right: 17px;
+}
+
+#confirm_icon {
+    right: 13px;
+}
+
+.register_wrapper .submit_btn {
+    margin-top: 20px;
+}
+
+.register_wrapper .register {
+    color: white;
+    margin-top: 20px;
+    justify-content: flex-end;
+}
+
+.register_wrapper .ques {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding: 0px;
+    font-size: 17px;
+    color: #fff;
+}
+
+.register_wrapper .login {
+    position: relative;
+    top: -3px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    padding: 3px;
+    padding-left: 7px;
+    padding-right: 7px;
+    transition: all 0.3s ease 0s;
+    color: rgba(255, 255, 255,  .5);
+    font-size: 17px;
+}
+
+.register_wrapper .login:hover {
+    color: white; 
+    cursor: pointer;
+}
+

@@ -30,7 +30,7 @@ const ButtonComponent = styled.button`
       ? "padding: 0 2.3rem; height: 43px; font-size: 22px"
       : props.size === "xxl"
       ? "padding: 0 2.6rem; height: 46px; font-size: 24px"
-      : console.log("Button: variant")};
+      : console.log("Button: size")};
   background-color: rgba(var(--${(props) => props.variant}), 1);
   border: 2px solid rgba(
       ${(props) =>

@@ -1,11 +1,12 @@
 import React, { useState, useContext } from "react";
 import Button from "./Button";
-import bcrypt from "bcryptjs";
 import { Context } from "../App";
 import "./styles/LoginForm.css";
+import { useNavigate } from "react-router-dom";
 
 function LoginForm() {
   const { login } = useContext(Context);
+  const navigate = useNavigate();
 
   const [loginFormData, setLoginFormData] = useState({
     username_email: "",
@@ -13,22 +14,18 @@ function LoginForm() {
     remember_me: false,
   });
 
-  const [inCorrectInput, setInCorrectInput] = useState(true);
+  const [correctInput, setCorrectInput] = useState(true);
 
   const changeData = (event) => {
     const { id, value, type, checked } = event.target;
-    setLoginFormData(() => ({
-      ...loginFormData,
+    setLoginFormData((prevData) => ({
+      ...prevData,
       [id]: type === "checkbox" ? checked : value,
     }));
   };
 
   const loginUser = (event) => {
     event.preventDefault();
-    setLoginFormData((p) => ({
-      ...p,
-      password: bcrypt.hashSync(p.password, "$2a$10$CwTycUXWue0Thq9StjUM0u"),
-    }));
     fetch(`/login`, {
       method: "POST",
       headers: {
@@ -37,14 +34,15 @@ function LoginForm() {
       body: JSON.stringify(loginFormData),
     })
       .then((response) => response.json())
-      .then((data) =>
-        data.correct_input || data.auth
-          ? (window.location.href = "/")
-          : setInCorrectInput(true)
-      );
-    login();
+      .then((data) => {
+        if (data.correct_input && login()) {
+          setCorrectInput(true);
+          navigate("/");
+        } else {
+          setCorrectInput(false);
+        }
+      });
   };
-
   return (
     <div className="login_wrapper">
       <h1 className="title">Login</h1>
@@ -54,7 +52,7 @@ function LoginForm() {
             id="username_email"
             onChange={changeData}
             placeholder="Username or E-Mail"
-            className={"input_box " + inCorrectInput}
+            className={"input_box " + correctInput}
             type="text"
           />
           <i style={{ color: "#fff" }} className="fa-solid fa-user"></i>
@@ -64,7 +62,7 @@ function LoginForm() {
             id="password"
             onChange={changeData}
             placeholder="Password"
-            className={"input_box " + inCorrectInput}
+            className={"input_box " + correctInput}
             type="password"
           />
           <i style={{ color: "#fff" }} className="fa-solid fa-lock"></i>
@@ -74,8 +72,8 @@ function LoginForm() {
             <input onClick={changeData} id="remember_me" type="checkbox" />
             <label htmlFor="remember_me">Remember Me</label>
           </div>
-          {inCorrectInput ? null : (
-            <p className="message">Username or passwort is not correct!</p>
+          {!correctInput && (
+            <p className="message">Invalid username/e-mail or passwort!</p>
           )}
         </div>
         <Button
@@ -89,9 +87,9 @@ function LoginForm() {
       </form>
       <p className="register">
         Don't have an account?
-        <a className="signup" href="/register">
+        <span className="signup" onClick={() => navigate("/signup")}>
           Sign Up
-        </a>
+        </span>
       </p>
     </div>
   );

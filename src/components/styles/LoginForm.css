@@ -81,6 +81,7 @@
     user-select: none;
 }
 
+.login_wrapper .signup,
 .login_wrapper .remember_message .remember_me,
 .login_wrapper .remember_message .remember_me > input,
 .login_wrapper .remember_message .remember_me > label {

@@ -97,9 +97,11 @@
 .dropdown {
     position: relative;
     display: block;
-    right: 110px;
+    right: 112px;
     user-select: none;
-    z-index: 0;
+    transition-property: margin-top;
+    transition: all .5s;
+    z-index: -1;
 }
 
 .dropdown .menu {
@@ -107,6 +109,7 @@
     display: block;
     width: 210px;
     padding: 13px;
+    padding-right: 15px;
     padding-top: 0;
     margin-top: 79px;
     margin-right: 110px;
@@ -119,15 +122,15 @@
 }
 
 .dropdown .menu li {
+    position: relative;
     display: flex;
-    width: 100%;
-    color: white;
     transition: all 0.3s ease 0s;
+    width: 100%;
     padding-top: 0px;
     margin: 10px 0 0 0;
+    color: white;
     border-radius: 0.3rem;
-    position: relative;
-    outline: 2px solid rgb(var(--secondary));
+    border: 2px solid rgb(var(--secondary));
 }
 
 .dropdown ul li i {
@@ -144,15 +147,15 @@
     text-decoration: none;
     color: rgb(var(--secondary));
     transition: all 0.3s ease 0s;
-    border-radius: 10px;
+    border-radius: 0.6rem;
 }
 
 .dropdown .menu li:hover {
-    background-color: rgba(var(--primary), 0.8);
-    box-shadow: 0 0 10px 1px rgba(var(--primary), 0.8);
+    background-color: rgb(var(--primary));
+    box-shadow: 0 0 10px 1px rgb(var(--primary));
+    border-color: rgb(var(--primary));
     color: white;
     cursor: pointer;
-    outline: transparent;
 }
 
 .dropdown .menu li:hover .label, 
@@ -160,81 +163,33 @@
     color: white;
 }
 
-#mode {
-    position: absolute;
-    right: 20px;
-    top: 73px;
-}
-
 
 /* Logout */
-.logout_container {
+.logout {
     position: absolute;
-    display: none;
-    left: 50%;
-    top: 50%;
+    right: 0px;
+    top: 80px;
+    transition-property: margin-top;
+    transition: all .5s;
+    z-index: -1;
+}
+
+.logout_menu {
+    display: grid;
+    padding: 13px;
     background-color: var(--navbar_color);
-    transform: translate(-50%, -50%);
+    border-radius: 0 0 0 var(--radius);
     color: white;
-    width: 500px;
-    height: 300px;
-    border-radius: 40px;
-    z-index: 10;
-    text-align: center;
-    flex-direction: column;
+    transition: all 0.3s;
+    margin: 0px;
+    gap: 10px;
 }
 
-.logout_container .title {
-    text-align: center;
-    color: white;
-    font-size: 40px;
-    margin: 40px 0 10px 0;
-    padding: 0px;
+.logout_menu span {
+    grid-column: 1 / span 2;
 }
 
-.logout_container .ques {
-    font-size: 20px;
-    margin-top: 20px;
-    margin-bottom: 0;
-}
 
-.logout_container .awnser {
-    display: flex;
-    justify-content: center;
-    margin: auto 0 auto 0;
-}
-
-.logout_container .button {
-    text-decoration: none;
-    font-size: 20px;
-    transition: all 0.4s ease 0s;
-    margin-left: 20px;
-    margin-right: 20px;
-    width: 120px;
-    height: 50px;
-    color: rgb(var(--red_button));
-    border: 2px solid rgb(var(--red_button));
-    border-radius: 10px;
-    cursor: pointer;
-    background-color: var(--navbar-color)
-}
-
-.logout_container .button:hover {
-    background-color: rgb(var(--red_button));
-    box-shadow: 0 0 20px rgb(var(--red_button));
-    color: white;
-}
-
-#yes {
-    border-color: rgb(var(--green_button));
-    color: rgb(var(--green_button));
-    display: flex;
-    flex-direction: column;
-    font-weight: 20px;
-    justify-content: center;
-}
-#yes:hover {
-    background-color: rgb(var(--green_button));
-    box-shadow: 0 0 20px rgb(var(--green_button));
-    color: white;
+.logout_menu .logout_button {
+    width: 100%;
 }

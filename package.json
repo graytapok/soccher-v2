@@ -10,6 +10,7 @@
     "bcryptjs": "^2.4.3",
     "crypto-browserify": "^3.12.0",
     "react": "^18.2.0",
+    "react-cookies": "^0.1.1",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.17.0",
     "react-scripts": "^5.0.1",
@@ -18,8 +19,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "start-api": "cd app && python -m flask run --no-debugger",
+    "front": "react-scripts start",
+    "api": "python -m flask run --debug",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

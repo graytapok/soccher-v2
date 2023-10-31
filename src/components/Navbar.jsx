@@ -1,9 +1,8 @@
 import React, { useContext, useState } from "react";
 import Button from "./Button";
 import "./styles/Navbar.css";
-import useAuth from "../hooks/useAuth";
 import { Context } from "../App";
-import { redirect } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Logo = () => {
   return (
@@ -16,24 +15,33 @@ const Logo = () => {
 
 const Links = () => {
   const { user } = useContext(Context);
+  const navigate = useNavigate();
   return (
     <ul className="nav_links">
       <li>
-        <span onClick={() => (window.location.href = "/")}>Home</span>
+        <span onClick={() => navigate("/")}>Home</span>
       </li>
-      {user.auth === true ? (
+      {user.auth && (
         <li>
-          <span onClick={() => (window.location.href = "/my_profile")}>
-            My Profile
-          </span>
+          <span onClick={() => navigate("/my_profile")}>My Profile</span>
         </li>
-      ) : null}
+      )}
+      <li>
+        <span onClick={() => navigate("/about")}>About</span>
+      </li>
     </ul>
   );
 };
 
-const Buttons = ({ showDropdown, toggleDropdown }) => {
-  const { user, logout } = useContext(Context);
+const Buttons = ({
+  showDropdown,
+  showLogoutMenu,
+  toggleDropdown,
+  toggleLogoutMenu,
+}) => {
+  const { user } = useContext(Context);
+  const navigate = useNavigate();
+
   return (
     <ul className="nav_btns">
       <li>
@@ -59,15 +67,24 @@ const Buttons = ({ showDropdown, toggleDropdown }) => {
       </li>
       {user.auth === true ? (
         <li>
-          <Button size="icon" variant="danger" onClick={logout} outline>
-            <i className="fa-solid fa-right-from-bracket"></i>
+          <Button
+            size="icon"
+            variant="danger"
+            onClick={toggleLogoutMenu}
+            outline
+          >
+            {showLogoutMenu ? (
+              <i className="fa-regular fa-circle-xmark"></i>
+            ) : (
+              <i className="fa-solid fa-right-from-bracket"></i>
+            )}
           </Button>
         </li>
       ) : (
         <Button
           size="icon"
           variant="success"
-          onClick={() => (window.location.href = "/login")}
+          onClick={() => navigate("/login")}
           outline
         >
           <i className="fa-solid fa-right-to-bracket"></i>
@@ -80,7 +97,7 @@ const Buttons = ({ showDropdown, toggleDropdown }) => {
 const DropdownMenu = ({ showDropdown }) => {
   const { darkMode, toggleDarkMode } = useContext(Context);
   const style = {
-    display: showDropdown ? "block" : "none",
+    marginTop: showDropdown ? "0px" : "-115px",
   };
   return (
     <div style={style} className="dropdown">
@@ -108,18 +125,86 @@ const DropdownMenu = ({ showDropdown }) => {
   );
 };
 
+const LogoutMenu = ({ showLogoutMenu, toggleLogoutMenu }) => {
+  const { logout } = useContext(Context);
+  const navigate = useNavigate();
+
+  const style = {
+    marginTop: showLogoutMenu ? "0px" : "-100px",
+  };
+
+  const logoutUser = () => {
+    fetch(`/logout`, { method: "GET" })
+      .then((response) => response.json())
+      .then((res) => (res.logged_out ? navigate("/") : console.log("Error")));
+    logout();
+    toggleLogoutMenu();
+  };
+
+  return (
+    <div style={style} className="logout">
+      <div className="logout_menu">
+        <span>Log out?</span>
+        <Button
+          onClick={toggleLogoutMenu}
+          className="logout_button"
+          size="lg"
+          variant="primary"
+          outline
+        >
+          No
+        </Button>
+        <Button
+          onClick={logoutUser}
+          className="logout_button"
+          size="lg"
+          variant="danger"
+          outline
+        >
+          Yes
+        </Button>
+      </div>
+    </div>
+  );
+};
+
 function Navbar() {
   const [showDropdown, setShowDropdown] = useState(false);
+  const [showLogoutMenu, setShowLogoutMenu] = useState(false);
 
   const toggleDropdown = () => {
-    setShowDropdown((prevShowDropdown) => !prevShowDropdown);
+    if (showLogoutMenu) {
+      setShowLogoutMenu((prevShow) => !prevShow);
+      setShowDropdown((prevShowDropdown) => !prevShowDropdown);
+    } else {
+      setShowDropdown((prevShowDropdown) => !prevShowDropdown);
+    }
   };
+
+  const toggleLogoutMenu = () => {
+    if (showDropdown) {
+      setShowDropdown((prevShow) => !prevShow);
+      setShowLogoutMenu((prevShow) => !prevShow);
+    } else {
+      setShowLogoutMenu((prevShow) => !prevShow);
+    }
+  };
+
   return (
     <header className="navbar">
       <Logo />
       <Links />
-      <Buttons showDropdown={showDropdown} toggleDropdown={toggleDropdown} />
+      <Buttons
+        showDropdown={showDropdown}
+        showLogoutMenu={showLogoutMenu}
+        toggleDropdown={toggleDropdown}
+        toggleLogoutMenu={toggleLogoutMenu}
+      />
       <DropdownMenu showDropdown={showDropdown} />
+      <LogoutMenu
+        showLogoutMenu={showLogoutMenu}
+        toggleLogoutMenu={toggleLogoutMenu}
+      />
     </header>
   );
 }

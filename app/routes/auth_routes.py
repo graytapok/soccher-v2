@@ -1,5 +1,6 @@
 from flask_login import login_user, logout_user, login_required, current_user
 from flask import Flask, render_template, flash, redirect, url_for, request
+from werkzeug.security import generate_password_hash
 
 from app.forms.register_form import RegistrationForm
 from app.sending import send_registration_email
@@ -31,18 +32,12 @@ def auth():
             "fav_matches": ""
         }
 
-@app.route("/login", methods=["GET", "POST"])
+@app.route("/login", methods=["POST"])
 def login():
-    correct_input = False
-    if current_user.is_authenticated:
-        print("user auth")
-        return {"auth": True}
     if request.method == "POST":
         username_email = request.json['username_email']
         password = request.json['password']
         remember_me = request.json['remember_me']
-
-        print([username_email, password, remember_me])
 
         try:
             v = validate_email(username_email)
@@ -51,34 +46,81 @@ def login():
         except EmailNotValidError:
             user = User.query.filter_by(username=username_email).first()
 
-        if user is None or user.password_hash == password:
-            correct_input = False
+        if user is None or not user.check_password(password):
+            print(False)
+            return {"correct_input": False}
         else:
             login_user(user, remember=remember_me)
-            correct_input = True
-    return {"correct_input": correct_input} # render_template('auth/login.html', title='Log In', form=form, user=current_user, incorrect=incorrect)
+            return {"correct_input": True} # render_template('auth/login.html', title='Log In', form=form, user=current_user, incorrect=incorrect)
 
 @app.route('/logout', methods=["GET"])
 @login_required
 def logout():
     logout_user()
-    print("user loggout")
     return {"logged_out": True} # redirect(url_for('index'))
 
-@app.route("/register", methods=["GET", "POST"])
+@app.route("/register", methods=["POST"])
 def register():
-    if current_user.is_authenticated:
-        return redirect(url_for('index'))
-    form = RegistrationForm()
-    if form.validate_on_submit():
-        user = User(username=form.username.data, email=form.email.data)
-        user.set_password(form.password.data)
-        db.session.add(user)
-        db.session.commit()
-        login_user(user)
-        send_registration_email(form.email.data)
-        return redirect(url_for('index'))
-    return {} # render_template("auth/register.html", form=form, title="Registration")
+    if request.method == "POST":
+        correctness = {
+            "correct_input": True, "data": {
+            "username": {"unique": True, "rules": True},
+            "email": {"unique": True, "rules": True},
+            "password": True,
+            "confirm_password": True}      
+        }
+
+        username = request.json["username"]
+        email = request.json["email"]
+        password = request.json["password"]
+        confirm_password = request.json["confirm_password"]
+
+        # Username: lenght >= 3, no only space
+        users = User.query.filter_by(username=username).first() 
+        print(users)
+        if len(username) < 3 or username.isspace():
+            correctness["correct_input"] = False
+            correctness["data"]["username"]["rules"] = False
+        elif User.query.filter_by(username=username).first() != None:
+            correctness["correct_input"] = False
+            correctness["data"]["username"]["unique"] = False
+
+        # Email: valid
+        if User.query.filter_by(email=email).first() != None:
+            correctness["correct_input"] = False
+            correctness["data"]["email"]["unique"] = False
+        else: 
+            try:
+                v = validate_email(email)
+                email = v["email"]
+            except EmailNotValidError:
+                correctness["correct_input"] = False
+                correctness["data"]["email"]["rules"] = False
+
+        # Password: 8-units, letters, capitals, numbers
+        if (len(password) < 8 
+                or password.isalpha() 
+                or password.isdigit() 
+                or password.islower() 
+                or password.isupper()):
+            correctness["correct_input"] = False
+            correctness["data"]["password"] = False
+
+        # Confirm Password: must be equal to password
+        if confirm_password != password:
+            correctness["correct_input"] = False
+            correctness["data"]["confirm_password"] = False
+
+        if correctness["correct_input"]:
+            user = User(username=username, email=email)
+            user.set_password(password)
+            db.session.add(user)
+            db.session.commit()
+            login_user(user, remember=True)
+            send_registration_email(email)
+
+        print(correctness)
+        return correctness
 
 @app.route("/my_profile", methods=["GET", "POST"])
 @login_required

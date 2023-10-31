@@ -41,12 +41,7 @@ def index():
         matches_json = json.loads(data)
 
     # Creating a list of User's followed matches.
-    followed_matches = []
-    if current_user.is_authenticated:
-        for i in matches:
-            fav = FollowedMatch.query.filter_by(match_id=i, user_id=current_user.id).first()
-            if fav is not None:
-                followed_matches.append(i)
+    followed_matches = FollowedMatch.query.filter_by(user_id=current_user.id)
 
     # Creating a dict of today's most important matches by "priority".
     matches = {}
