@@ -27,36 +27,81 @@ const App = () => {
     name: "",
     id: "",
     email: "",
-    followed_matches: [],
+    followed_matches: undefined,
   });
-
+  const addFollow = (id) => {
+    setUser((prevData) => ({
+      ...prevData,
+      followed_matches:
+        user.followed_matches === undefined
+          ? [Number(id)]
+          : [...prevData.followed_matches, Number(id)],
+    }));
+  };
+  const deleteFollow = (val) => {
+    setUser((prevData) => ({
+      ...prevData,
+      followed_matches:
+        [...user.followed_matches].length === 1
+          ? undefined
+          : user.followed_matches.filter((match) => match !== Number(val)),
+    }));
+  };
+  const follow_match = (id) => {
+    fetch("/follow_match", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ id: id }),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        console.log(res.state);
+        res.state === "added"
+          ? addFollow(id)
+          : res.state === "deleted"
+          ? deleteFollow(id)
+          : console.log("Auth");
+      })
+      .catch((error) => console.error(error));
+  };
   useEffect(() => {
     fetch("/auth")
       .then((res) => res.json())
       .then((data) => setUser(data));
   }, [user.auth]);
 
-  const [darkMode, setDarkMode] = useState(false);
-
   const login = () => {
     setUser({ ...user, auth: true });
     console.log("Authenticated: true");
   };
-
   const logout = () => {
     setUser({ ...user, auth: false });
     console.log("Authenticated: false");
   };
 
+  const [darkMode, setDarkMode] = useState(false);
   const toggleDarkMode = () => {
     setDarkMode((prevMode) => !prevMode);
     console.log("Dark Mode: " + darkMode);
   };
 
+  console.log(user.followed_matches);
+
   return (
     <BrowserRouter>
       <Context.Provider
-        value={{ user, login, logout, darkMode, toggleDarkMode }}
+        value={{
+          user,
+          login,
+          logout,
+          darkMode,
+          toggleDarkMode,
+          addFollow,
+          deleteFollow,
+          follow_match,
+        }}
       >
         <Navbar />
         <Routes style={{ zIndex: "-10" }}>

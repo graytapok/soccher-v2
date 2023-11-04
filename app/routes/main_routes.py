@@ -264,16 +264,3 @@ def follow_match():
         print(followed_matches, f"added: {match_id}")
 
         return {"state": "added"}
-    
-     # redirect(url_for("index"))
-
-@app.route("/get_followed_matches", methods=["GET"])
-def get_followed_matches():
-    if not current_user.is_authenticated:
-        return {"followed_matches": None}
-    else:
-        followed_matches = []
-        matches = FollowedMatch.query.filter_by(user_id=current_user.id).all()
-        for i in range(len(matches)):
-            followed_matches.append(matches[i].match_id)
-    return {"followed_matches": followed_matches} #{"followed_matches": followed_matches}

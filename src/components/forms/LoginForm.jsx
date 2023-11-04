@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
-import Button from "./Button";
-import { Context } from "../App";
+import Button from "../Button";
+import { Context } from "../../App";
 import "./styles/LoginForm.css";
 import { useNavigate } from "react-router-dom";
 

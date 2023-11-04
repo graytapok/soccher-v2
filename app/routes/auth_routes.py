@@ -16,18 +16,24 @@ import os
 @app.route("/auth", methods=["GET"])
 def auth():
     if current_user.is_authenticated:
+        followed_matches = []
+        matches = FollowedMatch.query.filter_by(user_id=current_user.id).all()
+        for i in range(len(matches)):
+            followed_matches.append(matches[i].match_id)
         return {
             "auth": current_user.is_authenticated, 
             "name": current_user.username, 
             "id": current_user.id,
-            "email": current_user.email
+            "email": current_user.email,
+            "followed_matches": followed_matches
         }
     else:
         return {
             "auth": current_user.is_authenticated, 
             "name": "", 
             "id": "",
-            "email": ""
+            "email": "",
+            "followed_matches": None
         }
 
 @app.route("/login", methods=["POST"])

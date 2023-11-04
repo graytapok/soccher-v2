@@ -28,6 +28,10 @@
     transition: all 0.3s;
 }
 
+.today .match .message {
+    padding: 10px;
+}
+
 .today .match:hover {
     border-color: var(--hover_bg_color);
     color: #fff;
