@@ -6,9 +6,7 @@ import { Context } from "../App";
 export const IndexContext = createContext();
 
 function IndexPage() {
-  const { user, setFollowedMatches } = useContext(Context);
   const [matchesData, setMatchesData] = useState({});
-  const navigate = useNavigate();
 
   useEffect(() => {
     fetch("/index")

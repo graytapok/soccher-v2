@@ -14,33 +14,29 @@ function FollowedMatches() {
 
   return (
     <div className="today">
-      <h3 className="topping">Today's most interesting mathes</h3>
-      {user.followed_matches ? (
-        user.followed_matches.length >= 1 ? (
-          [...user.followed_matches].map((id) => (
-            <div className="match" key={id}>
-              <i className="fa-solid fa-star" onClick={() => follow(id)} />
-              <p
-                className="teams"
-                onClick={() => navigate("/match_details/" + id)}
-              >
-                <span className="time">22:00</span>
-                <span className="home_team">{id}</span>
-                <span className="away_team">Barcelona</span>
-              </p>
-            </div>
-          ))
-        ) : (
-          <div className="match">
-            <span className="message">
-              Your followed matches will apear hear!
-            </span>
+      <h3 className="topping">Followed matches</h3>
+      {Object.keys(user.followed_matches).length > 0 ? (
+        Object.keys(user.followed_matches).map((id, i) => (
+          <div className="match" key={id}>
+            <i className="fa-solid fa-star" onClick={() => follow(id)} />
+            <p
+              className="teams"
+              onClick={() => navigate("/match_details/" + id)}
+            >
+              <span className="time">{user.followed_matches[id].time}</span>
+              <span className="home_team">
+                {user.followed_matches[id].home}
+              </span>
+              <span className="away_team">
+                {user.followed_matches[id].away}
+              </span>
+            </p>
           </div>
-        )
+        ))
       ) : (
         <div className="match">
           <span className="message">
-            Your followed matches will apear hear!
+            Your followed matches will apear here!
           </span>
         </div>
       )}

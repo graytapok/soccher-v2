@@ -31,6 +31,9 @@ class FollowedMatch(db.Model):
     id = db.Column(db.Integer, primary_key=True, unique=True)
     match_id = db.Column(db.Integer)
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
+    home = db.Column(db.String(120))
+    away = db.Column(db.String(120))
+    time = db.Column(db.String(120))
 
     def __repr__(self):
         return f'<table_id: {self.id}, match_id: {self.match_id}, user_id: {self.user_id}>'

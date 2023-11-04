@@ -16,10 +16,16 @@ import os
 @app.route("/auth", methods=["GET"])
 def auth():
     if current_user.is_authenticated:
-        followed_matches = []
+        followed_matches = {}
         matches = FollowedMatch.query.filter_by(user_id=current_user.id).all()
         for i in range(len(matches)):
-            followed_matches.append(matches[i].match_id)
+            followed_matches.update({
+                matches[i].match_id: {
+                    "home": matches[i].home,
+                    "away": matches[i].away,
+                    "time": matches[i].time
+                }
+                })
         return {
             "auth": current_user.is_authenticated, 
             "name": current_user.username, 

@@ -239,28 +239,23 @@ def country(country_name):
 def follow_match():
     # Adding or deleting the match from followed matches.
     match_id = request.json["id"]
+    details = request.json["details"]
+
     if not current_user.is_authenticated:
         return {"state": "auth"}
+
     fav = FollowedMatch.query.filter_by(match_id=match_id).filter_by(user_id=current_user.id).first()
     if fav is not None:
         db.session.delete(fav)
         db.session.commit()
-
-        followed_matches = []
-        matches = FollowedMatch.query.filter_by(user_id=current_user.id).all()
-        for i in range(len(matches)):
-            followed_matches.append(matches[i].match_id)
-        print(followed_matches, f"deleted: {match_id}")
-
         return {"state": "deleted"}
     elif fav is None: 
-        db.session.add(FollowedMatch(user_id=current_user.id, match_id=match_id))
+        row = FollowedMatch(
+            user_id=current_user.id, 
+            match_id=match_id,
+            home=details["home"],
+            away=details["away"],
+            time=details["time"])
+        db.session.add(row)
         db.session.commit()
-
-        followed_matches = []
-        matches = FollowedMatch.query.filter_by(user_id=current_user.id).all()
-        for i in range(len(matches)):
-            followed_matches.append(matches[i].match_id)
-        print(followed_matches, f"added: {match_id}")
-
         return {"state": "added"}

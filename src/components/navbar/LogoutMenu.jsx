@@ -4,12 +4,13 @@ import "./Navbar.css";
 import { Context } from "../../App";
 import { useNavigate } from "react-router-dom";
 
-const LogoutMenu = ({ showLogoutMenu, toggleLogoutMenu }) => {
+const LogoutMenu = ({ showLogoutMenu, showDropdown, toggleLogoutMenu }) => {
   const { logout } = useContext(Context);
   const navigate = useNavigate();
 
   const style = {
     marginTop: showLogoutMenu ? "0px" : "-100px",
+    zIndex: showDropdown ? "-1" : "998",
   };
 
   const logoutUser = () => {

@@ -2,11 +2,12 @@ import { useNavigate } from "react-router-dom";
 import { Context } from "../../App";
 import { useContext } from "react";
 
-const DropdownMenu = ({ showDropdown, toggleDropdown }) => {
+const DropdownMenu = ({ showDropdown, showLogoutMenu, toggleDropdown }) => {
   const { darkMode, toggleDarkMode } = useContext(Context);
   const navigate = useNavigate();
   const style = {
     marginTop: showDropdown ? "57px" : "-53px",
+    zIndex: showLogoutMenu ? "-1" : "998",
   };
   return (
     <div style={style} className="dropdown">

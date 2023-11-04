@@ -132,10 +132,12 @@ function Navbar() {
       </header>
       <DropdownMenu
         showDropdown={showDropdown}
+        showLogoutMenu={showLogoutMenu}
         toggleDropdown={toggleDropdown}
       />
       <LogoutMenu
         showLogoutMenu={showLogoutMenu}
+        showDropdown={showDropdown}
         toggleLogoutMenu={toggleLogoutMenu}
       />
     </>

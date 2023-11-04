@@ -48,13 +48,15 @@
 .today .match i {
     color: rgba(255, 255, 255, 0.8);
     position: absolute;
-    padding-top: 27px;
+    margin-top: 27px;
     left: 58px;
     transition: all 0.3s;
 }
 
 .today .match i:hover {
-    color: white;cursor: pointer;
+    color: white;
+    cursor: pointer;
+    text-shadow: 0px 0px 10px #fff;
 }
 
 .today .match .teams .time {

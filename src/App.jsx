@@ -27,39 +27,37 @@ const App = () => {
     name: "",
     id: "",
     email: "",
-    followed_matches: undefined,
+    followed_matches: {},
   });
-  const addFollow = (id) => {
+  const addFollow = (id, details) => {
     setUser((prevData) => ({
       ...prevData,
       followed_matches:
         user.followed_matches === undefined
-          ? [Number(id)]
-          : [...prevData.followed_matches, Number(id)],
+          ? { [Number(id)]: details }
+          : { ...prevData.followed_matches, [Number(id)]: details },
     }));
   };
-  const deleteFollow = (val) => {
+  const deleteFollow = (id) => {
+    delete user.followed_matches[id];
     setUser((prevData) => ({
       ...prevData,
-      followed_matches:
-        [...user.followed_matches].length === 1
-          ? undefined
-          : user.followed_matches.filter((match) => match !== Number(val)),
+      followed_matches: prevData.followed_matches,
     }));
   };
-  const follow_match = (id) => {
+  const follow_match = (id, details = {}) => {
     fetch("/follow_match", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ id: id }),
+      body: JSON.stringify({ id: id, details: details }),
     })
       .then((res) => res.json())
       .then((res) => {
         console.log(res.state);
         res.state === "added"
-          ? addFollow(id)
+          ? addFollow(id, details)
           : res.state === "deleted"
           ? deleteFollow(id)
           : console.log("Auth");
