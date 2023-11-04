@@ -20,16 +20,14 @@ def auth():
             "auth": current_user.is_authenticated, 
             "name": current_user.username, 
             "id": current_user.id,
-            "email": current_user.email,
-            "followed_matches": FollowedMatch.query.filter_by(user_id=current_user.id).all()
+            "email": current_user.email
         }
     else:
         return {
             "auth": current_user.is_authenticated, 
             "name": "", 
             "id": "",
-            "email": "",
-            "fav_matches": ""
+            "email": ""
         }
 
 @app.route("/login", methods=["POST"])

@@ -24,9 +24,9 @@ with app.app_context():
         country_codes_json = json.loads(data)
 
 
-@app.route("/", methods=["GET", "POST"])
-@app.route("/home", methods=["GET", "POST"])
-@app.route("/index", methods=["GET", "POST"])
+@app.route("/", methods=["GET"])
+@app.route("/home", methods=["GET"])
+@app.route("/index", methods=["GET"])
 def index():
     # Open or create JSON file for today's matches.
     d, m, y = datetime.now().day, datetime.now().month, datetime.now().year
@@ -40,9 +40,6 @@ def index():
         data = f.read()
         matches_json = json.loads(data)
 
-    # Creating a list of User's followed matches.
-    followed_matches = FollowedMatch.query.filter_by(user_id=current_user.id)
-
     # Creating a dict of today's most important matches by "priority".
     matches = {}
     priority = 450
@@ -52,31 +49,31 @@ def index():
                 continue
             elif event["tournament"]["priority"] >= priority:
                 timestamp = event['startTimestamp']
+
                 hour = datetime.fromtimestamp(timestamp).hour
                 hour = "0" + str(hour) if hour < 10 else hour
+
                 minutes = datetime.fromtimestamp(timestamp).minute
                 minutes = minutes = "0" + str(minutes) if minutes < 10 else minutes
 
                 if event['homeTeam']['name'] in country_list or event['awayTeam']['name'] in country_list:
-                    matches.update({event['id']: {"home": event['homeTeam']['name'],
+                    matches.update({int(event['id']): {"home": event['homeTeam']['name'],
                                                   "away": event['awayTeam']['name'],
                                                   "time": f'{hour}:{minutes}',
                                                   "country": True,
                                                   "home_code": "images/country_flags/" +
                                                                country_list[event['homeTeam']['name']] + ".png",
                                                   "away_code": "images/country_flags/" +
-                                                               country_list[event['awayTeam']['name']] + ".png",
-                                                  "favorite": (event["id"] in followed_matches)}})
+                                                               country_list[event['awayTeam']['name']] + ".png"}})
                 else:
-                    matches.update({event['id']: {"home": event['homeTeam']['name'],
+                    matches.update({int(event['id']): {"home": event['homeTeam']['name'],
                                                   "away": event['awayTeam']['name'],
                                                   "time": f'{hour}:{minutes}',
-                                                  "country": False,
-                                                  "favorite": (event["id"] in followed_matches)}})
+                                                  "country": False}})
         priority -= 50
 
-    return {"matches": matches} # render_template("index.html", title="Homepage", matches=matches, user=current_user, followed_matches=followed_matches)
-
+    # get a list of followed matches
+    return {"matches": matches}
 
 @app.route("/leagues_info", methods=["GET", "POST"])
 def leagues():
@@ -178,7 +175,6 @@ def countrys_ranking():
 
     # Get information about each team.
     countrys = {}
-    colors = {}
     for country in json_data["rankings"]:
         if country["points"] - country["previousPoints"] == 0:
             diff_points = 0
@@ -192,19 +188,18 @@ def countrys_ranking():
             diff_ranking = country["previousRanking"] - country['team']['ranking']
         countrys.update(
             {country['team']['ranking']: {"name": country['team']['name'],
-                                          "color":
+                                          "color_primary":
                                               ImageColor.getcolor(country['team']['teamColors']['primary'], "RGB"),
-                                          "color_sec":
+                                          "color_secondary":
                                               ImageColor.getcolor(country['team']['teamColors']['secondary'], "RGB"),
-                                          "code": "images/country_flags/" +
+                                          "img": "images/country_flags/" +
                                                   country_list[country['team']['name']] + ".png",
                                           "points": country["points"],
                                           "prev_points": country["previousPoints"],
                                           "prev_ranking": country["previousRanking"],
                                           "diff_points": diff_points,
                                           "diff_ranking": diff_ranking}})
-    return {} # render_template("countrys_ranking.html", title="County Ranking", countrys=countrys, dict_len=len(countrys))
-
+    return {"matches": countrys}
 
 @app.route("/league_ranking/<league_id>")
 def league_ranking(league_id):
@@ -240,17 +235,45 @@ def country(country_name):
     return {} # render_template("country.html", title="County Ranking", country_name=country_name)
 
 
-@app.route("/add_favorite_game/<match_id>")
-def add_favorite_game(match_id):
+@app.route("/follow_match", methods=["POST"])
+def follow_match():
     # Adding or deleting the match from followed matches.
+    match_id = request.json["id"]
     if not current_user.is_authenticated:
-        flash(f"please login: {match_id}")
-        return redirect(url_for("index"))
-    try:
-        fav = FollowedMatch.query.filter_by(match_id=match_id).filter_by(user_id=current_user.id).first()
+        return {"state": "auth"}
+    fav = FollowedMatch.query.filter_by(match_id=match_id).filter_by(user_id=current_user.id).first()
+    if fav is not None:
         db.session.delete(fav)
-    except:
-        db.session.add(FollowedMatch(user_id=current_user.id, match_id=match_id))
-    db.session.commit()
-    return {} # redirect(url_for("index"))
+        db.session.commit()
 
+        followed_matches = []
+        matches = FollowedMatch.query.filter_by(user_id=current_user.id).all()
+        for i in range(len(matches)):
+            followed_matches.append(matches[i].match_id)
+        print(followed_matches, f"deleted: {match_id}")
+
+        return {"state": "deleted"}
+    elif fav is None: 
+        db.session.add(FollowedMatch(user_id=current_user.id, match_id=match_id))
+        db.session.commit()
+
+        followed_matches = []
+        matches = FollowedMatch.query.filter_by(user_id=current_user.id).all()
+        for i in range(len(matches)):
+            followed_matches.append(matches[i].match_id)
+        print(followed_matches, f"added: {match_id}")
+
+        return {"state": "added"}
+    
+     # redirect(url_for("index"))
+
+@app.route("/get_followed_matches", methods=["GET"])
+def get_followed_matches():
+    if not current_user.is_authenticated:
+        return {"followed_matches": None}
+    else:
+        followed_matches = []
+        matches = FollowedMatch.query.filter_by(user_id=current_user.id).all()
+        for i in range(len(matches)):
+            followed_matches.append(matches[i].match_id)
+    return {"followed_matches": followed_matches} #{"followed_matches": followed_matches}

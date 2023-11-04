@@ -1,5 +1,5 @@
 import React, { useContext, useEffect } from "react";
-import Navbar from "./components/Navbar";
+import Navbar from "./components/navbar/Navbar";
 import IndexPage from "./pages/IndexPage";
 import LogoutPage from "./pages/LogoutPage";
 import LoginPage from "./pages/LoginPage";
@@ -59,7 +59,7 @@ const App = () => {
         value={{ user, login, logout, darkMode, toggleDarkMode }}
       >
         <Navbar />
-        <Routes>
+        <Routes style={{ zIndex: "-10" }}>
           <Route path="/" element={<IndexPage />} />
           <Route
             path="login"
@@ -89,6 +89,7 @@ const App = () => {
           <Route path="about" element={<IndexPage />} />
           <Route path="*" element={<p>There's nothing here: 404!</p>} />
         </Routes>
+        <img src="images/logo512.png" alt="background" className="background" />
       </Context.Provider>
     </BrowserRouter>
   );

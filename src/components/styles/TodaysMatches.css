@@ -1,0 +1,70 @@
+.today {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    min-width: 400px;
+    margin: 25px;
+    padding: 20px;
+    border: 2px solid var(--border_light);
+    border-radius: 5px;
+    background-color: var(--navbar_color);
+    z-index: 3;
+}
+
+.today .topping {
+    padding: 10px;
+    margin: 0;
+    color: #fff;
+    font-weight: normal;
+}
+
+.today .match {
+    display: flex;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0px;
+    margin-top: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.today .match:hover {
+    border-color: var(--hover_bg_color);
+    color: #fff;
+}
+
+.today .match .teams {
+    display: flex;
+    flex-direction: column;
+    color: rgba(255, 255, 255, 0.8);
+    width: 100%;
+    margin: 0;
+}
+
+.today .match i {
+    color: rgba(255, 255, 255, 0.8);
+    position: absolute;
+    padding-top: 27px;
+    left: 58px;
+    transition: all 0.3s;
+}
+
+.today .match i:hover {
+    color: white;cursor: pointer;
+}
+
+.today .match .teams .time {
+    position: absolute;
+    left: 100px;
+    padding-top: 24px;
+}
+
+.today .match .teams .home_team,
+.today .match .teams .away_team {
+    padding: 5px;
+    margin: 0 0 0 120px;
+}
+
+.today .match .teams .country_icon {
+    width: 20px;
+}
