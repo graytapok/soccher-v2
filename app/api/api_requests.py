@@ -165,7 +165,9 @@ with open(paths[1], "rb") as f:
         if event["tournament"]["uniqueTournament"]["id"] not in league_id_list:
             league_id_list.update({
                 event["tournament"]["uniqueTournament"]["id"]: {"name": event["tournament"]["name"],
-                                                                "category_name": event["tournament"]["uniqueTournament"]["category"]["name"]}})
+                                                                "category_name": event["tournament"]["uniqueTournament"]["category"]["name"],
+                                                                "priority": event["tournament"]["priority"]}
+            })
 with open(paths[2], "rb") as f:
     data = f.read()
     match_json = j.loads(data)
@@ -173,7 +175,9 @@ with open(paths[2], "rb") as f:
         if event["tournament"]["uniqueTournament"]["id"] not in league_id_list:
             league_id_list.update({
                 event["tournament"]["uniqueTournament"]["id"]: {"name": event["tournament"]["name"],
-                                                                "category_name": event["tournament"]["uniqueTournament"]["category"]["name"]}})
+                                                                "category_name": event["tournament"]["uniqueTournament"]["category"]["name"],
+                                                                "priority": event["tournament"]["priority"]}
+            })
 with open(paths[3], "rb") as f:
     data = f.read()
     match_json = j.loads(data)
@@ -181,5 +185,7 @@ with open(paths[3], "rb") as f:
         if event["tournament"]["uniqueTournament"]["id"] not in league_id_list:
             league_id_list.update({
                 event["tournament"]["uniqueTournament"]["id"]: {"name": event["tournament"]["name"],
-                                                                "category_name": event["tournament"]["uniqueTournament"]["category"]["name"]}})
+                                                                "category_name": event["tournament"]["uniqueTournament"]["category"]["name"],
+                                                                "priority": event["tournament"]["priority"]}
+            })
 

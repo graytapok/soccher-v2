@@ -1,8 +1,8 @@
 import React, { useContext, useState } from "react";
-import DropdownMenu from "./DropDownMenu";
-import LogoutMenu from "./LogoutMenu";
+import DropdownMenu from "./components/DropDownMenu";
+import LogoutMenu from "./components/LogoutMenu";
 import Button from "../Button";
-import "./Navbar.css";
+import "./styles/Navbar.css";
 import { Context } from "../../App";
 import { useNavigate } from "react-router-dom";
 

@@ -1,5 +1,5 @@
 from flask_login import login_user, logout_user, login_required, current_user
-from flask import Flask, render_template, flash, redirect, url_for, request
+from flask import Flask, render_template, flash, redirect, url_for, request, make_response
 from werkzeug.security import generate_password_hash
 
 from app.forms.register_form import RegistrationForm
@@ -9,13 +9,22 @@ from app.models import User, FollowedMatch
 from app import app, db, login
 
 from email_validator import validate_email, EmailNotValidError
+from icecream import ic
 from datetime import *
 import json
 import os
 
 @app.route("/auth", methods=["GET"])
 def auth():
-    if current_user.is_authenticated:
+    if not current_user.is_authenticated:
+        return {
+            "auth": current_user.is_authenticated, 
+            "name": None, 
+            "id": None,
+            "email": None,
+            "followed_matches": None
+        }
+    else:
         followed_matches = {}
         matches = FollowedMatch.query.filter_by(user_id=current_user.id).all()
         for i in range(len(matches)):
@@ -33,14 +42,7 @@ def auth():
             "email": current_user.email,
             "followed_matches": followed_matches
         }
-    else:
-        return {
-            "auth": current_user.is_authenticated, 
-            "name": "", 
-            "id": "",
-            "email": "",
-            "followed_matches": None
-        }
+        
 
 @app.route("/login", methods=["POST"])
 def login():
@@ -57,7 +59,6 @@ def login():
             user = User.query.filter_by(username=username_email).first()
 
         if user is None or not user.check_password(password):
-            print(False)
             return {"correct_input": False}
         else:
             login_user(user, remember=remember_me)
@@ -66,8 +67,11 @@ def login():
 @app.route('/logout', methods=["GET"])
 @login_required
 def logout():
+    ic(current_user.is_authenticated)
     logout_user()
-    return {"logged_out": True} # redirect(url_for('index'))
+    ic(current_user.is_authenticated)
+    ic()
+    return {"logged_out": True}
 
 @app.route("/register", methods=["POST"])
 def register():
@@ -86,8 +90,7 @@ def register():
         confirm_password = request.json["confirm_password"]
 
         # Username: lenght >= 3, no only space
-        users = User.query.filter_by(username=username).first() 
-        print(users)
+        users = User.query.filter_by(username=username).first()
         if len(username) < 3 or username.isspace():
             correctness["correct_input"] = False
             correctness["data"]["username"]["rules"] = False
@@ -138,4 +141,17 @@ def my_profile():
     fav_matches = {}
     for i in FollowedMatch.query.filter_by(user_id=current_user.id):
         fav_matches.update({i.id: i.match_id})
-    return {} # render_template("my_profile.html", title="My Profile", user=current_user, fav_matches=fav_matches)
+    return {}
+
+@app.route("/cookies", methods=["POST"])
+def cookies():
+    if not request.cookies.get("darkmode"):
+        darkmode = request.json["darkmode"]
+        if darkmode == True:
+            darkmode = "darkmode"
+        else:
+            darkmode = "lightmode"
+        res = make_response({"cookies": True})
+        res.set_cookie("darkmode", darkmode, max_age=60*60*24*365)
+        return res
+    return {"cookies": False}

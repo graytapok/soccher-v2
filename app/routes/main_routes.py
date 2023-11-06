@@ -22,12 +22,6 @@ with app.app_context():
     with open("app/api/json/country_codes.json", "rb") as f:
         data = f.read()
         country_codes_json = json.loads(data)
-
-
-@app.route("/", methods=["GET"])
-@app.route("/home", methods=["GET"])
-@app.route("/index", methods=["GET"])
-def index():
     # Open or create JSON file for today's matches.
     d, m, y = datetime.now().day, datetime.now().month, datetime.now().year
     matches_file = f"app/api/json/todays_matches/{d}_{m}_{y}.json"
@@ -40,6 +34,11 @@ def index():
         data = f.read()
         matches_json = json.loads(data)
 
+
+@app.route("/", methods=["GET"])
+@app.route("/home", methods=["GET"])
+@app.route("/index", methods=["GET"])
+def index():
     # Creating a dict of today's most important matches by "priority".
     matches = {}
     priority = 450
@@ -72,8 +71,17 @@ def index():
                                                   "country": False}})
         priority -= 50
 
-    # get a list of followed matches
-    return {"matches": matches}
+    # leagues overview
+    leagues = {}
+    for i in league_id_list:
+        if league_id_list[i]["priority"] >= 420:
+            leagues.update({
+                i: {
+                   "name": league_id_list[i]["name"],
+                   "category_name": league_id_list[i]["category_name"],
+                   "priority": league_id_list[i]["priority"]}
+            })
+    return {"matches": matches, "leagues": leagues}
 
 @app.route("/leagues_info", methods=["GET", "POST"])
 def leagues():

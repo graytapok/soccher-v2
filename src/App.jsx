@@ -1,13 +1,14 @@
 import React, { useContext, useEffect } from "react";
-import Navbar from "./components/navbar/Navbar";
-import IndexPage from "./pages/IndexPage";
-import LogoutPage from "./pages/LogoutPage";
-import LoginPage from "./pages/LoginPage";
-import RegisterPage from "./pages/RegisterPage";
-import "./components/styles/index.css";
+import Navbar from "./components/Navbar/Navbar";
+import IndexPage from "./pages/IndexPage/IndexPage";
+import LogoutPage from "./pages/LogoutPage/LogoutPage";
+import LoginPage from "./pages/LoginPage/LoginPage";
+import RegisterPage from "./pages/RegisterPage/RegisterPage";
+import MyProfilePage from "./pages/MyProfilePage/MyProfilePage";
+import CookiesRequest from "./components/CookiesRequest";
+import "./index.css";
 import { useState, createContext } from "react";
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
-import ProfilePage from "./pages/ProfilePage";
 
 export const Context = createContext();
 
@@ -75,17 +76,46 @@ const App = () => {
     console.log("Authenticated: true");
   };
   const logout = () => {
-    setUser({ ...user, auth: false });
+    fetch("/logout")
+      .then((res) => res.json())
+      .then((data) =>
+        data.logged_out
+          ? setUser({ ...user, auth: false })
+          : console.log("Unexpected Error")
+      );
     console.log("Authenticated: false");
   };
 
-  const [darkMode, setDarkMode] = useState(false);
-  const toggleDarkMode = () => {
-    setDarkMode((prevMode) => !prevMode);
-    console.log("Dark Mode: " + darkMode);
+  const getCookie = (name) =>
+    document.cookie.match("(^|;)\\s*" + name + "\\s*=\\s*([^;]+)")?.pop() || "";
+
+  const [showCookiesRequset, setShowCookiesRequest] = useState(true);
+  useEffect(() => {
+    setShowCookiesRequest(getCookie("darkmode") !== "" ? false : true);
+  }, []);
+  const toggleCookiesRequest = () => {
+    setShowCookiesRequest((prev) => !prev);
   };
 
-  console.log(user.followed_matches);
+  const [darkmode, setDarkmode] = useState(
+    getCookie("darkmode") !== ""
+      ? getCookie("darkmode") === "lightmode"
+        ? "lightmode"
+        : "darkmode"
+      : "darkmode"
+  );
+
+  const toggleDarkmode = () => {
+    setDarkmode((prevMode) =>
+      prevMode === "darkmode" ? "lightmode" : "darkmode"
+    );
+    const cookie = getCookie("darkmode");
+    if (cookie !== "") {
+      document.cookie = `darkmode=${
+        darkmode === "darkmode" ? "lightmode" : "darkmode"
+      }`;
+    }
+  };
 
   return (
     <BrowserRouter>
@@ -94,15 +124,17 @@ const App = () => {
           user,
           login,
           logout,
-          darkMode,
-          toggleDarkMode,
+          darkmode,
+          toggleDarkmode,
           addFollow,
           deleteFollow,
           follow_match,
+          showCookiesRequset,
+          toggleCookiesRequest,
         }}
       >
         <Navbar />
-        <Routes style={{ zIndex: "-10" }}>
+        <Routes>
           <Route path="/" element={<IndexPage />} />
           <Route
             path="login"
@@ -128,11 +160,22 @@ const App = () => {
               </ProtectedRoute>
             }
           />
-          <Route path="my_profile" element={<ProfilePage />} />
+          <Route
+            path="my_profile"
+            element={
+              <ProtectedRoute>
+                <MyProfilePage />
+              </ProtectedRoute>
+            }
+          />
           <Route path="about" element={<IndexPage />} />
-          <Route path="*" element={<p>There's nothing here: 404!</p>} />
+          <Route
+            path="*"
+            element={<h1>ERROROROROOROROR STOP STOP STOP STOP STOP!!!!!!</h1>}
+          />
         </Routes>
         <img src="images/logo512.png" alt="background" className="background" />
+        {showCookiesRequset && <CookiesRequest />}
       </Context.Provider>
     </BrowserRouter>
   );
