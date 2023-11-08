@@ -5,7 +5,7 @@ import { Context } from "../../../App";
 import { useNavigate } from "react-router-dom";
 
 const LogoutMenu = ({ showLogoutMenu, showDropdown, toggleLogoutMenu }) => {
-  const { logout } = useContext(Context);
+  const { logout, darkmode } = useContext(Context);
   const navigate = useNavigate();
 
   const style = {
@@ -22,7 +22,10 @@ const LogoutMenu = ({ showLogoutMenu, showDropdown, toggleLogoutMenu }) => {
   };
 
   return (
-    <div style={style} className="logout">
+    <div
+      style={style}
+      className={darkmode === "darkmode" ? "logout" : "logout_lightmode"}
+    >
       <div className="logout_menu">
         <span>Log out?</span>
         <Button

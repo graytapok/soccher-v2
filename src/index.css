@@ -9,6 +9,8 @@
     --button_color_rgb: 95, 122, 219;
     --hover_color_2: #4c4c4d;
     --navbar_color: #26292B; /*#171717,#202225 */
+    --lightmode_navbar_color:  	#fafafa;
+    --lightmode_text: 0, 0, 0;
     --heading_color: rgb(56, 56, 56);
     --border: rgba(255, 255, 255, 0.7);
     --border_2: rgba(128, 128, 128, 0.7);
@@ -32,11 +34,6 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     font-size: 20px;
-}
-
-.routes {
-    position: relative;
-    z-index: -10;
 }
 
 .display-5 {

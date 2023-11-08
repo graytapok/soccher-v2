@@ -147,7 +147,7 @@ def my_profile():
 def cookies():
     if not request.cookies.get("darkmode"):
         darkmode = request.json["darkmode"]
-        if darkmode == True:
+        if darkmode == "darkmode":
             darkmode = "darkmode"
         else:
             darkmode = "lightmode"

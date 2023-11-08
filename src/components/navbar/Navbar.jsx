@@ -41,13 +41,17 @@ const Buttons = ({
   toggleDropdown,
   toggleLogoutMenu,
 }) => {
-  const { user } = useContext(Context);
+  const { user, darkmode } = useContext(Context);
   const navigate = useNavigate();
 
   return (
     <ul className="nav_btns">
       <li>
-        <Button size="nav_icon" variant="secondary" outline>
+        <Button
+          size="nav_icon"
+          variant={darkmode === "darkmode" ? "secondary" : "primary"}
+          outline={true}
+        >
           <i id="drp_icon" className="fa-solid fa-magnifying-glass" />
         </Button>
       </li>
@@ -57,8 +61,8 @@ const Buttons = ({
             toggleDropdown();
           }}
           size="nav_icon"
-          variant="secondary"
-          outline
+          variant={darkmode === "darkmode" ? "secondary" : "primary"}
+          outline={true}
         >
           {showDropdown ? (
             <i className="fa-regular fa-circle-xmark"></i>
@@ -73,7 +77,7 @@ const Buttons = ({
             size="icon"
             variant="danger"
             onClick={toggleLogoutMenu}
-            outline
+            outline={true}
           >
             {showLogoutMenu ? (
               <i className="fa-regular fa-circle-xmark"></i>
@@ -87,7 +91,7 @@ const Buttons = ({
           size="icon"
           variant="success"
           onClick={() => navigate("/login")}
-          outline
+          outline={darkmode === "darkmode" ? true : false}
         >
           <i className="fa-solid fa-right-to-bracket"></i>
         </Button>
@@ -97,6 +101,7 @@ const Buttons = ({
 };
 
 function Navbar() {
+  const { darkmode } = useContext(Context);
   const [showDropdown, setShowDropdown] = useState(false);
   const [showLogoutMenu, setShowLogoutMenu] = useState(false);
 
@@ -120,7 +125,9 @@ function Navbar() {
 
   return (
     <>
-      <header className="navbar">
+      <header
+        className={darkmode === "darkmode" ? "navbar" : "navbar_lightmode"}
+      >
         <Logo />
         <Links />
         <Buttons

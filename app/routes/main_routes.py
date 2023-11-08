@@ -83,7 +83,7 @@ def index():
             })
     return {"matches": matches, "leagues": leagues}
 
-@app.route("/leagues_info", methods=["GET", "POST"])
+@app.route("/leagues_info", methods=["GET"])
 def leagues():
     # Open the JSON file "matches.json".
     file = "app/api/json/matches.json"
@@ -108,11 +108,12 @@ def leagues():
                 matches_leagues.update({event['id']: {"home": event['homeTeam']['name'],
                                                       "away": event['awayTeam']['name'],
                                                       "league": league_id}})
-    return {} # render_template("leagues_info.html", title="Leagues", matches_leagues=matches_leagues, leagues_accepted=leagues_accepted)
+    return {}
 
+@app.route("/match_details", methods=["GET", "POST"])
+def match_details():
+    match_id = int(request.json["match_id"])
 
-@app.route("/match_details/<match_id>", methods=["GET", "POST"])
-def match_details(match_id):
     # Open or create the match details JSON file.
     details_file = f"app/api/json/match_detail_info/{match_id}.json"
     if not os.path.exists(details_file):
@@ -164,14 +165,13 @@ def match_details(match_id):
         score.update({"home": 0, "away": 0})
 
     # Posession
-    i = 0
+    """ i = 0
     game_posession = {}
     for posession in statistics_json["statistics"]:
         game_posession.update({i: [posession['groups'][1]['statisticsItems'][0]['home'],
                                    posession['groups'][1]['statisticsItems'][0]['away']]})
-        i += 1
-    return {} # render_template("match_details.html", title="Match Details", match_id=match_id, team=team, score=score, match=match)
-
+        i += 1 """
+    return {"match_id"}
 
 @app.route("/countrys_ranking")
 def countrys_ranking():

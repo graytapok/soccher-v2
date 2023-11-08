@@ -13,7 +13,10 @@ const DropdownMenu = ({ showDropdown, showLogoutMenu, toggleDropdown }) => {
   };
 
   return (
-    <div style={style} className="dropdown">
+    <div
+      style={style}
+      className={darkmode === "darkmode" ? "dropdown" : "dropdown_lightmode"}
+    >
       <ul className="menu">
         <li
           onClick={() => {
@@ -33,9 +36,11 @@ const DropdownMenu = ({ showDropdown, showLogoutMenu, toggleDropdown }) => {
             {darkmode === "darkmode" ? "Lightmode" : "Darkmode"}
           </span>
           <i
-            style={darkmode ? { transform: "scaleX(-1)" } : null}
+            style={darkmode === "lightmode" ? { marginRight: "4px" } : null}
             id="darkmode_icon"
-            className="fa-solid fa-circle-half-stroke"
+            className={
+              darkmode === "darkmode" ? "fa-solid fa-sun" : "fa-solid fa-moon"
+            }
           />
         </li>
       </ul>

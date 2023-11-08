@@ -9,6 +9,7 @@ import CookiesRequest from "./components/CookiesRequest";
 import "./index.css";
 import { useState, createContext } from "react";
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
+import MatchDetails from "./pages/MatchDetails/MatchDetails";
 
 export const Context = createContext();
 
@@ -98,11 +99,7 @@ const App = () => {
   };
 
   const [darkmode, setDarkmode] = useState(
-    getCookie("darkmode") !== ""
-      ? getCookie("darkmode") === "lightmode"
-        ? "lightmode"
-        : "darkmode"
-      : "darkmode"
+    getCookie("darkmode") !== "" ? getCookie("darkmode") : "darkmode"
   );
 
   const toggleDarkmode = () => {
@@ -134,46 +131,52 @@ const App = () => {
         }}
       >
         <Navbar />
-        <Routes>
-          <Route path="/" element={<IndexPage />} />
-          <Route
-            path="login"
-            element={
-              <ProtectedRoute anti={true}>
-                <LoginPage />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="logout"
-            element={
-              <ProtectedRoute>
-                <LogoutPage />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="signup"
-            element={
-              <ProtectedRoute anti={true}>
-                <RegisterPage />
-              </ProtectedRoute>
-            }
-          />
-          <Route
-            path="my_profile"
-            element={
-              <ProtectedRoute>
-                <MyProfilePage />
-              </ProtectedRoute>
-            }
-          />
-          <Route path="about" element={<IndexPage />} />
-          <Route
-            path="*"
-            element={<h1>ERROROROROOROROR STOP STOP STOP STOP STOP!!!!!!</h1>}
-          />
-        </Routes>
+        <div
+          className={darkmode === "darkmode" ? "routes" : "routes_lightmode"}
+        >
+          <Routes>
+            <Route path="/" element={<IndexPage />} />
+            <Route
+              path="login"
+              element={
+                <ProtectedRoute anti={true}>
+                  <LoginPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="logout"
+              element={
+                <ProtectedRoute>
+                  <LogoutPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="signup"
+              element={
+                <ProtectedRoute anti={true}>
+                  <RegisterPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="my_profile"
+              element={
+                <ProtectedRoute>
+                  <MyProfilePage />
+                </ProtectedRoute>
+              }
+            />
+            <Route path="about" element={<IndexPage />} />
+            <Route path="match_details/:match_id" element={<MatchDetails />} />
+            <Route
+              path="*"
+              element={<h1>ERROROROROOROROR STOP STOP STOP STOP STOP!!!!!!</h1>}
+            />
+          </Routes>
+        </div>
+
         <img src="images/logo512.png" alt="background" className="background" />
         {showCookiesRequset && <CookiesRequest />}
       </Context.Provider>

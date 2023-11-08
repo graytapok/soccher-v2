@@ -8,7 +8,7 @@
     transition: all .5s;
 }
 
-.logout_menu {
+.logout .logout_menu {
     display: grid;
     padding: 13px;
     background-color: var(--navbar_color);
@@ -19,14 +19,46 @@
     gap: 10px;
 }
 
-.logout_menu > span {
+.logout .logout_menu > span {
     display: flex;
     justify-content: center;
     grid-column: 1 / span 2;
 }
 
-.logout_menu .logout_button {
+.logout .logout_menu .logout_button {
     position: relative;
     width: 100%;
 }
  
+/* lightmode */
+.logout_lightmode {
+    position: absolute;
+    z-index: 998;
+    right: 0px;
+    top: 80px;
+    transition-property: margin-top;
+    transition: all .5s;
+}
+
+.logout_lightmode .logout_menu {
+    display: grid;
+    padding: 13px;
+    background-color: var(--lightmode_navbar_color);
+    border-radius: 0 0 0 var(--radius);
+    color: white;
+    transition: all 0.3s;
+    margin: 0px;
+    gap: 10px;
+}
+
+.logout_lightmode .logout_menu > span {
+    display: flex;
+    justify-content: center;
+    grid-column: 1 / span 2;
+    color: rgba(var(--lightmode_text), 0.8)
+}
+
+.logout_lightmode .logout_menu .logout_button {
+    position: relative;
+    width: 100%;
+}
