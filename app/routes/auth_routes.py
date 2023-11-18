@@ -2,9 +2,7 @@ from flask_login import login_user, logout_user, login_required, current_user
 from flask import Flask, render_template, flash, redirect, url_for, request, make_response
 from werkzeug.security import generate_password_hash
 
-from app.forms.register_form import RegistrationForm
 from app.sending import send_registration_email
-from app.forms.login_form import LoginForm
 from app.models import User, FollowedMatch
 from app import app, db, login
 
@@ -33,16 +31,31 @@ def auth():
                     "home": matches[i].home,
                     "away": matches[i].away,
                     "time": matches[i].time
+                    
+                }})
+            # works only with postgres
+            """ followed_matches.update({
+                matches[i].match_id: {
+                    "home": {
+                        "name": matches[i]["home"]["name"],
+                        "score": matches[i]["home"]["score"],
+                        "img": matches[i]["home"]["img"]
+                    },
+                    "away": {
+                        "name": matches[i]["away"]["name"],
+                        "score": matches[i]["away"]["score"],
+                        "img": matches[i]["away"]["img"]
+                    },
+                    "time": matches[i].time
                 }
-                })
+                }) """
         return {
             "auth": current_user.is_authenticated, 
             "name": current_user.username, 
             "id": current_user.id,
             "email": current_user.email,
             "followed_matches": followed_matches
-        }
-        
+        }    
 
 @app.route("/login", methods=["POST"])
 def login():
@@ -54,9 +67,9 @@ def login():
         try:
             v = validate_email(username_email)
             email = v["email"]
-            user = User.query.filter_by(email=username_email).first()
+            user = User.query.filter_by(email = f"{username_email}").first()
         except EmailNotValidError:
-            user = User.query.filter_by(username=username_email).first()
+            user = User.query.filter_by(username=f"{username_email}").first()
 
         if user is None or not user.check_password(password):
             return {"correct_input": False}
@@ -67,10 +80,7 @@ def login():
 @app.route('/logout', methods=["GET"])
 @login_required
 def logout():
-    ic(current_user.is_authenticated)
     logout_user()
-    ic(current_user.is_authenticated)
-    ic()
     return {"logged_out": True}
 
 @app.route("/register", methods=["POST"])
@@ -155,3 +165,29 @@ def cookies():
         res.set_cookie("darkmode", darkmode, max_age=60*60*24*365)
         return res
     return {"cookies": False}
+
+
+@app.route("/follow_match", methods=["POST"])
+def follow_match():
+    # Adding or deleting the match from followed matches.
+    match_id = request.json["id"]
+    details = request.json["details"]
+
+    if not current_user.is_authenticated:
+        return {"state": "auth"}
+
+    fav = FollowedMatch.query.filter_by(match_id=match_id).filter_by(user_id=current_user.id).first()
+    if fav is not None:
+        db.session.delete(fav)
+        db.session.commit()
+        return {"state": "deleted"}
+    elif fav is None: 
+        row = FollowedMatch(
+            user_id=current_user.id, 
+            match_id=match_id,
+            home=details["home"]["name"],
+            away=details["away"]["name"],
+            time=details["time"])
+        db.session.add(row)
+        db.session.commit()
+        return {"state": "added"}

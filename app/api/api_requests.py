@@ -151,7 +151,8 @@ with open(country_codes_path, "rb") as f:
     country_list.update({"Macau": "mo"})
     country_list.update({"São Tomé and Príncipe": "st"})
     country_list.update({"East Timor": "tl"})
-    country_list.update({"US Virgin Islands": "vl"})
+    country_list.update({"US Virgin Islands": "vi"})
+    country_list.update({"Kosovo": "xk"})
 
 league_id_list = {}
 paths = {1: "app/api/json/matches.json",
