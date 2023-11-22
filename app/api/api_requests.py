@@ -4,26 +4,26 @@ import json as j
 import requests
 import os
 
-def create_todays_matches_json():
-    date = datetime.now()
-    day, month, year = date.day, date.month, date.year
+headers = {
+    "X-RapidAPI-Key": "261229b62cmsh9ff85b6a1f70efep192152jsn0dd435f8eb55",
+    "X-RapidAPI-Host": "footapi7.p.rapidapi.com"
+}
+
+def create_date_matches_json(day, month, year):
     url = f"https://footapi7.p.rapidapi.com/api/matches/{day}/{month}/{year}"
-    headers = {
-        "X-RapidAPI-Key": "261229b62cmsh9ff85b6a1f70efep192152jsn0dd435f8eb55",
-        "X-RapidAPI-Host": "footapi7.p.rapidapi.com"
-    }
+
     response = requests.get(url, headers=headers)
+
     path = f"app/api/json/todays_matches/{day}_{month}_{year}.json"
+
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, 'w') as outfile:
+    with open(path, 'w+') as outfile:
         j.dump(response.json(), outfile)
+
+create_date_matches_json(19, 11, 2023)
 
 def create_match_statistics_json(match_id):
     url = f"https://footapi7.p.rapidapi.com/api/match/{match_id}/statistics"
-    headers = {
-        "X-RapidAPI-Key": "261229b62cmsh9ff85b6a1f70efep192152jsn0dd435f8eb55",
-        "X-RapidAPI-Host": "footapi7.p.rapidapi.com"
-    }
     response = requests.get(url, headers=headers)
     path = f"app/api/json/match_statistics/{match_id}.json"
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -32,10 +32,6 @@ def create_match_statistics_json(match_id):
 
 def create_match_detail_info_json(match_id):
     url = f"https://footapi7.p.rapidapi.com/api/match/{match_id}"
-    headers = {
-        "X-RapidAPI-Key": "261229b62cmsh9ff85b6a1f70efep192152jsn0dd435f8eb55",
-        "X-RapidAPI-Host": "footapi7.p.rapidapi.com"
-    }
     response = requests.get(url, headers=headers)
     path = f"app/api/json/match_detail_info/{match_id}.json"
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -44,10 +40,6 @@ def create_match_detail_info_json(match_id):
 
 def create_categories_json():
     url = "https://footapi7.p.rapidapi.com/api/tournament/categories"
-    headers = {
-        "X-RapidAPI-Key": "261229b62cmsh9ff85b6a1f70efep192152jsn0dd435f8eb55",
-        "X-RapidAPI-Host": "footapi7.p.rapidapi.com"
-    }
     response = requests.get(url, headers=headers)
     path = f"json/api_info/categories.json"
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -56,10 +48,6 @@ def create_categories_json():
 
 def create_league_available_seasons_json(league_id):
     url = f'https://footapi7.p.rapidapi.com/api/tournament/{league_id}/seasons'
-    headers = {
-        "X-RapidAPI-Key": "261229b62cmsh9ff85b6a1f70efep192152jsn0dd435f8eb55",
-        "X-RapidAPI-Host": "footapi7.p.rapidapi.com"
-    }
     response = requests.get(url, headers=headers)
     path = f"json/leagues_info/seasons/{league_id}.json"
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -87,10 +75,6 @@ def create_league_standings_json(league_id, season=None):
         return "Error"
 
     url = f"https://footapi7.p.rapidapi.com/api/tournament/{league_id}/season/{cur_season}/standings/total"
-    headers = {
-        "X-RapidAPI-Key": "261229b62cmsh9ff85b6a1f70efep192152jsn0dd435f8eb55",
-        "X-RapidAPI-Host": "footapi7.p.rapidapi.com"
-    }
     response = requests.get(url, headers=headers)
     path = f"json/leagues_info/standings/{league_id}_{season}.json"
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -99,10 +83,6 @@ def create_league_standings_json(league_id, season=None):
 
 def create_league_media_json(league_id):
     url = f'https://footapi7.p.rapidapi.com/api/tournament/{league_id}/media'
-    headers = {
-        "X-RapidAPI-Key": "261229b62cmsh9ff85b6a1f70efep192152jsn0dd435f8eb55",
-        "X-RapidAPI-Host": "footapi7.p.rapidapi.com"
-    }
     response = requests.get(url, headers=headers)
     path = f"json/leagues_info/media/{league_id}.json"
     os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -153,6 +133,8 @@ with open(country_codes_path, "rb") as f:
     country_list.update({"East Timor": "tl"})
     country_list.update({"US Virgin Islands": "vi"})
     country_list.update({"Kosovo": "xk"})
+    country_list.update({"Bonaire": "bq"})
+    country_list.update({"Saint Martin": "mf"})
 
 league_id_list = {}
 paths = {1: "app/api/json/matches.json",

@@ -50,7 +50,7 @@ function Ranking() {
       tBody.removeChild(tBody.firstChild);
     }
 
-    // Readd the newly sorted rows
+    // Read the newly sorted rows
     tBody.append(...sortedRows);
 
     // Remember how the column is currently sorted
@@ -73,6 +73,8 @@ function Ranking() {
         headerCell
       );
       const currentIsAscending = headerCell.classList.contains("th-sort-asc");
+      console.log(headerIndex, currentIsAscending);
+
       if (
         headerIndex !== 5 &&
         headerIndex !== 3 &&

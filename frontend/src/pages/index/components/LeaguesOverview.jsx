@@ -1,8 +1,13 @@
 import React from "react";
-import "../styles/LeaguesOverview";
 
-function LeaguesOverview() {
-  return <div></div>;
+function LeaguesOverview({ leagues }) {
+  return (
+    <div>
+      {Object.keys(leagues).map((league) => (
+        <span>{leagues[league].name}</span>
+      ))}
+    </div>
+  );
 }
 
 export default LeaguesOverview;

@@ -2,6 +2,7 @@ from datetime import datetime, time, date
 from hashlib import md5
 from app import db, login
 from flask_login import UserMixin
+from sqlalchemy.dialects.postgresql import JSON
 from werkzeug.security import generate_password_hash, check_password_hash
 
 class User(UserMixin, db.Model):
@@ -27,12 +28,10 @@ class FollowedMatch(db.Model):
     id = db.Column(db.Integer, primary_key=True, unique=True)
     match_id = db.Column(db.Integer)
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
-    home = db.Column(db.String(120))
-    away = db.Column(db.String(120))
-    time = db.Column(db.String(120))
+    details = db.Column(JSON)
 
     def __repr__(self):
-        return f'<table_id: {self.id}, match_id: {self.match_id}, user_id: {self.user_id}>'
+        return f'<details: {self.details}, user_id: {self.user_id}>'
 
 @login.user_loader
 def load_user(user):

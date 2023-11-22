@@ -25,30 +25,29 @@ const ProtectedRoute = ({ anti = false, children }) => {
 };
 
 const App = () => {
-  const [user, setUser] = useState({
-    auth: false,
-    name: "",
-    id: "",
-    email: "",
-    followed_matches: {},
-  });
-  const addFollow = (id, details) => {
-    setUser((prevData) => ({
-      ...prevData,
-      followed_matches:
-        user.followed_matches === undefined
-          ? { [Number(id)]: details }
-          : { ...prevData.followed_matches, [Number(id)]: details },
-    }));
+  const [user, setUser] = useState({ auth: false });
+  const login = () => {
+    setUser({ ...user, auth: true });
   };
-  const deleteFollow = (id) => {
-    delete user.followed_matches[id];
-    setUser((prevData) => ({
-      ...prevData,
-      followed_matches: prevData.followed_matches,
-    }));
+  const logout = () => {
+    fetch("/logout")
+      .then((res) => res.json())
+      .then((data) =>
+        data.logged_out
+          ? setUser({ ...user, auth: false })
+          : console.log("Unexpected Error")
+      );
   };
+
+  const [followedMatches, setFollowedMatches] = useState({});
   const follow_match = (id, details = {}) => {
+    const deleteFollow = (id) => {
+      delete followedMatches[id];
+      setFollowedMatches((prevData) => ({
+        ...prevData,
+      }));
+    };
+
     fetch("/follow_match", {
       method: "POST",
       headers: {
@@ -59,38 +58,34 @@ const App = () => {
       .then((res) => res.json())
       .then((res) => {
         res.state === "added"
-          ? addFollow(id, details)
+          ? setFollowedMatches((prev) => ({ ...prev, [id]: details }))
           : res.state === "deleted"
           ? deleteFollow(id)
           : console.log("Auth");
       })
       .catch((error) => console.error(error));
   };
-  useEffect(() => {
+  const updateAuth = () => {
     fetch("/auth")
       .then((res) => res.json())
       .then((data) => setUser(data));
+  };
+  const updateFollowedMatches = () => {
+    fetch("/followed_matches")
+      .then((res) => res.json())
+      .then((data) => {
+        setFollowedMatches(data.followed_matches);
+      });
+  };
+
+  useEffect(() => {
+    updateAuth();
+    updateFollowedMatches();
   }, [user.auth]);
 
-  const login = () => {
-    setUser({ ...user, auth: true });
-    console.log("Authenticated: true");
-  };
-  const logout = () => {
-    fetch("/logout")
-      .then((res) => res.json())
-      .then((data) =>
-        data.logged_out
-          ? setUser({ ...user, auth: false })
-          : console.log("Unexpected Error")
-      );
-    console.log("Authenticated: false");
-  };
-
+  const [showCookiesRequset, setShowCookiesRequest] = useState(true);
   const getCookie = (name) =>
     document.cookie.match("(^|;)\\s*" + name + "\\s*=\\s*([^;]+)")?.pop() || "";
-
-  const [showCookiesRequset, setShowCookiesRequest] = useState(true);
   useEffect(() => {
     setShowCookiesRequest(getCookie("darkmode") !== "" ? false : true);
   }, []);
@@ -123,11 +118,12 @@ const App = () => {
           logout,
           darkmode,
           toggleDarkmode,
-          addFollow,
-          deleteFollow,
           follow_match,
           showCookiesRequset,
           toggleCookiesRequest,
+          updateAuth,
+          updateFollowedMatches,
+          followedMatches,
         }}
       >
         <Navbar />

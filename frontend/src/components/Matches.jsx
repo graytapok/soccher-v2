@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../App";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
@@ -7,7 +7,7 @@ const MatchesComponent = styled.div`
   .matches {
     display: flex;
     flex-direction: column;
-    width: 30%;
+    width: 40%;
     min-width: 400px;
     margin: 25px;
     padding: 20px;
@@ -67,7 +67,10 @@ const MatchesComponent = styled.div`
 
   .matches .match .teams .time {
     position: absolute;
+    display: flex;
+    justify-content: center;
     left: 100px;
+    width: 52px;
     padding-top: 24px;
   }
 
@@ -89,76 +92,129 @@ const MatchesComponent = styled.div`
   .matches .match .teams .score {
     margin: 0 10px 0 auto;
   }
+
+  .matches .match .teams .apostr {
+    animation: apostr 1s infinite linear;
+  }
+
+  @keyframes apostr {
+    10%,
+    20%,
+    30%,
+    40%,
+    50% {
+      opacity: 0;
+    }
+    60%,
+    70%,
+    80%,
+    90%,
+    100% {
+      opacity: 1;
+    }
+  }
 `;
 
-function Matches({ title, matches, message }) {
-  const { user, follow_match } = useContext(Context);
+function Matches({ title, matches, message, redirect }) {
+  const { followedMatches, follow_match } = useContext(Context);
   const navigate = useNavigate();
+
+  console.log(followedMatches);
 
   const follow = (id) => {
     follow_match(id, matches[id]);
-    navigate("/");
+    navigate(redirect);
   };
 
   const checkInclude = (id) => {
-    return user.followed_matches ? Number(id) in user.followed_matches : false;
+    return followedMatches ? Number(id) in followedMatches : false;
   };
 
   return (
-    <MatchesComponent className="matches">
-      <h3 className="topping">{title}</h3>
-      {Object.keys(matches).length > 0 ? (
-        Object.keys(matches).map((id) => (
-          <div className="match" key={id}>
-            {checkInclude(id) ? (
-              <i className="fa-solid fa-star" onClick={() => follow(id)} />
-            ) : (
-              <i className="fa-regular fa-star" onClick={() => follow(id)} />
-            )}
-            <p
-              className="teams"
-              onClick={() => navigate("/match_details/" + id)}
-            >
-              <span className="time">{matches[id].time}</span>
-              {matches[id].country ? (
-                <>
-                  <div className="home_team">
+    <MatchesComponent>
+      <div className="matches">
+        <h3 className="topping">{title}</h3>
+        {Object.keys(matches).length > 0 ? (
+          Object.keys(matches).map((id) => (
+            <div className="match" key={id}>
+              {checkInclude(id) ? (
+                <i className="fa-solid fa-star" onClick={() => follow(id)} />
+              ) : (
+                <i className="fa-regular fa-star" onClick={() => follow(id)} />
+              )}
+
+              <p
+                className="teams"
+                onClick={() => navigate("/match_details/" + id)}
+              >
+                {matches[id].status === "notstarted" ? (
+                  <span className="time">{matches[id].start_time}</span>
+                ) : matches[id].status === "finished" ? (
+                  <span className="time" style={{ color: "#fff" }}>
+                    {matches[id].start_time}
+                  </span>
+                ) : (
+                  <span
+                    className="time"
+                    style={{ color: "rgb(var(--danger))" }}
+                  >
+                    {matches[id].current_time}
+                    <span className="apostr">'</span>
+                  </span>
+                )}
+
+                <div className="home_team">
+                  {matches[id].country && (
                     <img
                       src={`countryFlags/${matches[id].home.img}`}
                       alt={`${matches[id].home}`}
                     />
-                    <span>{matches[id].home.name}</span>
-                    <span className="score">{matches[id].home.score}</span>
-                  </div>
-                  <div className="away_team">
+                  )}
+                  <span>{matches[id].home.name}</span>
+                  <span
+                    className="score"
+                    style={
+                      matches[id].status === "inprogress"
+                        ? { color: "rgb(var(--danger))" }
+                        : matches[id].status === "finished"
+                        ? { color: "#fff" }
+                        : null
+                    }
+                  >
+                    {matches[id].home.score}
+                  </span>
+                </div>
+
+                <div className="away_team">
+                  {matches[id].country && (
                     <img
                       src={`countryFlags/${matches[id].away.img}`}
-                      alt={`${matches[id].home}`}
+                      alt={`${matches[id].away}`}
                     />
-                    <span>{matches[id].away.name}</span>
-                    <span className="score">{matches[id].away.score}</span>
-                  </div>
-                </>
-              ) : (
-                <>
-                  <div className="home_team">
-                    <span className="score">{matches[id].home}</span>
-                  </div>
-                  <div className="away_team">
-                    <span className="score">{matches[id].away}</span>
-                  </div>
-                </>
-              )}
-            </p>
-          </div>
-        ))
-      ) : (
-        <>
-          <div className="match">
-            <span className="message">{message}</span>
-          </div>
-        </>
-      )}
+                  )}
+                  <span>{matches[id].away.name}</span>
+                  <span
+                    className="score"
+                    style={
+                      matches[id].status === "inprogress"
+                        ? { color: "rgb(var(--danger))" }
+                        : null
+                    }
+                  >
+                    {matches[id].away.score}
+                  </span>
+                </div>
+              </p>
+            </div>
+          ))
+        ) : (
+          <>
+            <div className="match">
+              <span className="message">{message}</span>
+            </div>
+          </>
+        )}
+      </div>
     </MatchesComponent>
   );
 }

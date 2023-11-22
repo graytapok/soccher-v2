@@ -1,10 +1,18 @@
-import React from "react";
-import FollowedMatches from "./components/FollowedMatches";
+import React, { useContext, useEffect } from "react";
+import { Context } from "../../App";
+import Matches from "../../components/Matches";
 
 function ProfilePage() {
+  const { followedMatches } = useContext(Context);
+
   return (
     <>
-      <FollowedMatches />
+      <Matches
+        title="Followed matches"
+        matches={followedMatches}
+        message="Your followed matches will apear here!"
+        redirect="/profile"
+      />
     </>
   );
 }

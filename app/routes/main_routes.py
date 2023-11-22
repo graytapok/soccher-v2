@@ -3,7 +3,7 @@ from flask_login import current_user
 
 from app import app, db
 from app.models import User, FollowedMatch
-from app.api.api_requests import (create_match_statistics_json, create_todays_matches_json,
+from app.api.api_requests import (create_match_statistics_json, create_date_matches_json,
                                   create_match_detail_info_json, create_categories_json, country_list, league_id_list,
                                   create_league_standings_json, create_league_media_json)
 
@@ -11,6 +11,7 @@ from PIL import ImageColor
 from icecream import ic
 from datetime import *
 import requests
+import time
 import json
 import os
 
@@ -18,40 +19,46 @@ import os
 # List of all leagues_info ids.
 with app.app_context():
     db.create_all()
+    db.session.commit()
     db.session.close_all()
-    with open("app/api/json/country_codes.json", "rb") as f:
-        data = f.read()
-        country_codes_json = json.loads(data)
-    # Open or create JSON file for today's matches.
-    d, m, y = datetime.now().day, datetime.now().month, datetime.now().year
-    matches_file = f"app/api/json/todays_matches/{d}_{m}_{y}.json"
-    if not os.path.exists(matches_file):
-        create_todays_matches_json()
-        while not os.path.exists(matches_file):
-            continue
-    os.makedirs(os.path.dirname(matches_file), exist_ok=True)
-    with open(matches_file, "rb") as f:
-        data = f.read()
-        matches_json = json.loads(data)
 
 @app.route("/", methods=["GET"])
 @app.route("/home", methods=["GET"])
 @app.route("/index", methods=["GET"])
 def index():
+    # Open or create JSON file for today's matches.
+    d, m, y = datetime.now().day, datetime.now().month, datetime.now().year
+    todays_file = f"app/api/json/todays_matches/{d}_{m}_{y}.json"
+    if not os.path.exists(todays_file):
+        create_date_matches_json(d, m, y)
+        while not os.path.exists(todays_file):
+            continue
+        
+    os.makedirs(os.path.dirname(todays_file), exist_ok=True)
+    with open(todays_file, "rb") as f:
+        data = f.read()
+        todays_json = json.loads(data)
+        
     # Creating a dict of today's most important matches by "priority".
     matches = {}
     priority = 450
     while len(matches) < 8:
-        for event in matches_json["events"]:
+        count = 0
+        for event in todays_json["events"]:
             if "women" in event["tournament"]["name"].lower():
                 continue
             elif event["tournament"]["priority"] >= priority:
                 timestamp = event['startTimestamp']
-                time = datetime.now()
+                current_timestamp = time.time()
+                current_time = datetime.now()
+
+                day = datetime.fromtimestamp(timestamp).day
+                if ((day == 31 or day == 30 or day == 29 or day == 28) and day > current_time.day) or day < current_time.day:
+                    continue
 
                 finished = True if event["status"]["description"] == "Ended" else False
-                home_score = event["homeScore"]["current"] if event["homeScore"] else "-"
-                away_score = event["awayScore"]["current"] if event["awayScore"] else "-"
+                home_score = event["homeScore"]["current"] if "current" in event["homeScore"] else "-"
+                away_score = event["awayScore"]["current"] if "current" in event["awayScore"] else "-"
 
                 hour = datetime.fromtimestamp(timestamp).hour
                 hour = "0" + str(hour) if hour < 10 else hour
@@ -64,6 +71,12 @@ def index():
                 else:
                     country = False
 
+                if event["status"]["type"] == "inprogress":
+                    current_time = current_timestamp - event["statusTime"]["timestamp"]
+                    current_time = current_time // 60
+                else:
+                    current_time = None
+
                 matches.update({int(event['id']): {
                     "home": {
                         "name": event['homeTeam']['name'],
@@ -75,12 +88,14 @@ def index():
                         "img": country_list[event['awayTeam']['name']] + ".png" if country else None,
                         "score": away_score
                     },
-                    "time": f'{hour}:{minutes}',
-                    "finished": finished,
+                    "start_time": f'{hour}:{minutes}',
+                    "status": event["status"]["type"], # "notstarted", "finished", "inprogress"
+                    "current_time": current_time,
                     "country": country
                 }})
+                count += 1
         priority -= 50
-
+        
     # leagues overview
     leagues = {}
     for i in league_id_list:
@@ -249,4 +264,4 @@ def country(country_name):
     with open(file, 'rb') as f:
         data = f.read()
         json_data = json.loads(data)
-    return {} # render_template("country.html", title="County Ranking", country_name=country_name)
+    return {}

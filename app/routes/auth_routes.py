@@ -1,5 +1,5 @@
-from flask_login import login_user, logout_user, login_required, current_user
 from flask import Flask, render_template, flash, redirect, url_for, request, make_response
+from flask_login import login_user, logout_user, login_required, current_user
 from werkzeug.security import generate_password_hash
 
 from app.sending import send_registration_email
@@ -14,48 +14,49 @@ import os
 
 @app.route("/auth", methods=["GET"])
 def auth():
-    if not current_user.is_authenticated:
+    if current_user.is_authenticated:
         return {
-            "auth": current_user.is_authenticated, 
-            "name": None, 
-            "id": None,
-            "email": None,
-            "followed_matches": None
-        }
-    else:
-        followed_matches = {}
-        matches = FollowedMatch.query.filter_by(user_id=current_user.id).all()
-        for i in range(len(matches)):
-            followed_matches.update({
-                matches[i].match_id: {
-                    "home": matches[i].home,
-                    "away": matches[i].away,
-                    "time": matches[i].time
-                    
-                }})
-            # works only with postgres
-            """ followed_matches.update({
-                matches[i].match_id: {
-                    "home": {
-                        "name": matches[i]["home"]["name"],
-                        "score": matches[i]["home"]["score"],
-                        "img": matches[i]["home"]["img"]
-                    },
-                    "away": {
-                        "name": matches[i]["away"]["name"],
-                        "score": matches[i]["away"]["score"],
-                        "img": matches[i]["away"]["img"]
-                    },
-                    "time": matches[i].time
-                }
-                }) """
-        return {
-            "auth": current_user.is_authenticated, 
+            "auth": True, 
             "name": current_user.username, 
             "id": current_user.id,
-            "email": current_user.email,
-            "followed_matches": followed_matches
+            "email": current_user.email
+        }
+    else:
+        return {
+            "auth": False, 
+            "name": None, 
+            "id": None,
+            "email": None
         }    
+
+@app.route("/followed_matches", methods=["GET"])
+def followed_matches():
+    if current_user.is_authenticated:
+        followed_matches = {}
+        matches = FollowedMatch.query.filter_by(user_id=current_user.id).all()
+        for i in matches:
+            match_id = str(i.match_id)
+            followed_matches.update({
+                i.match_id: {
+                    "home": {
+                        "name": i.details[match_id]["home"]["name"],
+                        "score": i.details[match_id]["home"]["score"],
+                        "img": i.details[match_id]["home"]["img"]
+                    },
+                    "away": {
+                        "name": i.details[match_id]["away"]["name"],
+                        "score": i.details[match_id]["away"]["score"],
+                        "img": i.details[match_id]["away"]["img"]
+                    },
+                    "start_time": i.details[match_id]["start_time"],
+                    "status": i.details[match_id]["status"],
+                    "current_time": i.details[match_id]["current_time"], 
+                    "country": i.details[match_id]["country"]
+                } 
+                })
+        return {"followed_matches": followed_matches}
+    else:
+        return {"followed_matches": "auth"}
 
 @app.route("/login", methods=["POST"])
 def login():
@@ -141,8 +142,6 @@ def register():
             db.session.commit()
             login_user(user, remember=True)
             send_registration_email(email)
-
-        print(correctness)
         return correctness
 
 @app.route("/my_profile", methods=["GET", "POST"])
@@ -176,7 +175,7 @@ def follow_match():
     if not current_user.is_authenticated:
         return {"state": "auth"}
 
-    fav = FollowedMatch.query.filter_by(match_id=match_id).filter_by(user_id=current_user.id).first()
+    fav = FollowedMatch.query.filter_by(user_id=current_user.id).filter_by(match_id=match_id).first()
     if fav is not None:
         db.session.delete(fav)
         db.session.commit()
@@ -185,9 +184,7 @@ def follow_match():
         row = FollowedMatch(
             user_id=current_user.id, 
             match_id=match_id,
-            home=details["home"]["name"],
-            away=details["away"]["name"],
-            time=details["time"])
+            details=details)
         db.session.add(row)
-        db.session.commit()
-        return {"state": "added"}
+        db.session.commit() 
+        return {"state": "added"} 
