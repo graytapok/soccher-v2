@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom";
 const Logo = () => {
   return (
     <div className="logo">
-      <img src="images/favicon.ico" alt="logo" />
+      <img src="images/react/favicon.ico" alt="logo" />
       <span>Soccher</span>
     </div>
   );

@@ -33,7 +33,7 @@ def index():
         create_date_matches_json(d, m, y)
         while not os.path.exists(todays_file):
             continue
-        
+    
     os.makedirs(os.path.dirname(todays_file), exist_ok=True)
     with open(todays_file, "rb") as f:
         data = f.read()
@@ -41,42 +41,47 @@ def index():
         
     # Creating a dict of today's most important matches by "priority".
     matches = {}
-    priority = 450
-    while len(matches) < 8:
-        count = 0
+    priority = 550
+    counter = 0
+    while len(matches) < 10 and counter < 9:
         for event in todays_json["events"]:
             if "women" in event["tournament"]["name"].lower():
                 continue
             elif event["tournament"]["priority"] >= priority:
                 timestamp = event['startTimestamp']
                 current_timestamp = time.time()
-                current_time = datetime.now()
+                user_current_time = datetime.now()
 
-                day = datetime.fromtimestamp(timestamp).day
-                if ((day == 31 or day == 30 or day == 29 or day == 28) and day > current_time.day) or day < current_time.day:
-                    continue
+                """ day = datetime.fromtimestamp(timestamp).day
+                if ((day == 31 or day == 30 or day == 29 or day == 28) and day > user_current_time.day) or day < user_current_time.day:
+                    continue """
+                    
+                current_time = event["status"]["description"]
+                extra_time = None
+                if event["status"]["type"] == "inprogress" and "statusTime" in event:
+                    current_time = (current_timestamp - event["statusTime"]["timestamp"]) + event["statusTime"]["initial"]
+                    current_time //= 60
+                    if (current_timestamp - event["statusTime"]["timestamp"]) > event["statusTime"]["max"]:
+                        extra_time = (current_timestamp - event["statusTime"]["timestamp"]) - event["statusTime"]["max"]
 
-                finished = True if event["status"]["description"] == "Ended" else False
-                home_score = event["homeScore"]["current"] if "current" in event["homeScore"] else "-"
-                away_score = event["awayScore"]["current"] if "current" in event["awayScore"] else "-"
+                if "current" in event["awayScore"]:
+                    away_score = event["awayScore"]["current"]
+                    home_score = event["homeScore"]["current"]
+                else:
+                    away_score = "/" if current_time == "Canceled" else "-"
+                    home_score = "/" if current_time == "Canceled" else "-"
 
                 hour = datetime.fromtimestamp(timestamp).hour
                 hour = "0" + str(hour) if hour < 10 else hour
 
                 minutes = datetime.fromtimestamp(timestamp).minute
                 minutes = minutes = "0" + str(minutes) if minutes < 10 else minutes
-
+                
+                country = False
                 if event['homeTeam']['name'] in country_list or event['awayTeam']['name'] in country_list:
                     country = True
-                else:
-                    country = False
-
-                if event["status"]["type"] == "inprogress":
-                    current_time = current_timestamp - event["statusTime"]["timestamp"]
-                    current_time = current_time // 60
-                else:
-                    current_time = None
-
+                    
+                    
                 matches.update({int(event['id']): {
                     "home": {
                         "name": event['homeTeam']['name'],
@@ -89,20 +94,22 @@ def index():
                         "score": away_score
                     },
                     "start_time": f'{hour}:{minutes}',
-                    "status": event["status"]["type"], # "notstarted", "finished", "inprogress"
+                    "status": event["status"]["type"],
                     "current_time": current_time,
-                    "country": country
+                    "country": country,
+                    "extra_time": extra_time                    
                 }})
-                count += 1
-        priority -= 50
+        priority -= 50  
+        counter += 1
         
     # leagues overview
     leagues = {}
     for i in league_id_list:
-        if league_id_list[i]["priority"] >= 420:
+        if league_id_list[i]["priority"] >= 430:
             leagues.update({
                 i: {
                    "name": league_id_list[i]["name"],
+                   "slug": league_id_list[i]["slug"],
                    "category_name": league_id_list[i]["category_name"],
                    "priority": league_id_list[i]["priority"]}
             })
@@ -196,7 +203,7 @@ def match_details():
         game_posession.update({i: [posession['groups'][1]['statisticsItems'][0]['home'],
                                    posession['groups'][1]['statisticsItems'][0]['away']]})
         i += 1 """
-    return {"match_id"}
+    return {"match_id": "Penis"}
 
 @app.route("/countrys_ranking", methods=["GET"])
 def countrys_ranking():

@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext } from "react";
 import { Context } from "../App";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
@@ -7,14 +7,12 @@ const MatchesComponent = styled.div`
   .matches {
     display: flex;
     flex-direction: column;
-    width: 40%;
-    min-width: 400px;
+    width: 800px;
     margin: 25px;
     padding: 20px;
     border: 2px solid var(--border_light);
     border-radius: 5px;
     background-color: var(--navbar_color);
-    z-index: 3;
   }
 
   .matches .topping {
@@ -34,13 +32,36 @@ const MatchesComponent = styled.div`
     transition: all 0.3s;
   }
 
+  .matches .match:hover {
+    border-color: var(--hover_bg_color);
+    color: #fff;
+  }
+
   .matches .match .message {
     padding: 10px;
   }
 
-  .matches .match:hover {
-    border-color: var(--hover_bg_color);
-    color: #fff;
+  .matches .match i {
+    color: rgba(255, 255, 255, 0.8);
+    margin: auto 0px auto 20px;
+    transition: all 0.3s;
+  }
+
+  .matches .match i:hover {
+    color: white;
+    cursor: pointer;
+    text-shadow: 0px 0px 10px #fff;
+  }
+
+  .matches .match .time {
+    display: flex;
+    justify-content: center;
+    margin: auto 15px auto 15px;
+    width: 150px;
+  }
+
+  .matches .match .apostr {
+    animation: apostr 1s infinite linear;
   }
 
   .matches .match .teams {
@@ -51,36 +72,12 @@ const MatchesComponent = styled.div`
     margin: 0;
   }
 
-  .matches .match i {
-    color: rgba(255, 255, 255, 0.8);
-    position: absolute;
-    margin-top: 27px;
-    left: 58px;
-    transition: all 0.3s;
-  }
-
-  .matches .match i:hover {
-    color: white;
-    cursor: pointer;
-    text-shadow: 0px 0px 10px #fff;
-  }
-
-  .matches .match .teams .time {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    left: 100px;
-    width: 52px;
-    padding-top: 24px;
-  }
-
   .matches .match .teams .home_team,
   .matches .match .teams .away_team {
     display: flex;
     justify-content: left;
     align-items: center;
     padding: 5px;
-    margin: 0 0 0 120px;
   }
 
   .matches .match .teams img {
@@ -91,10 +88,6 @@ const MatchesComponent = styled.div`
 
   .matches .match .teams .score {
     margin: 0 10px 0 auto;
-  }
-
-  .matches .match .teams .apostr {
-    animation: apostr 1s infinite linear;
   }
 
   @keyframes apostr {
@@ -119,21 +112,23 @@ function Matches({ title, matches, message, redirect }) {
   const { followedMatches, follow_match } = useContext(Context);
   const navigate = useNavigate();
 
-  console.log(followedMatches);
-
   const follow = (id) => {
     follow_match(id, matches[id]);
     navigate(redirect);
   };
 
   const checkInclude = (id) => {
-    return followedMatches ? Number(id) in followedMatches : false;
+    return typeof followedMatches === "object"
+      ? Number(id) in followedMatches
+      : false;
   };
+
+  const statusList = ["finished", "canceled", "postponed"];
 
   return (
     <MatchesComponent>
       <div className="matches">
-        <h3 className="topping">{title}</h3>
+        {title && <h3 className="topping">{title}</h3>}
         {Object.keys(matches).length > 0 ? (
           Object.keys(matches).map((id) => (
             <div className="match" key={id}>
@@ -142,31 +137,36 @@ function Matches({ title, matches, message, redirect }) {
               ) : (
                 <i className="fa-regular fa-star" onClick={() => follow(id)} />
               )}
+              <span
+                className="time"
+                style={
+                  matches[id].status === "finished"
+                    ? { color: "rgb(var(--danger))" }
+                    : matches[id].status === "canceled" ||
+                      matches[id].status === "postponed"
+                    ? { color: "rgba(var(--warning))" }
+                    : matches[id].status === "notstarted"
+                    ? { color: "rgba(255, 255, 255, 0.8)" }
+                    : { color: "rgb(var(--success))" }
+                }
+              >
+                {matches[id].status !== "notstarted"
+                  ? matches[id].current_time
+                  : matches[id].start_time}
+                {!(
+                  statusList.includes(matches[id].status) ||
+                  matches[id].status === "notstarted"
+                ) && <span className="apostr">'</span>}
+              </span>
 
               <p
                 className="teams"
                 onClick={() => navigate("/match_details/" + id)}
               >
-                {matches[id].status === "notstarted" ? (
-                  <span className="time">{matches[id].start_time}</span>
-                ) : matches[id].status === "finished" ? (
-                  <span className="time" style={{ color: "#fff" }}>
-                    {matches[id].start_time}
-                  </span>
-                ) : (
-                  <span
-                    className="time"
-                    style={{ color: "rgb(var(--danger))" }}
-                  >
-                    {matches[id].current_time}
-                    <span className="apostr">'</span>
-                  </span>
-                )}
-
                 <div className="home_team">
                   {matches[id].country && (
                     <img
-                      src={`countryFlags/${matches[id].home.img}`}
+                      src={`/images/countryFlags/${matches[id].home.img}`}
                       alt={`${matches[id].home}`}
                     />
                   )}
@@ -175,10 +175,10 @@ function Matches({ title, matches, message, redirect }) {
                     className="score"
                     style={
                       matches[id].status === "inprogress"
-                        ? { color: "rgb(var(--danger))" }
+                        ? { color: "rgb(var(--success))" }
                         : matches[id].status === "finished"
-                        ? { color: "#fff" }
-                        : null
+                        ? { color: "rgb(var(--danger))" }
+                        : { color: "rgba(255, 255, 255, 0.8)" }
                     }
                   >
                     {matches[id].home.score}
@@ -188,7 +188,7 @@ function Matches({ title, matches, message, redirect }) {
                 <div className="away_team">
                   {matches[id].country && (
                     <img
-                      src={`countryFlags/${matches[id].away.img}`}
+                      src={`/images/countryFlags/${matches[id].away.img}`}
                       alt={`${matches[id].away}`}
                     />
                   )}
@@ -197,8 +197,10 @@ function Matches({ title, matches, message, redirect }) {
                     className="score"
                     style={
                       matches[id].status === "inprogress"
+                        ? { color: "rgb(var(--success))" }
+                        : matches[id].status === "finished"
                         ? { color: "rgb(var(--danger))" }
-                        : null
+                        : { color: "rgba(255, 255, 255, 0.8)" }
                     }
                   >
                     {matches[id].away.score}

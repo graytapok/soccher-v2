@@ -12,12 +12,6 @@ function Ranking() {
       .then((data) => setRankingData(data.countrys));
   }, []);
 
-  /**
-   *
-   * @param {HTMLTableElement} table the table to sort
-   * @param {number} column column to sort
-   * @param {boolean} asc sorting increasing or decreasing
-   */
   function sortTableByColumn(table, column, asc = true) {
     const dirModifier = asc ? 1 : -1;
     const tBody = table.tBodies[0];
@@ -63,6 +57,7 @@ function Ranking() {
     table
       .querySelector(`th:nth-child(${column + 1})`)
       .classList.toggle("th-sort-desc", !asc);
+    console.log(asc, column);
   }
 
   document.querySelectorAll(".ranking_table th").forEach((headerCell) => {
@@ -73,7 +68,6 @@ function Ranking() {
         headerCell
       );
       const currentIsAscending = headerCell.classList.contains("th-sort-asc");
-      console.log(headerIndex, currentIsAscending);
 
       if (
         headerIndex !== 5 &&
@@ -141,13 +135,13 @@ function Ranking() {
                 <i className="fa-solid fa-up-long"></i>
               </>
             </th>
-            <th className="th-sort-desc">
+            <th>
               <span>Points</span>
             </th>
-            <th className="th-sort-desc">
+            <th>
               <span>Previous Points</span>
             </th>
-            <th className="th-sort-asc">
+            <th>
               <span className="po">+/-</span>
               <>
                 <i className="fa-solid fa-down-long"></i>
@@ -177,7 +171,7 @@ function Ranking() {
                   }}
                 >
                   <img
-                    src={`countryFlags/${rankingData[id].img}`}
+                    src={`images/countryFlags/${rankingData[id].img}`}
                     alt={`${rankingData[id].name}`}
                     className="country_icon"
                   />

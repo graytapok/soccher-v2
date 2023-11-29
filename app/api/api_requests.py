@@ -17,10 +17,11 @@ def create_date_matches_json(day, month, year):
     path = f"app/api/json/todays_matches/{day}_{month}_{year}.json"
 
     os.makedirs(os.path.dirname(path), exist_ok=True)
+    
+    print(f"Creating '{path}' ...")
+    
     with open(path, 'w+') as outfile:
         j.dump(response.json(), outfile)
-
-create_date_matches_json(19, 11, 2023)
 
 def create_match_statistics_json(match_id):
     url = f"https://footapi7.p.rapidapi.com/api/match/{match_id}/statistics"
@@ -137,9 +138,11 @@ with open(country_codes_path, "rb") as f:
     country_list.update({"Saint Martin": "mf"})
 
 league_id_list = {}
-paths = {1: "app/api/json/matches.json",
-         2: "app/api/json/todays_matches/2_10_2023.json",
-         3: "app/api/json/todays_matches/10_10_2023.json"}
+paths = {
+    1: "app/api/json/matches.json",
+    2: "app/api/json/todays_matches/2_10_2023.json",
+    3: "app/api/json/todays_matches/10_10_2023.json"
+}
 for i in paths.values(): os.makedirs(os.path.dirname(i), exist_ok=True)
 with open(paths[1], "rb") as f:
     data = f.read()
@@ -148,6 +151,7 @@ with open(paths[1], "rb") as f:
         if event["tournament"]["uniqueTournament"]["id"] not in league_id_list:
             league_id_list.update({
                 event["tournament"]["uniqueTournament"]["id"]: {"name": event["tournament"]["name"],
+                                                                "slug": event["tournament"]["slug"],
                                                                 "category_name": event["tournament"]["uniqueTournament"]["category"]["name"],
                                                                 "priority": event["tournament"]["priority"]}
             })

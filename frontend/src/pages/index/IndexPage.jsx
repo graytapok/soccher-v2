@@ -1,8 +1,17 @@
 import React, { createContext, useEffect, useState } from "react";
 import Matches from "../../components/Matches";
-import LeaguesOverview from "./components/LeaguesOverview";
+import Leagues from "../../components/Leagues";
+import styled from "styled-components";
 
 export const IndexContext = createContext();
+
+const IndexComponent = styled.div`
+  .index {
+    display: flex;
+    z-index: 1;
+    margin-left: 25px;
+  }
+`;
 
 function IndexPage() {
   const [matchesData, setMatchesData] = useState({});
@@ -19,14 +28,22 @@ function IndexPage() {
 
   return (
     <IndexContext.Provider value={{ matchesData, leaguesData }}>
-      <Matches
-        title="Today's most interesting matches"
-        matches={matchesData}
-        message="Macthes not Found"
-        redirect="/"
-      />
-
-      {/* <LeaguesOverview leagues={leaguesData} /> */}
+      <IndexComponent>
+        <div className="index">
+          <Leagues
+            leagues={leaguesData}
+            message="Macthes not Found"
+            title="Leagues"
+            redirect="/"
+          />
+          <Matches
+            title="Today's matches"
+            matches={matchesData}
+            message="Macthes not Found"
+            redirect="/"
+          />
+        </div>
+      </IndexComponent>
     </IndexContext.Provider>
   );
 }

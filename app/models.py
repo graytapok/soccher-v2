@@ -32,6 +32,16 @@ class FollowedMatch(db.Model):
 
     def __repr__(self):
         return f'<details: {self.details}, user_id: {self.user_id}>'
+    
+class FollowedLeague(db.Model):
+    __tablename__ = "followed_league"
+    id = db.Column(db.Integer, primary_key=True, unique=True)
+    league_id = db.Column(db.Integer)
+    user_id = db.Column(db.Integer, db.ForeignKey("user.id"))
+    details = db.Column(JSON)
+
+    def __repr__(self):
+        return f'<details: {self.details}, user_id: {self.user_id}>'
 
 @login.user_loader
 def load_user(user):

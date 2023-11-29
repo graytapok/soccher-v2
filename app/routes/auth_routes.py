@@ -3,7 +3,7 @@ from flask_login import login_user, logout_user, login_required, current_user
 from werkzeug.security import generate_password_hash
 
 from app.sending import send_registration_email
-from app.models import User, FollowedMatch
+from app.models import User, FollowedMatch, FollowedLeague
 from app import app, db, login
 
 from email_validator import validate_email, EmailNotValidError
@@ -39,24 +39,43 @@ def followed_matches():
             followed_matches.update({
                 i.match_id: {
                     "home": {
-                        "name": i.details[match_id]["home"]["name"],
-                        "score": i.details[match_id]["home"]["score"],
-                        "img": i.details[match_id]["home"]["img"]
+                        "name": i.details["home"]["name"],
+                        "score": i.details["home"]["score"],
+                        "img": i.details["home"]["img"]
                     },
                     "away": {
-                        "name": i.details[match_id]["away"]["name"],
-                        "score": i.details[match_id]["away"]["score"],
-                        "img": i.details[match_id]["away"]["img"]
+                        "name": i.details["away"]["name"],
+                        "score": i.details["away"]["score"],
+                        "img": i.details["away"]["img"]
                     },
-                    "start_time": i.details[match_id]["start_time"],
-                    "status": i.details[match_id]["status"],
-                    "current_time": i.details[match_id]["current_time"], 
-                    "country": i.details[match_id]["country"]
+                    "start_time": i.details["start_time"],
+                    "status": i.details["status"],
+                    "current_time": i.details["current_time"], 
+                    "country": i.details["country"]
                 } 
                 })
         return {"followed_matches": followed_matches}
     else:
         return {"followed_matches": "auth"}
+    
+@app.route("/followed_leagues", methods=["GET"])
+def followed_leagues():
+    if current_user.is_authenticated:
+        followed_leagues = {}
+        leagues = FollowedLeague.query.filter_by(user_id=current_user.id).all()
+        for i in leagues:
+            league_id = str(i.league_id)
+            followed_leagues.update({
+                i.league_id: {
+                    "name": i.details["name"],
+                    "slug": i.details["slug"],
+                    "category_name": i.details["category_name"],
+                    "priority": i.details["priority"]
+                }
+            })
+        return {"followed_leagues": followed_leagues}
+    else:
+        return {"followed_leagues": "auth"}
 
 @app.route("/login", methods=["POST"])
 def login():
@@ -184,6 +203,29 @@ def follow_match():
         row = FollowedMatch(
             user_id=current_user.id, 
             match_id=match_id,
+            details=details)
+        db.session.add(row)
+        db.session.commit() 
+        return {"state": "added"} 
+    
+@app.route("/follow_league", methods=["POST"])
+def follow_league():
+    # Adding or deleting the match from followed matches.
+    league_id = request.json["id"]
+    details = request.json["details"]
+
+    if not current_user.is_authenticated:
+        return {"state": "auth"}
+
+    fav = FollowedLeague.query.filter_by(user_id=current_user.id).filter_by(league_id=league_id).first()
+    if fav is not None:
+        db.session.delete(fav)
+        db.session.commit()
+        return {"state": "deleted"}
+    elif fav is None: 
+        row = FollowedLeague(
+            user_id=current_user.id, 
+            league_id=league_id,
             details=details)
         db.session.add(row)
         db.session.commit() 

@@ -10,7 +10,7 @@ import "./index.css";
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 import MatchDetails from "./pages/matchDetails/MatchDetails";
 import CountryRankingPage from "./pages/countryRanking/CountryRankingPage";
-import Matches from "./components/Matches";
+import Ranking from "./components/Ranking";
 
 export const Context = createContext();
 
@@ -40,6 +40,7 @@ const App = () => {
   };
 
   const [followedMatches, setFollowedMatches] = useState({});
+  const [followedLeagues, setFollowedLeagues] = useState({});
   const follow_match = (id, details = {}) => {
     const deleteFollow = (id) => {
       delete followedMatches[id];
@@ -65,6 +66,31 @@ const App = () => {
       })
       .catch((error) => console.error(error));
   };
+  const follow_league = (id, details = {}) => {
+    const deleteFollow = (id) => {
+      delete followedLeagues[id];
+      setFollowedLeagues((prevData) => ({
+        ...prevData,
+      }));
+    };
+
+    fetch("/follow_league", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ id: id, details: details }),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        res.state === "added"
+          ? setFollowedLeagues((prev) => ({ ...prev, [id]: details }))
+          : res.state === "deleted"
+          ? deleteFollow(id)
+          : console.log("Auth");
+      })
+      .catch((error) => console.error(error));
+  };
   const updateAuth = () => {
     fetch("/auth")
       .then((res) => res.json())
@@ -77,10 +103,18 @@ const App = () => {
         setFollowedMatches(data.followed_matches);
       });
   };
+  const updateFollowedLeagues = () => {
+    fetch("/followed_leagues")
+      .then((res) => res.json())
+      .then((data) => {
+        setFollowedLeagues(data.followed_leagues);
+      });
+  };
 
   useEffect(() => {
     updateAuth();
     updateFollowedMatches();
+    updateFollowedLeagues();
   }, [user.auth]);
 
   const [showCookiesRequset, setShowCookiesRequest] = useState(true);
@@ -92,11 +126,9 @@ const App = () => {
   const toggleCookiesRequest = () => {
     setShowCookiesRequest((prev) => !prev);
   };
-
   const [darkmode, setDarkmode] = useState(
     getCookie("darkmode") !== "" ? getCookie("darkmode") : "darkmode"
   );
-
   const toggleDarkmode = () => {
     setDarkmode((prevMode) =>
       prevMode === "darkmode" ? "lightmode" : "darkmode"
@@ -119,11 +151,13 @@ const App = () => {
           darkmode,
           toggleDarkmode,
           follow_match,
+          follow_league,
           showCookiesRequset,
           toggleCookiesRequest,
           updateAuth,
           updateFollowedMatches,
           followedMatches,
+          followedLeagues,
         }}
       >
         <Navbar />
@@ -170,21 +204,25 @@ const App = () => {
             <Route
               path="test"
               element={
-                <Matches
-                  title="test"
-                  matches={user.followed_matches}
-                  message="No data"
+                <Ranking
+                  head={{
+                    1: { name: "blalalala", sortable: true, asc: "asc" },
+                    2: { name: "jojojojo", sortable: true, asc: "desc" },
+                    3: { name: "wawdsdasd", sortable: false, asc: null },
+                  }}
+                  body={null}
                 />
               }
-            />
-            <Route
-              path="*"
-              element={<h1>ERROROROROOROROR STOP STOP STOP STOP STOP!!!!!!</h1>}
-            />
+            ></Route>
+            <Route path="*" element={<h1>Page not found</h1>} />
           </Routes>
         </div>
 
-        <img src="images/logo512.png" alt="background" className="background" />
+        <img
+          src="images/react/logo512.png"
+          alt="background"
+          className="background"
+        />
         {showCookiesRequset && <CookiesRequest />}
       </Context.Provider>
     </BrowserRouter>
