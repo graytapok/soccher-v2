@@ -6,7 +6,7 @@ const ButtonComponent = styled.button`
   flex-direction: column;
   align-items: center;
   position: relative;
-  dispaly: inline-flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   text-align: center;

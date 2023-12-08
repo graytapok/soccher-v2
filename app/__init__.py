@@ -12,4 +12,4 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
 
-from app.routes import auth_routes, main_routes
+from app.routes import auth_routes, main_routes, error_routes

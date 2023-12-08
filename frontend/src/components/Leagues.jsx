@@ -22,6 +22,11 @@ const LeaguesComponent = styled.div`
     margin: 0;
     color: #fff;
     font-weight: normal;
+    user-select: none;
+  }
+
+  .leagues .topping:hover {
+    cursor: pointer;
   }
 
   .leagues .league {
@@ -115,7 +120,12 @@ function Leagues({ leagues, title, redirect, message }) {
                 alt={`${leagues[league].slug}`}
                 className="league_logo"
               ></img>
-              <span className="topping">{leagues[league].name}</span>
+              <span
+                className="topping"
+                onClick={() => navigate(`/league/${leagues[league].id}`)}
+              >
+                {leagues[league].name}
+              </span>
             </div>
           ))
         ) : (

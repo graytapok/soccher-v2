@@ -32,14 +32,14 @@ function IndexPage() {
         <div className="index">
           <Leagues
             leagues={leaguesData}
-            message="Macthes not Found"
+            message="Leagues not Found"
             title="Leagues"
             redirect="/"
           />
           <Matches
             title="Today's matches"
             matches={matchesData}
-            message="Macthes not Found"
+            message="Matches not Found"
             redirect="/"
           />
         </div>

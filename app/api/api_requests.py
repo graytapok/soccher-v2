@@ -11,15 +11,10 @@ headers = {
 
 def create_date_matches_json(day, month, year):
     url = f"https://footapi7.p.rapidapi.com/api/matches/{day}/{month}/{year}"
-
     response = requests.get(url, headers=headers)
-
     path = f"app/api/json/todays_matches/{day}_{month}_{year}.json"
-
     os.makedirs(os.path.dirname(path), exist_ok=True)
-    
     print(f"Creating '{path}' ...")
-    
     with open(path, 'w+') as outfile:
         j.dump(response.json(), outfile)
 
@@ -28,6 +23,7 @@ def create_match_statistics_json(match_id):
     response = requests.get(url, headers=headers)
     path = f"app/api/json/match_statistics/{match_id}.json"
     os.makedirs(os.path.dirname(path), exist_ok=True)
+    print(f"Creating '{path}' ...")
     with open(path, 'w') as outfile:
         j.dump(response.json(), outfile)
 
@@ -50,37 +46,43 @@ def create_categories_json():
 def create_league_available_seasons_json(league_id):
     url = f'https://footapi7.p.rapidapi.com/api/tournament/{league_id}/seasons'
     response = requests.get(url, headers=headers)
-    path = f"json/leagues_info/seasons/{league_id}.json"
+    path = f"app/api/json/leagues_info/seasons/{league_id}.json"
     os.makedirs(os.path.dirname(path), exist_ok=True)
     with open(path, 'w') as outfile:
         j.dump(response.json(), outfile)
 
 def create_league_standings_json(league_id, season=None):
-    seasons_path = f"json/leagues_info/seasons/{league_id}.json"
+    seasons_path = f"app/api/json/leagues_info/seasons/{league_id}.json"
     if not os.path.exists(seasons_path):
         create_league_available_seasons_json(league_id)
-        os.makedirs(os.path.dirname(seasons_path), exist_ok=True)
         while not os.path.exists(seasons_path):
             continue
+    os.makedirs(os.path.dirname(seasons_path), exist_ok=True)
     with open(seasons_path, "rb") as f:
         data = f.read()
         league_json = j.loads(data)
 
     available_seasons = []
-    cur_season = season
     for seasons in league_json["seasons"]:
         available_seasons.append(seasons["id"])
+        
     if season is None:
-        cur_season = available_seasons[0]
+        season = available_seasons[0]
     elif season not in available_seasons:
-        return "Error"
+        return f"Season of {league_id} not found"
+    
+    league_standings_file = f"app/api/json/leagues_info/standings/{league_id}_{season}.json"
+    if not os.path.exists(league_standings_file):
+        url = f"https://footapi7.p.rapidapi.com/api/tournament/{league_id}/season/{season}/standings/total"
+        response = requests.get(url, headers=headers)
+        path = f"app/api/json/leagues_info/standings/{league_id}_{season}.json"
+        os.makedirs(os.path.dirname(path), exist_ok=True)
+        with open(path, 'w') as outfile:
+            j.dump(response.json(), outfile)
 
-    url = f"https://footapi7.p.rapidapi.com/api/tournament/{league_id}/season/{cur_season}/standings/total"
-    response = requests.get(url, headers=headers)
-    path = f"json/leagues_info/standings/{league_id}_{season}.json"
-    os.makedirs(os.path.dirname(path), exist_ok=True)
-    with open(path, 'w') as outfile:
-        j.dump(response.json(), outfile)
+        message = f"Created '{path}' ..."
+        ic(message)
+    return season
 
 def create_league_media_json(league_id):
     url = f'https://footapi7.p.rapidapi.com/api/tournament/{league_id}/media'
