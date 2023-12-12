@@ -1,0 +1,252 @@
+{
+    "event": {
+        "awayScore": {
+            "current": 0,
+            "display": 0,
+            "normaltime": 0,
+            "period1": 0,
+            "period2": 0
+        },
+        "awayTeam": {
+            "country": {
+                "alpha2": "AR",
+                "name": "Argentina"
+            },
+            "disabled": false,
+            "foundationDate": {},
+            "foundationDateTimestamp": -2333491200,
+            "fullName": "Banfield",
+            "gender": "M",
+            "id": 3219,
+            "manager": {
+                "country": {
+                    "alpha2": "AR",
+                    "name": "Argentina"
+                },
+                "id": 106909,
+                "name": "Julio Cesar Falcioni",
+                "shortName": "J. C. Falcioni",
+                "slug": "julio-cesar-falcioni"
+            },
+            "name": "Banfield",
+            "nameCode": "BAN",
+            "national": false,
+            "shortName": "Banfield",
+            "slug": "banfield",
+            "sport": {
+                "id": 1,
+                "name": "Football",
+                "slug": "football"
+            },
+            "subTeams": [],
+            "teamColors": {
+                "primary": "#009900",
+                "secondary": "#ffffff",
+                "text": "#ffffff"
+            },
+            "type": 0,
+            "userCount": 9405,
+            "venue": {
+                "city": {
+                    "name": "Buenos Aires"
+                },
+                "country": {
+                    "alpha2": "AR",
+                    "name": "Argentina"
+                },
+                "id": 634,
+                "stadium": {
+                    "capacity": 34901,
+                    "name": "Florencio Sola"
+                }
+            }
+        },
+        "bet365ExcludedCountryCodes": [
+            "AR",
+            "XA",
+            "XB",
+            "IR",
+            "GR",
+            "RU",
+            "CH",
+            "CA"
+        ],
+        "changes": {
+            "changeTimestamp": 1696892262,
+            "changes": [
+                "status.code",
+                "status.description",
+                "status.type",
+                "homeScore.period2",
+                "homeScore.normaltime",
+                "awayScore.period2",
+                "awayScore.normaltime",
+                "time.currentPeriodStart",
+                "time.injuryTime2"
+            ]
+        },
+        "crowdsourcingDataDisplayEnabled": false,
+        "crowdsourcingEnabled": false,
+        "currentPeriodStartTimestamp": 1696892260,
+        "customId": "uobswob",
+        "defaultPeriodCount": 2,
+        "defaultPeriodLength": 45,
+        "detailId": 1,
+        "endTimestamp": 1696892260,
+        "fanRatingEvent": false,
+        "finalResultOnly": false,
+        "hasBet365LiveStream": true,
+        "hasEventPlayerHeatMap": true,
+        "hasEventPlayerStatistics": true,
+        "hasGlobalHighlights": true,
+        "homeRedCards": 2,
+        "homeScore": {
+            "current": 0,
+            "display": 0,
+            "normaltime": 0,
+            "period1": 0,
+            "period2": 0
+        },
+        "homeTeam": {
+            "country": {
+                "alpha2": "AR",
+                "name": "Argentina"
+            },
+            "disabled": false,
+            "foundationDate": {},
+            "foundationDateTimestamp": -409363200,
+            "fullName": "Arsenal de Sarand\u00ed",
+            "gender": "M",
+            "id": 3221,
+            "manager": {
+                "country": {
+                    "alpha2": "AR",
+                    "name": "Argentina"
+                },
+                "id": 796677,
+                "name": "Dar\u00edo Esp\u00ednola",
+                "shortName": "D. Esp\u00ednola",
+                "slug": "dario-espinola"
+            },
+            "name": "Arsenal de Sarand\u00ed",
+            "nameCode": "ARS",
+            "national": false,
+            "shortName": "Arsenal",
+            "slug": "arsenal-de-sarandi",
+            "sport": {
+                "id": 1,
+                "name": "Football",
+                "slug": "football"
+            },
+            "subTeams": [],
+            "teamColors": {
+                "primary": "#00ccff",
+                "secondary": "#ff0000",
+                "text": "#ff0000"
+            },
+            "type": 0,
+            "userCount": 8161,
+            "venue": {
+                "city": {
+                    "name": "Sarandi"
+                },
+                "country": {
+                    "alpha2": "AR",
+                    "name": "Argentina"
+                },
+                "id": 586,
+                "stadium": {
+                    "capacity": 16300,
+                    "name": "Estadio Julio Humberto Grondona"
+                }
+            }
+        },
+        "id": 11512088,
+        "referee": {
+            "country": {
+                "alpha2": "AR",
+                "name": "Argentina"
+            },
+            "games": 26,
+            "id": 787946,
+            "name": "Sebastian Zunino",
+            "redCards": 10,
+            "slug": "zunino-sebastian",
+            "sport": {
+                "id": 1,
+                "name": "Football",
+                "slug": "football"
+            },
+            "yellowCards": 135,
+            "yellowRedCards": 6
+        },
+        "roundInfo": {
+            "round": 8
+        },
+        "season": {
+            "editor": false,
+            "id": 47644,
+            "name": "Copa de la Liga 2023",
+            "year": "2023"
+        },
+        "seasonStatisticsType": "overall",
+        "showTotoPromo": false,
+        "slug": "arsenal-de-sarandi-banfield",
+        "startTimestamp": 1696885200,
+        "status": {
+            "code": 100,
+            "description": "Ended",
+            "type": "finished"
+        },
+        "time": {
+            "currentPeriodStartTimestamp": 1696892260,
+            "injuryTime1": 2,
+            "injuryTime2": 7
+        },
+        "tournament": {
+            "category": {
+                "alpha2": "AR",
+                "flag": "argentina",
+                "id": 48,
+                "name": "Argentina",
+                "slug": "argentina",
+                "sport": {
+                    "id": 1,
+                    "name": "Football",
+                    "slug": "football"
+                }
+            },
+            "competitionType": 1,
+            "id": 72142,
+            "name": "Copa de la Liga",
+            "priority": 387,
+            "slug": "copa-de-la-liga",
+            "uniqueTournament": {
+                "category": {
+                    "alpha2": "AR",
+                    "flag": "argentina",
+                    "id": 48,
+                    "name": "Argentina",
+                    "slug": "argentina",
+                    "sport": {
+                        "id": 1,
+                        "name": "Football",
+                        "slug": "football"
+                    }
+                },
+                "country": {},
+                "crowdsourcingEnabled": false,
+                "displayInverseHomeAwayTeams": false,
+                "hasEventPlayerStatistics": true,
+                "hasPerformanceGraphFeature": false,
+                "id": 13475,
+                "name": "Copa de la Liga Profesional",
+                "primaryColorHex": "#0cbad8",
+                "secondaryColorHex": "#daa813",
+                "slug": "copa-de-la-liga-profesional",
+                "userCount": 29624
+            }
+        },
+        "winnerCode": 3
+    }
+}

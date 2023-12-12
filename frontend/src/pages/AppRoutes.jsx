@@ -17,8 +17,11 @@ import LeaguePage from "./league/LeaguePage";
 
 import "../index.css";
 
-const ProtectedRoute = ({ anti = false, children }) => {
+const ProtectedRoute = ({ anti = false, children, admin = false }) => {
   const { user } = useContext(Context);
+  if (admin && user.admin) {
+  }
+
   if (user.auth && anti) {
     return <Navigate to="/" replace />;
   } else if (!user.auth && anti === false) {

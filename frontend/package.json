@@ -20,7 +20,7 @@
   },
   "scripts": {
     "front": "react-scripts start",
-    "api": "cd .. && python -m flask run --debug",
+    "back": "cd .. && cd backend && python -m flask run --debug",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

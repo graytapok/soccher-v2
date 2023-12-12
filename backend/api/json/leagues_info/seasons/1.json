@@ -1,0 +1,82 @@
+{
+  "seasons": [
+    {
+      "editor": false,
+      "id": 26542,
+      "name": "Euro Cup 2020",
+      "year": "2021"
+    },
+    {
+      "editor": false,
+      "id": 11098,
+      "name": "European Championship 2016",
+      "year": "2016"
+    },
+    {
+      "editor": false,
+      "id": 4136,
+      "name": "European Championship 2012",
+      "year": "2012"
+    },
+    {
+      "editor": false,
+      "id": 1162,
+      "name": "Euro Cup 2008",
+      "year": "2008"
+    },
+    {
+      "editor": false,
+      "id": 356,
+      "name": "Euro Cup 2004",
+      "year": "2004"
+    },
+    {
+      "editor": false,
+      "id": 358,
+      "name": "Euro Cup 2000",
+      "year": "2000"
+    },
+    {
+      "editor": false,
+      "id": 27053,
+      "name": "Euro Cup 1996",
+      "year": "1996"
+    },
+    {
+      "editor": false,
+      "id": 27052,
+      "name": "Euro Cup 1992",
+      "year": "1992"
+    },
+    {
+      "editor": false,
+      "id": 27051,
+      "name": "Euro Cup 1988",
+      "year": "1988"
+    },
+    {
+      "editor": false,
+      "id": 27048,
+      "name": "Euro Cup 1984",
+      "year": "1984"
+    },
+    {
+      "editor": false,
+      "id": 27046,
+      "name": "Euro Cup 1980",
+      "year": "1980"
+    },
+    {
+      "editor": false,
+      "id": 27049,
+      "name": "Euro Cup 1976",
+      "year": "1976"
+    },
+    {
+      "editor": false,
+      "id": 27050,
+      "name": "Euro Cup 1972",
+      "year": "1972"
+    }
+  ]
+}

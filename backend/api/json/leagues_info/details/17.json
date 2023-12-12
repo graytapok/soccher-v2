@@ -1,0 +1,134 @@
+{
+    "uniqueTournament": {
+        "name": "Premier League",
+        "slug": "premier-league",
+        "primaryColorHex": "#3c1c5a",
+        "secondaryColorHex": "#f80158",
+        "logo": {
+            "md5": "36861710766b10701e2126a2d33021c4",
+            "id": 1418035
+        },
+        "darkLogo": {
+            "md5": "cac4c64c7f9e0878f33117bb29f7021a",
+            "id": 1418033
+        },
+        "category": {
+            "name": "England",
+            "slug": "england",
+            "sport": {
+                "name": "Football",
+                "slug": "football",
+                "id": 1
+            },
+            "id": 1,
+            "flag": "england",
+            "alpha2": "EN"
+        },
+        "userCount": 1380286,
+        "tier": 1,
+        "titleHolder": {
+            "name": "Manchester City",
+            "slug": "manchester-city",
+            "shortName": "Man City",
+            "gender": "M",
+            "sport": {
+                "name": "Football",
+                "slug": "football",
+                "id": 1
+            },
+            "userCount": 1349984,
+            "nameCode": "MCI",
+            "disabled": false,
+            "national": false,
+            "type": 0,
+            "id": 17,
+            "country": {
+                "alpha2": "EN",
+                "name": "England"
+            },
+            "teamColors": {
+                "primary": "#66ccff",
+                "secondary": "#ffffff",
+                "text": "#ffffff"
+            }
+        },
+        "titleHolderTitles": 9,
+        "mostTitles": 20,
+        "mostTitlesTeams": [
+            {
+                "name": "Manchester United",
+                "slug": "manchester-united",
+                "shortName": "Man Utd",
+                "gender": "M",
+                "sport": {
+                    "name": "Football",
+                    "slug": "football",
+                    "id": 1
+                },
+                "userCount": 1308797,
+                "nameCode": "MUN",
+                "disabled": false,
+                "national": false,
+                "type": 0,
+                "id": 35,
+                "country": {
+                    "alpha2": "EN",
+                    "name": "England"
+                },
+                "teamColors": {
+                    "primary": "#ff0000",
+                    "secondary": "#373737",
+                    "text": "#373737"
+                }
+            }
+        ],
+        "linkedUniqueTournaments": [],
+        "hasStandingsGroups": false,
+        "hasRounds": true,
+        "hasPlayoffSeries": false,
+        "upperDivisions": [],
+        "lowerDivisions": [
+            {
+                "name": "Championship",
+                "slug": "championship",
+                "primaryColorHex": "#20429a",
+                "secondaryColorHex": "#ac944a",
+                "logo": {
+                    "md5": "29a945d83732f069f92fb0986738b57f",
+                    "id": 294000
+                },
+                "category": {
+                    "name": "England",
+                    "slug": "england",
+                    "sport": {
+                        "name": "Football",
+                        "slug": "football",
+                        "id": 1
+                    },
+                    "id": 1,
+                    "flag": "england",
+                    "alpha2": "EN"
+                },
+                "tier": 2,
+                "hasRounds": true,
+                "hasPlayoffSeries": false,
+                "crowdsourcingEnabled": false,
+                "hasPerformanceGraphFeature": true,
+                "periodLength": {},
+                "id": 18,
+                "country": {},
+                "startDateTimestamp": 1691107200,
+                "endDateTimestamp": 1716681600,
+                "displayInverseHomeAwayTeams": false
+            }
+        ],
+        "crowdsourcingEnabled": false,
+        "hasPerformanceGraphFeature": true,
+        "periodLength": {},
+        "id": 17,
+        "country": {},
+        "startDateTimestamp": 1691712000,
+        "endDateTimestamp": 1716076800,
+        "displayInverseHomeAwayTeams": false
+    }
+}
