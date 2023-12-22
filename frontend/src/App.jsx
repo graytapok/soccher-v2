@@ -6,6 +6,8 @@ export const Context = createContext();
 
 const App = () => {
   const [user, setUser] = useState({ auth: false });
+  const [followedMatches, setFollowedMatches] = useState({});
+  const [followedLeagues, setFollowedLeagues] = useState({});
   const login = () => {
     setUser({ ...user, auth: true });
   };
@@ -19,8 +21,6 @@ const App = () => {
       );
   };
 
-  const [followedMatches, setFollowedMatches] = useState({});
-  const [followedLeagues, setFollowedLeagues] = useState({});
   const follow_match = (id, details = {}) => {
     const deleteFollow = (id) => {
       delete followedMatches[id];

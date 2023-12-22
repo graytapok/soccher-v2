@@ -8,9 +8,10 @@ const HeadingComponent = styled.div`
     margin: 0;
     height: 150px;
     color: #fff;
-    padding: 0 10% 0 10%;
+    padding: 0;
     align-items: center;
     justify-content: center;
+    width: 100%;
   }
 
   img {
@@ -22,11 +23,12 @@ const HeadingComponent = styled.div`
   }
 `;
 
-function Heading({ title, img }) {
+function Heading({ title, img, children }) {
   return (
     <HeadingComponent className="heading">
-      <img src={img.path} alt={img.alt} />
+      {img && <img src={img.path} alt={img.alt} />}
       <h1>{title}</h1>
+      {children}
     </HeadingComponent>
   );
 }

@@ -1,19 +1,17 @@
+from app import app
 from icecream import ic
 from datetime import *
 import json as j
 import requests
 import os
 
-headers = {
-    "X-RapidAPI-Key": "261229b62cmsh9ff85b6a1f70efep192152jsn0dd435f8eb55",
-    "X-RapidAPI-Host": "footapi7.p.rapidapi.com"
-}
+headers = {"X-RapidAPI-Key": app.config["API_KEY"], "X-RapidAPI-Host": app.config["API_HOST"]}
 
 api_folder = "api/json"
 
 def create_date_matches_json(day, month, year):
     path = f"{api_folder}/todays_matches/{day}_{month}_{year}.json"
-    if os.path.exists(path):
+    if not os.path.exists(path):
         url = f"https://footapi7.p.rapidapi.com/api/matches/{day}/{month}/{year}"
         response = requests.get(url, headers=headers)
         os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -23,7 +21,7 @@ def create_date_matches_json(day, month, year):
 
 def create_match_statistics_json(match_id):
     path = f"{api_folder}/match_statistics/{match_id}.json"
-    if os.path.exists(path):
+    if not os.path.exists(path):
         url = f"https://footapi7.p.rapidapi.com/api/match/{match_id}/statistics"
         response = requests.get(url, headers=headers)
         os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -33,7 +31,7 @@ def create_match_statistics_json(match_id):
 
 def create_match_detail_info_json(match_id):
     path = f"{api_folder}/match_detail_info/{match_id}.json"
-    if os.path.exists(path):
+    if not os.path.exists(path):
         url = f"https://footapi7.p.rapidapi.com/api/match/{match_id}"
         response = requests.get(url, headers=headers)
         os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -42,7 +40,7 @@ def create_match_detail_info_json(match_id):
 
 def create_categories_json():
     path = f"json/api_info/categories.json"
-    if os.path.exists(path):
+    if not os.path.exists(path):
         url = "https://footapi7.p.rapidapi.com/api/tournament/categories"
         response = requests.get(url, headers=headers)
         os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -51,7 +49,7 @@ def create_categories_json():
 
 def create_league_available_seasons_json(league_id):
     path = f"{api_folder}/leagues_info/seasons/{league_id}.json"
-    if os.path.exists(path):
+    if not os.path.exists(path):
         url = f'https://footapi7.p.rapidapi.com/api/tournament/{league_id}/seasons'
         response = requests.get(url, headers=headers)
         os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -79,7 +77,7 @@ def create_league_standings_json(league_id, season=None):
         return f"Season of {league_id} not found"
     
     league_standings_file = f"{api_folder}/leagues_info/standings/{league_id}_{season}.json"
-    if os.path.exists(league_standings_file):
+    if not os.path.exists(league_standings_file):
         url = f"https://footapi7.p.rapidapi.com/api/tournament/{league_id}/season/{season}/standings/total"
         response = requests.get(url, headers=headers)
         path = f"{api_folder}/leagues_info/standings/{league_id}_{season}.json"
@@ -93,7 +91,7 @@ def create_league_standings_json(league_id, season=None):
 
 def create_league_media_json(league_id):
     path = f"{api_folder}/leagues_info/media/{league_id}.json"
-    if os.path.exists(path):
+    if not os.path.exists(path):
         url = f'https://footapi7.p.rapidapi.com/api/tournament/{league_id}/media'
         response = requests.get(url, headers=headers)
         os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -102,7 +100,7 @@ def create_league_media_json(league_id):
    
 def create_league_details_json(league_id):
     path = f"{api_folder}/leagues_info/details/{league_id}.json"
-    if os.path.exists(path):
+    if not os.path.exists(path):
         url = f'https://footapi7.p.rapidapi.com/api/tournament/{league_id}'
         response = requests.get(url, headers=headers)
         os.makedirs(os.path.dirname(path), exist_ok=True)
@@ -110,8 +108,6 @@ def create_league_details_json(league_id):
             j.dump(response.json(), outfile)  
         message = f"Created '{path}' ..."
         ic(message)
-        
-
 
 country_list = {}
 country_codes_path = f"{api_folder}/country_codes.json"

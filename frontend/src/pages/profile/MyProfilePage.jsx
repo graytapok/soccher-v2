@@ -15,8 +15,6 @@ const ProfileComponent = styled.div`
 function ProfilePage() {
   const { followedMatches, followedLeagues } = useContext(Context);
 
-  console.log(followedLeagues);
-
   return (
     <ProfileComponent>
       <div className="profile">

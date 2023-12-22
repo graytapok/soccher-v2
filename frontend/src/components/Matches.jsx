@@ -156,7 +156,10 @@ function Matches({ title, matches, message, redirect }) {
                 {!(
                   statusList.includes(matches[id].status) ||
                   matches[id].status === "notstarted"
-                ) && <span className="apostr">'</span>}
+                ) &&
+                  matches[id].current_time !== "Halftime" && (
+                    <span className="apostr">'</span>
+                  )}
               </span>
 
               <p

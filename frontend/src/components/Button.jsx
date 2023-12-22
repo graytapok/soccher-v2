@@ -20,6 +20,8 @@ const ButtonComponent = styled.button`
   ${(props) =>
     props.size === "nav_icon" || props.size === "icon"
       ? "padding: 10px; height: 60px; width: 60px; user-select: none;"
+      : props.size === "mini"
+      ? "padding: 0 1rem; height: 30px; font-size: 16px"
       : props.size === "sm"
       ? "padding: 0 1.5rem; height: 34px; font-size: 16px"
       : props.size === "mid"

@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const RankingComponent = styled.div`
   .ranking_table {
-    width: 900px;
+    width: 1200px;
     margin: 20px auto 0 auto;
     color: #fff;
     background-color: var(--navbar_color);
@@ -16,6 +16,7 @@ const RankingComponent = styled.div`
     text-align: left;
     user-select: none;
     font-size: 15px;
+    padding-left: 5px;
   }
 
   .ranking_table th .po {
@@ -24,6 +25,10 @@ const RankingComponent = styled.div`
 
   .ranking_table th i {
     color: rgba(255, 255, 255, 0.5);
+  }
+
+  .ranking_table thead th:hover {
+    background-color: rgba(var(--secondary), 0.5);
   }
 
   .ranking_table tbody tr:hover {
@@ -208,6 +213,7 @@ const Ranking = ({ head, tbody, sorting }) => {
                       <img
                         className="td_item_img"
                         src={`${head[j].img}/${body[i].img}`}
+                        alt="img"
                       />
                     ) : null}
                     {Array.isArray(head[j].atribute)

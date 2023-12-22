@@ -4,7 +4,7 @@ import { Context } from "../../../App";
 import "../styles/LoginForm.css";
 import { useNavigate } from "react-router-dom";
 
-function LoginForm() {
+function LoginForm({ navigate_to }) {
   const { login } = useContext(Context);
   const navigate = useNavigate();
 
@@ -35,14 +35,16 @@ function LoginForm() {
     })
       .then((response) => response.json())
       .then((data) => {
-        if (data.correct_input && login()) {
+        if (data.correct_input) {
           setCorrectInput(true);
-          navigate("/");
+          login();
+          navigate(navigate_to || "/");
         } else {
           setCorrectInput(false);
         }
       });
   };
+
   return (
     <div className="login_wrapper">
       <h1 className="title">Login</h1>

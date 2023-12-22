@@ -28,6 +28,11 @@ const Links = () => {
           <span onClick={() => navigate("/profile")}>Profile</span>
         </li>
       )}
+      {user.auth && user.admin && (
+        <li>
+          <span onClick={() => navigate("/admin")}>Dashboard</span>
+        </li>
+      )}
       <li>
         <span onClick={() => navigate("/about")}>About</span>
       </li>

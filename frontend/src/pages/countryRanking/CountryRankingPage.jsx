@@ -10,6 +10,7 @@ function CountryRankingPage() {
       .then((res) => res.json())
       .then((data) => setRankingData(data.countrys));
   }, []);
+
   return (
     <div className="ranking">
       <Heading
