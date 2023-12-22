@@ -7,6 +7,7 @@ from models import User, FollowedMatch, FollowedLeague
 from email_validator import validate_email, EmailNotValidError
 from functools import wraps
 from icecream import ic
+import time
 
 def admin_required(func):
     @wraps(func)
@@ -57,7 +58,7 @@ def admin_edit_user():
     user = User.query.get(user_id)
             
     # Username: lenght >= 3, no only space
-    if user.username != username:
+    if user.username != username and username != "":
         if len(username) < 3 or username.isspace():
             correctness["correct_input"] = False
             correctness["data"]["username"]["rules"] = False
@@ -68,7 +69,7 @@ def admin_edit_user():
             user.username = username
             
     # Email: valid
-    if user.email != email:
+    if user.email != email and email != "":
         if User.query.filter_by(email=email).first() != None:
             correctness["correct_input"] = False
             correctness["data"]["email"]["unique"] = False
@@ -91,18 +92,19 @@ def admin_edit_user():
         else:
             password = request.json['password']
             confirm_password = request.json['confirm_password'] if "confirm_password" in request.json else None
-            if (len(password) < 8 
-                    or password.isalpha() 
-                    or password.isdigit() 
-                    or password.islower() 
-                    or password.isupper()):
-                correctness["correct_input"] = False
-                correctness["data"]["password"] = False
-            elif confirm_password != password:
-                correctness["correct_input"] = False
-                correctness["data"]["confirm_password"] = False
-            else:
-                user.set_password(password)
+            if password != "" and confirm_password != "":
+                if (len(password) < 8 
+                        or password.isalpha() 
+                        or password.isdigit() 
+                        or password.islower() 
+                        or password.isupper()):
+                    correctness["correct_input"] = False
+                    correctness["data"]["password"] = False
+                elif confirm_password != password:
+                    correctness["correct_input"] = False
+                    correctness["data"]["confirm_password"] = False
+                else:
+                    user.set_password(password)
             
     # Admin
     user.admin = admin if user.admin != admin else user.admin
@@ -114,8 +116,6 @@ def admin_edit_user():
     if correctness["correct_input"]:
         db.session.commit()
         
-    ic(correctness)  
-        
     return correctness
 
 @app.route("/admin/create/user", methods=["POST"])
@@ -123,9 +123,9 @@ def admin_edit_user():
 def admin_create_user():
     username = request.json['username']
     email = request.json['email']
-    admin = request.json['admin']
     password = request.json["password"]
     confirm_password = request.json["confirm_password"]
+    admin = request.json['admin']
     email_confirmed = request.json['email_confirmed']
     
     correctness = {
@@ -179,7 +179,7 @@ def admin_create_user():
         correctness["data"]["confirm_password"] = False
             
     if correctness["correct_input"]:
-        user = User(username=username, email=email, admin=admin, email_confirmed=email_conmfirmed)
+        user = User(username=username, email=email, admin=admin, email_confirmed=email_confirmed)
         user.set_password(password)
         db.session.add(user)
         db.session.commit()

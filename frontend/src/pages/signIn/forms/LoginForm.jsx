@@ -3,10 +3,12 @@ import Button from "../../../components/Button";
 import { Context } from "../../../App";
 import "../styles/LoginForm.css";
 import { useNavigate } from "react-router-dom";
+import ClipLoader from "react-spinners/ClipLoader";
 
 function LoginForm({ navigate_to }) {
   const { login } = useContext(Context);
   const navigate = useNavigate();
+  const [loading, setLoading] = useState(false);
 
   const [loginFormData, setLoginFormData] = useState({
     username_email: "",
@@ -26,6 +28,7 @@ function LoginForm({ navigate_to }) {
 
   const loginUser = (event) => {
     event.preventDefault();
+    setLoading(true);
     fetch(`/login`, {
       method: "POST",
       headers: {
@@ -40,6 +43,7 @@ function LoginForm({ navigate_to }) {
           login();
           navigate(navigate_to || "/");
         } else {
+          setLoading(false);
           setCorrectInput(false);
         }
       });
@@ -84,7 +88,17 @@ function LoginForm({ navigate_to }) {
           variant="light"
           size="xxl"
         >
-          Submit
+          {!loading ? (
+            "Log In"
+          ) : (
+            <ClipLoader
+              size={20}
+              color="black"
+              speedMultiplier={1}
+              aria-label="Loading Spinner"
+              data-testid="loader"
+            />
+          )}
         </Button>
       </form>
       <p className="register">

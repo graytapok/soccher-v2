@@ -4,14 +4,22 @@ import styled from "styled-components";
 const HeadingComponent = styled.div`
   & {
     display: flex;
+    flex-direction: column;
     background-color: var(--heading_color);
     margin: 0;
     height: 150px;
     color: #fff;
-    padding: 0;
+    padding: 20px;
     align-items: center;
     justify-content: center;
     width: 100%;
+  }
+
+  div {
+    display: felx;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
   }
 
   img {
@@ -26,8 +34,10 @@ const HeadingComponent = styled.div`
 function Heading({ title, img, children }) {
   return (
     <HeadingComponent className="heading">
-      {img && <img src={img.path} alt={img.alt} />}
-      <h1>{title}</h1>
+      <div>
+        {img && <img src={img.path} alt={img.alt} />}
+        <h1>{title}</h1>
+      </div>
       {children}
     </HeadingComponent>
   );
