@@ -1,0 +1,233 @@
+{
+    "event": {
+        "tournament": {
+            "name": "Serie A",
+            "slug": "serie-a",
+            "category": {
+                "name": "Italy",
+                "slug": "italy",
+                "sport": {
+                    "name": "Football",
+                    "slug": "football",
+                    "id": 1
+                },
+                "id": 31,
+                "flag": "italy",
+                "alpha2": "IT"
+            },
+            "uniqueTournament": {
+                "name": "Serie A",
+                "slug": "serie-a",
+                "primaryColorHex": "#09519e",
+                "secondaryColorHex": "#008fd7",
+                "category": {
+                    "name": "Italy",
+                    "slug": "italy",
+                    "sport": {
+                        "name": "Football",
+                        "slug": "football",
+                        "id": 1
+                    },
+                    "id": 31,
+                    "flag": "italy",
+                    "alpha2": "IT"
+                },
+                "userCount": 768917,
+                "id": 23,
+                "country": {},
+                "hasEventPlayerStatistics": true,
+                "crowdsourcingEnabled": false,
+                "hasPerformanceGraphFeature": true,
+                "displayInverseHomeAwayTeams": false
+            },
+            "priority": 597,
+            "competitionType": 1,
+            "id": 33
+        },
+        "season": {
+            "name": "Serie A 23/24",
+            "year": "23/24",
+            "editor": false,
+            "id": 52760
+        },
+        "roundInfo": {
+            "round": 18
+        },
+        "customId": "LdbsOdb",
+        "status": {
+            "code": 0,
+            "description": "Not started",
+            "type": "notstarted"
+        },
+        "venue": {
+            "city": {
+                "name": "Bergamo"
+            },
+            "stadium": {
+                "name": "Gewiss Stadium",
+                "capacity": 26393
+            },
+            "id": 588,
+            "country": {
+                "alpha2": "IT",
+                "name": "Italy"
+            }
+        },
+        "referee": {
+            "name": "Gianluca Manganiello",
+            "slug": "manganiello-gianluca",
+            "yellowCards": 983,
+            "redCards": 41,
+            "yellowRedCards": 30,
+            "games": 211,
+            "sport": {
+                "id": 1,
+                "slug": "football",
+                "name": "Football"
+            },
+            "id": 132287,
+            "country": {
+                "alpha2": "IT",
+                "name": "Italy"
+            }
+        },
+        "homeTeam": {
+            "name": "Atalanta",
+            "slug": "atalanta",
+            "shortName": "Atalanta",
+            "gender": "M",
+            "sport": {
+                "name": "Football",
+                "slug": "football",
+                "id": 1
+            },
+            "userCount": 227173,
+            "manager": {
+                "name": "Gian Piero Gasperini",
+                "slug": "gian-piero-gasperini",
+                "shortName": "G. P. Gasperini",
+                "id": 53191,
+                "country": {
+                    "alpha2": "IT",
+                    "name": "Italy"
+                }
+            },
+            "venue": {
+                "city": {
+                    "name": "Bergamo"
+                },
+                "stadium": {
+                    "name": "Gewiss Stadium",
+                    "capacity": 26393
+                },
+                "id": 588,
+                "country": {
+                    "alpha2": "IT",
+                    "name": "Italy"
+                }
+            },
+            "foundationDate": {},
+            "nameCode": "ATA",
+            "disabled": false,
+            "national": false,
+            "type": 0,
+            "id": 2686,
+            "country": {
+                "alpha2": "IT",
+                "name": "Italy"
+            },
+            "subTeams": [],
+            "fullName": "Atalanta",
+            "teamColors": {
+                "primary": "#0000cc",
+                "secondary": "#000000",
+                "text": "#000000"
+            },
+            "foundationDateTimestamp": -1963180800
+        },
+        "awayTeam": {
+            "name": "Lecce",
+            "slug": "lecce",
+            "shortName": "Lecce",
+            "gender": "M",
+            "sport": {
+                "name": "Football",
+                "slug": "football",
+                "id": 1
+            },
+            "userCount": 64747,
+            "manager": {
+                "name": "Roberto D'Aversa",
+                "slug": "roberto-daversa",
+                "shortName": "R. D'Aversa",
+                "id": 2940,
+                "country": {
+                    "alpha2": "IT",
+                    "name": "Italy"
+                }
+            },
+            "venue": {
+                "city": {
+                    "name": "Lecce"
+                },
+                "stadium": {
+                    "name": "Via del Mare",
+                    "capacity": 40800
+                },
+                "id": 1165,
+                "country": {
+                    "alpha2": "IT",
+                    "name": "Italy"
+                }
+            },
+            "foundationDate": {},
+            "nameCode": "LEC",
+            "disabled": false,
+            "national": false,
+            "type": 0,
+            "id": 2689,
+            "country": {
+                "alpha2": "IT",
+                "name": "Italy"
+            },
+            "subTeams": [],
+            "fullName": "Lecce",
+            "teamColors": {
+                "primary": "#f6ea00",
+                "secondary": "#db2d1f",
+                "text": "#db2d1f"
+            },
+            "foundationDateTimestamp": -1950134400
+        },
+        "homeScore": {},
+        "awayScore": {},
+        "time": {},
+        "changes": {
+            "changeTimestamp": 0
+        },
+        "hasGlobalHighlights": false,
+        "detailId": 1,
+        "crowdsourcingDataDisplayEnabled": false,
+        "id": 11407505,
+        "defaultPeriodCount": 2,
+        "defaultPeriodLength": 45,
+        "defaultOvertimeLength": 15,
+        "crowdsourcingEnabled": false,
+        "startTimestamp": 1703935800,
+        "slug": "lecce-atalanta",
+        "finalResultOnly": false,
+        "hasBet365LiveStream": true,
+        "bet365ExcludedCountryCodes": [
+            "IT",
+            "IR",
+            "GR",
+            "RU",
+            "CH",
+            "CA"
+        ],
+        "fanRatingEvent": false,
+        "seasonStatisticsType": "overall",
+        "showTotoPromo": false,
+        "isEditor": false
+    }
+}

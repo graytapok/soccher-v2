@@ -14,17 +14,12 @@ function LeaguePage() {
   const [leagueInfo, setLeagueInfo] = useState({});
 
   useEffect(() => {
-    fetch("/league", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ league_id: league_id }),
-    })
+    fetch(`/league/${league_id}`)
       .then((res) => res.json())
       .then((res) => {
         setStandings(res.standings);
         setLeagueInfo(res.league);
+        console.log(res);
       });
   }, [league_id]);
 
@@ -51,9 +46,9 @@ function LeaguePage() {
             background: ["team", "colors", "primary"],
           },
           2: { name: "Points", atribute: "points" },
-          3: { name: "Wins", atribute: "wins" },
-          4: { name: "Draws", atribute: "draws" },
-          5: { name: "Losses", atribute: "losses" },
+          3: { name: "Wins", atribute: "wins", sortable: true },
+          4: { name: "Draws", atribute: "draws", sortable: true },
+          5: { name: "Losses", atribute: "losses", sortable: true },
           6: { name: "Goals", atribute: "scored", sortable: true },
           7: { name: "Against Goals", atribute: "recieved" },
           8: {

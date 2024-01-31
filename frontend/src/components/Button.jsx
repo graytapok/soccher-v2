@@ -33,35 +33,35 @@ const ButtonComponent = styled.button`
       : props.size === "xxl"
       ? "padding: 0 2.6rem; height: 46px; font-size: 24px"
       : "padding: 0 1.8rem; height: 37px; font-size: 18px"};
-  background-color: rgba(var(--${(props) =>
-    props.variant ? props.variant : "primary"}), 1);
-  border: 2px solid rgba(
-      ${(props) =>
-        props.outline
-          ? `var(--${props.variant})); background-color: var(--transparent); color: rgb(var(--${props.variant}))`
-          : "var(--transparent))"};
+  ${(props) =>
+    props.variant
+      ? `background-color: rgba(var(--${props.variant}), 1);`
+      : "background-color: rgba(var(--primary), 1);"}
+  ${(props) =>
+    props.outline
+      ? `border: 2px solid rgba(var(--${props.variant})); background-color: var(--transparent); color: rgb(var(--${props.variant}));`
+      : "border: 2px solid rgba(var(--transparent));"}
   ${(props) => (props.variant === "light" ? "color: var(--navbar_color);" : "")}
   &:hover {
-    background-color: ${(props) =>
+    ${(props) =>
       props.size === "nav_icon"
-        ? `rgba(var(--primary), 1);`
-        : `rgba(var(--${props.variant ? props.variant : "primary"}), 1);`}
-    border-color: ${(props) =>
-      props.size === "nav_icon"
-        ? `rgba(var(--primary), 1);`
-        : `rgba(var(--${props.variant ? props.variant : "primary"}), 1);`}
-    box-shadow: 0 0 10px 1px ${(props) =>
-      props.size === "nav_icon"
-        ? `rgba(var(--primary), 1);`
-        : `rgba(var(--${props.variant ? props.variant : "primary"}), 1);`};
+        ? `background-color: rgba(var(--primary), 1);
+          border-color: rgba(var(--primary), 1);
+          box-shadow: 0 0 10px 1px rgba(var(--primary), 1);`
+        : props.variant
+        ? `background-color: rgba(var(--${props.variant}), 1);
+          border-color: rgba(var(--${props.variant}), 1);
+          box-shadow: 0 0 10px 1px rgba(var(--${props.variant}), 1);`
+        : `background-color: rgba(var(--primary), 1);
+          border-color: rgba(var(--primary), 1);
+          box-shadow: 0 0 10px 1px rgba(var(--primary), 1);`}
     ${(props) =>
       props.variant === "light" ? "color: black;" : "color: white;"}
-    
   }
   ${(props) =>
     props.size === "nav_icon" || props.size === "icon"
-      ? "i {font-size: 25px;}"
-      : ""};
+      ? "i {font-size: 25px;};"
+      : ""}
 `;
 
 function Button({

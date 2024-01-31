@@ -1,0 +1,34 @@
+{
+    "bestHomeTeamPlayer": {
+        "value": "8.5",
+        "label": "rating",
+        "player": {
+            "name": "Thody Elie Youan",
+            "firstName": "",
+            "lastName": "",
+            "slug": "thody-elie-youan",
+            "shortName": "T. E. Youan",
+            "position": "M",
+            "userCount": 213,
+            "id": 921362,
+            "marketValueCurrency": "EUR",
+            "dateOfBirthTimestamp": 923443200
+        }
+    },
+    "bestAwayTeamPlayer": {
+        "value": "8.0",
+        "label": "rating",
+        "player": {
+            "name": "Mika Biereth",
+            "firstName": "Mika Biereth",
+            "lastName": "",
+            "slug": "mika-biereth",
+            "shortName": "M. Biereth",
+            "position": "F",
+            "userCount": 582,
+            "id": 1083007,
+            "marketValueCurrency": "EUR",
+            "dateOfBirthTimestamp": 1044662400
+        }
+    }
+}

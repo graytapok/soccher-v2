@@ -1,0 +1,231 @@
+{
+    "event": {
+        "tournament": {
+            "name": "Pro League",
+            "slug": "pro-league",
+            "category": {
+                "name": "Belgium",
+                "slug": "belgium",
+                "sport": {
+                    "name": "Football",
+                    "slug": "football",
+                    "id": 1
+                },
+                "id": 33,
+                "flag": "belgium",
+                "alpha2": "BE"
+            },
+            "uniqueTournament": {
+                "name": "Pro League",
+                "slug": "pro-league",
+                "primaryColorHex": "#16002b",
+                "secondaryColorHex": "#ff1740",
+                "category": {
+                    "name": "Belgium",
+                    "slug": "belgium",
+                    "sport": {
+                        "name": "Football",
+                        "slug": "football",
+                        "id": 1
+                    },
+                    "id": 33,
+                    "flag": "belgium",
+                    "alpha2": "BE"
+                },
+                "userCount": 74868,
+                "id": 38,
+                "country": {},
+                "hasEventPlayerStatistics": true,
+                "crowdsourcingEnabled": false,
+                "hasPerformanceGraphFeature": false,
+                "displayInverseHomeAwayTeams": false
+            },
+            "priority": 426,
+            "competitionType": 1,
+            "id": 38
+        },
+        "season": {
+            "name": "Pro League 23/24",
+            "year": "23/24",
+            "editor": false,
+            "id": 52383
+        },
+        "roundInfo": {
+            "round": 20
+        },
+        "customId": "Vhbsbib",
+        "status": {
+            "code": 0,
+            "description": "Not started",
+            "type": "notstarted"
+        },
+        "venue": {
+            "city": {
+                "name": "Liege"
+            },
+            "stadium": {
+                "name": "Maurice Dufrasne",
+                "capacity": 27670
+            },
+            "id": 1133,
+            "country": {
+                "alpha2": "BE",
+                "name": "Belgium"
+            }
+        },
+        "referee": {
+            "name": "Eric Lambrechts",
+            "slug": "lambrechts-eric",
+            "yellowCards": 1052,
+            "redCards": 30,
+            "yellowRedCards": 34,
+            "games": 249,
+            "sport": {
+                "id": 1,
+                "slug": "football",
+                "name": "Football"
+            },
+            "id": 171215,
+            "country": {
+                "alpha2": "BE",
+                "name": "Belgium"
+            }
+        },
+        "homeTeam": {
+            "name": "Standard Li\u00e8ge",
+            "slug": "standard-liege",
+            "shortName": "Standard Li\u00e8ge",
+            "gender": "M",
+            "sport": {
+                "name": "Football",
+                "slug": "football",
+                "id": 1
+            },
+            "userCount": 25270,
+            "manager": {
+                "name": "Carl Hoefkens",
+                "slug": "carlo-hoefkens",
+                "shortName": "C. Hoefkens",
+                "id": 798046,
+                "country": {
+                    "alpha2": "BE",
+                    "name": "Belgium"
+                }
+            },
+            "venue": {
+                "city": {
+                    "name": "Liege"
+                },
+                "stadium": {
+                    "name": "Maurice Dufrasne",
+                    "capacity": 27670
+                },
+                "id": 1133,
+                "country": {
+                    "alpha2": "BE",
+                    "name": "Belgium"
+                }
+            },
+            "foundationDate": {},
+            "nameCode": "STA",
+            "national": false,
+            "type": 0,
+            "id": 2901,
+            "country": {
+                "alpha2": "BE",
+                "name": "Belgium"
+            },
+            "subTeams": [],
+            "fullName": "Standard Li\u00e8ge",
+            "teamColors": {
+                "primary": "#cc0000",
+                "secondary": "#ffffff",
+                "text": "#ffffff"
+            },
+            "foundationDateTimestamp": -2201212800
+        },
+        "awayTeam": {
+            "name": "Sint-Truidense VV",
+            "slug": "sint-truidense-vv",
+            "shortName": "St. Truidense",
+            "gender": "M",
+            "sport": {
+                "name": "Football",
+                "slug": "football",
+                "id": 1
+            },
+            "userCount": 12352,
+            "manager": {
+                "name": "Thorsten Fink",
+                "slug": "thorsten-fink",
+                "shortName": "T. Fink",
+                "id": 784613,
+                "country": {
+                    "alpha2": "DE",
+                    "name": "Germany"
+                }
+            },
+            "venue": {
+                "city": {
+                    "name": "Sint- Truiden"
+                },
+                "stadium": {
+                    "name": "Stayen",
+                    "capacity": 14600
+                },
+                "id": 1252,
+                "country": {
+                    "alpha2": "BE",
+                    "name": "Belgium"
+                }
+            },
+            "foundationDate": {},
+            "nameCode": "STT",
+            "national": false,
+            "type": 0,
+            "id": 2895,
+            "country": {
+                "alpha2": "BE",
+                "name": "Belgium"
+            },
+            "subTeams": [],
+            "fullName": "Sint-Truidense VV",
+            "teamColors": {
+                "primary": "#ffff00",
+                "secondary": "#3333cc",
+                "text": "#3333cc"
+            },
+            "foundationDateTimestamp": -1447113600
+        },
+        "homeScore": {},
+        "awayScore": {},
+        "time": {},
+        "changes": {
+            "changeTimestamp": 0
+        },
+        "hasGlobalHighlights": false,
+        "detailId": 1,
+        "crowdsourcingDataDisplayEnabled": false,
+        "id": 11369945,
+        "defaultPeriodCount": 2,
+        "defaultPeriodLength": 45,
+        "defaultOvertimeLength": 15,
+        "crowdsourcingEnabled": false,
+        "startTimestamp": 1703698200,
+        "slug": "standard-liege-sint-truidense-vv",
+        "finalResultOnly": false,
+        "hasBet365LiveStream": true,
+        "bet365ExcludedCountryCodes": [
+            "BE",
+            "IR",
+            "GR",
+            "RU",
+            "CH",
+            "CA"
+        ],
+        "fanRatingEvent": false,
+        "seasonStatisticsType": "overall",
+        "showTotoPromo": false,
+        "isEditor": false
+    }
+}

@@ -1,8 +1,9 @@
-from flask import request
+from flask import request, render_template
 from flask_login import current_user
 
 from app import app, db
-from models import User, FollowedMatch, FollowedLeague
+from database.models import User, FollowedMatch, FollowedLeague
+from database.schemas import UserSchema, FollowedMatchSchema, FollowedLeagueSchema
 
 from email_validator import validate_email, EmailNotValidError
 from functools import wraps
@@ -14,9 +15,17 @@ def admin_required(func):
     def wrapped(*args, **kwargs):
         if current_user:
             if not current_user.is_authenticated:
-                return {"message": "You must be logged in!"}
+                return {
+                    "message": "login required",
+                    "data": None,
+                    "success": False
+                }
             elif not current_user.admin:
-                return {"message": "You must be an admin!"}
+                return {
+                    "message": "admin role required",
+                    "data": None,
+                    "success": False
+                }
             else:
                 return func(*args, **kwargs)
     return wrapped
@@ -24,85 +33,68 @@ def admin_required(func):
 @app.route("/admin/dashboard", methods=["GET"])
 @admin_required
 def admin():
-    users = User.query.order_by(User.id).all()
-    json_users = []
-    for user in users:
-        json_users.append(user.jsonify())
-    return {"users": json_users}
+    user_schema = UserSchema(many=True)
+    users = user_schema.dump(User.query.order_by(User.id).all())
+    return {
+        "message": "",
+        "data": None,
+        "success": True
+    }
 
 @app.route("/admin/edit/user", methods=["POST"])
 @admin_required
 def admin_edit_user():
+    message = ""
+    data = {}
+    
     username = request.json['username']
     email = request.json['email']
     admin = request.json['admin']
-    email_confirmed = request.json['email_confirmed']
+    email_confirmed = request.json['Confirmed']
     user_id = request.json["id"]
-    
-    correctness = {
-        "correct_input": True, 
-        "data": {
-            "username": {
-                "unique": True, 
-                "rules": True
-            },
-            "email": {
-                "unique": True, 
-                "rules": True
-            },
-            "password": True,
-            "confirm_password": True
-        }      
-    }
     
     user = User.query.get(user_id)
             
     # Username: lenght >= 3, no only space
     if user.username != username and username != "":
         if len(username) < 3 or username.isspace():
-            correctness["correct_input"] = False
-            correctness["data"]["username"]["rules"] = False
+            data.update({"username": {"rules": False}})
         elif User.query.filter_by(username=username).first() != None:
-            correctness["correct_input"] = False
-            correctness["data"]["username"]["unique"] = False
+            data.update({"username": {"unique": False}})
         else:
             user.username = username
             
     # Email: valid
     if user.email != email and email != "":
         if User.query.filter_by(email=email).first() != None:
-            correctness["correct_input"] = False
-            correctness["data"]["email"]["unique"] = False
+            data.update({"email": {"unique": False}})
         else: 
             try:
                 v = validate_email(email)
                 email = v["email"]
                 user.email = email
             except EmailNotValidError:
-                correctness["correct_input"] = False
-                correctness["data"]["email"]["rules"] = False
+                data.update({"email": {"rules": False}})
                 
     # Password: 8-units, letters, capitals, numbers
     # Confirm Password: must be equal to password
-    if "password" in request.json or "confirm_password" in request.json: 
-        if ("password" in request.json and not "confirm_password" in request.json) or (not "password" in request.json and "confirm_password" in request.json):
-            correctness["correct_input"] = False
-            correctness["data"]["password"] = False
-            correctness["data"]["confirm_password"] = False
+    if "password" in request.json or "confirmPassword" in request.json: 
+        if (("password" in request.json and not "confirmPassword" in request.json) 
+            or (not "password" in request.json and "confirmPassword" in request.json)):
+            data.update({"password": False})
+            data.update({"confirmPassword": False})
         else:
             password = request.json['password']
-            confirm_password = request.json['confirm_password'] if "confirm_password" in request.json else None
+            confirm_password = request.json['confirmPassword'] if "confirmPassword" in request.json else None
             if password != "" and confirm_password != "":
                 if (len(password) < 8 
                         or password.isalpha() 
                         or password.isdigit() 
                         or password.islower() 
                         or password.isupper()):
-                    correctness["correct_input"] = False
-                    correctness["data"]["password"] = False
+                    data.update({"password": False})
                 elif confirm_password != password:
-                    correctness["correct_input"] = False
-                    correctness["data"]["confirm_password"] = False
+                    data.update({"confirmPassword": False})
                 else:
                     user.set_password(password)
             
@@ -113,56 +105,43 @@ def admin_edit_user():
     if user.email_confirmed != email_confirmed:
         user.email_confirmed = email_confirmed
             
-    if correctness["correct_input"]:
+    if len(data) == 0:
         db.session.commit()
         
-    return correctness
+    return {
+        "message": "",
+        "data": data,
+        "success": True if message == "" else False
+    }
 
 @app.route("/admin/create/user", methods=["POST"])
 @admin_required
 def admin_create_user():
+    message = ""
+    data = {}
+    
     username = request.json['username']
     email = request.json['email']
     password = request.json["password"]
-    confirm_password = request.json["confirm_password"]
+    confirm_password = request.json["confirmPassword"]
     admin = request.json['admin']
-    email_confirmed = request.json['email_confirmed']
-    
-    correctness = {
-        "correct_input": True, 
-        "data": {
-            "username": {
-                "unique": True, 
-                "rules": True
-            },
-            "email": {
-                "unique": True, 
-                "rules": True
-            },
-            "password": True,
-            "confirm_password": True
-        }      
-    }
+    email_confirmed = request.json['emailConfirmed']
             
     # Username: lenght >= 3, no only space
     if len(username) < 3 or username.isspace():
-        correctness["correct_input"] = False
-        correctness["data"]["username"]["rules"] = False
+        data.update({"username": {"rules": False}})
     elif User.query.filter_by(username=username).first() != None:
-        correctness["correct_input"] = False
-        correctness["data"]["username"]["unique"] = False
+        data.update({"username": {"unique": False}})
             
     # Email: valid
     if User.query.filter_by(email=email).first() != None:
-        correctness["correct_input"] = False
-        correctness["data"]["email"]["unique"] = False
+        data.update({"email": {"unique": False}})
     else: 
         try:
             v = validate_email(email)
             email = v["email"]
         except EmailNotValidError:
-            correctness["correct_input"] = False
-            correctness["data"]["email"]["rules"] = False
+            data.update({"email": {"rules": False}})
                 
     # Password: 8-units, letters, capitals, numbers
     if (len(password) < 8 
@@ -170,58 +149,81 @@ def admin_create_user():
             or password.isdigit() 
             or password.islower() 
             or password.isupper()):
-        correctness["correct_input"] = False
-        correctness["data"]["password"] = False
+        data.update({"password": False})
             
     # Confirm Password: must be equal to password
     if confirm_password != password:
-        correctness["correct_input"] = False
-        correctness["data"]["confirm_password"] = False
+        data.update({"confirmPassword": False})
             
-    if correctness["correct_input"]:
+    if len(data) == 0:
         user = User(username=username, email=email, admin=admin, email_confirmed=email_confirmed)
         user.set_password(password)
         db.session.add(user)
         db.session.commit()
-    return correctness
+        
+    return {
+        "message": "",
+        "data": data,
+        "success": True if message == "" else False
+    }
 
-@app.route("/admin/delete/user/<id>", methods=["GET"])
+@app.route("/admin/delete/user", methods=["DELETE"])
 @admin_required
-def admin_delete_user(id):
+def admin_delete_user():
     message = ""
-    user = User.query.filter_by(id=id).first()
+    
+    user_id = request.args.get("id")
+    
+    user = User.query.filter_by(id=user_id).first()
     if user is None:
-        message = f"not found"
+        message = "user not found"
     else:
-        FollowedMatch.query.filter_by(user_id=id).delete()
-        FollowedLeague.query.filter_by(user_id=id).delete()
+        FollowedMatch.query.filter_by(user_id=user_id).delete()
+        FollowedLeague.query.filter_by(user_id=user_id).delete()
         db.session.delete(user)
         db.session.commit()
-        message = f"deleted"
-    return {"message": message}
+    return {
+        "message": message,
+        "data": None,
+        "success": True if message == "" else False
+    }
 
-@app.route("/admin/delete/followed_match/<id>", methods=["GET"])
+@app.route("/admin/delete/followed_match", methods=["DELETE"])
 @admin_required
-def admin_delete_followed_match(id):
+def admin_delete_followed_match():
     message = ""
-    match = FollowedMatch.query.filter_by(id=id).first()
+    
+    match_id = request.args.get("id")
+    
+    match = FollowedMatch.query.filter_by(id=match_id).first()
     if match is None:
-        message = f"not found"
+        message = "match not found"
     else:
         db.session.delete(match)
         db.session.commit()
-        message = f"deleted"
-    return {"message": message}
+    return {
+        "message": message,
+        "data": None,
+        "success": True if message == "" else False
+    }
 
-@app.route("/admin/delete/followed_league/<id>", methods=["GET"])
+
+@app.route("/admin/delete/followed_league", methods=["DELETE"])
 @admin_required
-def admin_delete_followed_league(id):
+def admin_delete_followed_league():
     message = ""
-    league = FollowedLeague.query.filter_by(id=id).first()
+    
+    league_id = request.args.get("id")
+    
+    league = FollowedLeague.query.filter_by(id=league_id).first()
     if match is None:
-        message = f"not found"
+        message = "league not found"
     else:
         db.session.delete(league)
         db.session.commit()
-        message = f"deleted"
-    return {"message": message}
+    return {
+        "message": message,
+        "data": None,
+        "success": True if message == "" else False
+    }
+

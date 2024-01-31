@@ -2,10 +2,8 @@ from flask import Flask, render_template, flash, redirect, url_for, request, jso
 from flask_login import current_user
 
 from app import app, db
-from models import User, FollowedMatch
-from api.api_requests import (create_match_statistics_json, create_date_matches_json,
-                                  create_match_detail_info_json, create_categories_json, country_list, league_id_list,
-                                  create_league_standings_json, create_league_media_json)
+from database.models import User, FollowedMatch
+from api.api_requests import *
 from api.tools import dict_of_match_details
 
 from PIL import ImageColor
@@ -16,35 +14,31 @@ import time
 import json
 import os
 
-# Update the Database and open the JSON files "app/api/json/api_info/categories.json", "app/api/json/country_codes.json".
-# List of all leagues_info ids.
+# Update the Database and create todays matches
 with app.app_context():
     db.create_all()
     db.session.commit()
     db.session.close_all()
+    
+    date = datetime.now()
+    todays_json = api_match_date(date.day, date.month, date.year)
+    api_match_lineups(11393380)
 
-@app.route("/", methods=["GET"])
-@app.route("/home", methods=["GET"])
 @app.route("/index", methods=["GET"])
 def index():
+    message = ""
+    
     # Open or create JSON file for today's matches.
     d, m, y = datetime.now().day, datetime.now().month, datetime.now().year
-    todays_file = f"api/json/todays_matches/{d}_{m}_{y}.json"
-    if not os.path.exists(todays_file):
-        create_date_matches_json(d, m, y)
-        while not os.path.exists(todays_file):
-            continue
-    
-    os.makedirs(os.path.dirname(todays_file), exist_ok=True)
-    with open(todays_file, "rb") as f:
-        data = f.read()
-        todays_json = json.loads(data)
+    todays_json = api_match_date(d, m, y)
         
     # Creating a dict of today's most important matches by "priority".
     matches = []
     priority = 550
     counter = 0
     while len(matches) < 10 and counter < 9:
+        if counter > 0:
+            matches.clear()
         for event in todays_json["events"]:
             if "women" in event["tournament"]["name"].lower():
                 continue
@@ -82,14 +76,16 @@ def index():
                 if event['homeTeam']['name'] in country_list or event['awayTeam']['name'] in country_list:
                     country = True
                 
-                matches.append(dict_of_match_details(match_id=int(event['id']), 
-                                                     home={"name":event['homeTeam']['name'], "score": home_score}, 
-                                                     away={"name":event['awayTeam']['name'], "score": away_score}, 
-                                                     start_time=f'{hour}:{minutes}',
-                                                     status=event["status"]["type"],
-                                                     current_time=current_time,
-                                                     country=country,
-                                                     extra_time=extra_time))
+                matches.append(dict_of_match_details(
+                    match_id=int(event['id']), 
+                    home={"name":event['homeTeam']['name'], "score": home_score}, 
+                    away={"name":event['awayTeam']['name'], "score": away_score}, 
+                    start_time=f'{hour}:{minutes}',
+                    status=event["status"]["type"],
+                    current_time=current_time,
+                    country=country,
+                    extra_time=extra_time)
+                )
         priority -= 50  
         counter += 1
         
@@ -107,26 +103,27 @@ def index():
                 "category_name": league_id_list[i]["category_name"],
                 "priority": league_id_list[i]["priority"]}
             )
-    return {"matches": matches, "leagues": leagues}
+    
+    return {
+        "message": message,
+        "data": {
+            "matches": matches, 
+            "leagues": leagues
+        },
+        "success": True if message == "" else None
+    }
 
-@app.route("/league", methods=["POST", "GET"])
-def league():
-    if request.method == "GET":
-        league_id = 17
-    else:
-        league_id = int(request.json["league_id"])
-        
+@app.route("/league/<league_id>", methods=["GET"])
+def league(league_id):
+    message = ""
+    league_id = int(league_id)
+    
     # Open or create JSON file for league_id.
-    season = create_league_standings_json(league_id)
-    league_standings_file = f"api/json/leagues_info/standings/{league_id}_{season}.json"
-    while not os.path.exists(league_standings_file):
-            continue
-    os.makedirs(os.path.dirname(league_standings_file), exist_ok=True)
-    with open(league_standings_file, "rb") as f:
-        data = f.read()
-        league_standings_json = json.loads(data)
+    api_request = api_league_standings(league_id)
+    standings_json = api_request["json"]
+    season = api_request["season"]
         
-    json_data = league_standings_json["standings"][0]
+    json_data = standings_json["standings"][0]
     
     standings = []
     for row in json_data["rows"]:
@@ -163,78 +160,236 @@ def league():
         "category_name": league_id_list[league_id]["category_name"],
         "priority": league_id_list[league_id]["priority"]
     }
-    return {"league": league, "standings": standings}
+    return {
+        "message": message,
+        "data": {
+            "league": league, 
+        "standings": standings
+        },
+        "success": True if message == "" else False
+    }
 
-@app.route("/match_details", methods=["GET", "POST"])
-def match_details():
-    match_id = int(request.json["match_id"])
-
-    # Open or create the match details JSON file.
-    details_file = f"api/json/match_detail_info/{match_id}.json"
-    if not os.path.exists(details_file):
-        create_match_detail_info_json(match_id)
-        os.makedirs(os.path.dirname(details_file), exist_ok=True)
-        while not os.path.exists(details_file):
-            continue
-    with open(details_file, "rb") as f:
-        data = f.read()
-        details_json = json.loads(data)
-
-    # Open or create the match statistics JSON file.
-    statistics_file = f"api/json/match_statistics/{match_id}.json"
-    if not os.path.exists(statistics_file):
-        create_match_statistics_json(match_id)
-        os.makedirs(os.path.dirname(statistics_file), exist_ok=True)
-        while not os.path.exists(statistics_file):
-            continue
-    with open(statistics_file, "rb") as f:
-        data = f.read()
-        statistics_json = json.loads(data)
-
-    # Get the team's name and color.
-    team = {}
-    home_color = ImageColor.getcolor(details_json["event"]["homeTeam"]["teamColors"]["primary"], "RGB")
-    away_color = ImageColor.getcolor(details_json["event"]["awayTeam"]["teamColors"]["primary"], "RGB")
-    team.update({"home": [details_json["event"]["homeTeam"]["name"], home_color],
-                 "away": [details_json["event"]["awayTeam"]["name"], away_color]})
-
-    # Get details about the match
-    # Time
-    match = {}
-    t = details_json["event"]["startTimestamp"]
-    match_time = datetime.fromtimestamp(t)
-    hour = datetime.fromtimestamp(t).hour
-    minutes = datetime.fromtimestamp(t).minute
-    if minutes < 10:
-        minutes = "0" + str(datetime.fromtimestamp(t).minute)
-    if hour < 10:
-        hour = "0" + str(datetime.fromtimestamp(t).minute)
-    match.update({"starttime": f"{hour}:{minutes}, {match_time.day}.{match_time.month}"})
-
-    # Score
-    score = {}
+@app.route("/match_details/<match_id>", methods=["GET"])
+def match_details(match_id):
+    message = ""
+    
+    if match_id == "react_devtools_backend_compact.js.map":
+        return {}
+    # Open JSON files.
+    details_json = api_match_details(match_id)
+    statistics_json = api_match_statistics(match_id)
     try:
-        score.update({"home": details_json["event"]["homeScore"]["normaletime"],
-                      "away": details_json["event"]["awayScore"]["normaletime"]})
-    except KeyError:
-        score.update({"home": 0, "away": 0})
+        preform_json = api_match_preform(match_id)
+        lineups_json = api_match_lineups(match_id)
+    except:
+        preform_json = None
+        lineups_json = None
 
-    # Posession
-    """ i = 0
-    game_posession = {}
-    for posession in statistics_json["statistics"]:
-        game_posession.update({i: [posession['groups'][1]['statisticsItems'][0]['home'],
-                                   posession['groups'][1]['statisticsItems'][0]['away']]})
-        i += 1 """
-    return {"match_id": ""}
+    status = details_json["event"]["status"]["type"]
+
+    """MATCH DETAILS"""
+    match = {}
+    if details_json != None:
+        t = details_json["event"]["startTimestamp"]
+        start_time = datetime.fromtimestamp(t)
+        hour = start_time.hour
+        minutes = start_time.minute
+        if minutes < 10:
+            minutes = "0" + str(start_time.minute)
+        if hour < 10:
+            hour = "0" + str(start_time.minute)
+
+        colors = {
+            "away": ImageColor.getcolor(details_json["event"]["awayTeam"]["teamColors"]["primary"], "RGB"),
+            "home": ImageColor.getcolor(details_json["event"]["homeTeam"]["teamColors"]["primary"], "RGB")
+        }
+
+        if "foundationDateTimestamp" in details_json["event"]["homeTeam"]:
+            home_f = details_json["event"]["homeTeam"]["foundationDateTimestamp"]
+            home_dt = datetime(1970, 1, 1) + timedelta(seconds=home_f)
+            home_date = f"{f'0{home_dt.day}' if home_dt.day < 10 else home_dt.day}.{f'0{home_dt.month}' if home_dt.month < 10 else home_dt.month}.{home_dt.year}"
+
+        if "foundationDateTimestamp" in details_json["event"]["awayTeam"]:
+            away_f = details_json["event"]["awayTeam"]["foundationDateTimestamp"]
+            away_dt = datetime(1970, 1, 1) + timedelta(seconds=away_f)
+            away_date = f"{f'0{away_dt.day}' if away_dt.day < 10 else away_dt.day}.{f'0{away_dt.month}' if away_dt.month < 10 else away_dt.month}.{away_dt.year}"
+
+        foundations = {
+            "home": home_date if "foundationDateTimestamp" in details_json["event"]["homeTeam"] else None,
+            "away": away_date if "foundationDateTimestamp" in details_json["event"]["awayTeam"] else None
+        }
+
+        if f"{start_time.day}.{start_time.month}.{start_time.year}" == f"{datetime.now().day}.{datetime.now().month}.{datetime.now().year}":
+            date = "today"
+        else:
+            date = f"{start_time.day}.{start_time.month}.{start_time.year}"
+
+        match.update({
+        "id": details_json["event"]["id"],
+        "start_time": {
+            "time": f"{hour}:{minutes}", 
+            "date": date,
+        }, 
+        "round": details_json["event"]["roundInfo"]["round"],
+        "place": details_json["event"]["venue"] if "venue" in details_json["event"] else None,
+        "referee": {
+            "name": details_json["event"]["referee"]["name"],
+            "games": details_json["event"]["referee"]["games"],
+            "id": details_json["event"]["referee"]["id"],
+            "country": details_json["event"]["referee"]["country"]["name"],
+            "cards": {
+                "yellow": details_json["event"]["referee"]["yellowCards"],
+                "red": details_json["event"]["referee"]["redCards"],
+                "yellow-red": details_json["event"]["referee"]["yellowRedCards"]
+            }
+        } if "referee" in details_json["event"] else None,
+        "teams": {
+            "home": {
+                "name": details_json["event"]["homeTeam"]["name"],
+                "manager": {
+                    "name": details_json["event"]["homeTeam"]["manager"]["name"],
+                    "country": details_json["event"]["homeTeam"]["manager"]["country"]["name"],
+                    "id": details_json["event"]["homeTeam"]["manager"]["id"]
+                },
+                "id": details_json["event"]["homeTeam"]["id"],
+                "country": details_json["event"]["homeTeam"]["country"]["name"],
+                "foundation": foundations["home"],
+                "color": colors["home"]
+            },
+            "away": {
+                "name": details_json["event"]["awayTeam"]["name"],
+                "manager": {
+                    "name": details_json["event"]["awayTeam"]["manager"]["name"],
+                    "country": details_json["event"]["awayTeam"]["manager"]["country"]["name"],
+                    "id": details_json["event"]["awayTeam"]["manager"]["id"]
+                },
+                "id": details_json["event"]["awayTeam"]["id"],
+                "country": details_json["event"]["awayTeam"]["country"]["name"],
+                "foundation": foundations["away"],
+                "color": colors["away"]
+            },
+        },
+        "league": "",
+        "status": status
+        })
+
+    """MATCH STATISTICS"""
+    """
+    statistics = {}
+    if statistics_json != None:
+        # Posession
+        statistics = {"status": details_json["event"]["status"]["type"]}
+        for period in statistics_json["statistics"]:
+            def find_value(atr, team):
+                for i in period["groups"][2]['statisticsItems']:
+                    if i["name"] == atr:
+                        return i[team]
+                return None
+            
+            def convert_prc(num, base):
+                if int(base) > 0:
+                    return f"{int(round((int(num)/ int(base)), 2) * 100)}%"
+                else:
+                    return None
+            
+            data = {}
+            for i in ["home", "away"]:
+                data.update({
+                    i: {
+                        "possesion": period['groups'][0]['statisticsItems'][0][i],
+                        "shots": {
+                            "total": period["groups"][1]['statisticsItems'][0][i],
+                            "on_target": period["groups"][1]['statisticsItems'][1][i],
+                            "off_target": period["groups"][1]['statisticsItems'][2][i],
+                            "blocked": period["groups"][1]['statisticsItems'][3][i]
+                        },
+                        "tvdata": {
+                            "corner_kicks": find_value("Corner kicks", i),
+                            "offsides": find_value("Offsides", i),
+                            "fouls": find_value("Fouls", i),
+                            "yellow_cards": find_value("Yellow cards", i),
+                            "free_kicks": find_value("Free kicks", i),
+                            "throw_ins": find_value("Throw-ins", i),
+                        },
+                        "passes": {
+                            "total": period["groups"][4]['statisticsItems'][0][i],
+                            "acurate": convert_prc(period["groups"][4]['statisticsItems'][1][i + "Value"], period["groups"][4]['statisticsItems'][0][i]),
+                        },
+                        "duels": {
+                            "dribbles": {
+                                "value": period["groups"][5]['statisticsItems'][0][i + "Value"],
+                                "total": period["groups"][5]['statisticsItems'][0][i + "Total"],
+                                "percentage": convert_prc(period["groups"][5]['statisticsItems'][0][i + "Value"], period["groups"][5]['statisticsItems'][0][i + "Total"])
+                            },
+                            "possession_lost": period["groups"][5]['statisticsItems'][1][i],
+                            "duels_won": period["groups"][5]['statisticsItems'][2][i],
+                        },
+                        "defending": {
+                            "tackles": period["groups"][6]['statisticsItems'][0][i],
+                            "interceptions": period["groups"][6]['statisticsItems'][1][i],
+                            "clearances": period["groups"][6]['statisticsItems'][2][i],
+                        },
+                    },
+                })
+                
+            statistics.update({
+                period["period"]: data
+            })
+    else:
+        statistics.update({"status": "notstarted"})
+    """
+        
+    """MATCH LINEUPS"""
+    lineups = {}
+    lineups_team = {}
+    if lineups_json != None:
+        for i in ["home", "away"]:
+            players = []
+            for j in lineups_json[i]["players"]:
+                if "statistics" in j and "rating" in j["statistics"]:
+                    rating = j["statistics"]["rating"]
+                elif "statistics" not in j and "avgRating" in j:
+                    rating = j["avgRating"]
+                else: 
+                    rating = None
+                name = j["player"]["name"].split(" ")
+                players.append({
+                    "position": j["position"],
+                    "name": name[-1],
+                    "id": j["player"]["id"],
+                    "number": j["shirtNumber"],
+                    "substitute": j["substitute"],
+                    "rating": rating if j["substitute"] == False else None
+                })
+            lineups_team.update({
+                i: {
+                    "players": players,
+                    "formation": lineups_json[i]["formation"],
+                    "player": lineups_json[i]["playerColor"],
+                    "goalkeeper": lineups_json[i]["goalkeeperColor"]
+                }, 
+            })
+        lineups.update({"confirmed": lineups_json["confirmed"], "teams": lineups_team})
+    else:
+        lineups = None
+    
+    return {
+        "message": message,
+        "data": {
+            "match": match, 
+            "statistics": None, #statistics, 
+            "preform": preform_json,
+            "lineups": lineups
+        },
+        "success": True if message == "" else False
+    }
 
 @app.route("/countrys_ranking", methods=["GET"])
 def countrys_ranking():
+    message = ""
+    
     # Open or create the ranking JSON file.
-    file = "api/json/ranking.json"
-    with open(file, 'rb') as f:
-        data = f.read()
-        json_data = json.loads(data)
+    json_data = api_categories()
 
     # Get information about each team.
     countrys = []
@@ -263,7 +418,14 @@ def countrys_ranking():
             "diff_points": diff_points,
             "diff_ranking": diff_ranking
         })
-    return {"countrys": countrys}
+        
+    return {
+        "message": message,
+        "data": {
+            "countrys": countrys
+        },
+        "success": True if message == "" else None    
+    }
 
 @app.route("/countrys_ranking/<country_name>")
 def country(country_name):

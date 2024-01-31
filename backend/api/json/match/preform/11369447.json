@@ -1,0 +1,27 @@
+{
+    "homeTeam": {
+        "avgRating": "6.85",
+        "position": 8,
+        "value": "26",
+        "form": [
+            "W",
+            "L",
+            "W",
+            "W",
+            "D"
+        ]
+    },
+    "awayTeam": {
+        "avgRating": "6.82",
+        "position": 11,
+        "value": "20",
+        "form": [
+            "D",
+            "L",
+            "D",
+            "L",
+            "L"
+        ]
+    },
+    "label": "Pts"
+}

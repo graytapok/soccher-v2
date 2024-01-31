@@ -39,7 +39,7 @@ function DashboardPage() {
   };
 
   const updateData = () => {
-    fetch("admin/dashboard")
+    fetch("dashboard")
       .then((res) => res.json())
       .then((d) => setData(d.users));
   };
@@ -74,12 +74,14 @@ function DashboardPage() {
               4: { name: "Email", atribute: "email", sortable: true },
               6: {
                 name: "Followed Leagues",
-                atribute: "followed_leagues",
+                atribute: ["followed_leagues", "ids"],
+                atribute_array: true,
                 sortable: false,
               },
               5: {
                 name: "Followed Matches",
-                atribute: "followed_matches",
+                atribute: ["followed_matches", "ids"],
+                atribute_array: true,
                 sortable: false,
               },
               7: {
@@ -96,7 +98,7 @@ function DashboardPage() {
             sorting={{ by: "id", order: "desc" }}
             tbody={data}
             settings={{
-              delete: "admin/delete/user",
+              delete: "/admin/delete/user",
               update: updateData,
               edit: toggleEditUser,
             }}

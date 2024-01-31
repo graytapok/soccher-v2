@@ -1,13 +1,15 @@
 import React, { useEffect, useState, createContext } from "react";
-import "./index.css";
 import AppRoutes from "./pages/AppRoutes";
+/* import { useIsFirstRender } from "@uidotdev/usehooks"; */
+import "./index.css";
 
 export const Context = createContext();
 
 const App = () => {
+  /* const firstRender = useIsFirstRender(); */
+
   const [user, setUser] = useState({ auth: false });
-  const [followedMatches, setFollowedMatches] = useState({});
-  const [followedLeagues, setFollowedLeagues] = useState({});
+
   const login = () => {
     setUser({ ...user, auth: true });
   };
@@ -20,6 +22,9 @@ const App = () => {
           : console.log("Unexpected Error")
       );
   };
+
+  const [followedMatches, setFollowedMatches] = useState({});
+  const [followedLeagues, setFollowedLeagues] = useState({});
 
   const follow_match = (id, details = {}) => {
     const deleteFollow = (id) => {
@@ -34,7 +39,7 @@ const App = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ id: id, details: details }),
+      body: JSON.stringify({ id: details.id, details: details }),
     })
       .then((res) => res.json())
       .then((res) => {
@@ -59,7 +64,7 @@ const App = () => {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ id: id, details: details }),
+      body: JSON.stringify({ id: details.id, details: details }),
     })
       .then((res) => res.json())
       .then((res) => {
@@ -95,7 +100,7 @@ const App = () => {
     updateAuth();
     updateFollowedMatches();
     updateFollowedLeagues();
-  }, [user.auth]);
+  }, [user.auth /* , firstRender */]);
 
   const [showCookiesRequset, setShowCookiesRequest] = useState(true);
   const getCookie = (name) =>

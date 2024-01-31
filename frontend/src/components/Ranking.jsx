@@ -61,9 +61,7 @@ const TdItemComponent = styled.span`
       : null}
   ${(p) =>
     p.background_colors
-      ? {
-          backgroundColor: `rgb(${p.background_colors[0]}, ${p.background_colors[1]}, ${p.background_colors[2]}, 0.5)`,
-        }
+      ? `background-color: rgba(${p.background_colors[0]}, ${p.background_colors[1]}, ${p.background_colors[2]}, 0.5);`
       : null}
 `;
 

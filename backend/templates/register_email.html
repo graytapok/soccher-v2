@@ -1,31 +1,50 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>{{data.title}}</title>
+    <title>Soccher - Registration</title>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-  </head>
-  <body>
-    <div style="
-    background-color: #4c4c4d;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 10px;
-    color: white;
-  ">
-      <h1 class="title">Welcome to Soccher!</h1>
-      <span style="
-        margin-bottom: 10px;
-      " class="content">{{data.body}}</span>
-      <a style="
+    <script src="https://kit.fontawesome.com/5aea64ca2c.js" crossorigin="anonymous"></script>
+    <style>
+      .container {
+        background-color: #4c4c4d;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+        padding: 20px;
+        color: white;
+        border-radius: 10px;
+        gap: 0px;
+      }
+
+      .button {
         background-color: rgb(95, 122, 219);
         color: #fff;
         text-decoration: none;
         padding: 10px;
-        border-radius: 10px; 
-      " href="{{data.token_link}}">Confirm your Email</a>
+        border-radius: 10px;
+        width: 100px;
+        margin-top: 30px;
+      }
+
+      i {padding-left: 5px;}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="grid_row">
+        <h1>Welcome to Soccher!</h1>
+      </div>
+      <div>
+        <span>
+          You signed up on soccher. Please confirm your email for security reasons.
+        </span>
+      </div>
+      <div style="margin: 17.42px;">
+        <a class="button" href="{{link}}">Confirm</a>
+      </div>
     </div>
-    
   </body>
 </html>

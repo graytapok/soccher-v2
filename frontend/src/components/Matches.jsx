@@ -164,7 +164,7 @@ function Matches({ title, matches, message, redirect }) {
 
               <p
                 className="teams"
-                onClick={() => navigate("/match_details/" + id)}
+                onClick={() => navigate("/match_details/" + matches[id].id)}
               >
                 <div className="home_team">
                   {matches[id].country && (

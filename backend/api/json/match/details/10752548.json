@@ -1,0 +1,253 @@
+{
+    "event": {
+        "tournament": {
+            "name": "European Championship, Qualification Group C",
+            "slug": "european-championship-qualification-group-c",
+            "category": {
+                "name": "Europe",
+                "slug": "europe",
+                "sport": {
+                    "name": "Football",
+                    "slug": "football",
+                    "id": 1
+                },
+                "id": 1465,
+                "flag": "europe"
+            },
+            "uniqueTournament": {
+                "name": "European Championship, Qualification",
+                "slug": "european-championship-qualification",
+                "primaryColorHex": "#182026",
+                "secondaryColorHex": "#730000",
+                "category": {
+                    "name": "Europe",
+                    "slug": "europe",
+                    "sport": {
+                        "name": "Football",
+                        "slug": "football",
+                        "id": 1
+                    },
+                    "id": 1465,
+                    "flag": "europe"
+                },
+                "userCount": 244779,
+                "id": 27,
+                "country": {},
+                "hasEventPlayerStatistics": true,
+                "crowdsourcingEnabled": false,
+                "hasPerformanceGraphFeature": false,
+                "displayInverseHomeAwayTeams": false
+            },
+            "priority": 543,
+            "competitionType": 1,
+            "id": 4510
+        },
+        "season": {
+            "name": "European Championship 2024, Qualification",
+            "year": "2024",
+            "editor": false,
+            "seasonCoverageInfo": {},
+            "id": 46599
+        },
+        "roundInfo": {
+            "round": 8
+        },
+        "customId": "IObsbUb",
+        "status": {
+            "code": 100,
+            "description": "Ended",
+            "type": "finished"
+        },
+        "winnerCode": 2,
+        "venue": {
+            "city": {
+                "name": "Ta' Qali"
+            },
+            "stadium": {
+                "name": "Ta' Qali National Stadium",
+                "capacity": 17000
+            },
+            "id": 894,
+            "country": {
+                "alpha2": "MT",
+                "name": "Malta"
+            }
+        },
+        "referee": {
+            "name": "Morten Krogh",
+            "slug": "krogh-morten",
+            "yellowCards": 647,
+            "redCards": 11,
+            "yellowRedCards": 15,
+            "games": 146,
+            "sport": {
+                "id": 1,
+                "slug": "football",
+                "name": "Football"
+            },
+            "id": 785779,
+            "country": {
+                "alpha2": "DK",
+                "name": "Denmark"
+            }
+        },
+        "homeTeam": {
+            "name": "Malta",
+            "slug": "malta",
+            "shortName": "Malta",
+            "gender": "M",
+            "sport": {
+                "name": "Football",
+                "slug": "football",
+                "id": 1
+            },
+            "userCount": 13893,
+            "manager": {
+                "name": "Michele Marcolini",
+                "slug": "michele-marcolini",
+                "shortName": "M. Marcolini",
+                "id": 1835,
+                "country": {
+                    "alpha2": "IT",
+                    "name": "Italy"
+                }
+            },
+            "venue": {
+                "city": {
+                    "name": "Ta' Qali"
+                },
+                "stadium": {
+                    "name": "Ta' Qali National Stadium",
+                    "capacity": 17000
+                },
+                "id": 894,
+                "country": {
+                    "alpha2": "MT",
+                    "name": "Malta"
+                }
+            },
+            "nameCode": "MLT",
+            "ranking": 172,
+            "disabled": false,
+            "national": true,
+            "type": 0,
+            "id": 4483,
+            "country": {
+                "alpha2": "MT",
+                "name": "Malta"
+            },
+            "subTeams": [],
+            "fullName": "Malta",
+            "teamColors": {
+                "primary": "#ff0000",
+                "secondary": "#ffffff",
+                "text": "#ffffff"
+            }
+        },
+        "awayTeam": {
+            "name": "Ukraine",
+            "slug": "ukraine",
+            "shortName": "Ukraine",
+            "gender": "M",
+            "sport": {
+                "name": "Football",
+                "slug": "football",
+                "id": 1
+            },
+            "userCount": 43660,
+            "manager": {
+                "name": "Serhiy Rebrov",
+                "slug": "serhiy-rebrov",
+                "shortName": "S. Rebrov",
+                "id": 18042,
+                "country": {
+                    "alpha2": "UA",
+                    "name": "Ukraine"
+                }
+            },
+            "venue": {
+                "city": {
+                    "name": "Kyiv"
+                },
+                "stadium": {
+                    "name": "Olimpiysky National Sports Complex",
+                    "capacity": 70050
+                },
+                "id": 915,
+                "country": {
+                    "alpha2": "UA",
+                    "name": "Ukraine"
+                }
+            },
+            "foundationDate": {},
+            "nameCode": "UKR",
+            "ranking": 22,
+            "disabled": false,
+            "national": true,
+            "type": 0,
+            "id": 4701,
+            "country": {
+                "alpha2": "UA",
+                "name": "Ukraine"
+            },
+            "subTeams": [],
+            "fullName": "Ukraine",
+            "teamColors": {
+                "primary": "#ffcc00",
+                "secondary": "#0033ff",
+                "text": "#0033ff"
+            },
+            "foundationDateTimestamp": 692582400
+        },
+        "homeScore": {
+            "current": 1,
+            "display": 1,
+            "period1": 1,
+            "period2": 0,
+            "normaltime": 1
+        },
+        "awayScore": {
+            "current": 3,
+            "display": 3,
+            "period1": 2,
+            "period2": 1,
+            "normaltime": 3
+        },
+        "time": {
+            "injuryTime1": 5,
+            "injuryTime2": 4,
+            "currentPeriodStartTimestamp": 1697575386
+        },
+        "changes": {
+            "changes": [
+                "status.code",
+                "status.description",
+                "status.type",
+                "homeScore.period2",
+                "homeScore.normaltime",
+                "awayScore.period2",
+                "awayScore.normaltime",
+                "time.currentPeriodStart"
+            ],
+            "changeTimestamp": 1697575388
+        },
+        "hasGlobalHighlights": false,
+        "hasEventPlayerStatistics": true,
+        "hasEventPlayerHeatMap": true,
+        "detailId": 1,
+        "crowdsourcingDataDisplayEnabled": false,
+        "id": 10752548,
+        "defaultPeriodCount": 2,
+        "defaultPeriodLength": 45,
+        "defaultOvertimeLength": 15,
+        "crowdsourcingEnabled": false,
+        "currentPeriodStartTimestamp": 1697575386,
+        "startTimestamp": 1697568300,
+        "slug": "ukraine-malta",
+        "finalResultOnly": false,
+        "fanRatingEvent": false,
+        "seasonStatisticsType": "overall",
+        "showTotoPromo": false,
+        "isEditor": false
+    }
+}

@@ -27,11 +27,16 @@ const ProtectedRoute = ({ anti = false, children, admin = false }) => {
     fetch("/auth")
       .then((res) => res.json())
       .then((data) => {
-        setAuthen(data.auth);
-      });
+        if (data.message === "") {
+          setAuthen(data.data);
+        } else {
+          console.log(data.message);
+        }
+      })
+      .catch((e) => console.log(e));
   }, []);
 
-  if (admin && user.admin) {
+  if (admin && !user.admin) {
     return <Navigate to="/" replace />;
   }
 
@@ -124,7 +129,22 @@ function AppRoutes() {
             />
           </>
           <>
-            <Route path="/admin" element={<DashboardPage />} />
+            <Route
+              path="/admin/dashboard"
+              element={
+                <ProtectedRoute admin={true}>
+                  <DashboardPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/admin/followedMatches"
+              element={
+                <ProtectedRoute admin={true}>
+                  <DashboardPage />
+                </ProtectedRoute>
+              }
+            />
           </>
           <Route path="*" element={<h1>Page not found</h1>} />
         </Routes>

@@ -1,0 +1,1134 @@
+{
+    "shotmap": [
+        {
+            "player": {
+                "name": "Christian Doidge",
+                "slug": "christian-doidge",
+                "shortName": "C. Doidge",
+                "position": "F",
+                "userCount": 45,
+                "id": 305254
+            },
+            "isHome": true,
+            "shotType": "miss",
+            "situation": "assisted",
+            "playerCoordinates": {
+                "x": 10.7,
+                "y": 55.2,
+                "z": 0
+            },
+            "bodyPart": "head",
+            "goalMouthLocation": "right",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 39.5,
+                "z": 9.7
+            },
+            "id": 2424723,
+            "time": 90,
+            "addedTime": 3,
+            "timeSeconds": 5568,
+            "draw": {
+                "start": {
+                    "x": 55.2,
+                    "y": 10.7
+                },
+                "end": {
+                    "x": 60.5,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 60.5,
+                    "y": 90.3
+                }
+            },
+            "reversedPeriodTime": 1,
+            "reversedPeriodTimeSeconds": 732,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Thody Elie Youan",
+                "firstName": "",
+                "lastName": "",
+                "slug": "thody-elie-youan",
+                "shortName": "T. E. Youan",
+                "position": "M",
+                "userCount": 213,
+                "id": 921362
+            },
+            "isHome": true,
+            "shotType": "goal",
+            "goalType": "regular",
+            "situation": "assisted",
+            "playerCoordinates": {
+                "x": 13.7,
+                "y": 66,
+                "z": 0
+            },
+            "bodyPart": "right-foot",
+            "goalMouthLocation": "high-right",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 47.5,
+                "z": 27.8
+            },
+            "id": 2424721,
+            "time": 90,
+            "addedTime": 1,
+            "timeSeconds": 5458,
+            "draw": {
+                "start": {
+                    "x": 66,
+                    "y": 13.7
+                },
+                "end": {
+                    "x": 52.5,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 52.5,
+                    "y": 72.2
+                }
+            },
+            "reversedPeriodTime": 1,
+            "reversedPeriodTimeSeconds": 842,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Lewis Stevenson",
+                "slug": "lewis-stevenson",
+                "shortName": "L. Stevenson",
+                "position": "D",
+                "userCount": 33,
+                "id": 16343
+            },
+            "isHome": true,
+            "shotType": "post",
+            "situation": "regular",
+            "playerCoordinates": {
+                "x": 18.4,
+                "y": 61.1,
+                "z": 0
+            },
+            "bodyPart": "left-foot",
+            "goalMouthLocation": "high",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 47.9,
+                "z": 39.2
+            },
+            "id": 2424708,
+            "time": 77,
+            "timeSeconds": 4603,
+            "draw": {
+                "start": {
+                    "x": 61.1,
+                    "y": 18.4
+                },
+                "end": {
+                    "x": 52.1,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 52.1,
+                    "y": 60.8
+                }
+            },
+            "reversedPeriodTime": 14,
+            "reversedPeriodTimeSeconds": 797,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Thody Elie Youan",
+                "firstName": "",
+                "lastName": "",
+                "slug": "thody-elie-youan",
+                "shortName": "T. E. Youan",
+                "position": "M",
+                "userCount": 213,
+                "id": 921362
+            },
+            "isHome": true,
+            "shotType": "block",
+            "situation": "assisted",
+            "playerCoordinates": {
+                "x": 9,
+                "y": 66.6,
+                "z": 0
+            },
+            "bodyPart": "left-foot",
+            "goalMouthLocation": "low-right",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 46.1,
+                "z": 19
+            },
+            "blockCoordinates": {
+                "x": 7.2,
+                "y": 64.1,
+                "z": 0
+            },
+            "id": 2424706,
+            "time": 77,
+            "timeSeconds": 4600,
+            "draw": {
+                "start": {
+                    "x": 66.6,
+                    "y": 9
+                },
+                "block": {
+                    "x": 64.1,
+                    "y": 7.2
+                },
+                "end": {
+                    "x": 53.9,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 53.9,
+                    "y": 81
+                }
+            },
+            "reversedPeriodTime": 14,
+            "reversedPeriodTimeSeconds": 800,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Rudi Allan Molotnikov",
+                "slug": "rudi-allan-molotnikov",
+                "shortName": "R. A. Molotnikov",
+                "position": "M",
+                "userCount": 7,
+                "id": 1405622
+            },
+            "isHome": true,
+            "shotType": "block",
+            "situation": "regular",
+            "playerCoordinates": {
+                "x": 11.4,
+                "y": 61.5,
+                "z": 0
+            },
+            "bodyPart": "left-foot",
+            "goalMouthLocation": "low-centre",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 49.7,
+                "z": 19
+            },
+            "blockCoordinates": {
+                "x": 8.5,
+                "y": 58.7,
+                "z": 0
+            },
+            "id": 2424704,
+            "time": 77,
+            "timeSeconds": 4585,
+            "draw": {
+                "start": {
+                    "x": 61.5,
+                    "y": 11.4
+                },
+                "block": {
+                    "x": 58.7,
+                    "y": 8.5
+                },
+                "end": {
+                    "x": 50.3,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 50.3,
+                    "y": 81
+                }
+            },
+            "reversedPeriodTime": 14,
+            "reversedPeriodTimeSeconds": 815,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Bevis Mugabi",
+                "firstName": "",
+                "lastName": "",
+                "slug": "bevis-mugabi",
+                "shortName": "B. Mugabi",
+                "position": "D",
+                "userCount": 105,
+                "id": 845899
+            },
+            "isHome": false,
+            "shotType": "goal",
+            "goalType": "regular",
+            "situation": "set-piece",
+            "playerCoordinates": {
+                "x": 2.2,
+                "y": 50.4,
+                "z": 0
+            },
+            "bodyPart": "head",
+            "goalMouthLocation": "high-centre",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 50.8,
+                "z": 27.2
+            },
+            "id": 2424685,
+            "time": 64,
+            "timeSeconds": 3783,
+            "draw": {
+                "start": {
+                    "x": 50.4,
+                    "y": 2.2
+                },
+                "end": {
+                    "x": 49.2,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 49.2,
+                    "y": 72.8
+                }
+            },
+            "reversedPeriodTime": 27,
+            "reversedPeriodTimeSeconds": 1617,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Christian Doidge",
+                "slug": "christian-doidge",
+                "shortName": "C. Doidge",
+                "position": "F",
+                "userCount": 45,
+                "id": 305254
+            },
+            "isHome": true,
+            "shotType": "miss",
+            "situation": "corner",
+            "playerCoordinates": {
+                "x": 12.1,
+                "y": 38.9,
+                "z": 0
+            },
+            "bodyPart": "head",
+            "goalMouthLocation": "left",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 63.7,
+                "z": 16.7
+            },
+            "blockCoordinates": {
+                "x": 4.1,
+                "y": 38.1,
+                "z": 0
+            },
+            "id": 2424682,
+            "time": 58,
+            "timeSeconds": 3455,
+            "draw": {
+                "start": {
+                    "x": 38.9,
+                    "y": 12.1
+                },
+                "block": {
+                    "x": 38.1,
+                    "y": 4.1
+                },
+                "end": {
+                    "x": 36.3,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 36.3,
+                    "y": 83.3
+                }
+            },
+            "reversedPeriodTime": 33,
+            "reversedPeriodTimeSeconds": 1945,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Mika Biereth",
+                "firstName": "Mika Biereth",
+                "lastName": "",
+                "slug": "mika-biereth",
+                "shortName": "M. Biereth",
+                "position": "F",
+                "userCount": 582,
+                "id": 1083007
+            },
+            "isHome": false,
+            "shotType": "miss",
+            "situation": "throw-in-set-piece",
+            "playerCoordinates": {
+                "x": 4.9,
+                "y": 68.7,
+                "z": 0
+            },
+            "bodyPart": "right-foot",
+            "goalMouthLocation": "close-right",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 41.3,
+                "z": 23.6
+            },
+            "id": 2424676,
+            "time": 53,
+            "timeSeconds": 3159,
+            "draw": {
+                "start": {
+                    "x": 68.7,
+                    "y": 4.9
+                },
+                "end": {
+                    "x": 58.7,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 58.7,
+                    "y": 76.4
+                }
+            },
+            "reversedPeriodTime": 38,
+            "reversedPeriodTimeSeconds": 2241,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Callum Slattery",
+                "firstName": "",
+                "lastName": "",
+                "slug": "callum-slattery",
+                "shortName": "C. Slattery",
+                "position": "M",
+                "userCount": 52,
+                "id": 920371
+            },
+            "isHome": false,
+            "shotType": "save",
+            "situation": "regular",
+            "playerCoordinates": {
+                "x": 9.4,
+                "y": 49.8,
+                "z": 0
+            },
+            "bodyPart": "left-foot",
+            "goalMouthLocation": "low-centre",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 49.7,
+                "z": 18.4
+            },
+            "blockCoordinates": {
+                "x": 2.5,
+                "y": 49.8,
+                "z": 0
+            },
+            "id": 2424663,
+            "time": 39,
+            "timeSeconds": 2282,
+            "draw": {
+                "start": {
+                    "x": 49.8,
+                    "y": 9.4
+                },
+                "block": {
+                    "x": 49.8,
+                    "y": 2.5
+                },
+                "end": {
+                    "x": 50.3,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 50.3,
+                    "y": 81.6
+                }
+            },
+            "reversedPeriodTime": 7,
+            "reversedPeriodTimeSeconds": 418,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Harrison Paton",
+                "slug": "harrison-paton",
+                "shortName": "H. Paton",
+                "position": "M",
+                "userCount": 36,
+                "id": 841167
+            },
+            "isHome": false,
+            "shotType": "save",
+            "situation": "assisted",
+            "playerCoordinates": {
+                "x": 15.4,
+                "y": 30.4,
+                "z": 0
+            },
+            "bodyPart": "left-foot",
+            "goalMouthLocation": "high-centre",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 49.5,
+                "z": 22.8
+            },
+            "blockCoordinates": {
+                "x": 1.4,
+                "y": 48.7,
+                "z": 0
+            },
+            "id": 2424662,
+            "time": 39,
+            "timeSeconds": 2280,
+            "draw": {
+                "start": {
+                    "x": 30.4,
+                    "y": 15.4
+                },
+                "block": {
+                    "x": 48.7,
+                    "y": 1.4
+                },
+                "end": {
+                    "x": 50.5,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 50.5,
+                    "y": 77.2
+                }
+            },
+            "reversedPeriodTime": 7,
+            "reversedPeriodTimeSeconds": 420,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Callum Slattery",
+                "firstName": "",
+                "lastName": "",
+                "slug": "callum-slattery",
+                "shortName": "C. Slattery",
+                "position": "M",
+                "userCount": 52,
+                "id": 920371
+            },
+            "isHome": false,
+            "shotType": "miss",
+            "situation": "free-kick",
+            "playerCoordinates": {
+                "x": 27.6,
+                "y": 50.1,
+                "z": 0
+            },
+            "bodyPart": "right-foot",
+            "goalMouthLocation": "high",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 48.2,
+                "z": 98.6
+            },
+            "id": 2424660,
+            "time": 38,
+            "timeSeconds": 2225,
+            "draw": {
+                "start": {
+                    "x": 50.1,
+                    "y": 27.6
+                },
+                "end": {
+                    "x": 51.8,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 51.8,
+                    "y": 1.4
+                }
+            },
+            "reversedPeriodTime": 8,
+            "reversedPeriodTimeSeconds": 475,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Thelonius Bair",
+                "slug": "bair-thelonius",
+                "shortName": "T. Bair",
+                "position": "F",
+                "userCount": 69,
+                "id": 936848
+            },
+            "isHome": false,
+            "shotType": "goal",
+            "goalType": "regular",
+            "situation": "assisted",
+            "playerCoordinates": {
+                "x": 6.9,
+                "y": 36.2,
+                "z": 0
+            },
+            "bodyPart": "right-foot",
+            "goalMouthLocation": "low-centre",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 50.4,
+                "z": 17.1
+            },
+            "id": 2424658,
+            "time": 35,
+            "timeSeconds": 2065,
+            "draw": {
+                "start": {
+                    "x": 36.2,
+                    "y": 6.9
+                },
+                "end": {
+                    "x": 49.6,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 49.6,
+                    "y": 82.9
+                }
+            },
+            "reversedPeriodTime": 11,
+            "reversedPeriodTimeSeconds": 635,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "William Fish",
+                "firstName": "",
+                "lastName": "",
+                "slug": "william-fish",
+                "shortName": "W. T. Fish",
+                "position": "D",
+                "userCount": 547,
+                "id": 966654
+            },
+            "isHome": true,
+            "shotType": "block",
+            "situation": "corner",
+            "playerCoordinates": {
+                "x": 14.1,
+                "y": 56.4,
+                "z": 0
+            },
+            "bodyPart": "left-foot",
+            "goalMouthLocation": "low-left",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 52,
+                "z": 19
+            },
+            "blockCoordinates": {
+                "x": 5.8,
+                "y": 51.4,
+                "z": 0
+            },
+            "id": 2424654,
+            "time": 33,
+            "timeSeconds": 1931,
+            "draw": {
+                "start": {
+                    "x": 56.4,
+                    "y": 14.1
+                },
+                "block": {
+                    "x": 51.4,
+                    "y": 5.8
+                },
+                "end": {
+                    "x": 48,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 48,
+                    "y": 81
+                }
+            },
+            "reversedPeriodTime": 13,
+            "reversedPeriodTimeSeconds": 769,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Thody Elie Youan",
+                "firstName": "",
+                "lastName": "",
+                "slug": "thody-elie-youan",
+                "shortName": "T. E. Youan",
+                "position": "M",
+                "userCount": 213,
+                "id": 921362
+            },
+            "isHome": true,
+            "shotType": "goal",
+            "goalType": "regular",
+            "situation": "assisted",
+            "playerCoordinates": {
+                "x": 14.1,
+                "y": 63.2,
+                "z": 0
+            },
+            "bodyPart": "left-foot",
+            "goalMouthLocation": "low-right",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 46.2,
+                "z": 4.4
+            },
+            "id": 2424649,
+            "time": 28,
+            "timeSeconds": 1654,
+            "draw": {
+                "start": {
+                    "x": 63.2,
+                    "y": 14.1
+                },
+                "end": {
+                    "x": 53.8,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 53.8,
+                    "y": 95.6
+                }
+            },
+            "reversedPeriodTime": 18,
+            "reversedPeriodTimeSeconds": 1046,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Thody Elie Youan",
+                "firstName": "",
+                "lastName": "",
+                "slug": "thody-elie-youan",
+                "shortName": "T. E. Youan",
+                "position": "M",
+                "userCount": 213,
+                "id": 921362
+            },
+            "isHome": true,
+            "shotType": "block",
+            "situation": "assisted",
+            "playerCoordinates": {
+                "x": 26.8,
+                "y": 44,
+                "z": 0
+            },
+            "bodyPart": "right-foot",
+            "goalMouthLocation": "low-centre",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 48.3,
+                "z": 19
+            },
+            "blockCoordinates": {
+                "x": 21,
+                "y": 45.7,
+                "z": 0
+            },
+            "id": 2424648,
+            "time": 27,
+            "timeSeconds": 1563,
+            "draw": {
+                "start": {
+                    "x": 44,
+                    "y": 26.8
+                },
+                "block": {
+                    "x": 45.7,
+                    "y": 21
+                },
+                "end": {
+                    "x": 51.7,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 51.7,
+                    "y": 81
+                }
+            },
+            "reversedPeriodTime": 19,
+            "reversedPeriodTimeSeconds": 1137,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Dylan Levitt",
+                "firstName": "",
+                "lastName": "",
+                "slug": "levitt-dylan",
+                "shortName": "D. Levitt",
+                "position": "M",
+                "userCount": 568,
+                "id": 960404
+            },
+            "isHome": true,
+            "shotType": "block",
+            "situation": "corner",
+            "playerCoordinates": {
+                "x": 15.1,
+                "y": 58.8,
+                "z": 0
+            },
+            "bodyPart": "right-foot",
+            "goalMouthLocation": "low-centre",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 50.2,
+                "z": 19
+            },
+            "blockCoordinates": {
+                "x": 7,
+                "y": 54,
+                "z": 0
+            },
+            "id": 2424647,
+            "time": 25,
+            "timeSeconds": 1448,
+            "draw": {
+                "start": {
+                    "x": 58.8,
+                    "y": 15.1
+                },
+                "block": {
+                    "x": 54,
+                    "y": 7
+                },
+                "end": {
+                    "x": 49.8,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 49.8,
+                    "y": 81
+                }
+            },
+            "reversedPeriodTime": 21,
+            "reversedPeriodTimeSeconds": 1252,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Paul Hanlon",
+                "slug": "paul-hanlon",
+                "shortName": "P. Hanlon",
+                "position": "D",
+                "userCount": 24,
+                "id": 32855
+            },
+            "isHome": true,
+            "shotType": "block",
+            "situation": "set-piece",
+            "playerCoordinates": {
+                "x": 10.5,
+                "y": 54.9,
+                "z": 0
+            },
+            "bodyPart": "head",
+            "goalMouthLocation": "low-centre",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 48.8,
+                "z": 19
+            },
+            "blockCoordinates": {
+                "x": 8.4,
+                "y": 54.2,
+                "z": 0
+            },
+            "id": 2424645,
+            "time": 23,
+            "timeSeconds": 1369,
+            "draw": {
+                "start": {
+                    "x": 54.9,
+                    "y": 10.5
+                },
+                "block": {
+                    "x": 54.2,
+                    "y": 8.4
+                },
+                "end": {
+                    "x": 51.2,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 51.2,
+                    "y": 81
+                }
+            },
+            "reversedPeriodTime": 23,
+            "reversedPeriodTimeSeconds": 1331,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Callum Slattery",
+                "firstName": "",
+                "lastName": "",
+                "slug": "callum-slattery",
+                "shortName": "C. Slattery",
+                "position": "M",
+                "userCount": 52,
+                "id": 920371
+            },
+            "isHome": false,
+            "shotType": "miss",
+            "situation": "assisted",
+            "playerCoordinates": {
+                "x": 3.1,
+                "y": 40.7,
+                "z": 0
+            },
+            "bodyPart": "right-foot",
+            "goalMouthLocation": "close-left",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 56.8,
+                "z": 5.6
+            },
+            "id": 2424642,
+            "time": 17,
+            "timeSeconds": 992,
+            "draw": {
+                "start": {
+                    "x": 40.7,
+                    "y": 3.1
+                },
+                "end": {
+                    "x": 43.2,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 43.2,
+                    "y": 94.4
+                }
+            },
+            "reversedPeriodTime": 29,
+            "reversedPeriodTimeSeconds": 1708,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Paul McGinn",
+                "slug": "paul-mcginn",
+                "shortName": "P. McGinn",
+                "position": "D",
+                "userCount": 35,
+                "id": 214506
+            },
+            "isHome": false,
+            "shotType": "block",
+            "situation": "assisted",
+            "playerCoordinates": {
+                "x": 26.4,
+                "y": 57.9,
+                "z": 0
+            },
+            "bodyPart": "right-foot",
+            "goalMouthLocation": "low-left",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 53.6,
+                "z": 19
+            },
+            "blockCoordinates": {
+                "x": 13.7,
+                "y": 52.3,
+                "z": 0
+            },
+            "id": 2424641,
+            "time": 16,
+            "timeSeconds": 953,
+            "draw": {
+                "start": {
+                    "x": 57.9,
+                    "y": 26.4
+                },
+                "block": {
+                    "x": 52.3,
+                    "y": 13.7
+                },
+                "end": {
+                    "x": 46.4,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 46.4,
+                    "y": 81
+                }
+            },
+            "reversedPeriodTime": 30,
+            "reversedPeriodTimeSeconds": 1747,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Thody Elie Youan",
+                "firstName": "",
+                "lastName": "",
+                "slug": "thody-elie-youan",
+                "shortName": "T. E. Youan",
+                "position": "M",
+                "userCount": 213,
+                "id": 921362
+            },
+            "isHome": true,
+            "shotType": "block",
+            "situation": "free-kick",
+            "playerCoordinates": {
+                "x": 28.3,
+                "y": 66.9,
+                "z": 0
+            },
+            "bodyPart": "right-foot",
+            "goalMouthLocation": "low-centre",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 50.3,
+                "z": 19
+            },
+            "blockCoordinates": {
+                "x": 18.9,
+                "y": 61.2,
+                "z": 0
+            },
+            "id": 2424637,
+            "time": 14,
+            "timeSeconds": 788,
+            "draw": {
+                "start": {
+                    "x": 66.9,
+                    "y": 28.3
+                },
+                "block": {
+                    "x": 61.2,
+                    "y": 18.9
+                },
+                "end": {
+                    "x": 49.7,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 49.7,
+                    "y": 81
+                }
+            },
+            "reversedPeriodTime": 32,
+            "reversedPeriodTimeSeconds": 1912,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Christian Doidge",
+                "slug": "christian-doidge",
+                "shortName": "C. Doidge",
+                "position": "F",
+                "userCount": 45,
+                "id": 305254
+            },
+            "isHome": true,
+            "shotType": "save",
+            "situation": "corner",
+            "playerCoordinates": {
+                "x": 12.7,
+                "y": 54.6,
+                "z": 0
+            },
+            "bodyPart": "left-foot",
+            "goalMouthLocation": "low-right",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 47.6,
+                "z": 5.7
+            },
+            "blockCoordinates": {
+                "x": 1.6,
+                "y": 50.9,
+                "z": 0
+            },
+            "id": 2424635,
+            "time": 9,
+            "timeSeconds": 515,
+            "draw": {
+                "start": {
+                    "x": 54.6,
+                    "y": 12.7
+                },
+                "block": {
+                    "x": 50.9,
+                    "y": 1.6
+                },
+                "end": {
+                    "x": 52.4,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 52.4,
+                    "y": 94.3
+                }
+            },
+            "reversedPeriodTime": 37,
+            "reversedPeriodTimeSeconds": 2185,
+            "incidentType": "shot"
+        },
+        {
+            "player": {
+                "name": "Mika Biereth",
+                "firstName": "Mika Biereth",
+                "lastName": "",
+                "slug": "mika-biereth",
+                "shortName": "M. Biereth",
+                "position": "F",
+                "userCount": 582,
+                "id": 1083007
+            },
+            "isHome": false,
+            "shotType": "miss",
+            "situation": "assisted",
+            "playerCoordinates": {
+                "x": 10.7,
+                "y": 52.2,
+                "z": 0
+            },
+            "bodyPart": "head",
+            "goalMouthLocation": "close-right",
+            "goalMouthCoordinates": {
+                "x": 0,
+                "y": 41.2,
+                "z": 12.5
+            },
+            "id": 2424633,
+            "time": 8,
+            "timeSeconds": 435,
+            "draw": {
+                "start": {
+                    "x": 52.2,
+                    "y": 10.7
+                },
+                "end": {
+                    "x": 58.8,
+                    "y": 0
+                },
+                "goal": {
+                    "x": 58.8,
+                    "y": 87.5
+                }
+            },
+            "reversedPeriodTime": 38,
+            "reversedPeriodTimeSeconds": 2265,
+            "incidentType": "shot"
+        }
+    ]
+}

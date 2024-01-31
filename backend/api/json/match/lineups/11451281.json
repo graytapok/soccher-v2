@@ -1,0 +1,1192 @@
+{
+    "confirmed": true,
+    "home": {
+        "players": [
+            {
+                "player": {
+                    "name": "Nikolaos Papadopoulos",
+                    "slug": "nikolaos-papadopoulos",
+                    "shortName": "N. Papadopoulos",
+                    "position": "G",
+                    "userCount": 18,
+                    "id": 175341,
+                    "country": {
+                        "alpha2": "GR",
+                        "name": "Greece"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 639792000
+                },
+                "shirtNumber": 1,
+                "jerseyNumber": "1",
+                "position": "G",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 1,
+                    "accuratePass": 1,
+                    "minutesPlayed": 9,
+                    "touches": 1,
+                    "rating": 6.4,
+                    "ratingVersions": {
+                        "original": 6.4,
+                        "alternative": 6
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "David Carmona",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "david-carmona",
+                    "shortName": "D. Carmona",
+                    "position": "D",
+                    "userCount": 19,
+                    "id": 800986,
+                    "country": {
+                        "alpha2": "ES",
+                        "name": "Spain"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 852940800
+                },
+                "shirtNumber": 12,
+                "jerseyNumber": "12",
+                "position": "D",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 2,
+                    "accuratePass": 1,
+                    "totalLongBalls": 1,
+                    "totalCross": 1,
+                    "minutesPlayed": 9,
+                    "touches": 5,
+                    "rating": 6.2,
+                    "possessionLostCtrl": 2,
+                    "ratingVersions": {
+                        "original": 6.2,
+                        "alternative": 6.2
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Pepe Casta\u00f1o",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "pepe-castano",
+                    "shortName": "P. Casta\u00f1o",
+                    "position": "D",
+                    "userCount": 16,
+                    "id": 914750,
+                    "country": {
+                        "alpha2": "ES",
+                        "name": "Spain"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 913248000
+                },
+                "shirtNumber": 19,
+                "jerseyNumber": "19",
+                "position": "D",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 5,
+                    "accuratePass": 4,
+                    "totalLongBalls": 2,
+                    "accurateLongBalls": 1,
+                    "minutesPlayed": 9,
+                    "touches": 5,
+                    "rating": 6.2,
+                    "possessionLostCtrl": 1,
+                    "ratingVersions": {
+                        "original": 6.2,
+                        "alternative": 6.2
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Ervin Zukanovi\u0107",
+                    "slug": "ervin-zukanovic",
+                    "shortName": "E. Zukanovi\u0107",
+                    "position": "D",
+                    "userCount": 167,
+                    "id": 48543,
+                    "country": {
+                        "alpha2": "BA",
+                        "name": "Bosnia & Herzegovina"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 540000000
+                },
+                "shirtNumber": 87,
+                "jerseyNumber": "87",
+                "position": "D",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 4,
+                    "accuratePass": 3,
+                    "totalLongBalls": 1,
+                    "minutesPlayed": 9,
+                    "touches": 4,
+                    "rating": 6.2,
+                    "possessionLostCtrl": 1,
+                    "ratingVersions": {
+                        "original": 6.2,
+                        "alternative": 6.2
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Diamantis Chouchoumis",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "diamantis-chouchoumis",
+                    "shortName": "D. Chouchoumis",
+                    "position": "D",
+                    "userCount": 26,
+                    "id": 268819,
+                    "country": {
+                        "alpha2": "GR",
+                        "name": "Greece"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 774403200
+                },
+                "shirtNumber": 3,
+                "jerseyNumber": "3",
+                "position": "D",
+                "substitute": false,
+                "statistics": {
+                    "duelLost": 1,
+                    "penaltyConceded": 1,
+                    "fouls": 1,
+                    "minutesPlayed": 9,
+                    "rating": 4.7,
+                    "ratingVersions": {
+                        "original": 4.7,
+                        "alternative": 4.7
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Juan Munafo",
+                    "slug": "juan-munafo",
+                    "shortName": "J. Munafo",
+                    "position": "M",
+                    "userCount": 6,
+                    "id": 81176,
+                    "country": {
+                        "alpha2": "ES",
+                        "name": "Spain"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 574819200
+                },
+                "shirtNumber": 8,
+                "jerseyNumber": "8",
+                "position": "M",
+                "substitute": false,
+                "captain": true,
+                "statistics": {
+                    "totalPass": 5,
+                    "accuratePass": 4,
+                    "duelWon": 1,
+                    "shotOffTarget": 1,
+                    "totalTackle": 1,
+                    "minutesPlayed": 9,
+                    "touches": 7,
+                    "rating": 6.7,
+                    "possessionLostCtrl": 1,
+                    "ratingVersions": {
+                        "original": 6.7,
+                        "alternative": 6.6
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Sean Goss",
+                    "slug": "sean-goss",
+                    "shortName": "S. Goss",
+                    "position": "M",
+                    "userCount": 41,
+                    "id": 788131,
+                    "country": {
+                        "alpha2": "NX",
+                        "name": "Northern Ireland"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 812505600
+                },
+                "shirtNumber": 4,
+                "jerseyNumber": "4",
+                "position": "M",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 3,
+                    "accuratePass": 2,
+                    "minutesPlayed": 9,
+                    "touches": 3,
+                    "rating": 6.4,
+                    "possessionLostCtrl": 1,
+                    "ratingVersions": {
+                        "original": 6.4,
+                        "alternative": 6.4
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Nikos Kaltsas",
+                    "slug": "nikos-kaltsas",
+                    "shortName": "N. Kaltsas",
+                    "position": "M",
+                    "userCount": 50,
+                    "id": 133682,
+                    "country": {
+                        "alpha2": "GR",
+                        "name": "Greece"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 641692800
+                },
+                "shirtNumber": 20,
+                "jerseyNumber": "20",
+                "position": "M",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 3,
+                    "accuratePass": 1,
+                    "totalCross": 1,
+                    "minutesPlayed": 9,
+                    "touches": 5,
+                    "rating": 6.4,
+                    "possessionLostCtrl": 4,
+                    "ratingVersions": {
+                        "original": 6.4,
+                        "alternative": 6.3
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Nikolaos Zouglis",
+                    "firstName": "Nikolaos Zouglis",
+                    "lastName": "",
+                    "slug": "zouglis-nikolaos",
+                    "shortName": "N. Zouglis",
+                    "position": "M",
+                    "userCount": 31,
+                    "id": 1470908,
+                    "country": {
+                        "alpha2": "GR",
+                        "name": "Greece"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 1068768000
+                },
+                "shirtNumber": 77,
+                "jerseyNumber": "77",
+                "position": "M",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 2,
+                    "accuratePass": 1,
+                    "aerialLost": 3,
+                    "duelLost": 3,
+                    "minutesPlayed": 9,
+                    "touches": 3,
+                    "rating": 6.2,
+                    "possessionLostCtrl": 2,
+                    "ratingVersions": {
+                        "original": 6.2,
+                        "alternative": 6.2
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Francesc Regis",
+                    "slug": "francesc-regis",
+                    "shortName": "F. Regis",
+                    "position": "M",
+                    "userCount": 19,
+                    "id": 881730,
+                    "country": {
+                        "alpha2": "ES",
+                        "name": "Spain"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 844041600
+                },
+                "shirtNumber": 11,
+                "jerseyNumber": "11",
+                "position": "M",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 1,
+                    "minutesPlayed": 9,
+                    "touches": 1,
+                    "rating": 6.4,
+                    "possessionLostCtrl": 1,
+                    "ratingVersions": {
+                        "original": 6.4,
+                        "alternative": 6.4
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Juan Miritello",
+                    "slug": "juan-miritello",
+                    "shortName": "J. Miritello",
+                    "position": "F",
+                    "userCount": 25,
+                    "id": 1003721,
+                    "country": {
+                        "alpha2": "AR",
+                        "name": "Argentina"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 918432000
+                },
+                "shirtNumber": 9,
+                "jerseyNumber": "9",
+                "position": "F",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 3,
+                    "accuratePass": 2,
+                    "minutesPlayed": 9,
+                    "touches": 3,
+                    "rating": 6.5,
+                    "possessionLostCtrl": 1,
+                    "ratingVersions": {
+                        "original": 6.5,
+                        "alternative": 6.5
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Nikolaos Grammatikakis",
+                    "firstName": "Nikolaos Grammatikakis",
+                    "lastName": "",
+                    "slug": "grammatikakis-nikolaos",
+                    "shortName": "N. Grammatikakis",
+                    "position": "G",
+                    "userCount": 8,
+                    "id": 1489569,
+                    "country": {
+                        "alpha2": "GR",
+                        "name": "Greece"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 1053907200
+                },
+                "shirtNumber": 70,
+                "jerseyNumber": "70",
+                "position": "G",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Giannis Christopoulos",
+                    "slug": "christopoulos-giannis",
+                    "shortName": "G. Christopoulos",
+                    "position": "D",
+                    "userCount": 32,
+                    "id": 922198,
+                    "country": {
+                        "alpha2": "GR",
+                        "name": "Greece"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 961632000
+                },
+                "shirtNumber": 45,
+                "jerseyNumber": "45",
+                "position": "D",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Rub\u00e9n Garc\u00eda",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "ruben-garcia",
+                    "shortName": "R. Garc\u00eda",
+                    "position": "D",
+                    "userCount": 5,
+                    "id": 950040,
+                    "country": {
+                        "alpha2": "ES",
+                        "name": "Spain"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 908841600
+                },
+                "shirtNumber": 2,
+                "jerseyNumber": "2",
+                "position": "D",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Youba Diarra",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "youba-diarra",
+                    "shortName": "Y. Diarra",
+                    "position": "M",
+                    "userCount": 269,
+                    "id": 924369,
+                    "country": {
+                        "alpha2": "ML",
+                        "name": "Mali"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 890697600
+                },
+                "shirtNumber": 24,
+                "jerseyNumber": "24",
+                "position": "M",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Sito",
+                    "slug": "sito",
+                    "shortName": "Sito",
+                    "position": "M",
+                    "userCount": 20,
+                    "id": 840284,
+                    "country": {
+                        "alpha2": "ES",
+                        "name": "Spain"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 848275200
+                },
+                "shirtNumber": 40,
+                "jerseyNumber": "40",
+                "position": "M",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Vasilios Sourlis",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "vasilios-sourlis",
+                    "shortName": "V. Sourlis",
+                    "position": "M",
+                    "userCount": 154,
+                    "id": 983032,
+                    "country": {
+                        "alpha2": "GR",
+                        "name": "Greece"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 1037404800
+                },
+                "shirtNumber": 21,
+                "jerseyNumber": "21",
+                "position": "F",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Jos\u00e9 Luis Valiente",
+                    "slug": "jose-luis-valiente",
+                    "shortName": "J. L. Valiente",
+                    "position": "M",
+                    "userCount": 4,
+                    "id": 849426,
+                    "country": {
+                        "alpha2": "ES",
+                        "name": "Spain"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 674524800
+                },
+                "shirtNumber": 6,
+                "jerseyNumber": "6",
+                "position": "M",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Oluwatobiloba Alagbe",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "alagbe-oluwatobiloba",
+                    "shortName": "O. Alagbe",
+                    "position": "M",
+                    "userCount": 21,
+                    "id": 981577,
+                    "country": {
+                        "alpha2": "NG",
+                        "name": "Nigeria"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 956534400
+                },
+                "shirtNumber": 69,
+                "jerseyNumber": "69",
+                "position": "D",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Vasilios Mantzis",
+                    "slug": "vasilios-mantzis",
+                    "shortName": "V. Mantzis",
+                    "position": "F",
+                    "userCount": 51,
+                    "id": 816741,
+                    "country": {
+                        "alpha2": "GR",
+                        "name": "Greece"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 691804800
+                },
+                "shirtNumber": 14,
+                "jerseyNumber": "14",
+                "position": "F",
+                "substitute": true,
+                "statistics": {}
+            }
+        ],
+        "supportStaff": [],
+        "formation": "4-2-3-1",
+        "playerColor": {
+            "primary": "024699",
+            "number": "ffdd00",
+            "outline": "024699",
+            "fancyNumber": "ffffff"
+        },
+        "goalkeeperColor": {
+            "primary": "000000",
+            "number": "ffffff",
+            "outline": "000000",
+            "fancyNumber": "ffffff"
+        }
+    },
+    "away": {
+        "players": [
+            {
+                "player": {
+                    "name": "Juli\u00e1n Cuesta",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "julian-cuesta",
+                    "shortName": "J. Cuesta",
+                    "position": "G",
+                    "userCount": 91,
+                    "id": 217110,
+                    "country": {
+                        "alpha2": "ES",
+                        "name": "Spain"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 670118400
+                },
+                "shirtNumber": 23,
+                "jerseyNumber": "23",
+                "position": "G",
+                "substitute": false,
+                "captain": true,
+                "statistics": {
+                    "totalPass": 4,
+                    "accuratePass": 2,
+                    "totalLongBalls": 3,
+                    "accurateLongBalls": 1,
+                    "minutesPlayed": 9,
+                    "touches": 4,
+                    "rating": 6.5,
+                    "possessionLostCtrl": 2,
+                    "ratingVersions": {
+                        "original": 6.5,
+                        "alternative": 6.5
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Moses Odubajo",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "moses-odubajo",
+                    "shortName": "M. Odubajo",
+                    "position": "D",
+                    "userCount": 75,
+                    "id": 134365,
+                    "country": {
+                        "alpha2": "EN",
+                        "name": "England"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 743817600
+                },
+                "shirtNumber": 22,
+                "jerseyNumber": "22",
+                "position": "D",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 2,
+                    "accuratePass": 2,
+                    "interceptionWon": 1,
+                    "minutesPlayed": 9,
+                    "touches": 3,
+                    "rating": 6.6,
+                    "ratingVersions": {
+                        "original": 6.6,
+                        "alternative": 6.6
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Fabiano",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "fabiano",
+                    "shortName": "F. Leismann",
+                    "position": "D",
+                    "userCount": 123,
+                    "id": 551304,
+                    "country": {
+                        "alpha2": "BR",
+                        "name": "Brazil"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 690422400
+                },
+                "shirtNumber": 4,
+                "jerseyNumber": "4",
+                "position": "D",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 4,
+                    "accuratePass": 4,
+                    "minutesPlayed": 9,
+                    "touches": 4,
+                    "rating": 6.5,
+                    "ratingVersions": {
+                        "original": 6.5,
+                        "alternative": 6.5
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Jakub Brabec",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "jakub-brabec",
+                    "shortName": "J. Brabec",
+                    "position": "D",
+                    "userCount": 140,
+                    "id": 72020,
+                    "country": {
+                        "alpha2": "CZ",
+                        "name": "Czech Republic"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 713059200
+                },
+                "shirtNumber": 14,
+                "jerseyNumber": "14",
+                "position": "D",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 10,
+                    "accuratePass": 9,
+                    "totalLongBalls": 1,
+                    "aerialWon": 1,
+                    "duelWon": 1,
+                    "totalClearance": 1,
+                    "minutesPlayed": 9,
+                    "touches": 13,
+                    "rating": 6.7,
+                    "possessionLostCtrl": 2,
+                    "ratingVersions": {
+                        "original": 6.7,
+                        "alternative": 6.6
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Mart\u00edn Montoya",
+                    "slug": "martin-montoya",
+                    "shortName": "M. Montoya",
+                    "position": "D",
+                    "userCount": 171,
+                    "id": 99517,
+                    "country": {
+                        "alpha2": "ES",
+                        "name": "Spain"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 671587200
+                },
+                "shirtNumber": 33,
+                "jerseyNumber": "33",
+                "position": "D",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 6,
+                    "accuratePass": 4,
+                    "aerialWon": 1,
+                    "duelWon": 1,
+                    "minutesPlayed": 9,
+                    "touches": 9,
+                    "rating": 6.5,
+                    "possessionLostCtrl": 3,
+                    "ratingVersions": {
+                        "original": 6.5,
+                        "alternative": 6.5
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "\u00c1lvaro Zamora",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "alvaro-zamora",
+                    "shortName": "\u00c1. Zamora",
+                    "position": "M",
+                    "userCount": 144,
+                    "id": 1015703,
+                    "country": {
+                        "alpha2": "CR",
+                        "name": "Costa Rica"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 1015632000
+                },
+                "shirtNumber": 12,
+                "jerseyNumber": "12",
+                "position": "M",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 3,
+                    "accuratePass": 3,
+                    "duelWon": 1,
+                    "wasFouled": 1,
+                    "penaltyWon": 1,
+                    "minutesPlayed": 9,
+                    "touches": 4,
+                    "rating": 7.2,
+                    "ratingVersions": {
+                        "original": 7.2,
+                        "alternative": 7
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Jean Jules Mvondo",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "jean-jules-mvondo",
+                    "shortName": "J. Jules Mvondo",
+                    "position": "M",
+                    "userCount": 63,
+                    "id": 946208,
+                    "country": {
+                        "alpha2": "CM",
+                        "name": "Cameroon"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 893289600
+                },
+                "shirtNumber": 30,
+                "jerseyNumber": "30",
+                "position": "M",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 8,
+                    "accuratePass": 7,
+                    "duelLost": 1,
+                    "totalContest": 1,
+                    "minutesPlayed": 9,
+                    "touches": 10,
+                    "rating": 6.4,
+                    "possessionLostCtrl": 2,
+                    "ratingVersions": {
+                        "original": 6.4,
+                        "alternative": 6.4
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Rub\u00e9n Pardo",
+                    "slug": "ruben-pardo",
+                    "shortName": "R. Pardo",
+                    "position": "M",
+                    "userCount": 89,
+                    "id": 153440,
+                    "country": {
+                        "alpha2": "ES",
+                        "name": "Spain"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 719712000
+                },
+                "shirtNumber": 21,
+                "jerseyNumber": "21",
+                "position": "M",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 5,
+                    "accuratePass": 5,
+                    "minutesPlayed": 9,
+                    "touches": 5,
+                    "rating": 6.6,
+                    "ratingVersions": {
+                        "original": 6.6,
+                        "alternative": 6.6
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Magomed Shapi Suleymanov",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "magomed-shapi-suleymanov",
+                    "shortName": "M. S. Suleymanov",
+                    "position": "M",
+                    "userCount": 503,
+                    "id": 800698,
+                    "country": {
+                        "alpha2": "RU",
+                        "name": "Russia"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 945302400
+                },
+                "shirtNumber": 93,
+                "jerseyNumber": "93",
+                "position": "F",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 6,
+                    "accuratePass": 6,
+                    "interceptionWon": 1,
+                    "minutesPlayed": 9,
+                    "touches": 7,
+                    "rating": 6.6,
+                    "ratingVersions": {
+                        "original": 6.6,
+                        "alternative": 6.6
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Loren Mor\u00f3n",
+                    "slug": "loren-moron",
+                    "shortName": "L. Mor\u00f3n",
+                    "position": "F",
+                    "userCount": 368,
+                    "id": 893063,
+                    "country": {
+                        "alpha2": "ES",
+                        "name": "Spain"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 757209600
+                },
+                "shirtNumber": 80,
+                "jerseyNumber": "80",
+                "position": "F",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 2,
+                    "accuratePass": 2,
+                    "totalCross": 1,
+                    "onTargetScoringAttempt": 1,
+                    "goals": 1,
+                    "totalOffside": 1,
+                    "minutesPlayed": 9,
+                    "touches": 5,
+                    "rating": 7.1,
+                    "possessionLostCtrl": 2,
+                    "ratingVersions": {
+                        "original": 7.1,
+                        "alternative": 7.1
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Michalis Panagidis",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "michalis-panagidis",
+                    "shortName": "M. Panagidis",
+                    "position": "M",
+                    "userCount": 77,
+                    "id": 1387195,
+                    "country": {
+                        "alpha2": "GR",
+                        "name": "Greece"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 1076457600
+                },
+                "shirtNumber": 77,
+                "jerseyNumber": "77",
+                "position": "F",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 5,
+                    "accuratePass": 4,
+                    "aerialWon": 1,
+                    "duelWon": 1,
+                    "totalClearance": 1,
+                    "minutesPlayed": 9,
+                    "touches": 7,
+                    "rating": 6.6,
+                    "possessionLostCtrl": 1,
+                    "ratingVersions": {
+                        "original": 6.6,
+                        "alternative": 6.6
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Lefteris Choutesiotis",
+                    "slug": "lefteris-choutesiotis",
+                    "shortName": "L. Choutesiotis",
+                    "position": "G",
+                    "userCount": 59,
+                    "id": 606274,
+                    "country": {
+                        "alpha2": "GR",
+                        "name": "Greece"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 774662400
+                },
+                "shirtNumber": 94,
+                "jerseyNumber": "94",
+                "position": "G",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Valentino Fattore",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "valentino-fattore",
+                    "shortName": "V. Fattore",
+                    "position": "D",
+                    "userCount": 54,
+                    "id": 910105,
+                    "country": {
+                        "alpha2": "ES",
+                        "name": "Spain"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 997401600
+                },
+                "shirtNumber": 18,
+                "jerseyNumber": "18",
+                "position": "D",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Franco Ferrari",
+                    "slug": "franco-ferrari",
+                    "shortName": "F. Ferrari",
+                    "position": "D",
+                    "userCount": 68,
+                    "id": 933171,
+                    "country": {
+                        "alpha2": "AR",
+                        "name": "Argentina"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 705369600
+                },
+                "shirtNumber": 3,
+                "jerseyNumber": "3",
+                "position": "D",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Lukas Rupp",
+                    "slug": "lukas-rupp",
+                    "shortName": "L. Rupp",
+                    "position": "M",
+                    "userCount": 92,
+                    "id": 56601,
+                    "country": {
+                        "alpha2": "DE",
+                        "name": "Germany"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 663292800
+                },
+                "shirtNumber": 10,
+                "jerseyNumber": "10",
+                "position": "M",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Cheick Doukour\u00e9",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "cheick-doukoure",
+                    "shortName": "C. Doukour\u00e9",
+                    "position": "M",
+                    "userCount": 120,
+                    "id": 93885,
+                    "country": {
+                        "alpha2": "CI",
+                        "name": "Ivory Coast"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 716169600
+                },
+                "shirtNumber": 8,
+                "jerseyNumber": "8",
+                "position": "M",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Kike Saverio",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "kike-saverio",
+                    "shortName": "K. Saverio",
+                    "position": "M",
+                    "userCount": 292,
+                    "id": 1032938,
+                    "country": {
+                        "alpha2": "EC",
+                        "name": "Ecuador"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 929750400
+                },
+                "shirtNumber": 11,
+                "jerseyNumber": "11",
+                "position": "M",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Lazaros Christodoulopoulos",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "lazaros-christodoulopoulos",
+                    "shortName": "L. Christodoulopoulos",
+                    "position": "M",
+                    "userCount": 230,
+                    "id": 13667,
+                    "country": {
+                        "alpha2": "GR",
+                        "name": "Greece"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 535334400
+                },
+                "shirtNumber": 7,
+                "jerseyNumber": "7",
+                "position": "F",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Neven \u0110urasek",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "neven-durasek",
+                    "shortName": "N. \u0110urasek",
+                    "position": "M",
+                    "userCount": 140,
+                    "id": 876867,
+                    "country": {
+                        "alpha2": "HR",
+                        "name": "Croatia"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 903139200
+                },
+                "shirtNumber": 20,
+                "jerseyNumber": "20",
+                "position": "M",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Jonathan Men\u00e9ndez",
+                    "slug": "jonathan-menendez",
+                    "shortName": "J. Men\u00e9ndez",
+                    "position": "F",
+                    "userCount": 76,
+                    "id": 846568,
+                    "country": {
+                        "alpha2": "AR",
+                        "name": "Argentina"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 762825600
+                },
+                "shirtNumber": 27,
+                "jerseyNumber": "27",
+                "position": "F",
+                "substitute": true,
+                "statistics": {}
+            }
+        ],
+        "supportStaff": [],
+        "formation": "4-3-3",
+        "playerColor": {
+            "primary": "ffee00",
+            "number": "000000",
+            "outline": "ffee00",
+            "fancyNumber": "222226"
+        },
+        "goalkeeperColor": {
+            "primary": "0041ff",
+            "number": "000000",
+            "outline": "0041ff",
+            "fancyNumber": "ffffff"
+        }
+    }
+}

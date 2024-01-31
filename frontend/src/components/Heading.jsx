@@ -16,7 +16,7 @@ const HeadingComponent = styled.div`
   }
 
   div {
-    display: felx;
+    display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
@@ -34,10 +34,12 @@ const HeadingComponent = styled.div`
 function Heading({ title, img, children }) {
   return (
     <HeadingComponent className="heading">
-      <div>
-        {img && <img src={img.path} alt={img.alt} />}
-        <h1>{title}</h1>
-      </div>
+      {(img || title) && (
+        <div>
+          {img && <img src={img.path} alt={img.alt} />}
+          {title && <h1>{title}</h1>}
+        </div>
+      )}
       {children}
     </HeadingComponent>
   );

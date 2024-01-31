@@ -1,0 +1,1658 @@
+{
+    "confirmed": true,
+    "home": {
+        "players": [
+            {
+                "player": {
+                    "name": "Erce Karde\u015fler",
+                    "slug": "erce-kardesler",
+                    "shortName": "E. Karde\u015fler",
+                    "position": "G",
+                    "userCount": 141,
+                    "id": 758606,
+                    "country": {
+                        "alpha2": "TR",
+                        "name": "Turkey"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 763603200
+                },
+                "shirtNumber": 1,
+                "jerseyNumber": "1",
+                "position": "G",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 16,
+                    "accuratePass": 16,
+                    "totalLongBalls": 3,
+                    "accurateLongBalls": 3,
+                    "savedShotsFromInsideTheBox": 1,
+                    "saves": 2,
+                    "totalKeeperSweeper": 1,
+                    "accurateKeeperSweeper": 1,
+                    "minutesPlayed": 90,
+                    "touches": 21,
+                    "rating": 7.1,
+                    "ratingVersions": {
+                        "original": 7.1,
+                        "alternative": 7.3
+                    },
+                    "goalsPrevented": 0.1386
+                }
+            },
+            {
+                "player": {
+                    "name": "Kerim Al\u0131c\u0131",
+                    "slug": "kerim-alici",
+                    "shortName": "K. Al\u0131c\u0131",
+                    "position": "D",
+                    "userCount": 29,
+                    "id": 758870,
+                    "country": {
+                        "alpha2": "TR",
+                        "name": "Turkey"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 867110400
+                },
+                "shirtNumber": 22,
+                "jerseyNumber": "22",
+                "position": "D",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 30,
+                    "accuratePass": 26,
+                    "totalLongBalls": 2,
+                    "totalCross": 5,
+                    "accurateCross": 1,
+                    "aerialLost": 1,
+                    "aerialWon": 1,
+                    "duelLost": 3,
+                    "duelWon": 3,
+                    "challengeLost": 1,
+                    "totalContest": 2,
+                    "wonContest": 2,
+                    "blockedScoringAttempt": 1,
+                    "interceptionWon": 1,
+                    "fouls": 1,
+                    "totalOffside": 1,
+                    "minutesPlayed": 45,
+                    "touches": 42,
+                    "rating": 7,
+                    "possessionLostCtrl": 9,
+                    "expectedGoals": 0.0393,
+                    "keyPass": 1,
+                    "ratingVersions": {
+                        "original": 7,
+                        "alternative": 6.9
+                    },
+                    "expectedAssists": 0.0654974
+                }
+            },
+            {
+                "player": {
+                    "name": "Guy-Marcelin Kilama",
+                    "slug": "guy-marcelin-kilama",
+                    "shortName": "G. M. Kilama",
+                    "position": "D",
+                    "userCount": 95,
+                    "id": 944222,
+                    "country": {
+                        "alpha2": "CM",
+                        "name": "Cameroon"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 928022400
+                },
+                "shirtNumber": 3,
+                "jerseyNumber": "3",
+                "position": "D",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 105,
+                    "accuratePass": 100,
+                    "totalLongBalls": 8,
+                    "accurateLongBalls": 5,
+                    "aerialWon": 3,
+                    "duelLost": 2,
+                    "duelWon": 6,
+                    "totalClearance": 3,
+                    "outfielderBlock": 1,
+                    "totalTackle": 3,
+                    "fouls": 2,
+                    "minutesPlayed": 90,
+                    "touches": 114,
+                    "rating": 7.8,
+                    "possessionLostCtrl": 5,
+                    "keyPass": 1,
+                    "ratingVersions": {
+                        "original": 7.8,
+                        "alternative": 7.7
+                    },
+                    "expectedAssists": 0.0344192
+                }
+            },
+            {
+                "player": {
+                    "name": "Nikola Maksimovi\u0107",
+                    "slug": "nikola-maksimovic",
+                    "shortName": "N. Maksimovi\u0107",
+                    "position": "D",
+                    "userCount": 374,
+                    "id": 68076,
+                    "country": {
+                        "alpha2": "RS",
+                        "name": "Serbia"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 691027200,
+                    "fieldTranslations": {
+                        "nameTranslation": {
+                            "ar": "\u0646\u064a\u0643\u0648\u0644\u0627 \u0645\u0627\u0643\u0633\u064a\u0645\u0648\u0641\u064a\u062a\u0634"
+                        },
+                        "shortNameTranslation": {}
+                    }
+                },
+                "shirtNumber": 19,
+                "jerseyNumber": "19",
+                "position": "D",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 93,
+                    "accuratePass": 88,
+                    "aerialWon": 1,
+                    "duelLost": 2,
+                    "duelWon": 3,
+                    "challengeLost": 1,
+                    "shotOffTarget": 1,
+                    "totalClearance": 3,
+                    "outfielderBlock": 1,
+                    "totalTackle": 2,
+                    "fouls": 1,
+                    "minutesPlayed": 90,
+                    "touches": 101,
+                    "rating": 7.3,
+                    "possessionLostCtrl": 6,
+                    "expectedGoals": 0.0154,
+                    "ratingVersions": {
+                        "original": 7.3,
+                        "alternative": 7.2
+                    },
+                    "expectedAssists": 0.0818429
+                }
+            },
+            {
+                "player": {
+                    "name": "Kamil Ahmet \u00c7\u00f6rek\u00e7i",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "kamil-ahmet-corekci",
+                    "shortName": "K. A. \u00c7\u00f6rek\u00e7i",
+                    "position": "D",
+                    "userCount": 66,
+                    "id": 124728,
+                    "country": {
+                        "alpha2": "TR",
+                        "name": "Turkey"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 696902400
+                },
+                "shirtNumber": 2,
+                "jerseyNumber": "2",
+                "position": "D",
+                "substitute": false,
+                "captain": true,
+                "statistics": {
+                    "totalPass": 76,
+                    "accuratePass": 70,
+                    "totalLongBalls": 5,
+                    "accurateLongBalls": 3,
+                    "totalCross": 4,
+                    "accurateCross": 1,
+                    "aerialLost": 2,
+                    "duelLost": 4,
+                    "duelWon": 1,
+                    "challengeLost": 1,
+                    "totalContest": 1,
+                    "wonContest": 1,
+                    "onTargetScoringAttempt": 1,
+                    "interceptionWon": 1,
+                    "fouls": 1,
+                    "minutesPlayed": 90,
+                    "touches": 99,
+                    "rating": 7.5,
+                    "possessionLostCtrl": 12,
+                    "expectedGoals": 0.0475,
+                    "ratingVersions": {
+                        "original": 7.5,
+                        "alternative": 7.2
+                    },
+                    "expectedAssists": 0.129289
+                }
+            },
+            {
+                "player": {
+                    "name": "Giorgi Aburjania",
+                    "slug": "giorgi-aburjania",
+                    "shortName": "G. Aburjania",
+                    "position": "M",
+                    "userCount": 225,
+                    "id": 156569,
+                    "country": {
+                        "alpha2": "GE",
+                        "name": "Georgia"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 789004800,
+                    "fieldTranslations": {
+                        "nameTranslation": {
+                            "ar": "\u062c\u064a\u0648\u0631\u062c\u064a \u0623\u0628\u0648\u0631\u062c\u0627\u0646\u064a\u0627"
+                        },
+                        "shortNameTranslation": {}
+                    }
+                },
+                "shirtNumber": 29,
+                "jerseyNumber": "29",
+                "position": "M",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 31,
+                    "accuratePass": 26,
+                    "totalLongBalls": 2,
+                    "accurateLongBalls": 1,
+                    "duelLost": 2,
+                    "duelWon": 1,
+                    "dispossessed": 1,
+                    "totalClearance": 1,
+                    "interceptionWon": 2,
+                    "totalTackle": 1,
+                    "fouls": 1,
+                    "minutesPlayed": 45,
+                    "touches": 37,
+                    "rating": 6.7,
+                    "possessionLostCtrl": 7,
+                    "ratingVersions": {
+                        "original": 6.7,
+                        "alternative": 6.7
+                    },
+                    "expectedAssists": 0.0284792
+                }
+            },
+            {
+                "player": {
+                    "name": "G\u00f6rkem Sa\u011flam",
+                    "slug": "gorkem-saglam",
+                    "shortName": "G. Sa\u011flam",
+                    "position": "M",
+                    "userCount": 149,
+                    "id": 795001,
+                    "country": {
+                        "alpha2": "TR",
+                        "name": "Turkey"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 892252800
+                },
+                "shirtNumber": 5,
+                "jerseyNumber": "5",
+                "position": "M",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 131,
+                    "accuratePass": 125,
+                    "totalLongBalls": 15,
+                    "accurateLongBalls": 13,
+                    "totalCross": 4,
+                    "accurateCross": 1,
+                    "aerialLost": 2,
+                    "aerialWon": 1,
+                    "duelLost": 5,
+                    "duelWon": 4,
+                    "challengeLost": 3,
+                    "totalContest": 2,
+                    "wonContest": 2,
+                    "onTargetScoringAttempt": 1,
+                    "totalClearance": 1,
+                    "interceptionWon": 1,
+                    "totalTackle": 1,
+                    "fouls": 1,
+                    "minutesPlayed": 90,
+                    "touches": 146,
+                    "rating": 8.1,
+                    "possessionLostCtrl": 9,
+                    "expectedGoals": 0.0255,
+                    "keyPass": 2,
+                    "ratingVersions": {
+                        "original": 8.1,
+                        "alternative": 7.8
+                    },
+                    "expectedAssists": 0.168748
+                }
+            },
+            {
+                "player": {
+                    "name": "Oluwafisayo Dele-Bashiru",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "dele-bashiru-oluwafisayo",
+                    "shortName": "O. Dele-Bashiru",
+                    "position": "M",
+                    "userCount": 438,
+                    "id": 910121,
+                    "country": {
+                        "alpha2": "NG",
+                        "name": "Nigeria"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 981417600
+                },
+                "shirtNumber": 17,
+                "jerseyNumber": "17",
+                "position": "M",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 38,
+                    "accuratePass": 35,
+                    "duelLost": 3,
+                    "duelWon": 3,
+                    "dispossessed": 1,
+                    "totalContest": 4,
+                    "wonContest": 3,
+                    "bigChanceMissed": 1,
+                    "shotOffTarget": 1,
+                    "onTargetScoringAttempt": 1,
+                    "interceptionWon": 1,
+                    "fouls": 1,
+                    "minutesPlayed": 79,
+                    "touches": 50,
+                    "rating": 7.1,
+                    "possessionLostCtrl": 8,
+                    "expectedGoals": 0.1212,
+                    "keyPass": 3,
+                    "ratingVersions": {
+                        "original": 7.1,
+                        "alternative": 6.9
+                    },
+                    "expectedAssists": 0.0405378
+                }
+            },
+            {
+                "player": {
+                    "name": "\u00d6mer Faruk Beyaz",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "omer-faruk-beyaz",
+                    "shortName": "\u00d6. F. Beyaz",
+                    "position": "M",
+                    "userCount": 683,
+                    "id": 1022881,
+                    "country": {
+                        "alpha2": "TR",
+                        "name": "Turkey"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 1062115200
+                },
+                "shirtNumber": 7,
+                "jerseyNumber": "7",
+                "position": "F",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 34,
+                    "accuratePass": 27,
+                    "totalLongBalls": 2,
+                    "accurateLongBalls": 1,
+                    "totalCross": 1,
+                    "aerialLost": 1,
+                    "aerialWon": 1,
+                    "duelLost": 6,
+                    "duelWon": 9,
+                    "dispossessed": 1,
+                    "totalContest": 8,
+                    "wonContest": 5,
+                    "shotOffTarget": 1,
+                    "onTargetScoringAttempt": 2,
+                    "blockedScoringAttempt": 1,
+                    "totalTackle": 1,
+                    "wasFouled": 2,
+                    "fouls": 1,
+                    "minutesPlayed": 90,
+                    "touches": 64,
+                    "rating": 7.7,
+                    "possessionLostCtrl": 16,
+                    "expectedGoals": 0.1084,
+                    "keyPass": 2,
+                    "ratingVersions": {
+                        "original": 7.7,
+                        "alternative": 7.4
+                    },
+                    "expectedAssists": 0.0845013
+                }
+            },
+            {
+                "player": {
+                    "name": "Carlos Strandberg",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "carlos-strandberg",
+                    "shortName": "C. Strandberg",
+                    "position": "M",
+                    "userCount": 201,
+                    "id": 333423,
+                    "country": {
+                        "alpha2": "SE",
+                        "name": "Sweden"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 829440000,
+                    "fieldTranslations": {
+                        "nameTranslation": {
+                            "ar": "\u0643\u0627\u0631\u0644\u0648\u0633 \u0634\u062a\u0631\u0627\u0646\u0628\u064a\u0631\u063a"
+                        },
+                        "shortNameTranslation": {}
+                    }
+                },
+                "shirtNumber": 10,
+                "jerseyNumber": "10",
+                "position": "F",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 13,
+                    "accuratePass": 10,
+                    "totalLongBalls": 1,
+                    "accurateLongBalls": 1,
+                    "aerialWon": 4,
+                    "duelLost": 5,
+                    "duelWon": 6,
+                    "dispossessed": 1,
+                    "totalContest": 5,
+                    "wonContest": 2,
+                    "shotOffTarget": 1,
+                    "totalClearance": 1,
+                    "fouls": 1,
+                    "minutesPlayed": 70,
+                    "touches": 27,
+                    "rating": 6.7,
+                    "possessionLostCtrl": 10,
+                    "expectedGoals": 0.0465,
+                    "keyPass": 1,
+                    "ratingVersions": {
+                        "original": 6.7,
+                        "alternative": 6.7
+                    },
+                    "expectedAssists": 0.00968857
+                }
+            },
+            {
+                "player": {
+                    "name": "Rigoberto Rivas",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "rigoberto-rivas",
+                    "shortName": "R. Rivas",
+                    "position": "F",
+                    "userCount": 238,
+                    "id": 837742,
+                    "country": {
+                        "alpha2": "HN",
+                        "name": "Honduras"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 901843200
+                },
+                "shirtNumber": 99,
+                "jerseyNumber": "99",
+                "position": "F",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 32,
+                    "accuratePass": 22,
+                    "totalLongBalls": 2,
+                    "totalCross": 2,
+                    "aerialWon": 1,
+                    "duelLost": 3,
+                    "duelWon": 2,
+                    "totalContest": 1,
+                    "onTargetScoringAttempt": 2,
+                    "totalTackle": 1,
+                    "fouls": 3,
+                    "totalOffside": 2,
+                    "minutesPlayed": 70,
+                    "touches": 44,
+                    "rating": 6.8,
+                    "possessionLostCtrl": 15,
+                    "expectedGoals": 0.0896,
+                    "ratingVersions": {
+                        "original": 6.8,
+                        "alternative": 6.7
+                    },
+                    "expectedAssists": 0.0155325
+                }
+            },
+            {
+                "player": {
+                    "name": "Faouzi Ghoulam",
+                    "slug": "faouzi-ghoulam",
+                    "shortName": "F. Ghoulam",
+                    "position": "D",
+                    "userCount": 3777,
+                    "id": 133236,
+                    "country": {
+                        "alpha2": "DZ",
+                        "name": "Algeria"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 665366400,
+                    "fieldTranslations": {
+                        "nameTranslation": {
+                            "ar": "\u0641\u0648\u0632\u064a \u063a\u0644\u0627\u0645"
+                        },
+                        "shortNameTranslation": {}
+                    }
+                },
+                "shirtNumber": 13,
+                "jerseyNumber": "13",
+                "position": "D",
+                "substitute": true,
+                "statistics": {
+                    "totalPass": 24,
+                    "accuratePass": 23,
+                    "totalLongBalls": 1,
+                    "accurateLongBalls": 1,
+                    "totalCross": 6,
+                    "accurateCross": 1,
+                    "aerialLost": 1,
+                    "aerialWon": 2,
+                    "duelLost": 1,
+                    "duelWon": 2,
+                    "totalClearance": 1,
+                    "minutesPlayed": 45,
+                    "touches": 36,
+                    "rating": 6.8,
+                    "possessionLostCtrl": 8,
+                    "ratingVersions": {
+                        "original": 6.8,
+                        "alternative": 6.9
+                    },
+                    "expectedAssists": 0.0962156
+                }
+            },
+            {
+                "player": {
+                    "name": "Renat Dada\u015fov",
+                    "slug": "renat-dadasov",
+                    "shortName": "R. Dada\u015fov",
+                    "position": "F",
+                    "userCount": 1557,
+                    "id": 836941,
+                    "country": {
+                        "alpha2": "AZ",
+                        "name": "Azerbaijan"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 926899200,
+                    "fieldTranslations": {
+                        "nameTranslation": {
+                            "ar": "\u062f\u0627\u062f\u0627\u0634\u0648\u0641, \u0631\u064a\u0646\u0627\u062a"
+                        },
+                        "shortNameTranslation": {}
+                    }
+                },
+                "shirtNumber": 9,
+                "jerseyNumber": "9",
+                "position": "F",
+                "substitute": true,
+                "statistics": {
+                    "totalPass": 5,
+                    "accuratePass": 2,
+                    "totalLongBalls": 1,
+                    "aerialLost": 1,
+                    "aerialWon": 1,
+                    "duelLost": 2,
+                    "duelWon": 2,
+                    "totalContest": 2,
+                    "wonContest": 1,
+                    "fouls": 1,
+                    "totalOffside": 1,
+                    "minutesPlayed": 45,
+                    "touches": 9,
+                    "rating": 6.6,
+                    "possessionLostCtrl": 6,
+                    "keyPass": 1,
+                    "ratingVersions": {
+                        "original": 6.6,
+                        "alternative": 6.5
+                    },
+                    "expectedAssists": 0.0151688
+                }
+            },
+            {
+                "player": {
+                    "name": "Joelson Fernandes",
+                    "firstName": "Joelson Mendes",
+                    "lastName": "",
+                    "slug": "joelson-fernandes",
+                    "shortName": "J. Fernandes",
+                    "position": "F",
+                    "userCount": 529,
+                    "id": 1032547,
+                    "country": {
+                        "alpha2": "PT",
+                        "name": "Portugal"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 1046390400
+                },
+                "shirtNumber": 77,
+                "jerseyNumber": "77",
+                "position": "F",
+                "substitute": true,
+                "statistics": {
+                    "totalPass": 11,
+                    "accuratePass": 9,
+                    "totalCross": 2,
+                    "duelLost": 1,
+                    "duelWon": 1,
+                    "challengeLost": 1,
+                    "interceptionWon": 1,
+                    "wasFouled": 1,
+                    "minutesPlayed": 20,
+                    "touches": 17,
+                    "rating": 6.9,
+                    "possessionLostCtrl": 4,
+                    "keyPass": 1,
+                    "ratingVersions": {
+                        "original": 6.9,
+                        "alternative": 6.8
+                    },
+                    "expectedAssists": 0.0243998
+                }
+            },
+            {
+                "player": {
+                    "name": "Didier Lamkel Z\u00e9",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "didier-lamkel-ze",
+                    "shortName": "D. L. Z\u00e9",
+                    "position": "F",
+                    "userCount": 389,
+                    "id": 845272,
+                    "country": {
+                        "alpha2": "CM",
+                        "name": "Cameroon"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 842918400
+                },
+                "shirtNumber": 11,
+                "jerseyNumber": "11",
+                "position": "F",
+                "substitute": true,
+                "statistics": {
+                    "totalPass": 11,
+                    "accuratePass": 10,
+                    "totalCross": 1,
+                    "aerialLost": 1,
+                    "aerialWon": 1,
+                    "duelLost": 1,
+                    "duelWon": 1,
+                    "bigChanceCreated": 1,
+                    "blockedScoringAttempt": 1,
+                    "minutesPlayed": 20,
+                    "touches": 15,
+                    "rating": 7.1,
+                    "possessionLostCtrl": 2,
+                    "expectedGoals": 0.0138,
+                    "keyPass": 1,
+                    "ratingVersions": {
+                        "original": 7.1,
+                        "alternative": 7
+                    },
+                    "expectedAssists": 0.162254
+                }
+            },
+            {
+                "player": {
+                    "name": "Armin Hod\u017ei\u0107",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "armin-hodzic",
+                    "shortName": "A. Hod\u017ei\u0107",
+                    "position": "M",
+                    "userCount": 80,
+                    "id": 928333,
+                    "country": {
+                        "alpha2": "BA",
+                        "name": "Bosnia & Herzegovina"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 951782400
+                },
+                "shirtNumber": 18,
+                "jerseyNumber": "18",
+                "position": "M",
+                "substitute": true,
+                "statistics": {
+                    "totalPass": 6,
+                    "accuratePass": 6,
+                    "duelLost": 1,
+                    "dispossessed": 1,
+                    "minutesPlayed": 11,
+                    "touches": 8,
+                    "rating": 6.4,
+                    "possessionLostCtrl": 1,
+                    "ratingVersions": {
+                        "original": 6.4,
+                        "alternative": 6.4
+                    },
+                    "expectedAssists": 0.0103393
+                }
+            },
+            {
+                "player": {
+                    "name": "Visar Bekaj",
+                    "slug": "visar-bekaj",
+                    "shortName": "V. Bekaj",
+                    "position": "G",
+                    "userCount": 148,
+                    "id": 890652,
+                    "country": {
+                        "alpha2": "XK",
+                        "name": "Kosovo"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 864432000,
+                    "fieldTranslations": {
+                        "nameTranslation": {
+                            "ar": "\u0641\u064a\u0633\u0627\u0631 \u0628\u0643\u0627\u064a"
+                        },
+                        "shortNameTranslation": {}
+                    }
+                },
+                "shirtNumber": 12,
+                "jerseyNumber": "12",
+                "position": "G",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Burak Bekaro\u011flu",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "burak-bekaroglu",
+                    "shortName": "B. Bekaro\u011flu",
+                    "position": "D",
+                    "userCount": 45,
+                    "id": 802645,
+                    "country": {
+                        "alpha2": "TR",
+                        "name": "Turkey"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 861148800
+                },
+                "shirtNumber": 86,
+                "jerseyNumber": "86",
+                "position": "D",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Recep Burak Y\u0131lmaz",
+                    "slug": "recep-burak-yilmaz",
+                    "shortName": "R. B. Y\u0131lmaz",
+                    "position": "D",
+                    "userCount": 13,
+                    "id": 904172,
+                    "country": {
+                        "alpha2": "TR",
+                        "name": "Turkey"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 817430400
+                },
+                "shirtNumber": 15,
+                "jerseyNumber": "15",
+                "position": "D",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Rayane Aabid",
+                    "slug": "rayane-aabid",
+                    "shortName": "R. Aabid",
+                    "position": "M",
+                    "userCount": 94,
+                    "id": 297510,
+                    "country": {
+                        "alpha2": "FR",
+                        "name": "France"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 695779200
+                },
+                "shirtNumber": 20,
+                "jerseyNumber": "20",
+                "position": "M",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Ibrahim Demir",
+                    "firstName": "Ibrahim Demir",
+                    "lastName": "",
+                    "slug": "demir-ibrahim",
+                    "shortName": "I. Demir",
+                    "position": "F",
+                    "userCount": 6,
+                    "id": 1430693,
+                    "country": {
+                        "alpha2": "TR",
+                        "name": "Turkey"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 1120176000
+                },
+                "shirtNumber": 28,
+                "jerseyNumber": "28",
+                "position": "M",
+                "substitute": true,
+                "statistics": {}
+            }
+        ],
+        "supportStaff": [],
+        "formation": "4-3-3",
+        "playerColor": {
+            "primary": "ffffff",
+            "number": "811313",
+            "outline": "ffffff",
+            "fancyNumber": "222226"
+        },
+        "goalkeeperColor": {
+            "primary": "1515b4",
+            "number": "ffffff",
+            "outline": "1515b4",
+            "fancyNumber": "ffffff"
+        }
+    },
+    "away": {
+        "players": [
+            {
+                "player": {
+                    "name": "Florin Ni\u021b\u0103",
+                    "slug": "florin-nita",
+                    "shortName": "F. Ni\u021b\u0103",
+                    "position": "G",
+                    "userCount": 348,
+                    "id": 83551,
+                    "country": {
+                        "alpha2": "RO",
+                        "name": "Romania"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 552268800,
+                    "fieldTranslations": {
+                        "nameTranslation": {
+                            "ar": "\u0641\u0644\u0648\u0631\u064a\u0646 \u0642\u0633\u0637\u0646\u0637\u064a\u0646 \u0646\u064a\u062a\u0627"
+                        },
+                        "shortNameTranslation": {}
+                    }
+                },
+                "shirtNumber": 33,
+                "jerseyNumber": "33",
+                "position": "G",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 37,
+                    "accuratePass": 23,
+                    "totalLongBalls": 29,
+                    "accurateLongBalls": 15,
+                    "totalClearance": 2,
+                    "goodHighClaim": 1,
+                    "savedShotsFromInsideTheBox": 4,
+                    "saves": 7,
+                    "punches": 1,
+                    "minutesPlayed": 90,
+                    "touches": 50,
+                    "rating": 9,
+                    "possessionLostCtrl": 14,
+                    "ratingVersions": {
+                        "original": 9,
+                        "alternative": 8.6
+                    },
+                    "goalsPrevented": 1.7462
+                }
+            },
+            {
+                "player": {
+                    "name": "Salem M'Bakata",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "salem-mbakata",
+                    "shortName": "S. M'Bakata",
+                    "position": "D",
+                    "userCount": 71,
+                    "id": 940367,
+                    "country": {
+                        "alpha2": "FR",
+                        "name": "France"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 892944000,
+                    "fieldTranslations": {
+                        "nameTranslation": {
+                            "ar": "\u0645\u0628\u0643\u0627\u062a\u0627"
+                        },
+                        "shortNameTranslation": {}
+                    }
+                },
+                "shirtNumber": 22,
+                "jerseyNumber": "22",
+                "position": "D",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 14,
+                    "accuratePass": 11,
+                    "totalLongBalls": 1,
+                    "totalCross": 1,
+                    "aerialLost": 2,
+                    "duelLost": 2,
+                    "duelWon": 3,
+                    "totalContest": 2,
+                    "wonContest": 2,
+                    "totalClearance": 4,
+                    "interceptionWon": 1,
+                    "totalTackle": 1,
+                    "minutesPlayed": 90,
+                    "touches": 31,
+                    "rating": 7,
+                    "possessionLostCtrl": 5,
+                    "ratingVersions": {
+                        "original": 7,
+                        "alternative": 7
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Arda K\u0131z\u0131lda\u011f",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "arda-kizildag",
+                    "shortName": "A. K\u0131z\u0131lda\u011f",
+                    "position": "D",
+                    "userCount": 76,
+                    "id": 904228,
+                    "country": {
+                        "alpha2": "TR",
+                        "name": "Turkey"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 908409600
+                },
+                "shirtNumber": 4,
+                "jerseyNumber": "4",
+                "position": "D",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 28,
+                    "accuratePass": 21,
+                    "totalLongBalls": 5,
+                    "aerialLost": 1,
+                    "aerialWon": 1,
+                    "duelLost": 4,
+                    "duelWon": 5,
+                    "challengeLost": 3,
+                    "totalClearance": 11,
+                    "outfielderBlock": 1,
+                    "totalTackle": 2,
+                    "wasFouled": 2,
+                    "minutesPlayed": 90,
+                    "touches": 46,
+                    "rating": 7.2,
+                    "possessionLostCtrl": 7,
+                    "ratingVersions": {
+                        "original": 7.2,
+                        "alternative": 6.9
+                    },
+                    "expectedAssists": 0.0243626
+                }
+            },
+            {
+                "player": {
+                    "name": "Nicolas N'Koulou",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "nicolas-nkoulou",
+                    "shortName": "N. N'Koulou",
+                    "position": "D",
+                    "userCount": 1049,
+                    "id": 38533,
+                    "country": {
+                        "alpha2": "CM",
+                        "name": "Cameroon"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 638496000,
+                    "fieldTranslations": {
+                        "nameTranslation": {
+                            "ar": "\u0646\u064a\u0643\u0648\u0644\u0627\u0633 \u0646\u0643\u0648\u0644\u0648"
+                        },
+                        "shortNameTranslation": {}
+                    }
+                },
+                "shirtNumber": 63,
+                "jerseyNumber": "63",
+                "position": "D",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 23,
+                    "accuratePass": 20,
+                    "totalLongBalls": 2,
+                    "aerialLost": 1,
+                    "aerialWon": 1,
+                    "duelLost": 1,
+                    "duelWon": 2,
+                    "totalClearance": 8,
+                    "outfielderBlock": 1,
+                    "totalTackle": 1,
+                    "totalOffside": 1,
+                    "minutesPlayed": 90,
+                    "touches": 35,
+                    "rating": 7,
+                    "possessionLostCtrl": 4,
+                    "ratingVersions": {
+                        "original": 7,
+                        "alternative": 7.1
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Ertu\u011frul Ersoy",
+                    "slug": "ertugrul-ersoy",
+                    "shortName": "E. Ersoy",
+                    "position": "D",
+                    "userCount": 101,
+                    "id": 355004,
+                    "country": {
+                        "alpha2": "TR",
+                        "name": "Turkey"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 855792000
+                },
+                "shirtNumber": 15,
+                "jerseyNumber": "15",
+                "position": "D",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 22,
+                    "accuratePass": 16,
+                    "aerialLost": 3,
+                    "aerialWon": 1,
+                    "duelLost": 5,
+                    "duelWon": 5,
+                    "challengeLost": 1,
+                    "totalContest": 1,
+                    "totalClearance": 5,
+                    "totalTackle": 3,
+                    "wasFouled": 1,
+                    "minutesPlayed": 90,
+                    "touches": 33,
+                    "rating": 7.1,
+                    "possessionLostCtrl": 7,
+                    "ratingVersions": {
+                        "original": 7.1,
+                        "alternative": 7
+                    },
+                    "expectedAssists": 0.00799832
+                }
+            },
+            {
+                "player": {
+                    "name": "J\u00fanior Morais",
+                    "slug": "junior-morais",
+                    "shortName": "J. Morais",
+                    "position": "D",
+                    "userCount": 79,
+                    "id": 79056,
+                    "country": {
+                        "alpha2": "BR",
+                        "name": "Brazil"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 522374400
+                },
+                "shirtNumber": 13,
+                "jerseyNumber": "13",
+                "position": "D",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 19,
+                    "accuratePass": 12,
+                    "totalLongBalls": 7,
+                    "accurateLongBalls": 4,
+                    "totalCross": 1,
+                    "aerialLost": 4,
+                    "duelLost": 8,
+                    "duelWon": 4,
+                    "challengeLost": 4,
+                    "totalContest": 1,
+                    "wonContest": 1,
+                    "shotOffTarget": 2,
+                    "totalClearance": 3,
+                    "outfielderBlock": 1,
+                    "totalTackle": 2,
+                    "wasFouled": 1,
+                    "minutesPlayed": 90,
+                    "touches": 39,
+                    "rating": 6.9,
+                    "possessionLostCtrl": 10,
+                    "expectedGoals": 0.0255,
+                    "ratingVersions": {
+                        "original": 6.9,
+                        "alternative": 6.7
+                    },
+                    "expectedAssists": 0.00886261
+                }
+            },
+            {
+                "player": {
+                    "name": "Mustafa Eskihella\u00e7",
+                    "slug": "mustafa-eskihellac",
+                    "shortName": "M. Eskihella\u00e7",
+                    "position": "M",
+                    "userCount": 95,
+                    "id": 899069,
+                    "country": {
+                        "alpha2": "TR",
+                        "name": "Turkey"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 862790400
+                },
+                "shirtNumber": 11,
+                "jerseyNumber": "11",
+                "position": "M",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 16,
+                    "accuratePass": 12,
+                    "totalCross": 3,
+                    "aerialWon": 1,
+                    "duelLost": 1,
+                    "duelWon": 4,
+                    "dispossessed": 1,
+                    "totalTackle": 1,
+                    "wasFouled": 2,
+                    "minutesPlayed": 66,
+                    "touches": 26,
+                    "rating": 6.9,
+                    "possessionLostCtrl": 11,
+                    "keyPass": 1,
+                    "ratingVersions": {
+                        "original": 6.9,
+                        "alternative": 6.7
+                    },
+                    "expectedAssists": 0.0219129
+                }
+            },
+            {
+                "player": {
+                    "name": "Marko Jevtovi\u0107",
+                    "slug": "marko-jevtovic",
+                    "shortName": "M. Jevtovi\u0107",
+                    "position": "M",
+                    "userCount": 130,
+                    "id": 310068,
+                    "country": {
+                        "alpha2": "RS",
+                        "name": "Serbia"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 743472000
+                },
+                "shirtNumber": 8,
+                "jerseyNumber": "8",
+                "position": "M",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 22,
+                    "accuratePass": 17,
+                    "aerialWon": 1,
+                    "duelLost": 2,
+                    "duelWon": 5,
+                    "challengeLost": 2,
+                    "totalContest": 1,
+                    "wonContest": 1,
+                    "totalClearance": 1,
+                    "interceptionWon": 3,
+                    "totalTackle": 2,
+                    "wasFouled": 1,
+                    "fouls": 1,
+                    "minutesPlayed": 90,
+                    "touches": 31,
+                    "rating": 6.8,
+                    "possessionLostCtrl": 6,
+                    "ratingVersions": {
+                        "original": 6.8,
+                        "alternative": 6.9
+                    },
+                    "expectedAssists": 0.00529553
+                }
+            },
+            {
+                "player": {
+                    "name": "Og\u00fcn \u00d6z\u00e7i\u00e7ek",
+                    "slug": "ogun-ozcicek",
+                    "shortName": "O. \u00d6z\u00e7i\u00e7ek",
+                    "position": "M",
+                    "userCount": 20,
+                    "id": 859783,
+                    "country": {
+                        "alpha2": "TR",
+                        "name": "Turkey"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 917136000
+                },
+                "shirtNumber": 61,
+                "jerseyNumber": "61",
+                "position": "M",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 24,
+                    "accuratePass": 21,
+                    "totalLongBalls": 1,
+                    "aerialWon": 1,
+                    "duelLost": 2,
+                    "duelWon": 7,
+                    "totalContest": 3,
+                    "wonContest": 1,
+                    "totalClearance": 1,
+                    "interceptionWon": 1,
+                    "totalTackle": 1,
+                    "wasFouled": 5,
+                    "minutesPlayed": 90,
+                    "touches": 39,
+                    "rating": 7.2,
+                    "possessionLostCtrl": 8,
+                    "keyPass": 2,
+                    "ratingVersions": {
+                        "original": 7.2,
+                        "alternative": 7.1
+                    },
+                    "expectedAssists": 0.142627
+                }
+            },
+            {
+                "player": {
+                    "name": "Alexandru Maxim",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "alexandru-maxim",
+                    "shortName": "A. Maxim",
+                    "position": "M",
+                    "userCount": 785,
+                    "id": 180511,
+                    "country": {
+                        "alpha2": "RO",
+                        "name": "Romania"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 647395200
+                },
+                "shirtNumber": 44,
+                "jerseyNumber": "44",
+                "position": "M",
+                "substitute": false,
+                "captain": true,
+                "statistics": {
+                    "totalPass": 26,
+                    "accuratePass": 21,
+                    "totalLongBalls": 5,
+                    "accurateLongBalls": 3,
+                    "totalCross": 6,
+                    "accurateCross": 2,
+                    "aerialLost": 2,
+                    "aerialWon": 1,
+                    "duelLost": 10,
+                    "duelWon": 2,
+                    "challengeLost": 5,
+                    "totalContest": 1,
+                    "wonContest": 1,
+                    "bigChanceCreated": 1,
+                    "totalClearance": 1,
+                    "fouls": 3,
+                    "minutesPlayed": 89,
+                    "touches": 38,
+                    "rating": 6.9,
+                    "possessionLostCtrl": 11,
+                    "keyPass": 4,
+                    "ratingVersions": {
+                        "original": 6.9,
+                        "alternative": 6.8
+                    },
+                    "expectedAssists": 0.115461
+                }
+            },
+            {
+                "player": {
+                    "name": "Denis Dr\u0103gu\u015f",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "denis-dragus",
+                    "shortName": "D. Dr\u0103gu\u015f",
+                    "position": "F",
+                    "userCount": 734,
+                    "id": 841199,
+                    "country": {
+                        "alpha2": "RO",
+                        "name": "Romania"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 931219200
+                },
+                "shirtNumber": 70,
+                "jerseyNumber": "70",
+                "position": "F",
+                "substitute": false,
+                "statistics": {
+                    "totalPass": 17,
+                    "accuratePass": 9,
+                    "aerialLost": 3,
+                    "aerialWon": 1,
+                    "duelLost": 9,
+                    "duelWon": 3,
+                    "challengeLost": 1,
+                    "dispossessed": 4,
+                    "totalContest": 2,
+                    "wonContest": 1,
+                    "bigChanceMissed": 1,
+                    "shotOffTarget": 1,
+                    "onTargetScoringAttempt": 1,
+                    "blockedScoringAttempt": 2,
+                    "totalClearance": 1,
+                    "totalTackle": 1,
+                    "minutesPlayed": 80,
+                    "touches": 35,
+                    "rating": 6.2,
+                    "possessionLostCtrl": 16,
+                    "expectedGoals": 0.0894,
+                    "ratingVersions": {
+                        "original": 6.2,
+                        "alternative": 6.1
+                    },
+                    "expectedAssists": 0.00778196
+                }
+            },
+            {
+                "player": {
+                    "name": "Lazar Markovi\u0107",
+                    "slug": "lazar-markovic",
+                    "shortName": "L. Markovi\u0107",
+                    "position": "M",
+                    "userCount": 476,
+                    "id": 98461,
+                    "country": {
+                        "alpha2": "RS",
+                        "name": "Serbia"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 762566400
+                },
+                "shirtNumber": 50,
+                "jerseyNumber": "50",
+                "position": "M",
+                "substitute": true,
+                "statistics": {
+                    "onTargetScoringAttempt": 1,
+                    "minutesPlayed": 24,
+                    "touches": 1,
+                    "rating": 6.7,
+                    "expectedGoals": 0.0483,
+                    "ratingVersions": {
+                        "original": 6.7,
+                        "alternative": 6.7
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Brayan Riascos",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "brayan-riascos",
+                    "shortName": "B. Riascos",
+                    "position": "F",
+                    "userCount": 96,
+                    "id": 537040,
+                    "country": {
+                        "alpha2": "CO",
+                        "name": "Colombia"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 781747200
+                },
+                "shirtNumber": 94,
+                "jerseyNumber": "94",
+                "position": "F",
+                "substitute": true,
+                "statistics": {
+                    "totalPass": 2,
+                    "accuratePass": 1,
+                    "aerialWon": 1,
+                    "duelWon": 1,
+                    "minutesPlayed": 10,
+                    "touches": 7,
+                    "rating": 6.5,
+                    "possessionLostCtrl": 4,
+                    "ratingVersions": {
+                        "original": 6.5,
+                        "alternative": 6.5
+                    }
+                }
+            },
+            {
+                "player": {
+                    "name": "Furkan Soyalp",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "furkan-soyalp",
+                    "shortName": "F. Soyalp",
+                    "position": "M",
+                    "userCount": 84,
+                    "id": 226992,
+                    "country": {
+                        "alpha2": "TR",
+                        "name": "Turkey"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 802915200
+                },
+                "shirtNumber": 5,
+                "jerseyNumber": "5",
+                "position": "M",
+                "substitute": true,
+                "statistics": {
+                    "minutesPlayed": 1
+                }
+            },
+            {
+                "player": {
+                    "name": "Batuhan Ahmet \u015een",
+                    "slug": "batuhan-ahmet-sen",
+                    "shortName": "B. A. \u015een",
+                    "position": "G",
+                    "userCount": 193,
+                    "id": 867595,
+                    "country": {
+                        "alpha2": "TR",
+                        "name": "Turkey"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 918000000
+                },
+                "shirtNumber": 19,
+                "jerseyNumber": "19",
+                "position": "G",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Mustafa Burak Bozan",
+                    "slug": "bozan-mustafa-burak",
+                    "shortName": "M. B. Bozan",
+                    "position": "G",
+                    "userCount": 36,
+                    "id": 934201,
+                    "country": {
+                        "alpha2": "TR",
+                        "name": "Turkey"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 966988800
+                },
+                "shirtNumber": 1,
+                "jerseyNumber": "1",
+                "position": "G",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "\u00d6m\u00fcrcan Artan",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "omurcan-artan",
+                    "shortName": "\u00d6. Artan",
+                    "position": "D",
+                    "userCount": 15,
+                    "id": 1016384,
+                    "country": {
+                        "alpha2": "TR",
+                        "name": "Turkey"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 933033600
+                },
+                "shirtNumber": 27,
+                "jerseyNumber": "27",
+                "position": "D",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Mirza Cihan",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "mirza-cihan",
+                    "shortName": "M. Cihan",
+                    "position": "M",
+                    "userCount": 28,
+                    "id": 909289,
+                    "country": {
+                        "alpha2": "TR",
+                        "name": "Turkey"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 972518400
+                },
+                "shirtNumber": 26,
+                "jerseyNumber": "26",
+                "position": "M",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "Mehmet Kuzucu",
+                    "firstName": "Mehmet Kuzucu",
+                    "slug": "mehmet-kuzucu",
+                    "shortName": "M. Kuzucu",
+                    "position": "F",
+                    "userCount": 2,
+                    "id": 1394336,
+                    "country": {
+                        "alpha2": "TR",
+                        "name": "Turkey"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 1064016000
+                },
+                "shirtNumber": 93,
+                "jerseyNumber": "93",
+                "position": "M",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "\u0130lker Karaka\u015f",
+                    "slug": "ilker-karakas",
+                    "shortName": "\u0130. Karaka\u015f",
+                    "position": "F",
+                    "userCount": 26,
+                    "id": 921406,
+                    "country": {
+                        "alpha2": "TR",
+                        "name": "Turkey"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 916012800
+                },
+                "shirtNumber": 9,
+                "jerseyNumber": "9",
+                "position": "F",
+                "substitute": true,
+                "statistics": {}
+            },
+            {
+                "player": {
+                    "name": "O\u011fulcan \u00c7a\u011flayan",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "ogulcan-caglayan",
+                    "shortName": "O. \u00c7a\u011flayan",
+                    "position": "F",
+                    "userCount": 172,
+                    "id": 387050,
+                    "country": {
+                        "alpha2": "TR",
+                        "name": "Turkey"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 827452800
+                },
+                "shirtNumber": 23,
+                "jerseyNumber": "23",
+                "position": "F",
+                "substitute": true,
+                "statistics": {}
+            }
+        ],
+        "supportStaff": [],
+        "formation": "5-4-1",
+        "playerColor": {
+            "primary": "000000",
+            "number": "ffffff",
+            "outline": "000000",
+            "fancyNumber": "ffffff"
+        },
+        "goalkeeperColor": {
+            "primary": "ffff00",
+            "number": "ffffff",
+            "outline": "ffff00",
+            "fancyNumber": "222226"
+        }
+    }
+}

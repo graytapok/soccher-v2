@@ -1,0 +1,24 @@
+.match_details .heading {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.match_details .heading .time,  
+.match_details .heading .team {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+}
+
+.match_details .heading .time  > h3 {
+    margin: 10px;
+}
+
+.match_details .heading .team > h3 {
+  border-radius: 15px;
+  padding: 10px;
+}

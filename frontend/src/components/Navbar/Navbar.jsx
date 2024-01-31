@@ -30,7 +30,7 @@ const Links = () => {
       )}
       {user.auth && user.admin && (
         <li>
-          <span onClick={() => navigate("/admin")}>Dashboard</span>
+          <span onClick={() => navigate("/admin/dashboard")}>Dashboard</span>
         </li>
       )}
       <li>

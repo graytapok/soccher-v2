@@ -1,5 +1,5 @@
 {
   "dependencies": {
-    "react-spinners": "^0.13.8"
+    "@uidotdev/usehooks": "^2.4.1"
   }
 }

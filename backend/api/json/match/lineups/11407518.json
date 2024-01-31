@@ -1,0 +1,557 @@
+{
+    "confirmed": false,
+    "home": {
+        "players": [
+            {
+                "avgRating": 7.2,
+                "player": {
+                    "name": "Yann Sommer",
+                    "slug": "yann-sommer",
+                    "shortName": "Y. Sommer",
+                    "position": "G",
+                    "userCount": 6330,
+                    "id": 16206,
+                    "country": {
+                        "alpha2": "CH",
+                        "name": "Switzerland"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 598320000
+                },
+                "shirtNumber": 1,
+                "jerseyNumber": "1",
+                "position": "G",
+                "substitute": false
+            },
+            {
+                "avgRating": 7.08,
+                "player": {
+                    "name": "Benjamin Pavard",
+                    "slug": "benjamin-pavard",
+                    "shortName": "B. Pavard",
+                    "position": "D",
+                    "userCount": 6982,
+                    "id": 787505,
+                    "country": {
+                        "alpha2": "FR",
+                        "name": "France"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 827971200
+                },
+                "shirtNumber": 28,
+                "jerseyNumber": "28",
+                "position": "D",
+                "substitute": false
+            },
+            {
+                "avgRating": 7.29,
+                "player": {
+                    "name": "Francesco Acerbi",
+                    "slug": "francesco-acerbi",
+                    "shortName": "F. Acerbi",
+                    "position": "D",
+                    "userCount": 2473,
+                    "id": 126816,
+                    "country": {
+                        "alpha2": "IT",
+                        "name": "Italy"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 571449600
+                },
+                "shirtNumber": 15,
+                "jerseyNumber": "15",
+                "position": "D",
+                "substitute": false
+            },
+            {
+                "avgRating": 7.42,
+                "player": {
+                    "name": "Alessandro Bastoni",
+                    "slug": "alessandro-bastoni",
+                    "shortName": "A. Bastoni",
+                    "position": "D",
+                    "userCount": 4882,
+                    "id": 826188,
+                    "country": {
+                        "alpha2": "IT",
+                        "name": "Italy"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 923961600
+                },
+                "shirtNumber": 95,
+                "jerseyNumber": "95",
+                "position": "D",
+                "substitute": false
+            },
+            {
+                "avgRating": 7.05,
+                "player": {
+                    "name": "Denzel Dumfries",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "denzel-dumfries",
+                    "shortName": "D. Dumfries",
+                    "position": "M",
+                    "userCount": 5550,
+                    "id": 759520,
+                    "country": {
+                        "alpha2": "NL",
+                        "name": "Netherlands"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 829785600
+                },
+                "shirtNumber": 2,
+                "jerseyNumber": "2",
+                "position": "M",
+                "substitute": false
+            },
+            {
+                "avgRating": 7.18,
+                "player": {
+                    "name": "Nicol\u00f2 Barella",
+                    "slug": "nicolo-barella",
+                    "shortName": "N. Barella",
+                    "position": "M",
+                    "userCount": 9122,
+                    "id": 363856,
+                    "country": {
+                        "alpha2": "IT",
+                        "name": "Italy"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 855273600
+                },
+                "shirtNumber": 23,
+                "jerseyNumber": "23",
+                "position": "M",
+                "substitute": false
+            },
+            {
+                "avgRating": 7.61,
+                "player": {
+                    "name": "Hakan \u00c7alhano\u011flu",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "hakan-calhanoglu",
+                    "shortName": "H. \u00c7alhano\u011flu",
+                    "position": "M",
+                    "userCount": 10201,
+                    "id": 135700,
+                    "country": {
+                        "alpha2": "TR",
+                        "name": "Turkey"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 760665600
+                },
+                "shirtNumber": 20,
+                "jerseyNumber": "20",
+                "position": "M",
+                "substitute": false
+            },
+            {
+                "avgRating": 7.32,
+                "player": {
+                    "name": "Henrikh Mkhitaryan",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "henrikh-mkhitaryan",
+                    "shortName": "H. Mkhitaryan",
+                    "position": "M",
+                    "userCount": 5894,
+                    "id": 37151,
+                    "country": {
+                        "alpha2": "AM",
+                        "name": "Armenia"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 601344000
+                },
+                "shirtNumber": 22,
+                "jerseyNumber": "22",
+                "position": "M",
+                "substitute": false
+            },
+            {
+                "avgRating": 7.43,
+                "player": {
+                    "name": "Federico Dimarco",
+                    "slug": "federico-dimarco",
+                    "shortName": "F. Dimarco",
+                    "position": "M",
+                    "userCount": 4486,
+                    "id": 284361,
+                    "country": {
+                        "alpha2": "IT",
+                        "name": "Italy"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 879120000
+                },
+                "shirtNumber": 32,
+                "jerseyNumber": "32",
+                "position": "M",
+                "substitute": false
+            },
+            {
+                "avgRating": 7.33,
+                "player": {
+                    "name": "Marcus Thuram",
+                    "slug": "marcus-thuram",
+                    "shortName": "M. Thuram",
+                    "position": "F",
+                    "userCount": 7121,
+                    "id": 791702,
+                    "country": {
+                        "alpha2": "FR",
+                        "name": "France"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 870825600
+                },
+                "shirtNumber": 9,
+                "jerseyNumber": "9",
+                "position": "F",
+                "substitute": false
+            },
+            {
+                "avgRating": 7.66,
+                "player": {
+                    "name": "Lautaro Mart\u00ednez",
+                    "slug": "lautaro-martinez",
+                    "shortName": "L. Mart\u00ednez",
+                    "position": "F",
+                    "userCount": 43007,
+                    "id": 823984,
+                    "country": {
+                        "alpha2": "AR",
+                        "name": "Argentina"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 872208000
+                },
+                "shirtNumber": 10,
+                "jerseyNumber": "10",
+                "position": "F",
+                "substitute": false
+            }
+        ],
+        "supportStaff": [],
+        "formation": "3-5-2",
+        "playerColor": {
+            "primary": "071fcf",
+            "number": "ffffff",
+            "outline": "071fcf",
+            "fancyNumber": "ffffff"
+        },
+        "goalkeeperColor": {
+            "primary": "ff6600",
+            "number": "ffffff",
+            "outline": "ff6600",
+            "fancyNumber": "222226"
+        },
+        "missingPlayers": [
+            {
+                "player": {
+                    "name": "Juan Cuadrado",
+                    "slug": "juan-cuadrado",
+                    "shortName": "J. Cuadrado",
+                    "position": "M",
+                    "userCount": 9780,
+                    "id": 47743,
+                    "country": {
+                        "alpha2": "CO",
+                        "name": "Colombia"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 580608000
+                },
+                "type": "missing",
+                "reason": 1
+            }
+        ]
+    },
+    "away": {
+        "players": [
+            {
+                "avgRating": 7.11,
+                "player": {
+                    "name": "Lorenzo Montip\u00f2",
+                    "slug": "lorenzo-montipo",
+                    "shortName": "L. Montip\u00f2",
+                    "position": "G",
+                    "userCount": 487,
+                    "id": 253391,
+                    "country": {
+                        "alpha2": "IT",
+                        "name": "Italy"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 820454400
+                },
+                "shirtNumber": 1,
+                "jerseyNumber": "1",
+                "position": "G",
+                "substitute": false
+            },
+            {
+                "avgRating": 6.82,
+                "player": {
+                    "name": "Jackson Tchatchoua",
+                    "slug": "jackson-tchatchoua",
+                    "shortName": "J. Tchatchoua",
+                    "position": "M",
+                    "userCount": 196,
+                    "id": 1096210,
+                    "country": {
+                        "alpha2": "CM",
+                        "name": "Cameroon"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 993254400
+                },
+                "shirtNumber": 38,
+                "jerseyNumber": "38",
+                "position": "M",
+                "substitute": false
+            },
+            {
+                "avgRating": 6.9,
+                "player": {
+                    "name": "Pawe\u0142 Dawidowicz",
+                    "slug": "pawel-dawidowicz",
+                    "shortName": "P. Dawidowicz",
+                    "position": "D",
+                    "userCount": 1741,
+                    "id": 288321,
+                    "country": {
+                        "alpha2": "PL",
+                        "name": "Poland"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 800928000
+                },
+                "shirtNumber": 27,
+                "jerseyNumber": "27",
+                "position": "D",
+                "substitute": false
+            },
+            {
+                "avgRating": 6.89,
+                "player": {
+                    "name": "Giangiacomo Magnani",
+                    "slug": "giangiacomo-magnani",
+                    "shortName": "G. Magnani",
+                    "position": "D",
+                    "userCount": 249,
+                    "id": 812829,
+                    "country": {
+                        "alpha2": "IT",
+                        "name": "Italy"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 812764800
+                },
+                "shirtNumber": 23,
+                "jerseyNumber": "23",
+                "position": "D",
+                "substitute": false
+            },
+            {
+                "avgRating": 6.68,
+                "player": {
+                    "name": "Josh Doig",
+                    "slug": "josh-doig",
+                    "shortName": "J. Doig",
+                    "position": "M",
+                    "userCount": 615,
+                    "id": 989276,
+                    "country": {
+                        "alpha2": "SX",
+                        "name": "Scotland"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 1009843200
+                },
+                "shirtNumber": 3,
+                "jerseyNumber": "3",
+                "position": "M",
+                "substitute": false
+            },
+            {
+                "avgRating": 7.05,
+                "player": {
+                    "name": "Ondrej Duda",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "ondrej-duda",
+                    "shortName": "O. Duda",
+                    "position": "M",
+                    "userCount": 1065,
+                    "id": 246319,
+                    "country": {
+                        "alpha2": "SK",
+                        "name": "Slovakia"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 786585600
+                },
+                "shirtNumber": 33,
+                "jerseyNumber": "33",
+                "position": "M",
+                "substitute": false
+            },
+            {
+                "avgRating": 6.72,
+                "player": {
+                    "name": "Michael Folorunsho",
+                    "slug": "michael-folorunsho",
+                    "shortName": "M. Folorunsho",
+                    "position": "M",
+                    "userCount": 448,
+                    "id": 869795,
+                    "country": {
+                        "alpha2": "IT",
+                        "name": "Italy"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 886809600
+                },
+                "shirtNumber": 90,
+                "jerseyNumber": "90",
+                "position": "M",
+                "substitute": false
+            },
+            {
+                "avgRating": 6.95,
+                "player": {
+                    "name": "Cyril Ngonge",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "cyril-ngonge",
+                    "shortName": "C. Ngonge",
+                    "position": "F",
+                    "userCount": 1089,
+                    "id": 877037,
+                    "country": {
+                        "alpha2": "BE",
+                        "name": "Belgium"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 959299200
+                },
+                "shirtNumber": 26,
+                "jerseyNumber": "26",
+                "position": "F",
+                "substitute": false
+            },
+            {
+                "avgRating": 6.76,
+                "player": {
+                    "name": "Tom\u00e1\u0161 Suslov",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "tomas-suslov",
+                    "shortName": "T. Suslov",
+                    "position": "M",
+                    "userCount": 669,
+                    "id": 964154,
+                    "country": {
+                        "alpha2": "SK",
+                        "name": "Slovakia"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 1023408000
+                },
+                "shirtNumber": 31,
+                "jerseyNumber": "31",
+                "position": "M",
+                "substitute": false
+            },
+            {
+                "avgRating": 6.69,
+                "player": {
+                    "name": "Darko Lazovi\u0107",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "darko-lazovic",
+                    "shortName": "D. Lazovi\u0107",
+                    "position": "M",
+                    "userCount": 1330,
+                    "id": 41157,
+                    "country": {
+                        "alpha2": "RS",
+                        "name": "Serbia"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 653356800
+                },
+                "shirtNumber": 8,
+                "jerseyNumber": "8",
+                "position": "M",
+                "substitute": false
+            },
+            {
+                "avgRating": 7.05,
+                "player": {
+                    "name": "Milan \u0110uri\u0107",
+                    "firstName": "",
+                    "lastName": "",
+                    "slug": "milan-duric",
+                    "shortName": "M. \u0110uri\u0107",
+                    "position": "F",
+                    "userCount": 604,
+                    "id": 76132,
+                    "country": {
+                        "alpha2": "BA",
+                        "name": "Bosnia & Herzegovina"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 643334400
+                },
+                "shirtNumber": 11,
+                "jerseyNumber": "11",
+                "position": "F",
+                "substitute": false
+            }
+        ],
+        "supportStaff": [],
+        "formation": "4-2-3-1",
+        "playerColor": {
+            "primary": "ffffff",
+            "number": "00468c",
+            "outline": "ffffff",
+            "fancyNumber": "222226"
+        },
+        "goalkeeperColor": {
+            "primary": "ff3700",
+            "number": "000000",
+            "outline": "ff3700",
+            "fancyNumber": "222226"
+        },
+        "missingPlayers": [
+            {
+                "player": {
+                    "name": "Riccardo Saponara",
+                    "slug": "riccardo-saponara",
+                    "shortName": "R. Saponara",
+                    "position": "M",
+                    "userCount": 383,
+                    "id": 126236,
+                    "country": {
+                        "alpha2": "IT",
+                        "name": "Italy"
+                    },
+                    "marketValueCurrency": "EUR",
+                    "dateOfBirthTimestamp": 693273600
+                },
+                "type": "doubtful",
+                "reason": 1
+            }
+        ]
+    }
+}

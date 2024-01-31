@@ -1,24 +1,23 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import Button from "../../../../components/Button";
-import { useNavigate } from "react-router-dom";
 
 const AdminTableComponent = styled.div`
   .ranking_table {
-    width: 1200px;
     margin: 20px auto 0 auto;
     color: #fff;
     background-color: var(--navbar_color);
-    padding: 10px;
+    padding: 20px;
+    padding-bottom: 15px;
   }
 
   .ranking_table th {
-    justify-content: space-between;
-    margin: 10px;
     text-align: left;
     user-select: none;
     font-size: 15px;
     padding-left: 5px;
+    margin: 10px;
+    min-width: 100px;
   }
 
   .ranking_table th .po {
@@ -41,6 +40,7 @@ const AdminTableComponent = styled.div`
     text-align: center;
     justify-content: center;
     align-items: center;
+    margin: 5px;
   }
 
   .ranking_table .td_item .td_item_img {
@@ -76,7 +76,9 @@ const AdminTable = ({ head, tbody, sorting, settings }) => {
       atribute: "position", --where to get info from api
       sortable: true,
       img: --path-to-folder--,
-      background: ["color-folder"] }
+      background: ["color-folder"],
+      atribut_array: true
+    }
   }
 
   sorting={by: atribute, order: "asc"}
@@ -86,7 +88,6 @@ const AdminTable = ({ head, tbody, sorting, settings }) => {
   */
 
   const [body, setBody] = useState(tbody);
-  const navigate = useNavigate();
 
   const [curColumn, setCurColumn] = useState(sorting.by);
   const [order, setOrder] = useState(sorting.order);
@@ -139,9 +140,20 @@ const AdminTable = ({ head, tbody, sorting, settings }) => {
       .then((res) => res.json())
       .then((d) =>
         d.message === "deleted"
-          ? setBody((prev) => prev.filter((el) => el.id != id))
+          ? setBody((prev) => prev.filter((el) => el.id !== id))
           : console.log(d.message)
       );
+  };
+
+  const convert_array = (arr) => {
+    let ans = arr[0];
+    if (arr.length > 1) {
+      for (let i = 1; i < arr.length; i++) {
+        ans = `${arr[i]}, ${ans}`;
+      }
+      return ans;
+    }
+    return arr[0];
   };
 
   useEffect(() => {
@@ -216,6 +228,7 @@ const AdminTable = ({ head, tbody, sorting, settings }) => {
                     display: "flex",
                     flexDirection: "row",
                     justifyContent: "center",
+                    alignItems: "center",
                     gap: "5px",
                   }}
                 >
@@ -257,7 +270,11 @@ const AdminTable = ({ head, tbody, sorting, settings }) => {
                       ) : null}
 
                       {Array.isArray(head[j].atribute) ? (
-                        findValue(body[i], head[j].atribute)
+                        head[j].atribute_array ? (
+                          convert_array(findValue(body[i], head[j].atribute))
+                        ) : (
+                          findValue(body[i], head[j].atribute)
+                        )
                       ) : typeof body[i][head[j].atribute] === "boolean" ? (
                         body[i][head[j].atribute] ? (
                           <i
