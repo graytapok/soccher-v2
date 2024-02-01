@@ -82,7 +82,7 @@ const Buttons = ({
             size="icon"
             variant="danger"
             onClick={toggleLogoutMenu}
-            outline={true}
+            outline
           >
             {showLogoutMenu ? (
               <i className="fa-regular fa-circle-xmark"></i>
@@ -96,7 +96,7 @@ const Buttons = ({
           size="icon"
           variant="success"
           onClick={() => navigate("/login")}
-          outline={darkmode === "darkmode" ? true : false}
+          outline
         >
           <i className="fa-solid fa-right-to-bracket"></i>
         </Button>

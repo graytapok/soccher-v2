@@ -1,40 +1,24 @@
 import React, { useEffect, useState, createContext } from "react";
 import AppRoutes from "./pages/AppRoutes";
-/* import { useIsFirstRender } from "@uidotdev/usehooks"; */
 import "./index.css";
 
 export const Context = createContext();
 
 const App = () => {
-  /* const firstRender = useIsFirstRender(); */
+  const [user, setUser] = useState({});
 
-  const [user, setUser] = useState({ auth: false });
-
-  const login = () => {
-    setUser({ ...user, auth: true });
-  };
   const logout = () => {
-    fetch("/logout")
+    fetch("/auth/logout")
       .then((res) => res.json())
       .then((data) =>
-        data.logged_out
+        data.success
           ? setUser({ ...user, auth: false })
           : console.log("Unexpected Error")
       );
   };
 
-  const [followedMatches, setFollowedMatches] = useState({});
-  const [followedLeagues, setFollowedLeagues] = useState({});
-
-  const follow_match = (id, details = {}) => {
-    const deleteFollow = (id) => {
-      delete followedMatches[id];
-      setFollowedMatches((prevData) => ({
-        ...prevData,
-      }));
-    };
-
-    fetch("/follow_match", {
+  const followMatch = (details) => {
+    fetch("/auth/follow_match", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -42,24 +26,21 @@ const App = () => {
       body: JSON.stringify({ id: details.id, details: details }),
     })
       .then((res) => res.json())
-      .then((res) => {
-        res.state === "added"
-          ? setFollowedMatches((prev) => ({ ...prev, [id]: details }))
-          : res.state === "deleted"
-          ? deleteFollow(id)
-          : console.log("Auth");
-      })
-      .catch((error) => console.error(error));
+      .then((res) => (res.success ? updateAuth() : console.log(res.message)));
   };
-  const follow_league = (id, details = {}) => {
-    const deleteFollow = (id) => {
-      delete followedLeagues[id];
-      setFollowedLeagues((prevData) => ({
-        ...prevData,
-      }));
-    };
+  const unFollowMatch = (id) => {
+    fetch(`/auth/follow_match?id=${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => (res.success ? updateAuth() : console.log(res.message)));
+  };
 
-    fetch("/follow_league", {
+  const followLeague = (details) => {
+    fetch("/auth/follow_league", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -67,40 +48,31 @@ const App = () => {
       body: JSON.stringify({ id: details.id, details: details }),
     })
       .then((res) => res.json())
-      .then((res) => {
-        res.state === "added"
-          ? setFollowedLeagues((prev) => ({ ...prev, [id]: details }))
-          : res.state === "deleted"
-          ? deleteFollow(id)
-          : console.log("Auth");
-      })
-      .catch((error) => console.error(error));
+      .then((res) => (res.success ? updateAuth() : console.log(res.message)));
   };
+  const unFollowLeague = (id) => {
+    fetch(`/auth/follow_league?id=${id}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => res.json())
+      .then((res) => (res.success ? updateAuth() : console.log(res.message)));
+  };
+
   const updateAuth = () => {
     fetch("/auth")
       .then((res) => res.json())
-      .then((data) => setUser(data));
-  };
-  const updateFollowedMatches = () => {
-    fetch("/followed_matches")
-      .then((res) => res.json())
-      .then((data) => {
-        setFollowedMatches(data.followed_matches);
-      });
-  };
-  const updateFollowedLeagues = () => {
-    fetch("/followed_leagues")
-      .then((res) => res.json())
-      .then((data) => {
-        setFollowedLeagues(data.followed_leagues);
-      });
+      .then((res) =>
+        res.success ? setUser(res.data) : console.log(res.message)
+      )
+      .catch((e) => console.log(e));
   };
 
   useEffect(() => {
     updateAuth();
-    updateFollowedMatches();
-    updateFollowedLeagues();
-  }, [user.auth /* , firstRender */]);
+  }, [user.auth]);
 
   const [showCookiesRequset, setShowCookiesRequest] = useState(true);
   const getCookie = (name) =>
@@ -130,18 +102,16 @@ const App = () => {
     <Context.Provider
       value={{
         user,
-        login,
+        updateAuth,
         logout,
+        followLeague,
+        followMatch,
+        unFollowLeague,
+        unFollowMatch,
         darkmode,
         toggleDarkmode,
-        follow_match,
-        follow_league,
         showCookiesRequset,
         toggleCookiesRequest,
-        updateAuth,
-        updateFollowedMatches,
-        followedMatches,
-        followedLeagues,
       }}
     >
       <AppRoutes />

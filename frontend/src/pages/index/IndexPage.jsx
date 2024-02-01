@@ -20,9 +20,13 @@ function IndexPage() {
   useEffect(() => {
     fetch("/index")
       .then((res) => res.json())
-      .then((data) => {
-        setMatchesData(data.matches);
-        setLeaguesData(data.leagues);
+      .then((res) => {
+        if (res.success) {
+          setMatchesData(res.data.matches);
+          setLeaguesData(res.data.leagues);
+        } else {
+          console.log(res.message);
+        }
       });
   }, []);
 

@@ -109,18 +109,26 @@ const MatchesComponent = styled.div`
 `;
 
 function Matches({ title, matches, message, redirect }) {
-  const { followedMatches, follow_match } = useContext(Context);
+  const { user, followMatch, unFollowMatch } = useContext(Context);
   const navigate = useNavigate();
 
   const follow = (id) => {
-    follow_match(id, matches[id]);
+    followMatch(matches[id]);
+    navigate(redirect);
+  };
+
+  const unFollow = (id) => {
+    unFollowMatch(id);
     navigate(redirect);
   };
 
   const checkInclude = (id) => {
-    return typeof followedMatches === "object"
-      ? Number(id) in followedMatches
-      : false;
+    for (let match in user.followedMatches) {
+      if (user.followedMatches[match].matchId === id) {
+        return true;
+      }
+    }
+    return false;
   };
 
   const statusList = ["finished", "canceled", "postponed"];
@@ -132,8 +140,11 @@ function Matches({ title, matches, message, redirect }) {
         {Object.keys(matches).length > 0 ? (
           Object.keys(matches).map((id) => (
             <div className="match" key={id}>
-              {checkInclude(id) ? (
-                <i className="fa-solid fa-star" onClick={() => follow(id)} />
+              {checkInclude(matches[id].id) ? (
+                <i
+                  className="fa-solid fa-star"
+                  onClick={() => unFollow(matches[id].id)}
+                />
               ) : (
                 <i className="fa-regular fa-star" onClick={() => follow(id)} />
               )}

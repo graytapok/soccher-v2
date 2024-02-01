@@ -1,15 +1,13 @@
-from app import db, ma
+from app import ma
 from database.models import User, FollowedMatch, FollowedLeague
 from marshmallow import fields
 
-class UserSchema(ma.SQLAlchemyAutoSchema):
-    class Meta:
-        model = User
-        fields = ("id", "username", "email", "admin", "confirmed")
         
 class FollowedMatchSchema(ma.SQLAlchemySchema):
     class Meta:
         model = FollowedMatch
+        include_relationships = True
+        load_instance = True
     id = ma.auto_field()
     userId = fields.Integer(attribute="user_id")
     matchId = fields.Integer(attribute="match_id")
@@ -18,7 +16,23 @@ class FollowedMatchSchema(ma.SQLAlchemySchema):
 class FollowedLeagueSchema(ma.SQLAlchemySchema):
     class Meta:
         model = FollowedLeague
+        include_relationships = True
+        load_instance = True
     id = ma.auto_field()
     userId = fields.Integer(attribute="user_id")
     leagueId = fields.Integer(attribute="league_id")
     details = ma.auto_field()
+
+class UserSchema(ma.SQLAlchemySchema):
+    class Meta:
+        model = User
+        load_instance = True
+        
+    id = ma.auto_field()
+    username = ma.auto_field()
+    email = ma.auto_field()
+    admin = ma.auto_field()
+    confirmed = ma.auto_field()
+    
+    followedMatches = fields.Nested(FollowedMatchSchema, many=True, attribute="followed_matches")
+    followedLeagues = fields.Nested(FollowedLeagueSchema, many=True, attribute="followed_leagues")

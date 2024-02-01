@@ -1,4 +1,4 @@
-import React, { useContext, useState, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { Context } from "../App";
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 
@@ -15,36 +15,30 @@ import RegisterPage from "./signUp/RegisterPage";
 import MyProfilePage from "./profile/MyProfilePage";
 import LeaguePage from "./league/LeaguePage";
 import ConfirmEmailPage from "./confirmEmail/ConfirmEmailPage";
+import { useIsFirstRender } from "@uidotdev/usehooks";
 
 import "../index.css";
 import DashboardPage from "./admin/dashboard/DashboardPage";
 
 const ProtectedRoute = ({ anti = false, children, admin = false }) => {
-  const { user } = useContext(Context);
-  const [authen, setAuthen] = useState();
+  const firstRender = useIsFirstRender();
+  const { user, updateAuth } = useContext(Context);
 
   useEffect(() => {
-    fetch("/auth")
-      .then((res) => res.json())
-      .then((data) => {
-        if (data.message === "") {
-          setAuthen(data.data);
-        } else {
-          console.log(data.message);
-        }
-      })
-      .catch((e) => console.log(e));
-  }, []);
+    if (firstRender) {
+      updateAuth();
+    }
+  }, [firstRender, updateAuth]);
 
   if (admin && !user.admin) {
     return <Navigate to="/" replace />;
   }
 
-  if (authen && anti) {
+  if (user.auth && anti) {
     return <Navigate to="/" replace />;
   }
 
-  if (authen === false && anti === false) {
+  if (user.authen === false && anti === false) {
     return <Navigate to="/" replace />;
   }
   return children;

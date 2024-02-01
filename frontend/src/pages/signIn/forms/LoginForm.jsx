@@ -6,30 +6,27 @@ import { useNavigate } from "react-router-dom";
 import ClipLoader from "react-spinners/ClipLoader";
 
 function LoginForm({ navigate_to }) {
-  const { login } = useContext(Context);
-  const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
 
-  const [loginFormData, setLoginFormData] = useState({
-    username_email: "",
-    password: "",
-    remember_me: false,
-  });
+  const { updateAuth } = useContext(Context);
+  const navigate = useNavigate();
+
+  const [loginFormData, setLoginFormData] = useState({});
 
   const [correctInput, setCorrectInput] = useState(true);
 
   const changeData = (event) => {
     const { id, value, type, checked } = event.target;
-    setLoginFormData((prevData) => ({
-      ...prevData,
+    setLoginFormData({
+      ...loginFormData,
       [id]: type === "checkbox" ? checked : value,
-    }));
+    });
   };
 
   const loginUser = (event) => {
     event.preventDefault();
     setLoading(true);
-    fetch(`/login`, {
+    fetch(`/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -38,9 +35,9 @@ function LoginForm({ navigate_to }) {
     })
       .then((response) => response.json())
       .then((data) => {
-        if (data.correct_input) {
+        if (data.success) {
           setCorrectInput(true);
-          login();
+          updateAuth();
           navigate(navigate_to || "/");
         } else {
           setLoading(false);
@@ -55,7 +52,7 @@ function LoginForm({ navigate_to }) {
       <form className="login_form">
         <div>
           <input
-            id="username_email"
+            id="login"
             onChange={changeData}
             placeholder="Username or E-Mail"
             className={"input_box " + correctInput}
@@ -75,8 +72,8 @@ function LoginForm({ navigate_to }) {
         </div>
         <div className="remember_message">
           <div className="remember_me">
-            <input onClick={changeData} id="remember_me" type="checkbox" />
-            <label htmlFor="remember_me">Remember Me</label>
+            <input onClick={changeData} id="rememberMe" type="checkbox" />
+            <label htmlFor="rememberMe">Remember Me</label>
           </div>
           {!correctInput && (
             <p className="message">Invalid username/e-mail or passwort!</p>

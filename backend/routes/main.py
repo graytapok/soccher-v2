@@ -1,7 +1,7 @@
 from flask import Flask, render_template, flash, redirect, url_for, request, jsonify
 from flask_login import current_user
 
-from app import app, db
+from app import app, db, Loader
 from database.models import User, FollowedMatch
 from api.api_requests import *
 from api.tools import dict_of_match_details
@@ -14,15 +14,12 @@ import time
 import json
 import os
 
-# Update the Database and create todays matches
 with app.app_context():
-    db.create_all()
-    db.session.commit()
-    db.session.close_all()
-    
+    loader = Loader("Creating todays matches...", "Todays matches created!", 0.05).start()
     date = datetime.now()
     todays_json = api_match_date(date.day, date.month, date.year)
     api_match_lineups(11393380)
+    loader.stop()
 
 @app.route("/index", methods=["GET"])
 def index():

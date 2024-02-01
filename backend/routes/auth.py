@@ -48,7 +48,7 @@ def no_login_required(func):
 
 @app.route("/auth", methods=["GET"])
 def auth():
-    user_schema = UserSchema(many=False)
+    user_schema = UserSchema()
     user = user_schema.dump(current_user)
     user.update({"auth": current_user.is_authenticated})
     
@@ -197,7 +197,7 @@ def follow_match():
         message = ""
         details = request.json["details"]
         
-        row = FollowedMatch.query.filter_by(user_id=current_user.id).filter_by(match_id=details["id"]).first()
+        row = FollowedMatch.query.filter_by(user_id=current_user.id).filter_by(match_id=int(details["id"])).first()
         if row is not None:
             message = "already followed"
         else:
@@ -274,29 +274,7 @@ def follow_league():
             "data": None,
             "success": True if message == "" else False
         } 
-    
-@app.route("/auth/followed_matches", methods=["GET"])
-@login_required
-def followed_matches():
-    matches_schemas = FollowedMatchSchema(many=True)
-    matches = matches_schemas.dump(FollowedMatch.query.filter_by(user_id=current_user.id).all())
-    return {
-        "message": "",
-        "data": matches,
-        "success": True
-    }
-    
-@app.route("/auth/followed_leagues", methods=["GET"])
-@login_required
-def followed_leagues():
-    leagues_schemas = FollowedLeagueSchema(many=True)
-    leagues = leagues_schemas.dump(FollowedLeague.query.filter_by(user_id=current_user.id).all())
-    return {
-        "message": "",
-        "data": leagues,
-        "success": True
-    }
-
+        
 @app.route("/cookies", methods=["POST"])
 def cookies():
     res = make_response({
