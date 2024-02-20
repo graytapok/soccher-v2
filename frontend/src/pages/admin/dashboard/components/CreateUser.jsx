@@ -143,12 +143,7 @@ function CreateUser() {
   const { toggleCreateUser } = useContext(AdminDashboardContext);
   const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({});
-  const [correctInput, setCorrectInput] = useState({
-    username: { unique: true, rules: true },
-    email: { unique: true, rules: true },
-    password: true,
-    confirm_password: true,
-  });
+  const [correctInput, setCorrectInput] = useState({});
 
   const createUser = (event) => {
     setLoading(true);
@@ -162,9 +157,9 @@ function CreateUser() {
     })
       .then((res) => res.json())
       .then((res) => {
-        if (res.correct_input) {
+        if (res.success) {
           toggleCreateUser(false);
-        } else {
+        } else if (!res.success && res.message === "invalid input") {
           setLoading(false);
           setCorrectInput(res.data);
         }
@@ -173,22 +168,30 @@ function CreateUser() {
 
   const changeData = (event) => {
     const { id, value, type, checked } = event.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [id]: type === "checkbox" ? checked : value,
-    }));
+    if (type !== "checkbox" && value !== "") {
+      console.log(id);
+      setFormData((prevData) => ({
+        ...prevData,
+        [id]: value,
+      }));
+    } else {
+      setFormData((prevData) => {
+        const copy = { ...prevData };
+        delete copy[[id]];
+        return copy;
+      });
+    }
+
+    if (type === "checkbox") {
+      setFormData((prevData) => ({
+        ...prevData,
+        [id]: checked,
+      }));
+    }
   };
 
   useEffect(() => {
     setLoading(false);
-    setFormData({
-      username: "",
-      password: "",
-      confirm_password: "",
-      admin: false,
-      email: "",
-      email_confirmed: false,
-    });
   }, []);
 
   return (
@@ -202,17 +205,13 @@ function CreateUser() {
             onChange={changeData}
             placeholder={"Name"}
             type="text"
-            className={
-              "input_box " +
-              correctInput.username.unique +
-              " " +
-              correctInput.username.rules
-            }
+            className={"input_box " + !("username" in correctInput)}
           />
           <i style={{ color: "#fff" }} className="fa-solid fa-user"></i>
-          {!correctInput.username.rules ? (
+          {"username" in correctInput && "rules" in correctInput.username ? (
             <span>Username must be at least 3 letters long.</span>
-          ) : !correctInput.username.unique ? (
+          ) : "username" in correctInput &&
+            "unique" in correctInput.username ? (
             <span>User with this username already exists.</span>
           ) : null}
         </div>
@@ -220,23 +219,18 @@ function CreateUser() {
           <input
             id="email"
             onChange={changeData}
-            placeholder={"Email"}
+            placeholder="Email"
             type="text"
-            className={
-              "input_box " +
-              correctInput.email.unique +
-              " " +
-              correctInput.email.rules
-            }
+            className={"input_box " + !("email" in correctInput)}
           />
           <i
             id="email_icon"
             style={{ color: "#fff" }}
             className="fa-solid fa-envelope"
           />
-          {!correctInput.email.rules ? (
+          {"email" in correctInput && "rules" in correctInput.email ? (
             <span>Email must be valid.</span>
-          ) : !correctInput.email.unique ? (
+          ) : "email" in correctInput && "unique" in correctInput.email ? (
             <span>User with this email already exists.</span>
           ) : null}
         </div>
@@ -246,10 +240,10 @@ function CreateUser() {
             onChange={changeData}
             placeholder="Password"
             type="password"
-            className={"input_box " + correctInput.password}
+            className={"input_box " + !("password" in correctInput)}
           />
           <i style={{ color: "#fff" }} className="fa-solid fa-lock"></i>
-          {!correctInput.password && (
+          {"password" in correctInput && (
             <span>
               Ensure 8-unit password with letters, capitals and numbers.
             </span>
@@ -257,18 +251,18 @@ function CreateUser() {
         </div>
         <div>
           <input
-            id="confirm_password"
+            id="confirmPassword"
             onChange={changeData}
             placeholder="Confirm password"
             type="password"
-            className={"input_box " + correctInput.confirm_password}
+            className={"input_box " + !("confirmPassword" in correctInput)}
           />
           <i
             id="confirm_icon"
             style={{ color: "#fff" }}
             className="fa-solid fa-lock-open"
           ></i>
-          {!correctInput.confirm_password && (
+          {"confirmPassword" in correctInput && (
             <span>Confirm Password must be equal to password.</span>
           )}
         </div>
@@ -278,8 +272,8 @@ function CreateUser() {
             <label htmlFor="admin">Admin</label>
           </div>
           <div className="email_confirmed_input">
-            <input id="email_confirmed" type="checkbox" onChange={changeData} />
-            <label htmlFor="email_confirmed">Email Confirmed</label>
+            <input id="emailConfirmed" type="checkbox" onChange={changeData} />
+            <label htmlFor="emailConfirmed">Email Confirmed</label>
           </div>
         </div>
         <Button

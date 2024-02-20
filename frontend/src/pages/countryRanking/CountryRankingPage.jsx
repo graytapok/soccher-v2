@@ -8,7 +8,7 @@ function CountryRankingPage() {
   useEffect(() => {
     fetch("/countrys_ranking")
       .then((res) => res.json())
-      .then((data) => setRankingData(data.countrys));
+      .then((res) => setRankingData(res.data.countrys));
   }, []);
 
   return (
@@ -30,18 +30,18 @@ function CountryRankingPage() {
           2: { name: "Points", atribute: "points", sortable: false },
           3: {
             name: "Previous Points",
-            atribute: "prev_points",
+            atribute: "prevPoints",
             sortable: false,
           },
           4: {
             name: "+/-",
-            atribute: "diff_points",
+            atribute: "diffPoints",
             sortable: true,
             coloredNumber: true,
           },
           5: {
             name: "Position",
-            atribute: "diff_ranking",
+            atribute: "diffRanking",
             sortable: true,
             coloredNumber: true,
           },

@@ -147,9 +147,19 @@ def api_league_details(league_id): # idk
 
 
 """OTHERS"""
-def api_categories():
-    path = f"json/api_info/categories.json"
-    url = "https://footapi7.p.rapidapi.com/api/tournament/categories"
+def api_fifa_country_ranking():
+    path = f"api/json/rankings/fifa_country_ranking.json"
+    url = "https://footapi7.p.rapidapi.com/api/rankings/fifa"
+    return api_create_open_json(path, url)
+
+def api_uefa_country_ranking():
+    path = f"api/json/rankings/uefa_club_ranking.json"
+    url = "https://footapi7.p.rapidapi.com/api/rankings/uefa/clubs"
+    return api_create_open_json(path, url)
+
+def api_uefa_club_ranking():
+    path = f"api/json/rankings/uefa_country_ranking.json"
+    url = "https://footapi7.p.rapidapi.com/api/rankings/uefa/countries"
     return api_create_open_json(path, url)
             
 country_list = {}

@@ -12,35 +12,35 @@ import IndexPage from "./index/IndexPage";
 import LogoutPage from "./logout/LogoutPage";
 import LoginPage from "./signIn/LoginPage";
 import RegisterPage from "./signUp/RegisterPage";
-import MyProfilePage from "./profile/MyProfilePage";
+import ProfilePage from "./profile/ProfilePage";
 import LeaguePage from "./league/LeaguePage";
 import ConfirmEmailPage from "./confirmEmail/ConfirmEmailPage";
-import { useIsFirstRender } from "@uidotdev/usehooks";
 
 import "../index.css";
 import DashboardPage from "./admin/dashboard/DashboardPage";
 
-const ProtectedRoute = ({ anti = false, children, admin = false }) => {
-  const firstRender = useIsFirstRender();
+const ProtectedRoute = ({
+  anti = false,
+  children,
+  admin = false,
+  confirmed = false,
+}) => {
   const { user, updateAuth } = useContext(Context);
 
   useEffect(() => {
-    if (firstRender) {
+    if (user === null) {
       updateAuth();
     }
-  }, [firstRender, updateAuth]);
+  }, [user, updateAuth]);
 
   if (admin && !user.admin) {
     return <Navigate to="/" replace />;
-  }
-
-  if (user.auth && anti) {
+  } else if (user.auth && anti) {
+    return <Navigate to="/" replace />;
+  } else if (user.auth === false && anti === false && confirmed === false) {
     return <Navigate to="/" replace />;
   }
 
-  if (user.authen === false && anti === false) {
-    return <Navigate to="/" replace />;
-  }
   return children;
 };
 
@@ -82,7 +82,7 @@ function AppRoutes() {
               path="profile"
               element={
                 <ProtectedRoute>
-                  <MyProfilePage />
+                  <ProfilePage />
                 </ProtectedRoute>
               }
             />
@@ -118,7 +118,7 @@ function AppRoutes() {
             ></Route>
             <Route path="/league/:league_id" element={<LeaguePage />} />
             <Route
-              path="/confirm_email/:token"
+              path="/confirm_email/:email/:token"
               element={<ConfirmEmailPage />}
             />
           </>

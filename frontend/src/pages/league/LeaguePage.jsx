@@ -17,8 +17,8 @@ function LeaguePage() {
     fetch(`/league/${league_id}`)
       .then((res) => res.json())
       .then((res) => {
-        setStandings(res.standings);
-        setLeagueInfo(res.league);
+        setStandings(res.data.standings);
+        setLeagueInfo(res.data.league);
         console.log(res);
       });
   }, [league_id]);

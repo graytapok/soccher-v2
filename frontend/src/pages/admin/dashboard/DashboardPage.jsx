@@ -39,9 +39,11 @@ function DashboardPage() {
   };
 
   const updateData = () => {
-    fetch("dashboard")
+    fetch("/admin/dashboard")
       .then((res) => res.json())
-      .then((d) => setData(d.users));
+      .then((res) => {
+        setData(res.data);
+      });
   };
 
   useEffect(() => {
@@ -56,12 +58,12 @@ function DashboardPage() {
         editedUser,
       }}
     >
+      <Heading title="Admin Dashboard">
+        {!showCreateUser && (
+          <Button onClick={() => toggleCreateUser()}>Create User</Button>
+        )}
+      </Heading>
       <DashboardPageComponent>
-        <Heading title="Admin Dashboard">
-          {!showCreateUser && (
-            <Button onClick={() => toggleCreateUser()}>Create User</Button>
-          )}
-        </Heading>
         {!showEditUser && !showCreateUser ? (
           <AdminTable
             head={{
@@ -74,14 +76,14 @@ function DashboardPage() {
               4: { name: "Email", atribute: "email", sortable: true },
               6: {
                 name: "Followed Leagues",
-                atribute: ["followed_leagues", "ids"],
-                atribute_array: true,
+                /* atribute: ["followedLeagues", "ids"],
+                atribute_array: true, */
                 sortable: false,
               },
               5: {
                 name: "Followed Matches",
-                atribute: ["followed_matches", "ids"],
-                atribute_array: true,
+                /* atribute: ["followedMatches", "ids"],
+                atribute_array: true, */
                 sortable: false,
               },
               7: {
@@ -91,7 +93,7 @@ function DashboardPage() {
               },
               8: {
                 name: "Confirmed Email",
-                atribute: "email_confirmed",
+                atribute: "emailConfirmed",
                 sortable: true,
               },
             }}
@@ -106,7 +108,7 @@ function DashboardPage() {
         ) : showEditUser ? (
           <EditUser />
         ) : (
-          <CreateUser />
+          showCreateUser && <CreateUser />
         )}
       </DashboardPageComponent>
     </AdminDashboardContext.Provider>

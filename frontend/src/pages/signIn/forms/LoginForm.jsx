@@ -13,7 +13,7 @@ function LoginForm({ navigate_to }) {
 
   const [loginFormData, setLoginFormData] = useState({});
 
-  const [correctInput, setCorrectInput] = useState(true);
+  const [correctInput, setCorrectInput] = useState("");
 
   const changeData = (event) => {
     const { id, value, type, checked } = event.target;
@@ -26,6 +26,7 @@ function LoginForm({ navigate_to }) {
   const loginUser = (event) => {
     event.preventDefault();
     setLoading(true);
+    console.log(loginFormData);
     fetch(`/auth/login`, {
       method: "POST",
       headers: {
@@ -34,14 +35,15 @@ function LoginForm({ navigate_to }) {
       body: JSON.stringify(loginFormData),
     })
       .then((response) => response.json())
-      .then((data) => {
-        if (data.success) {
+      .then((res) => {
+        console.log(res);
+        if (res.success) {
           setCorrectInput(true);
           updateAuth();
           navigate(navigate_to || "/");
         } else {
           setLoading(false);
-          setCorrectInput(false);
+          setCorrectInput(res.message);
         }
       });
   };
@@ -55,7 +57,7 @@ function LoginForm({ navigate_to }) {
             id="login"
             onChange={changeData}
             placeholder="Username or E-Mail"
-            className={"input_box " + correctInput}
+            className={"input_box " + (correctInput !== "incorrect input")}
             type="text"
           />
           <i style={{ color: "#fff" }} className="fa-solid fa-user"></i>
@@ -65,7 +67,7 @@ function LoginForm({ navigate_to }) {
             id="password"
             onChange={changeData}
             placeholder="Password"
-            className={"input_box " + correctInput}
+            className={"input_box " + (correctInput !== "incorrect input")}
             type="password"
           />
           <i style={{ color: "#fff" }} className="fa-solid fa-lock"></i>
@@ -75,8 +77,11 @@ function LoginForm({ navigate_to }) {
             <input onClick={changeData} id="rememberMe" type="checkbox" />
             <label htmlFor="rememberMe">Remember Me</label>
           </div>
-          {!correctInput && (
+          {correctInput === "incorrect input" && (
             <p className="message">Invalid username/e-mail or passwort!</p>
+          )}
+          {correctInput === "email must be confirmed" && (
+            <p className="message">You must confirm your email!</p>
           )}
         </div>
         <Button

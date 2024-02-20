@@ -91,7 +91,6 @@ const Ranking = ({ head, tbody, sorting }) => {
   const [order, setOrder] = useState(sorting.order);
 
   const sortByColumn = (col) => {
-    console.log(body);
     if (curColumn !== col) {
       setCurColumn(col);
       const sorted = [...body].sort((a, b) => (a[col] > b[col] ? 1 : -1));

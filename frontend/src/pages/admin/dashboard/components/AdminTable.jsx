@@ -136,12 +136,12 @@ const AdminTable = ({ head, tbody, sorting, settings }) => {
   };
 
   const deleteItem = (id) => {
-    fetch(`${settings.delete}/${id}`)
+    fetch(`${settings.delete}/${id}`, { method: "DELETE" })
       .then((res) => res.json())
-      .then((d) =>
-        d.message === "deleted"
+      .then((res) =>
+        res.success
           ? setBody((prev) => prev.filter((el) => el.id !== id))
-          : console.log(d.message)
+          : console.log(res.message)
       );
   };
 

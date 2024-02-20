@@ -82,23 +82,13 @@ const LeaguesComponent = styled.div`
   }
 `;
 
-function Leagues({ leagues, title, redirect, message }) {
-  const { followLeague, unFollowLeague, user } = useContext(Context);
+function Leagues({ leagues, title, message }) {
+  const { followLeague, unFollowLeague, followedLeagues } = useContext(Context);
   const navigate = useNavigate();
 
-  const follow = (id) => {
-    followLeague(leagues[id]);
-    navigate(redirect);
-  };
-
-  const unFollow = (id) => {
-    unFollowLeague(id);
-    navigate(redirect);
-  };
-
-  const checkInclude = (id) => {
-    for (let match in user.followedLeagues) {
-      if (user.followedLeagues[match].leagueId === id) {
+  const checkFollow = (id) => {
+    for (let match in followedLeagues) {
+      if (followedLeagues[match].leagueId === id) {
         return true;
       }
     }
@@ -112,15 +102,15 @@ function Leagues({ leagues, title, redirect, message }) {
         {Object.keys(leagues).length > 0 ? (
           Object.keys(leagues).map((league) => (
             <div className="league" key={league}>
-              {checkInclude(leagues[league].id) ? (
+              {checkFollow(leagues[league].id) ? (
                 <i
                   className="fa-solid fa-star"
-                  onClick={() => unFollow(leagues[league].id)}
+                  onClick={() => unFollowLeague(leagues[league].id)}
                 />
               ) : (
                 <i
                   className="fa-regular fa-star"
-                  onClick={() => follow(league)}
+                  onClick={() => followLeague(leagues[league])}
                 />
               )}
               <img

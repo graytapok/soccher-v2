@@ -14,9 +14,9 @@ const LogoutMenu = ({ showLogoutMenu, showDropdown, toggleLogoutMenu }) => {
   };
 
   const logoutUser = () => {
-    fetch(`/logout`, { method: "GET" })
+    fetch(`/auth/logout`)
       .then((response) => response.json())
-      .then((res) => (res.logged_out ? navigate("/") : console.log("Error")));
+      .then((res) => navigate("/"));
     logout();
     toggleLogoutMenu();
   };

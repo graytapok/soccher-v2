@@ -37,7 +37,7 @@ def admin():
     users = user_schema.dump(User.query.order_by(User.id).all())
     return {
         "message": "",
-        "data": None,
+        "data": users,
         "success": True
     }
 
@@ -47,27 +47,27 @@ def admin_edit_user():
     message = ""
     data = {}
     
-    username = request.json['username']
-    email = request.json['email']
-    admin = request.json['admin']
-    email_confirmed = request.json['Confirmed']
     user_id = request.json["id"]
     
     user = User.query.get(user_id)
             
     # Username: lenght >= 3, no only space
-    if user.username != username and username != "":
+    if "username" in request.json:
+        username = request.json["username"]
         if len(username) < 3 or username.isspace():
             data.update({"username": {"rules": False}})
         elif User.query.filter_by(username=username).first() != None:
-            data.update({"username": {"unique": False}})
+            if User.query.filter_by(username=username).first() != user:
+                data.update({"username": {"unique": False}})
         else:
             user.username = username
             
     # Email: valid
-    if user.email != email and email != "":
+    if "email" in request.json:
+        email = request.json["email"]
         if User.query.filter_by(email=email).first() != None:
-            data.update({"email": {"unique": False}})
+            if User.query.filter_by(email=email).first() != user:
+                data.update({"email": {"unique": False}})
         else: 
             try:
                 v = validate_email(email)
@@ -79,37 +79,47 @@ def admin_edit_user():
     # Password: 8-units, letters, capitals, numbers
     # Confirm Password: must be equal to password
     if "password" in request.json or "confirmPassword" in request.json: 
-        if (("password" in request.json and not "confirmPassword" in request.json) 
-            or (not "password" in request.json and "confirmPassword" in request.json)):
+        if ("password" in request.json and "confirmPassword" not in request.json):
+            password = request.json['password']
+            if (len(password) < 8 
+                    or password.isalpha() 
+                    or password.isdigit() 
+                    or password.islower() 
+                    or password.isupper()):
+                data.update({"password": False})
+            data.update({"confirmPassword": False})
+        elif ("password" not in request.json and "confirmPassword" in request.json):
             data.update({"password": False})
             data.update({"confirmPassword": False})
         else:
             password = request.json['password']
-            confirm_password = request.json['confirmPassword'] if "confirmPassword" in request.json else None
-            if password != "" and confirm_password != "":
-                if (len(password) < 8 
-                        or password.isalpha() 
-                        or password.isdigit() 
-                        or password.islower() 
-                        or password.isupper()):
-                    data.update({"password": False})
-                elif confirm_password != password:
-                    data.update({"confirmPassword": False})
-                else:
-                    user.set_password(password)
-            
+            confirm_password = request.json['confirmPassword']
+            if (len(password) < 8 
+                    or password.isalpha() 
+                    or password.isdigit() 
+                    or password.islower() 
+                    or password.isupper()):
+                data.update({"password": False})
+            if confirm_password != password:
+                data.update({"confirmPassword": False})
+            if "password" not in data and "confirmPassword" in data:
+                user.set_password(password)
+                
     # Admin
-    user.admin = admin if user.admin != admin else user.admin
+    if "admin" in request.json:
+        user.admin = request.json["admin"]
     
     # Email confirmed
-    if user.email_confirmed != email_confirmed:
-        user.email_confirmed = email_confirmed
+    if "emailConfirmed" in request.json:
+        user.email_confirmed = request.json["emailConfirmed"]
             
     if len(data) == 0:
         db.session.commit()
+    else:
+        message = "invalid input"
         
     return {
-        "message": "",
+        "message": message,
         "data": data,
         "success": True if message == "" else False
     }
@@ -120,59 +130,73 @@ def admin_create_user():
     message = ""
     data = {}
     
-    username = request.json['username']
-    email = request.json['email']
-    password = request.json["password"]
-    confirm_password = request.json["confirmPassword"]
-    admin = request.json['admin']
-    email_confirmed = request.json['emailConfirmed']
-            
     # Username: lenght >= 3, no only space
-    if len(username) < 3 or username.isspace():
+    if "username" in request.json:
+        username = request.json['username']
+        if len(username) < 3 or username.isspace():
+            data.update({"username": {"rules": False}})
+        elif User.query.filter_by(username=username).first() != None:
+            data.update({"username": {"unique": False}})
+    else:
         data.update({"username": {"rules": False}})
-    elif User.query.filter_by(username=username).first() != None:
-        data.update({"username": {"unique": False}})
             
     # Email: valid
-    if User.query.filter_by(email=email).first() != None:
-        data.update({"email": {"unique": False}})
-    else: 
-        try:
-            v = validate_email(email)
-            email = v["email"]
-        except EmailNotValidError:
-            data.update({"email": {"rules": False}})
-                
+    if "email" in request.json:
+        email = request.json['email']   
+        if User.query.filter_by(email=email).first() != None:
+            data.update({"email": {"unique": False}})
+        else: 
+            try:
+                v = validate_email(email)
+                email = v["email"]
+            except EmailNotValidError:
+                data.update({"email": {"rules": False}})
+    else:
+        data.update({"email": {"rules": False}})
+        
     # Password: 8-units, letters, capitals, numbers
-    if (len(password) < 8 
-            or password.isalpha() 
-            or password.isdigit() 
-            or password.islower() 
-            or password.isupper()):
+    if "password" in request.json:
+        password = request.json["password"]
+        if (len(password) < 8 
+                or password.isalpha() 
+                or password.isdigit() 
+                or password.islower() 
+                or password.isupper()):
+            data.update({"password": False})
+    else:
         data.update({"password": False})
-            
+        
     # Confirm Password: must be equal to password
-    if confirm_password != password:
-        data.update({"confirmPassword": False})
-            
-    if len(data) == 0:
+    if "confirmPassword" in request.json:  
+        confirm_password = request.json["confirmPassword"]
+        if confirm_password != password:
+            data.update({"confirmPassword": False})
+    else: 
+        data.update({"confirmPassword": False})   
+        
+    admin = request.json['admin'] if "admin" in request.json else False
+    email_confirmed = request.json['emailConfirmed'] if 'emailConfirmed' in request.json else False
+          
+    if len(data) != 0:
+        message = "invalid input"
+    else:
         user = User(username=username, email=email, admin=admin, email_confirmed=email_confirmed)
         user.set_password(password)
         db.session.add(user)
         db.session.commit()
-        
+
     return {
-        "message": "",
+        "message": message,
         "data": data,
         "success": True if message == "" else False
     }
 
-@app.route("/admin/delete/user", methods=["DELETE"])
+@app.route("/admin/delete/user/<id>", methods=["DELETE"])
 @admin_required
-def admin_delete_user():
+def admin_delete_user(id):
     message = ""
     
-    user_id = request.args.get("id")
+    user_id = id
     
     user = User.query.filter_by(id=user_id).first()
     if user is None:

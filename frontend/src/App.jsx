@@ -1,32 +1,59 @@
 import React, { useEffect, useState, createContext } from "react";
 import AppRoutes from "./pages/AppRoutes";
+import { useIsFirstRender } from "@uidotdev/usehooks";
 import "./index.css";
 
 export const Context = createContext();
 
 const App = () => {
-  const [user, setUser] = useState({});
+  const firstRender = useIsFirstRender();
 
+  const [user, setUser] = useState({ auth: false });
+  const updateAuth = () => {
+    fetch("/auth")
+      .then((res) => res.json())
+      .then((res) => setUser(res.data));
+  };
+  const login = () => {
+    setUser({ ...user, auth: true });
+  };
   const logout = () => {
     fetch("/auth/logout")
       .then((res) => res.json())
-      .then((data) =>
-        data.success
-          ? setUser({ ...user, auth: false })
-          : console.log("Unexpected Error")
-      );
+      .then((res) => res.success && setUser({ ...user, auth: false }));
   };
 
-  const followMatch = (details) => {
+  const [followedMatches, setFollowedMatches] = useState({});
+  const [followedLeagues, setFollowedLeagues] = useState({});
+  const updateFollowedMatches = () => {
+    fetch("/auth/followed_matches")
+      .then((res) => res.json())
+      .then((res) => {
+        setFollowedMatches(res.data);
+      });
+  };
+  const updateFollowedLeagues = () => {
+    fetch("/auth/followed_leagues")
+      .then((res) => res.json())
+      .then((res) => {
+        setFollowedLeagues(res.data);
+      });
+  };
+  const followMatch = (details = {}) => {
     fetch("/auth/follow_match", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ id: details.id, details: details }),
+      body: JSON.stringify({
+        details: details,
+      }),
     })
       .then((res) => res.json())
-      .then((res) => (res.success ? updateAuth() : console.log(res.message)));
+      .then((res) => {
+        res.success && updateFollowedMatches();
+      })
+      .catch((error) => console.error(error));
   };
   const unFollowMatch = (id) => {
     fetch(`/auth/follow_match?id=${id}`, {
@@ -36,19 +63,26 @@ const App = () => {
       },
     })
       .then((res) => res.json())
-      .then((res) => (res.success ? updateAuth() : console.log(res.message)));
+      .then((res) => {
+        res.success && updateFollowedMatches();
+      })
+      .catch((error) => console.error(error));
   };
-
-  const followLeague = (details) => {
+  const followLeague = (details = {}) => {
     fetch("/auth/follow_league", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ id: details.id, details: details }),
+      body: JSON.stringify({
+        details: details,
+      }),
     })
       .then((res) => res.json())
-      .then((res) => (res.success ? updateAuth() : console.log(res.message)));
+      .then((res) => {
+        res.success && updateFollowedLeagues();
+      })
+      .catch((error) => console.error(error));
   };
   const unFollowLeague = (id) => {
     fetch(`/auth/follow_league?id=${id}`, {
@@ -58,21 +92,17 @@ const App = () => {
       },
     })
       .then((res) => res.json())
-      .then((res) => (res.success ? updateAuth() : console.log(res.message)));
-  };
-
-  const updateAuth = () => {
-    fetch("/auth")
-      .then((res) => res.json())
-      .then((res) =>
-        res.success ? setUser(res.data) : console.log(res.message)
-      )
-      .catch((e) => console.log(e));
+      .then((res) => {
+        res.success && updateFollowedLeagues();
+      })
+      .catch((error) => console.error(error));
   };
 
   useEffect(() => {
     updateAuth();
-  }, [user.auth]);
+    updateFollowedMatches();
+    updateFollowedLeagues();
+  }, [user.auth, firstRender]);
 
   const [showCookiesRequset, setShowCookiesRequest] = useState(true);
   const getCookie = (name) =>
@@ -103,11 +133,19 @@ const App = () => {
       value={{
         user,
         updateAuth,
+        login,
         logout,
+
         followLeague,
         followMatch,
         unFollowLeague,
         unFollowMatch,
+
+        followedMatches,
+        followedLeagues,
+        updateFollowedLeagues,
+        updateFollowedMatches,
+
         darkmode,
         toggleDarkmode,
         showCookiesRequset,

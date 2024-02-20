@@ -108,23 +108,13 @@ const MatchesComponent = styled.div`
   }
 `;
 
-function Matches({ title, matches, message, redirect }) {
-  const { user, followMatch, unFollowMatch } = useContext(Context);
+function Matches({ title, matches, message }) {
+  const { followMatch, unFollowMatch, followedMatches } = useContext(Context);
   const navigate = useNavigate();
 
-  const follow = (id) => {
-    followMatch(matches[id]);
-    navigate(redirect);
-  };
-
-  const unFollow = (id) => {
-    unFollowMatch(id);
-    navigate(redirect);
-  };
-
-  const checkInclude = (id) => {
-    for (let match in user.followedMatches) {
-      if (user.followedMatches[match].matchId === id) {
+  const checkFollow = (id) => {
+    for (let match in followedMatches) {
+      if (followedMatches[match].matchId === id) {
         return true;
       }
     }
@@ -140,13 +130,16 @@ function Matches({ title, matches, message, redirect }) {
         {Object.keys(matches).length > 0 ? (
           Object.keys(matches).map((id) => (
             <div className="match" key={id}>
-              {checkInclude(matches[id].id) ? (
+              {checkFollow(matches[id].id) ? (
                 <i
                   className="fa-solid fa-star"
-                  onClick={() => unFollow(matches[id].id)}
+                  onClick={() => unFollowMatch(matches[id].id)}
                 />
               ) : (
-                <i className="fa-regular fa-star" onClick={() => follow(id)} />
+                <i
+                  className="fa-regular fa-star"
+                  onClick={() => followMatch(matches[id])}
+                />
               )}
               <span
                 className="time"
@@ -162,13 +155,13 @@ function Matches({ title, matches, message, redirect }) {
                 }
               >
                 {matches[id].status !== "notstarted"
-                  ? matches[id].current_time
-                  : matches[id].start_time}
+                  ? matches[id].currentTime
+                  : matches[id].startTime}
                 {!(
                   statusList.includes(matches[id].status) ||
                   matches[id].status === "notstarted"
                 ) &&
-                  matches[id].current_time !== "Halftime" && (
+                  matches[id].currentTime !== "Halftime" && (
                     <span className="apostr">'</span>
                   )}
               </span>

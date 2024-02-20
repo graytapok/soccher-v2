@@ -7,8 +7,16 @@ from icecream import ic
 def react_error1():
     return {}
 
-@app.route("/match_details/images/react/favicon.ico")
+@app.route("/react_devtools_backend_compact.js.map")
 def react_error2():
+    return {}
+
+@app.route("/match_details/images/react/favicon.ico")
+def react_error3():
+    return {}
+
+@app.route("/images/leagues/undefined/logo.png")
+def react_error4():
     return {}
 
 @app.errorhandler(400)

@@ -128,7 +128,7 @@ const EditUserComponent = styled.div`
   .close {
     right: 30px;
     top: 30px;
-    fontsize: 25px;
+    font-size: 25px;
     cursor: pointer;
     color: rgba(255, 255, 255, 0.8);
     padding: 8px;
@@ -142,16 +142,12 @@ const EditUserComponent = styled.div`
 function EditUser() {
   const { toggleEditUser, editedUser } = useContext(AdminDashboardContext);
   const [loading, setLoading] = useState(false);
-  const [formData, setFormData] = useState({});
-  const [correctInput, setCorrectInput] = useState({
-    username: { unique: true, rules: true },
-    email: { unique: true, rules: true },
-    password: true,
-    confirm_password: true,
+  const [formData, setFormData] = useState({
+    id: editedUser.id,
   });
+  const [correctInput, setCorrectInput] = useState({});
 
   const editUser = (event) => {
-    console.log(formData.id);
     setLoading(true);
     event.preventDefault();
     fetch(`/admin/edit/user`, {
@@ -163,9 +159,9 @@ function EditUser() {
     })
       .then((res) => res.json())
       .then((res) => {
-        if (res.correct_input) {
+        if (res.success) {
           toggleEditUser();
-        } else {
+        } else if (!res.succes && res.message === "invalid input") {
           setLoading(false);
           setCorrectInput(res.data);
         }
@@ -174,21 +170,29 @@ function EditUser() {
 
   const changeData = (event) => {
     const { id, value, type, checked } = event.target;
-    setFormData((prevData) => ({
-      ...prevData,
-      [id]: type === "checkbox" ? checked : value,
-    }));
+    if (type !== "checkbox" && value !== "") {
+      setFormData((prevData) => ({
+        ...prevData,
+        [id]: value,
+      }));
+    } else {
+      setFormData((prevData) => {
+        const copy = { ...prevData };
+        delete copy[[id]];
+        return copy;
+      });
+    }
+
+    if (type === "checkbox") {
+      setFormData((prevData) => ({
+        ...prevData,
+        [id]: checked,
+      }));
+    }
   };
 
   useEffect(() => {
     setLoading(false);
-    setFormData({
-      id: editedUser.id,
-      username: editedUser.username,
-      admin: editedUser.admin,
-      email: editedUser.email,
-      email_confirmed: editedUser.email_confirmed,
-    });
   }, [editedUser]);
 
   return (
@@ -202,17 +206,13 @@ function EditUser() {
             onChange={changeData}
             placeholder={"Name: " + editedUser.username}
             type="text"
-            className={
-              "input_box " +
-              correctInput.username.unique +
-              " " +
-              correctInput.username.rules
-            }
+            className={"input_box " + !("username" in correctInput)}
           />
           <i style={{ color: "#fff" }} className="fa-solid fa-user"></i>
-          {!correctInput.username.rules ? (
+          {"username" in correctInput && "rules" in correctInput.username ? (
             <span>Username must be at least 3 letters long.</span>
-          ) : !correctInput.username.unique ? (
+          ) : "username" in correctInput &&
+            "unique" in correctInput.username ? (
             <span>User with this username already exists.</span>
           ) : null}
         </div>
@@ -222,21 +222,16 @@ function EditUser() {
             onChange={changeData}
             placeholder={"Email: " + editedUser.email}
             type="text"
-            className={
-              "input_box " +
-              correctInput.email.unique +
-              " " +
-              correctInput.email.rules
-            }
+            className={"input_box " + !("email" in correctInput)}
           />
           <i
             id="email_icon"
             style={{ color: "#fff" }}
             className="fa-solid fa-envelope"
           />
-          {!correctInput.email.rules ? (
+          {"email" in correctInput && "rules" in correctInput.email ? (
             <span>Email must be valid.</span>
-          ) : !correctInput.email.unique ? (
+          ) : "email" in correctInput && "unique" in correctInput.email ? (
             <span>User with this email already exists.</span>
           ) : null}
         </div>
@@ -246,10 +241,10 @@ function EditUser() {
             onChange={changeData}
             placeholder="Password"
             type="password"
-            className={"input_box " + correctInput.password}
+            className={"input_box " + !("password" in correctInput)}
           />
           <i style={{ color: "#fff" }} className="fa-solid fa-lock"></i>
-          {!correctInput.password && (
+          {"password" in correctInput && (
             <span>
               Ensure 8-unit password with letters, capitals and numbers.
             </span>
@@ -257,18 +252,18 @@ function EditUser() {
         </div>
         <div>
           <input
-            id="confirm_password"
+            id="confirmPassword"
             onChange={changeData}
             placeholder="Confirm password"
             type="password"
-            className={"input_box " + correctInput.confirm_password}
+            className={"input_box " + !("confirmPassword" in correctInput)}
           />
           <i
             id="confirm_icon"
             style={{ color: "#fff" }}
             className="fa-solid fa-lock-open"
           ></i>
-          {!correctInput.confirm_password && (
+          {"confirmPassword" in correctInput && (
             <span>Confirm Password must be equal to password.</span>
           )}
         </div>
@@ -284,12 +279,12 @@ function EditUser() {
           </div>
           <div className="email_confirmed_input">
             <input
-              id="email_confirmed"
+              id="emailConfirmed"
               type="checkbox"
-              defaultChecked={editedUser.email_confirmed}
+              defaultChecked={editedUser.emailConfirmed}
               onChange={changeData}
             />
-            <label htmlFor="email_confirmed">Email Confirmed</label>
+            <label htmlFor="emailConfirmed">Email Confirmed</label>
           </div>
         </div>
         <Button

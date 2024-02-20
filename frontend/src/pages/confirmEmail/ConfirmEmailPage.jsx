@@ -1,9 +1,10 @@
 import React, { useContext, useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
+import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import Heading from "../../components/Heading";
 import styled from "styled-components";
 import { Context } from "../../App";
-import LoginForm from "../signIn/forms/LoginForm";
+import Button from "../../components/Button";
+import { useIsFirstRender } from "@uidotdev/usehooks";
 
 const ConfirmEmailPageComponent = styled.div`
   & {
@@ -34,57 +35,61 @@ const ConfirmEmailPageComponent = styled.div`
   .message span {
     margin: 10px;
   }
+
+  button {
+    margin-top: 10px;
+  }
 `;
 
 function ConfirmEmailPage() {
-  const { user } = useContext(Context);
+  const render = useIsFirstRender();
+  const { user, updateAuth } = useContext(Context);
+  const navigate = useNavigate();
   const url = useLocation();
   const token = url.pathname.slice(15);
   const [message, setMessage] = useState("");
 
   useEffect(() => {
-    if (user.auth) {
-      fetch(`/confirm_email/${token}`)
+    if (render) {
+      fetch(`/auth/confirm_email/${token}`)
         .then((res) => res.json())
-        .then((res) => setMessage(res.message))
+        .then((res) => {
+          updateAuth();
+          if (res.success) {
+            setMessage("confirmed");
+          } else {
+            setMessage(res.message);
+          }
+          console.log(res);
+        })
         .catch((e) => console.log(e));
     }
-  }, [user.auth, token]);
+  }, [user.auth, token, updateAuth, render]);
 
   return (
     <>
       <Heading title="Email Confirmation"></Heading>
-      {user.auth ? (
-        <ConfirmEmailPageComponent>
-          <div className="message">
-            {message.includes("confirmed") ? (
-              message === "already confirmed" ? (
-                <h1 className="message">Your email is already confirmed!</h1>
-              ) : (
-                <>
-                  <h1 className="message">Thanks {user.name}!</h1>
-                  <span>Your email is now confirmed!</span>
-                </>
-              )
-            ) : (
-              <>
-                {message === "expired" && (
-                  <h1 className="message">
-                    Your email-verification is expired!
-                  </h1>
-                )}
-                {message === "not correct" && (
-                  <h1 className="message">
-                    Your email verification token is not correct!
-                  </h1>
-                )}
-              </>
-            )}
-          </div>
-        </ConfirmEmailPageComponent>
-      ) : (
-        <LoginForm navigate_to={`/confirm_email/${token}`} />
-      )}
+      <ConfirmEmailPageComponent>
+        <div className="message">
+          {message === "confirmed" ? (
+            <>
+              <h1 className="message">Thanks {user.name}!</h1>
+              <span>Your email is now confirmed!</span>
+              <Button onClick={() => navigate("/")}>Home</Button>
+            </>
+          ) : message === "expired" ? (
+            <h1 className="message">Your email-verification is expired!</h1>
+          ) : message === "already confirmed" ? (
+            <Navigate to="/" replace></Navigate>
+          ) : (
+            message === "token is incorrect" && (
+              <h1 className="message">
+                Your email verification token is not correct!
+              </h1>
+            )
+          )}
+        </div>
+      </ConfirmEmailPageComponent>
     </>
   );
 }

@@ -1,4 +1,4 @@
-from flask import Flask, render_template, flash, redirect, url_for, request, make_response
+from flask import Flask, render_template, flash, redirect, url_for, request, make_response, session
 from flask_login import login_user, logout_user, current_user
 from flask_mail import Message
 
@@ -23,7 +23,7 @@ def login_required(func):
                 "data": None,
                 "success": False
             }
-        elif not current_user.confirmed:
+        elif not current_user.email_confirmed:
             return {
                 "message": "email must be confirmed",
                 "data": None,
@@ -63,9 +63,9 @@ def auth():
 def login():
     message = ""
     
-    username_email = request.json['login']
-    password = request.json['password']
-    remember_me = request.json['rememberMe']
+    username_email = request.json['login'] if "login" in request.json else ""
+    password = request.json['password'] if "password" in request.json else ""
+    remember_me = request.json['rememberMe'] if "rememberMe" in request.json else ""
     
     try:
         v = validate_email(username_email)
@@ -76,6 +76,8 @@ def login():
         
     if user is None or not user.check_password(password):
         message = "incorrect input"
+    elif user.email_confirmed != True:
+        message = "email must be confirmed"
     else:
         login_user(user, remember=remember_me)
     
@@ -105,7 +107,7 @@ def register():
         
         token = safe.dumps(email, salt="email-confirm")
         
-        msg.html = render_template("register_email.html", link=f"{app.config['DOMAIN']}/confirm_email/{token}")
+        msg.html = render_template("register_email.html", link=f"{app.config['DOMAIN']}/confirm_email/{email}/{token}")
         mail.send(msg)
     
     message = ""
@@ -146,49 +148,41 @@ def register():
         
     if len(data) != 0:
         message = "invalid input"
-        
-    res = make_response({
-        "message": message,
-        "data": data,
-        "success": True if message == "" else False
-    })
-        
-    if len(data) == 0:
+    else:
         user = User(username=username, email=email)
         user.set_password(password)
         db.session.add(user)
         db.session.commit()
         send_registration_email(email)
-        res.set_cookie("email", email, max_age=60*60*24*365)
         
-    return res
+    return {
+        "message": message,
+        "data": data,
+        "success": True if message == "" else False
+    }
     
-@app.route("/auth/confirm_email/<token>")
-def confirm_email(token):
+@app.route("/auth/confirm_email/<email>/<token>")
+def confirm_email(email, token):
     message = ""
-    set_cookies = False
     try:
-        email = safe.loads(token, salt="email-confirm", max_age=60*60*24)
-        user = User.query.filter_by(email=request.cookies.get("email")).first()
+        itsdanger = safe.loads(token, salt="email-confirm", max_age=60*60*24)
+        user = User.query.filter_by(email=email).first()
+        if user.email_confirmed:
+            message = "already confirmed"
+        else:
+            user.email_confirmed = True
+            db.session.commit()
         login_user(user, remember=True)
-        set_cookies = True
-        current_user.confirmed = True
-        db.session.commit()
     except SignatureExpired:
         message = "token is expired"
     except BadSignature:
         message = "token is incorrect"
-        
-    res = make_response({
+    
+    return {
         "message": message,
         "data": None,
         "success": True if message == "" else False
-    })
-    
-    if set_cookies:
-        res.set_cookie("email", "", expires=0)
-    
-    return res
+    }
 
 @app.route("/auth/follow_match", methods=["POST", "DELETE"])
 @login_required
@@ -239,7 +233,7 @@ def follow_league():
         message = ""      
         details = request.json["details"]
         
-        row = FollowedLeague.query.filter_by(user_id=current_user.id).filter_by(league_id=details["id"]).first()
+        row = FollowedLeague.query.filter_by(user_id=current_user.id).filter_by(league_id=int(details["id"])).first()
         if row is not None:
             message = "already followed"
         else:
@@ -255,8 +249,7 @@ def follow_league():
             "message": message,
             "data": None,
             "success": True if message == "" else False
-        }
-        
+        }      
     if request.method == "DELETE":
         message = ""
         league_id = int(request.args["id"])
@@ -274,6 +267,30 @@ def follow_league():
             "data": None,
             "success": True if message == "" else False
         } 
+        
+@app.route("/auth/followed_matches", methods=["GET"])
+@login_required
+def followed_matches():
+    followed_schema = FollowedMatchSchema(many=True)
+    matches = followed_schema.dump(current_user.followed_matches)
+    
+    return {
+        "message": "",
+        "data": matches,
+        "success": True
+    }
+    
+@app.route("/auth/followed_leagues", methods=["GET"])
+@login_required
+def followed_leagues():
+    followed_schema = FollowedLeagueSchema(many=True)
+    leagues = followed_schema.dump(current_user.followed_leagues)
+    
+    return {
+        "message": "",
+        "data": leagues,
+        "success": True
+    }
         
 @app.route("/cookies", methods=["POST"])
 def cookies():

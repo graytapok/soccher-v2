@@ -12,7 +12,6 @@ const HeadingComponent = styled.div`
     padding: 20px;
     align-items: center;
     justify-content: center;
-    width: 100%;
   }
 
   div {

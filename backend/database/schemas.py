@@ -32,7 +32,7 @@ class UserSchema(ma.SQLAlchemySchema):
     username = ma.auto_field()
     email = ma.auto_field()
     admin = ma.auto_field()
-    confirmed = ma.auto_field()
+    emailConfirmed = fields.Boolean(attribute="email_confirmed")
     
-    followedMatches = fields.Nested(FollowedMatchSchema, many=True, attribute="followed_matches")
-    followedLeagues = fields.Nested(FollowedLeagueSchema, many=True, attribute="followed_leagues")
+    # followedMatches = fields.Nested(FollowedMatchSchema, many=True, attribute="followed_matches")
+    # followedLeagues = fields.Nested(FollowedLeagueSchema, many=True, attribute="followed_leagues")

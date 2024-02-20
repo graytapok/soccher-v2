@@ -1,8 +1,24 @@
-import React from "react";
-import RegisterForm from "./forms/RegisterForm";
+import React, { createContext, useState } from "react";
+import RegisterForm from "./components/RegisterForm";
+import Complete from "./components/Complete";
+import Heading from "../../components/Heading";
+
+export const RegisterContext = createContext();
 
 function RegisterPage() {
-  return <RegisterForm />;
+  const [complete, setComplete] = useState(false);
+  return (
+    <RegisterContext.Provider value={{ setComplete }}>
+      {!complete ? (
+        <RegisterForm />
+      ) : (
+        <>
+          <Heading title="Sign Up"></Heading>
+          <Complete />
+        </>
+      )}
+    </RegisterContext.Provider>
+  );
 }
 
 export default RegisterPage;

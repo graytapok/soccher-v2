@@ -14,8 +14,8 @@ const IndexComponent = styled.div`
 `;
 
 function IndexPage() {
-  const [matchesData, setMatchesData] = useState({});
-  const [leaguesData, setLeaguesData] = useState({});
+  const [matchesData, setMatchesData] = useState([]);
+  const [leaguesData, setLeaguesData] = useState([]);
 
   useEffect(() => {
     fetch("/index")
@@ -38,13 +38,11 @@ function IndexPage() {
             leagues={leaguesData}
             message="Leagues not Found"
             title="Leagues"
-            redirect="/"
           />
           <Matches
             title="Today's matches"
             matches={matchesData}
             message="Matches not Found"
-            redirect="/"
           />
         </div>
       </IndexComponent>

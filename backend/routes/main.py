@@ -4,7 +4,6 @@ from flask_login import current_user
 from app import app, db, Loader
 from database.models import User, FollowedMatch
 from api.api_requests import *
-from api.tools import dict_of_match_details
 
 from PIL import ImageColor
 from icecream import ic
@@ -73,21 +72,29 @@ def index():
                 if event['homeTeam']['name'] in country_list or event['awayTeam']['name'] in country_list:
                     country = True
                 
-                matches.append(dict_of_match_details(
-                    match_id=int(event['id']), 
-                    home={"name":event['homeTeam']['name'], "score": home_score}, 
-                    away={"name":event['awayTeam']['name'], "score": away_score}, 
-                    start_time=f'{hour}:{minutes}',
-                    status=event["status"]["type"],
-                    current_time=current_time,
-                    country=country,
-                    extra_time=extra_time)
-                )
+                matches.append({
+                    "id": int(event['id']),
+                    "home": {
+                        "name": event['homeTeam']['name'],
+                        "img": (country_list[info["home"]["name"]] + ".png") if country else None,
+                        "score": home_score
+                    },
+                    "away": {
+                        "name": event['awayTeam']['name'],
+                        "img": (country_list[info["away"]['name']] + ".png") if country else None,
+                        "score": away_score
+                    },
+                    "startTime": f'{hour}:{minutes}',
+                    "currentTime": current_time, 
+                    "extraTime": extra_time,            
+                    "status": event["status"]["type"],
+                    "country": country
+                })
         priority -= 50  
         counter += 1
         
     # Sort matches
-    matches = sorted(matches, key = lambda k: k["start_time"], reverse=False)
+    matches = sorted(matches, key = lambda k: k["startTime"], reverse=False)
         
     # leagues overview
     leagues = []
@@ -97,7 +104,7 @@ def index():
                 "id": i,
                 "name": league_id_list[i]["name"],
                 "slug": league_id_list[i]["slug"],
-                "category_name": league_id_list[i]["category_name"],
+                "categoryName": league_id_list[i]["category_name"],
                 "priority": league_id_list[i]["priority"]}
             )
     
@@ -154,7 +161,7 @@ def league(league_id):
         "name": json_data["name"], 
         "type": json_data["type"], 
         "slug": league_id_list[league_id]["slug"],
-        "category_name": league_id_list[league_id]["category_name"],
+        "categoryName": league_id_list[league_id]["category_name"],
         "priority": league_id_list[league_id]["priority"]
     }
     return {
@@ -194,7 +201,7 @@ def match_details(match_id):
         if minutes < 10:
             minutes = "0" + str(start_time.minute)
         if hour < 10:
-            hour = "0" + str(start_time.minute)
+            hour = "0" + str(start_time.hour)
 
         colors = {
             "away": ImageColor.getcolor(details_json["event"]["awayTeam"]["teamColors"]["primary"], "RGB"),
@@ -222,52 +229,52 @@ def match_details(match_id):
             date = f"{start_time.day}.{start_time.month}.{start_time.year}"
 
         match.update({
-        "id": details_json["event"]["id"],
-        "start_time": {
-            "time": f"{hour}:{minutes}", 
-            "date": date,
-        }, 
-        "round": details_json["event"]["roundInfo"]["round"],
-        "place": details_json["event"]["venue"] if "venue" in details_json["event"] else None,
-        "referee": {
-            "name": details_json["event"]["referee"]["name"],
-            "games": details_json["event"]["referee"]["games"],
-            "id": details_json["event"]["referee"]["id"],
-            "country": details_json["event"]["referee"]["country"]["name"],
-            "cards": {
-                "yellow": details_json["event"]["referee"]["yellowCards"],
-                "red": details_json["event"]["referee"]["redCards"],
-                "yellow-red": details_json["event"]["referee"]["yellowRedCards"]
-            }
-        } if "referee" in details_json["event"] else None,
-        "teams": {
-            "home": {
-                "name": details_json["event"]["homeTeam"]["name"],
-                "manager": {
-                    "name": details_json["event"]["homeTeam"]["manager"]["name"],
-                    "country": details_json["event"]["homeTeam"]["manager"]["country"]["name"],
-                    "id": details_json["event"]["homeTeam"]["manager"]["id"]
+            "id": details_json["event"]["id"],
+            "startTime": {
+                "time": f"{hour}:{minutes}", 
+                "date": date,
+            }, 
+            "round": details_json["event"]["roundInfo"]["round"],
+            "place": details_json["event"]["venue"] if "venue" in details_json["event"] else None,
+            "referee": {
+                "name": details_json["event"]["referee"]["name"],
+                "games": details_json["event"]["referee"]["games"],
+                "id": details_json["event"]["referee"]["id"],
+                "country": details_json["event"]["referee"]["country"]["name"],
+                "cards": {
+                    "yellow": details_json["event"]["referee"]["yellowCards"],
+                    "red": details_json["event"]["referee"]["redCards"],
+                    "yellow-red": details_json["event"]["referee"]["yellowRedCards"]
+                }
+            } if "referee" in details_json["event"] else None,
+            "teams": {
+                "home": {
+                    "name": details_json["event"]["homeTeam"]["name"],
+                    "manager": {
+                        "name": details_json["event"]["homeTeam"]["manager"]["name"],
+                        "country": details_json["event"]["homeTeam"]["manager"]["country"]["name"] if "name" in details_json["event"]["homeTeam"]["manager"]["country"] else None,
+                        "id": details_json["event"]["homeTeam"]["manager"]["id"]
+                    } if "manager" in details_json["event"]["homeTeam"] else None,
+                    "id": details_json["event"]["homeTeam"]["id"],
+                    "country": details_json["event"]["homeTeam"]["country"]["name"],
+                    "foundation": foundations["home"],
+                    "color": colors["home"]
                 },
-                "id": details_json["event"]["homeTeam"]["id"],
-                "country": details_json["event"]["homeTeam"]["country"]["name"],
-                "foundation": foundations["home"],
-                "color": colors["home"]
-            },
-            "away": {
-                "name": details_json["event"]["awayTeam"]["name"],
-                "manager": {
-                    "name": details_json["event"]["awayTeam"]["manager"]["name"],
-                    "country": details_json["event"]["awayTeam"]["manager"]["country"]["name"],
-                    "id": details_json["event"]["awayTeam"]["manager"]["id"]
+                "away": {
+                    "name": details_json["event"]["awayTeam"]["name"],
+                    "manager": {
+                        "name": details_json["event"]["awayTeam"]["manager"]["name"],
+                        "country": details_json["event"]["awayTeam"]["manager"]["country"]["name"] if "name" in details_json["event"]["awayTeam"]["manager"]["country"] else None,
+                        "id": details_json["event"]["awayTeam"]["manager"]["id"]
+                    } if "manager" in details_json["event"]["awayTeam"] else None,
+                    "id": details_json["event"]["awayTeam"]["id"],
+                    "country": details_json["event"]["awayTeam"]["country"]["name"],
+                    "foundation": foundations["away"],
+                    "color": colors["away"]
                 },
-                "id": details_json["event"]["awayTeam"]["id"],
-                "country": details_json["event"]["awayTeam"]["country"]["name"],
-                "foundation": foundations["away"],
-                "color": colors["away"]
             },
-        },
-        "league": "",
-        "status": status
+            "league": "",
+            "status": status
         })
 
     """MATCH STATISTICS"""
@@ -386,7 +393,7 @@ def countrys_ranking():
     message = ""
     
     # Open or create the ranking JSON file.
-    json_data = api_categories()
+    json_data = api_fifa_country_ranking()
 
     # Get information about each team.
     countrys = []
@@ -410,10 +417,10 @@ def countrys_ranking():
                 ImageColor.getcolor(country['team']['teamColors']['primary'], "RGB"),
             "img": country_list[country['team']['name']] + ".png",
             "points": country["points"],
-            "prev_points": country["previousPoints"],
-            "prev_ranking": country["previousRanking"],
-            "diff_points": diff_points,
-            "diff_ranking": diff_ranking
+            "prevPoints": country["previousPoints"],   #
+            "prevRanking": country["previousRanking"],  #
+            "diffPoints": diff_points,   #
+            "diffRanking": diff_ranking   #
         })
         
     return {

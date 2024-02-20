@@ -1,0 +1,260 @@
+{
+    "event": {
+        "tournament": {
+            "name": "Liga MX, Clausura",
+            "slug": "liga-mx-clausura",
+            "category": {
+                "name": "Mexico",
+                "slug": "mexico",
+                "sport": {
+                    "name": "Football",
+                    "slug": "football",
+                    "id": 1
+                },
+                "id": 12,
+                "country": {
+                    "alpha2": "MX",
+                    "name": "Mexico"
+                },
+                "flag": "mexico",
+                "alpha2": "MX"
+            },
+            "uniqueTournament": {
+                "name": "Liga MX, Clausura",
+                "slug": "liga-mx-clausura",
+                "primaryColorHex": "#cd2c25",
+                "secondaryColorHex": "#52b030",
+                "category": {
+                    "name": "Mexico",
+                    "slug": "mexico",
+                    "sport": {
+                        "name": "Football",
+                        "slug": "football",
+                        "id": 1
+                    },
+                    "id": 12,
+                    "country": {
+                        "alpha2": "MX",
+                        "name": "Mexico"
+                    },
+                    "flag": "mexico",
+                    "alpha2": "MX"
+                },
+                "userCount": 33668,
+                "id": 11620,
+                "country": {},
+                "hasEventPlayerStatistics": true,
+                "crowdsourcingEnabled": false,
+                "hasPerformanceGraphFeature": false,
+                "displayInverseHomeAwayTeams": false
+            },
+            "priority": 369,
+            "competitionType": 1,
+            "id": 16753
+        },
+        "season": {
+            "name": "Liga MX, Clausura 2024",
+            "year": "2024",
+            "editor": false,
+            "id": 57315
+        },
+        "roundInfo": {
+            "round": 7
+        },
+        "customId": "INsYN",
+        "status": {
+            "code": 100,
+            "description": "Ended",
+            "type": "finished"
+        },
+        "winnerCode": 1,
+        "venue": {
+            "city": {
+                "name": "Mexico City"
+            },
+            "stadium": {
+                "name": "Estadio Olimpico Universitario",
+                "capacity": 72000
+            },
+            "id": 4560,
+            "country": {
+                "alpha2": "MX",
+                "name": "Mexico"
+            }
+        },
+        "referee": {
+            "name": "Ismael Rosario Lopez Penuelas",
+            "slug": "lopez-penuelas-ismael-rosario",
+            "yellowCards": 211,
+            "redCards": 12,
+            "yellowRedCards": 4,
+            "games": 35,
+            "sport": {
+                "id": 1,
+                "slug": "football",
+                "name": "Football"
+            },
+            "id": 788004,
+            "country": {
+                "alpha2": "MX",
+                "name": "Mexico"
+            }
+        },
+        "homeTeam": {
+            "name": "Pumas UNAM",
+            "slug": "pumas-unam",
+            "shortName": "Pumas UNAM",
+            "gender": "M",
+            "sport": {
+                "name": "Football",
+                "slug": "football",
+                "id": 1
+            },
+            "userCount": 21776,
+            "manager": {
+                "name": "Gustavo Lema",
+                "slug": "gustavo-lema",
+                "shortName": "G. Lema",
+                "id": 800705,
+                "country": {}
+            },
+            "venue": {
+                "city": {
+                    "name": "Mexico City"
+                },
+                "stadium": {
+                    "name": "Estadio Olimpico Universitario",
+                    "capacity": 72000
+                },
+                "id": 4560,
+                "country": {
+                    "alpha2": "MX",
+                    "name": "Mexico"
+                }
+            },
+            "foundationDate": {},
+            "nameCode": "PUM",
+            "disabled": false,
+            "national": false,
+            "type": 0,
+            "id": 1933,
+            "country": {
+                "alpha2": "MX",
+                "name": "Mexico"
+            },
+            "subTeams": [],
+            "fullName": "Pumas UNAM",
+            "teamColors": {
+                "primary": "#d2b651",
+                "secondary": "#000033",
+                "text": "#000033"
+            },
+            "foundationDateTimestamp": -486518400,
+            "fieldTranslations": {
+                "nameTranslation": {
+                    "ar": "\u0628\u0648\u0645\u0627\u0633"
+                },
+                "shortNameTranslation": {}
+            }
+        },
+        "awayTeam": {
+            "name": "Santos Laguna",
+            "slug": "santos-laguna",
+            "shortName": "Santos",
+            "gender": "M",
+            "sport": {
+                "name": "Football",
+                "slug": "football",
+                "id": 1
+            },
+            "userCount": 15387,
+            "manager": {
+                "name": "Marcos Ignacio Ambriz Espinoza",
+                "slug": "marcos-ignacio-ambriz-espinoza",
+                "shortName": "M. I. A. Espinoza",
+                "id": 114912,
+                "country": {
+                    "alpha2": "MX",
+                    "name": "Mexico"
+                }
+            },
+            "venue": {
+                "city": {
+                    "name": "Torreon"
+                },
+                "stadium": {
+                    "name": "Estadio TSM Corona",
+                    "capacity": 30000
+                },
+                "id": 2400,
+                "country": {
+                    "alpha2": "MX",
+                    "name": "Mexico"
+                }
+            },
+            "foundationDate": {},
+            "nameCode": "SLA",
+            "disabled": false,
+            "national": false,
+            "type": 0,
+            "id": 1948,
+            "country": {
+                "alpha2": "MX",
+                "name": "Mexico"
+            },
+            "subTeams": [],
+            "fullName": "Santos Laguna",
+            "teamColors": {
+                "primary": "#ffffff",
+                "secondary": "#00c6c6",
+                "text": "#00c6c6"
+            },
+            "foundationDateTimestamp": 431481600
+        },
+        "homeScore": {
+            "current": 3,
+            "display": 3,
+            "period1": 2,
+            "period2": 1,
+            "normaltime": 3
+        },
+        "awayScore": {
+            "current": 0,
+            "display": 0,
+            "period1": 0,
+            "period2": 0,
+            "normaltime": 0
+        },
+        "time": {
+            "injuryTime1": 2,
+            "injuryTime2": 4,
+            "currentPeriodStartTimestamp": 1708304928
+        },
+        "changes": {
+            "changes": [
+                "status.code",
+                "status.description",
+                "status.type"
+            ],
+            "changeTimestamp": 1708307885
+        },
+        "hasGlobalHighlights": true,
+        "hasEventPlayerStatistics": true,
+        "hasEventPlayerHeatMap": true,
+        "detailId": 1,
+        "crowdsourcingDataDisplayEnabled": false,
+        "id": 11911138,
+        "defaultPeriodCount": 2,
+        "defaultPeriodLength": 45,
+        "defaultOvertimeLength": 15,
+        "crowdsourcingEnabled": false,
+        "currentPeriodStartTimestamp": 1708304928,
+        "startTimestamp": 1708301100,
+        "slug": "santos-laguna-pumas-unam",
+        "finalResultOnly": false,
+        "fanRatingEvent": false,
+        "seasonStatisticsType": "overall",
+        "showTotoPromo": false,
+        "isEditor": false
+    }
+}

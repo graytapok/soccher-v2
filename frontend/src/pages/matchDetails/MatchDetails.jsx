@@ -17,10 +17,10 @@ function MatchDetails() {
     fetch(`/match_details/${match_id}`)
       .then((res) => res.json())
       .then((res) => {
-        setMatch(res.match);
-        setStatistics(res.statistics);
-        setLineups(res.lineups);
-        console.log(res);
+        setMatch(res.data.match);
+        setStatistics(res.data.statistics);
+        setLineups(res.data.lineups);
+        console.log(res.data);
       });
   }, [match_id]);
 
