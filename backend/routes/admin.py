@@ -2,33 +2,13 @@ from flask import request, render_template
 from flask_login import current_user
 
 from app import app, db
+from tools import admin_required
 from database.models import User, FollowedMatch, FollowedLeague
 from database.schemas import UserSchema, FollowedMatchSchema, FollowedLeagueSchema
 
 from email_validator import validate_email, EmailNotValidError
-from functools import wraps
 from icecream import ic
 import time
-
-def admin_required(func):
-    @wraps(func)
-    def wrapped(*args, **kwargs):
-        if current_user:
-            if not current_user.is_authenticated:
-                return {
-                    "message": "login required",
-                    "data": None,
-                    "success": False
-                }
-            elif not current_user.admin:
-                return {
-                    "message": "admin role required",
-                    "data": None,
-                    "success": False
-                }
-            else:
-                return func(*args, **kwargs)
-    return wrapped
 
 @app.route("/admin/dashboard", methods=["GET"])
 @admin_required
@@ -230,7 +210,6 @@ def admin_delete_followed_match():
         "data": None,
         "success": True if message == "" else False
     }
-
 
 @app.route("/admin/delete/followed_league", methods=["DELETE"])
 @admin_required

@@ -128,7 +128,7 @@ const CreateUserComponent = styled.div`
   .close {
     right: 30px;
     top: 30px;
-    fontsize: 25px;
+    font-size: 25px;
     cursor: pointer;
     color: rgba(255, 255, 255, 0.8);
     padding: 8px;

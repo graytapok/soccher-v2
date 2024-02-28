@@ -1,13 +1,10 @@
 import React, { useEffect, useState, createContext } from "react";
 import AppRoutes from "./pages/AppRoutes";
-import { useIsFirstRender } from "@uidotdev/usehooks";
 import "./index.css";
 
 export const Context = createContext();
 
 const App = () => {
-  const firstRender = useIsFirstRender();
-
   const [user, setUser] = useState({ auth: false });
   const updateAuth = () => {
     fetch("/auth")
@@ -102,13 +99,19 @@ const App = () => {
     updateAuth();
     updateFollowedMatches();
     updateFollowedLeagues();
-  }, [user.auth, firstRender]);
+  }, [user.auth]);
 
   const [showCookiesRequset, setShowCookiesRequest] = useState(true);
   const getCookie = (name) =>
     document.cookie.match("(^|;)\\s*" + name + "\\s*=\\s*([^;]+)")?.pop() || "";
   useEffect(() => {
-    setShowCookiesRequest(getCookie("darkmode") !== "" ? false : true);
+    setShowCookiesRequest(
+      getCookie("darkmode") !== "" ||
+        getCookie("remember_token") !== "" ||
+        getCookie("session") !== ""
+        ? false
+        : true
+    );
   }, []);
   const toggleCookiesRequest = () => {
     setShowCookiesRequest((prev) => !prev);

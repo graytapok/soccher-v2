@@ -2,6 +2,7 @@ from flask import Flask, render_template, flash, redirect, url_for, request, jso
 from flask_login import current_user
 
 from app import app, db, Loader
+from tools import create_response
 from database.models import User, FollowedMatch
 from api.api_requests import *
 
@@ -14,11 +15,8 @@ import json
 import os
 
 with app.app_context():
-    loader = Loader("Creating todays matches...", "Todays matches created!", 0.05).start()
     date = datetime.now()
     todays_json = api_match_date(date.day, date.month, date.year)
-    api_match_lineups(11393380)
-    loader.stop()
 
 @app.route("/index", methods=["GET"])
 def index():
@@ -108,14 +106,13 @@ def index():
                 "priority": league_id_list[i]["priority"]}
             )
     
-    return {
-        "message": message,
-        "data": {
+    return create_response(
+        message, 
+        data={
             "matches": matches, 
             "leagues": leagues
-        },
-        "success": True if message == "" else None
-    }
+        }
+    )
 
 @app.route("/league/<league_id>", methods=["GET"])
 def league(league_id):
@@ -164,14 +161,14 @@ def league(league_id):
         "categoryName": league_id_list[league_id]["category_name"],
         "priority": league_id_list[league_id]["priority"]
     }
-    return {
-        "message": message,
-        "data": {
+    
+    return create_response(
+        message, 
+        data={
             "league": league, 
-        "standings": standings
-        },
-        "success": True if message == "" else False
-    }
+            "standings": standings
+        }
+    )
 
 @app.route("/match_details/<match_id>", methods=["GET"])
 def match_details(match_id):
@@ -377,16 +374,15 @@ def match_details(match_id):
     else:
         lineups = None
     
-    return {
-        "message": message,
-        "data": {
+    return create_response(
+        message,
+        data={
             "match": match, 
             "statistics": None, #statistics, 
             "preform": preform_json,
             "lineups": lineups
-        },
-        "success": True if message == "" else False
-    }
+        }
+    )
 
 @app.route("/countrys_ranking", methods=["GET"])
 def countrys_ranking():
@@ -423,13 +419,12 @@ def countrys_ranking():
             "diffRanking": diff_ranking   #
         })
         
-    return {
-        "message": message,
-        "data": {
+    return create_response(
+        messgae,
+        data={
             "countrys": countrys
-        },
-        "success": True if message == "" else None    
-    }
+        }
+    )
 
 @app.route("/countrys_ranking/<country_name>")
 def country(country_name):
@@ -437,4 +432,4 @@ def country(country_name):
     with open(file, 'rb') as f:
         data = f.read()
         json_data = json.loads(data)
-    return {}
+    return create_response("")

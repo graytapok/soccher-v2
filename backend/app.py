@@ -67,6 +67,5 @@ with app.app_context():
     loader = Loader("Creating database...", "Database created!", 0.1).start()
     db.create_all()
     loader.stop()
-    
 
-from routes import main, auth, admin, errors
+from routes import main, auth, admin, soccer_api, errors

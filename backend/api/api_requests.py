@@ -5,11 +5,14 @@ import json as j
 import requests
 import os
 
-headers = {"X-RapidAPI-Key": app.config["API_KEY"], "X-RapidAPI-Host": app.config["API_HOST"]}
+headers = {
+    "X-RapidAPI-Key": app.config["API_KEY"], 
+    "X-RapidAPI-Host": app.config["API_HOST"]
+}
 
 """SHORTCUTS"""
-def api_create_open_json(path, url):
-    if not os.path.exists(path):
+def api_create_open_json(path, url, **kwargs):
+    if not os.path.exists(path) or kwargs["update"] == True:
         response = requests.get(url, headers=headers)
         os.makedirs(os.path.dirname(path), exist_ok=True)
         print(f"Creating '{path}' ...")
@@ -27,8 +30,6 @@ def api_match_date(day, month, year):
     return api_create_open_json(path, url)
 
 def api_match_details(match_id):
-    if match_id == "react_devtools_backend_compact.js.map":
-        return
     path = f"api/json/match/details/{match_id}.json"
     url = f"https://footapi7.p.rapidapi.com/api/match/{match_id}"
     return api_create_open_json(path, url)
@@ -133,7 +134,10 @@ def api_league_standings(league_id, season=None):
     
     path = f"api/json/league/standings/{league_id}_{season}.json"
     url = f"https://footapi7.p.rapidapi.com/api/tournament/{league_id}/season/{season}/standings/total"
-    return {"season": season, "json": api_create_open_json(path, url)}
+    return {
+        "season": season, 
+        "json": api_create_open_json(path, url)
+    }
 
 def api_league_media(league_id): # idk
     path = f"api/json/league/media/{league_id}.json"
@@ -161,6 +165,13 @@ def api_uefa_club_ranking():
     path = f"api/json/rankings/uefa_country_ranking.json"
     url = "https://footapi7.p.rapidapi.com/api/rankings/uefa/countries"
     return api_create_open_json(path, url)
+      
+      
+"""UPDATE"""
+def api_update(type, **kwargs):
+    if type == "league":
+        
+      
             
 country_list = {}
 country_codes_path = f"api/json/country_codes.json"

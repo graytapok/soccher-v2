@@ -12,8 +12,10 @@ class User(UserMixin, db.Model):
     username = db.Column(db.String(65), index=True, unique=True)
     email = db.Column(db.String(121), index=True, unique=True)
     password_hash = db.Column(db.String(128))
+    
     admin = db.Column(db.Boolean, default=False)
     email_confirmed = db.Column(db.Boolean, default=False)
+    verification_token = db.Column(db.String)
     
     followed_matches = db.relationship("FollowedMatch", backref="user", lazy=True)
     followed_leagues = db.relationship("FollowedLeague", backref="user", lazy=True)

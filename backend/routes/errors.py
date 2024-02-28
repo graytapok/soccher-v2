@@ -1,29 +1,29 @@
-from app import app
 from flask import request
+
+from app import app
+from tools import create_response
 
 from icecream import ic
 
-@app.route("/favicon.ico")
-def react_error1():
+@app.route("/manifest.json")
+def react_error_1():
     return {}
 
 @app.route("/react_devtools_backend_compact.js.map")
-def react_error2():
+def react_error_2():
     return {}
 
-@app.route("/match_details/images/react/favicon.ico")
-def react_error3():
-    return {}
-
-@app.route("/images/leagues/undefined/logo.png")
-def react_error4():
+@app.route("/favicon.ico")
+def react_error_3():
     return {}
 
 @app.errorhandler(400)
 def bad_request(e):
-    print(e)
-    print(request.base_url)
-    return {"message": "Page not found"}
+    print(f"""
+        {e}
+        {request.base_url}
+    """)
+    return create_response("Page not found")
 
 @app.errorhandler(404)
 def page_not_found(e):
@@ -31,16 +31,20 @@ def page_not_found(e):
         {e}
         {request.base_url}
     """)
-    return {"message": "Page not found"}
+    return create_response("Page not found")
 
 @app.errorhandler(405)
 def method_not_allowed(e):
-    print(e)
-    print(request.base_url)
-    return {"message": "Method not allowed"}
+    print(f"""
+        {e}
+        {request.base_url}
+    """)
+    return create_response("Method not allowed")
 
 @app.errorhandler(500)
 def internal_server_error(e):
-    print(e)
-    print(request.base_url)
-    return {"message": "Internal Server Error"}
+    print(f"""
+        {e}
+        {request.base_url}
+    """)
+    return create_response("Internal Server Error")

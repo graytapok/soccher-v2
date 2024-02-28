@@ -4,20 +4,22 @@ import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 
 import Navbar from "../components/Navbar/Navbar";
 import CookiesRequest from "../components/CookiesRequest";
-import Ranking from "../components/Ranking";
 
+import IndexPage from "./index/IndexPage";
 import MatchDetails from "./matchDetails/MatchDetails";
 import CountryRankingPage from "./countryRanking/CountryRankingPage";
-import IndexPage from "./index/IndexPage";
-import LogoutPage from "./logout/LogoutPage";
-import LoginPage from "./signIn/LoginPage";
-import RegisterPage from "./signUp/RegisterPage";
-import ProfilePage from "./profile/ProfilePage";
 import LeaguePage from "./league/LeaguePage";
-import ConfirmEmailPage from "./confirmEmail/ConfirmEmailPage";
 
-import "../index.css";
+import LogoutPage from "./auth/logout/LogoutPage";
+import LoginPage from "./auth/signIn/LoginPage";
+import RegisterPage from "./auth/signUp/RegisterPage";
+import ProfilePage from "./auth/profile/ProfilePage";
+import ConfirmEmailPage from "./auth/confirmEmail/ConfirmEmailPage";
+import ForgotPasswordPage from "./auth/forgotPassword/ForgotPasswordPage";
+import ChangePasswordPage from "./auth/changePasword/ChangePasswordPage";
+
 import DashboardPage from "./admin/dashboard/DashboardPage";
+import "../index.css";
 
 const ProtectedRoute = ({
   anti = false,
@@ -86,40 +88,24 @@ function AppRoutes() {
                 </ProtectedRoute>
               }
             />
-            <Route path="about" element={<IndexPage />} />
             <Route path="match_details/:match_id" element={<MatchDetails />} />
             <Route path="country_ranking" element={<CountryRankingPage />} />
-            <Route
-              path="test"
-              element={
-                <Ranking
-                  head={{
-                    0: {
-                      name: "Label",
-                      sortable: true,
-                      asc: "asc",
-                      sort_by: "string",
-                    },
-                    1: {
-                      name: "Rank",
-                      sortable: true,
-                      asc: "desc",
-                      sort_by: "number",
-                    },
-                    2: { name: "Size", sortable: false, asc: null },
-                  }}
-                  body={{
-                    0: ["bbdsfdds", "12312312312", "asdasd"],
-                    1: ["gfedcbga", "12312312312", "asdasd"],
-                    2: ["abcdefg", "12312312312", "asdasd"],
-                  }}
-                />
-              }
-            ></Route>
             <Route path="/league/:league_id" element={<LeaguePage />} />
             <Route
               path="/confirm_email/:email/:token"
               element={<ConfirmEmailPage />}
+            />
+            <Route
+              path="/forgot_password"
+              element={
+                <ProtectedRoute anti>
+                  <ForgotPasswordPage />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/change_password/:email/:token"
+              element={<ChangePasswordPage />}
             />
           </>
           <>
