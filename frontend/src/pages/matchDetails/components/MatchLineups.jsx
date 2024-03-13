@@ -165,7 +165,7 @@ function MatchLineups() {
                 </PlayerComponent>
               </LayerComponent>
               {layers[team].map((layer) => (
-                <LayerComponent key={layer}>
+                <LayerComponent key={layers[team].indexOf(layer) + team}>
                   {Object.keys(layer).map((player) => (
                     <PlayerComponent
                       key={layer[player].id}

@@ -1,7 +1,7 @@
 from flask import Flask, render_template, flash, redirect, url_for, request, jsonify
 from flask_login import current_user
 
-from app import app, db, Loader
+from app import app, db
 from tools import create_response
 from database.models import User, FollowedMatch
 from api.api_requests import *
@@ -16,7 +16,7 @@ import os
 
 with app.app_context():
     date = datetime.now()
-    todays_json = api_match_date(date.day, date.month, date.year)
+    todays_json = api_match_date(date.day, date.month, date.year, update=True, timeframe=60*60*60*24)
 
 @app.route("/index", methods=["GET"])
 def index():
@@ -174,8 +174,6 @@ def league(league_id):
 def match_details(match_id):
     message = ""
     
-    if match_id == "react_devtools_backend_compact.js.map":
-        return {}
     # Open JSON files.
     details_json = api_match_details(match_id)
     statistics_json = api_match_statistics(match_id)
@@ -192,6 +190,7 @@ def match_details(match_id):
     match = {}
     if details_json != None:
         t = details_json["event"]["startTimestamp"]
+        
         start_time = datetime.fromtimestamp(t)
         hour = start_time.hour
         minutes = start_time.minute
@@ -223,7 +222,10 @@ def match_details(match_id):
         if f"{start_time.day}.{start_time.month}.{start_time.year}" == f"{datetime.now().day}.{datetime.now().month}.{datetime.now().year}":
             date = "today"
         else:
-            date = f"{start_time.day}.{start_time.month}.{start_time.year}"
+            day = "0" + str(start_time.day) if start_time.day < 10 else start_time.day
+            month = "0" + str(start_time.month) if start_time.month < 10 else start_time.month
+            year = "0" + str(start_time.year) if start_time.year < 10 else start_time.year
+            date = f"{day}.{month}.{year}"
 
         match.update({
             "id": details_json["event"]["id"],

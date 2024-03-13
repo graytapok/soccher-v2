@@ -2,6 +2,7 @@ import React, { createContext, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import MatchDetailsHeading from "./components/MatchDetailsHeading";
 import MatchLineups from "./components/MatchLineups";
+import MatchDetailsInfo from "./components/MatchDetailsInfo";
 
 export const MatchDetailsContext = createContext();
 
@@ -31,6 +32,7 @@ function MatchDetails() {
         className="match_detials"
       >
         <MatchDetailsHeading />
+        <MatchDetailsInfo />
         <MatchLineups />
       </MatchDetailsContext.Provider>
     </div>
