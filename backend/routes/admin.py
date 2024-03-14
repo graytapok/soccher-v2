@@ -2,7 +2,7 @@ from flask import request, render_template
 from flask_login import current_user
 
 from app import app, db
-from tools import admin_required
+from tools import admin_required, create_response, UnexpectedError
 from database.models import User, FollowedMatch, FollowedLeague
 from database.schemas import UserSchema, FollowedMatchSchema, FollowedLeagueSchema
 
@@ -15,11 +15,8 @@ import time
 def admin():
     user_schema = UserSchema(many=True)
     users = user_schema.dump(User.query.order_by(User.id).all())
-    return {
-        "message": "",
-        "data": users,
-        "success": True
-    }
+    
+    return create_response("", data=users)
 
 @app.route("/admin/edit/user", methods=["POST"])
 @admin_required
@@ -98,11 +95,7 @@ def admin_edit_user():
     else:
         message = "invalid input"
         
-    return {
-        "message": message,
-        "data": data,
-        "success": True if message == "" else False
-    }
+    return create_response(message, data=data)
 
 @app.route("/admin/create/user", methods=["POST"])
 @admin_required
@@ -165,68 +158,52 @@ def admin_create_user():
         db.session.add(user)
         db.session.commit()
 
-    return {
-        "message": message,
-        "data": data,
-        "success": True if message == "" else False
-    }
+    return create_response(message, data=data)
 
-@app.route("/admin/delete/user/<id>", methods=["DELETE"])
+@app.route("/admin/delete/<request_type>/<id>", methods=["DELETE"])
 @admin_required
-def admin_delete_user(id):
-    message = ""
+def admin_delete(request_type, id):
+    request_types = ["user", "followed_match", "followed_league"]
+    if request_type not in request_types:
+        return create_response(f"wrong request type: {request_type}, possible options: {request_types}")
     
-    user_id = id
-    
-    user = User.query.filter_by(id=user_id).first()
-    if user is None:
-        message = "user not found"
-    else:
-        FollowedMatch.query.filter_by(user_id=user_id).delete()
-        FollowedLeague.query.filter_by(user_id=user_id).delete()
-        db.session.delete(user)
-        db.session.commit()
-    return {
-        "message": message,
-        "data": None,
-        "success": True if message == "" else False
-    }
+    match request_type:
+        case "user":
+            message = ""
 
-@app.route("/admin/delete/followed_match", methods=["DELETE"])
-@admin_required
-def admin_delete_followed_match():
-    message = ""
-    
-    match_id = request.args.get("id")
-    
-    match = FollowedMatch.query.filter_by(id=match_id).first()
-    if match is None:
-        message = "match not found"
-    else:
-        db.session.delete(match)
-        db.session.commit()
-    return {
-        "message": message,
-        "data": None,
-        "success": True if message == "" else False
-    }
+            user = User.query.filter_by(id=id).first()
+            if user is None:
+                message = "user not found"
+            else:
+                FollowedMatch.query.filter_by(user_id=id).delete()
+                FollowedLeague.query.filter_by(user_id=id).delete()
+                db.session.delete(user)
+                db.session.commit()
 
-@app.route("/admin/delete/followed_league", methods=["DELETE"])
-@admin_required
-def admin_delete_followed_league():
-    message = ""
-    
-    league_id = request.args.get("id")
-    
-    league = FollowedLeague.query.filter_by(id=league_id).first()
-    if match is None:
-        message = "league not found"
-    else:
-        db.session.delete(league)
-        db.session.commit()
-    return {
-        "message": message,
-        "data": None,
-        "success": True if message == "" else False
-    }
+            return create_response(message)
+        
+        case "followed_match":
+            message = ""
 
+            match = FollowedMatch.query.filter_by(id=id).first()
+            if match is None:
+                message = "match not found"
+            else:
+                db.session.delete(match)
+                db.session.commit()
+
+            return create_response(message)
+        
+        case "followed_league":
+            message = ""
+
+            league = FollowedLeague.query.filter_by(id=id).first()
+            if league is None:
+                message = "league not found"
+            else:
+                db.session.delete(league)
+                db.session.commit()
+
+            return create_response(message)
+        
+    raise UnexpectedError

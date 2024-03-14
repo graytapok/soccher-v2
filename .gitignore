@@ -24,4 +24,5 @@ yarn-error.log*
 venv
 __pycache__
 .env
+venv
 .idea

@@ -3,7 +3,6 @@ from flask_mail import Mail
 from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
-from flask_marshmallow import Marshmallow
 
 from itsdangerous import URLSafeTimedSerializer
 from shutil import get_terminal_size
@@ -23,7 +22,6 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
 mail = Mail(app)
-ma = Marshmallow(app)
 safe = URLSafeTimedSerializer(app.config["SECRET_KEY"])
 
 from database.models import *

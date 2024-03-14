@@ -4,7 +4,7 @@ from flask_login import current_user
 from app import app, db
 from tools import create_response
 from database.models import User, FollowedMatch
-from api.api_requests import *
+from api.api_requests import ApiData
 
 from PIL import ImageColor
 from icecream import ic
@@ -14,9 +14,15 @@ import time
 import json
 import os
 
-with app.app_context():
-    date = datetime.now()
-    todays_json = api_match_date(date.day, date.month, date.year, update=True, timeframe=60*60*60*24)
+with app.app_context(): 
+    day, month, year = datetime.now().day, datetime.now().month, datetime.now().year
+    ApiData(
+        day = day,
+        month = month,
+        year = year,
+        update=True,
+        timeframe = 60*60
+    ).match("date")
 
 @app.route("/index", methods=["GET"])
 def index():
@@ -24,7 +30,7 @@ def index():
     
     # Open or create JSON file for today's matches.
     d, m, y = datetime.now().day, datetime.now().month, datetime.now().year
-    todays_json = api_match_date(d, m, y)
+    todays_json = ApiData(day=d, month=m, year=y, timeframe=60*60).match("date")
         
     # Creating a dict of today's most important matches by "priority".
     matches = []
@@ -120,7 +126,7 @@ def league(league_id):
     league_id = int(league_id)
     
     # Open or create JSON file for league_id.
-    api_request = api_league_standings(league_id)
+    api_request = ApiData(id=league_id).league("standings")
     standings_json = api_request["json"]
     season = api_request["season"]
         
@@ -175,14 +181,11 @@ def match_details(match_id):
     message = ""
     
     # Open JSON files.
-    details_json = api_match_details(match_id)
-    statistics_json = api_match_statistics(match_id)
-    try:
-        preform_json = api_match_preform(match_id)
-        lineups_json = api_match_lineups(match_id)
-    except:
-        preform_json = None
-        lineups_json = None
+    details_json = ApiData(id=match_id).match("details")
+    statistics_json = ApiData(id=match_id).match("statistics")
+    
+    preform_json = ApiData(id=match_id).match("preform")
+    lineups_json = ApiData(id=match_id).match("lineups")
 
     status = details_json["event"]["status"]["type"]
 
@@ -391,7 +394,7 @@ def countrys_ranking():
     message = ""
     
     # Open or create the ranking JSON file.
-    json_data = api_fifa_country_ranking()
+    json_data = ApiData().othe("fifa")
 
     # Get information about each team.
     countrys = []

@@ -1,0 +1,5542 @@
+{
+    "leagues": {
+        "17": {
+            "name": "Premier League",
+            "slug": "premier-league",
+            "category_name": "England",
+            "priority": 562
+        },
+        "8": {
+            "name": "LaLiga",
+            "slug": "laliga",
+            "category_name": "Spain",
+            "priority": 561
+        },
+        "23": {
+            "name": "Serie A",
+            "slug": "serie-a",
+            "category_name": "Italy",
+            "priority": 560
+        },
+        "35": {
+            "name": "Bundesliga",
+            "slug": "bundesliga",
+            "category_name": "Germany",
+            "priority": 559
+        },
+        "34": {
+            "name": "Ligue 1",
+            "slug": "ligue-1",
+            "category_name": "France",
+            "priority": 558
+        },
+        "238": {
+            "name": "Liga Portugal",
+            "slug": "liga-portugal",
+            "category_name": "Portugal",
+            "priority": 410
+        },
+        "37": {
+            "name": "Eredivisie",
+            "slug": "eredivisie",
+            "category_name": "Netherlands",
+            "priority": 407
+        },
+        "325": {
+            "name": "Brasileiro S\u00e9rie A",
+            "slug": "brasileiro-serie-a",
+            "category_name": "Brazil",
+            "priority": 404
+        },
+        "52": {
+            "name": "Trendyol S\u00fcper Lig",
+            "slug": "trendyol-super-lig",
+            "category_name": "Turkey",
+            "priority": 402
+        },
+        "38": {
+            "name": "Pro League",
+            "slug": "pro-league",
+            "category_name": "Belgium",
+            "priority": 389
+        },
+        "185": {
+            "name": "Stoiximan Super League",
+            "slug": "stoiximan-super-league",
+            "category_name": "Greece",
+            "priority": 388
+        },
+        "36": {
+            "name": "Premiership",
+            "slug": "premiership",
+            "category_name": "Scotland",
+            "priority": 382
+        },
+        "11621": {
+            "name": "Liga MX, Apertura",
+            "slug": "liga-mx-apertura",
+            "category_name": "Mexico",
+            "priority": 367
+        },
+        "170": {
+            "name": "HNL",
+            "slug": "hnl",
+            "category_name": "Croatia",
+            "priority": 362
+        },
+        "210": {
+            "name": "Superliga",
+            "slug": "superliga",
+            "category_name": "Serbia",
+            "priority": 358
+        },
+        "242": {
+            "name": "Major League Soccer",
+            "slug": "major-league-soccer",
+            "category_name": "USA",
+            "priority": 344
+        },
+        "18": {
+            "name": "Championship",
+            "slug": "championship",
+            "category_name": "England",
+            "priority": 311
+        },
+        "54": {
+            "name": "LaLiga 2",
+            "slug": "laliga-2",
+            "category_name": "Spain",
+            "priority": 309
+        },
+        "44": {
+            "name": "2. Bundesliga",
+            "slug": "2-bundesliga",
+            "category_name": "Germany",
+            "priority": 307
+        },
+        "53": {
+            "name": "Serie B",
+            "slug": "serie-b",
+            "category_name": "Italy",
+            "priority": 301
+        },
+        "182": {
+            "name": "Ligue 2",
+            "slug": "ligue-2",
+            "category_name": "France",
+            "priority": 298
+        },
+        "390": {
+            "name": "Brasileiro S\u00e9rie B",
+            "slug": "brasileiro-serie-b",
+            "category_name": "Brazil",
+            "priority": 297
+        },
+        "131": {
+            "name": "Eerste Divisie",
+            "slug": "eerste-divisie",
+            "category_name": "Netherlands",
+            "priority": 275
+        },
+        "98": {
+            "name": "Trendyol 1.Lig",
+            "slug": "trendyol-1lig",
+            "category_name": "Turkey",
+            "priority": 274
+        },
+        "45": {
+            "name": "Bundesliga",
+            "slug": "bundesliga",
+            "category_name": "Austria",
+            "priority": 269
+        },
+        "11653": {
+            "name": "Primera Division",
+            "slug": "primera-division",
+            "category_name": "Chile",
+            "priority": 250
+        },
+        "11536": {
+            "name": "Primera A, Clausura",
+            "slug": "primera-a-clausura",
+            "category_name": "Colombia",
+            "priority": 246
+        },
+        "172": {
+            "name": "1. Liga",
+            "slug": "1-liga",
+            "category_name": "Czech Republic",
+            "priority": 223
+        },
+        "202": {
+            "name": "Ekstraklasa",
+            "slug": "ekstraklasa",
+            "category_name": "Poland",
+            "priority": 220
+        },
+        "39": {
+            "name": "Superliga",
+            "slug": "superliga",
+            "category_name": "Denmark",
+            "priority": 209
+        },
+        "24": {
+            "name": "League One",
+            "slug": "league-one",
+            "category_name": "England",
+            "priority": 206
+        },
+        "25": {
+            "name": "League Two",
+            "slug": "league-two",
+            "category_name": "England",
+            "priority": 204
+        },
+        "240": {
+            "name": "LigaPro Serie A, Segunda Etapa",
+            "slug": "ligapro-serie-a-segunda-etapa",
+            "category_name": "Ecuador",
+            "priority": 197
+        },
+        "196": {
+            "name": "J1 League",
+            "slug": "j1-league",
+            "category_name": "Japan",
+            "priority": 179
+        },
+        "20": {
+            "name": "Eliteserien",
+            "slug": "eliteserien",
+            "category_name": "Norway",
+            "priority": 176
+        },
+        "406": {
+            "name": "Liga 1, Clausura",
+            "slug": "liga-1-clausura",
+            "category_name": "Peru",
+            "priority": 172
+        },
+        "955": {
+            "name": "Saudi Professional League",
+            "slug": "saudi-professional-league",
+            "category_name": "Saudi Arabia",
+            "priority": 157
+        },
+        "152": {
+            "name": "Superliga",
+            "slug": "superliga",
+            "category_name": "Romania",
+            "priority": 152
+        },
+        "40": {
+            "name": "Allsvenskan",
+            "slug": "allsvenskan",
+            "category_name": "Sweden",
+            "priority": 146
+        },
+        "215": {
+            "name": "Super League",
+            "slug": "super-league",
+            "category_name": "Switzerland",
+            "priority": 144
+        },
+        "358": {
+            "name": "Premiership",
+            "slug": "premiership",
+            "category_name": "South Africa",
+            "priority": 142
+        },
+        "13470": {
+            "name": "Canadian Premier League",
+            "slug": "canadian-premier-league",
+            "category_name": "Canada",
+            "priority": 97
+        },
+        "13363": {
+            "name": "USL, Championship",
+            "slug": "usl-championship",
+            "category_name": "USA",
+            "priority": 92
+        },
+        "13362": {
+            "name": "USL League One",
+            "slug": "usl-league-one",
+            "category_name": "USA",
+            "priority": 90
+        },
+        "203": {
+            "name": "Premier Liga",
+            "slug": "premier-liga",
+            "category_name": "Russia",
+            "priority": 88
+        },
+        "851": {
+            "name": "International Matches",
+            "slug": "international-matches",
+            "category_name": "World",
+            "priority": 84
+        },
+        "1690": {
+            "name": "National Women's Soccer League",
+            "slug": "national-womens-soccer-league",
+            "category_name": "USA",
+            "priority": 83
+        },
+        "410": {
+            "name": "K League 1",
+            "slug": "k-league-1",
+            "category_name": "South Korea",
+            "priority": 26
+        },
+        "777": {
+            "name": "K League 2",
+            "slug": "k-league-2",
+            "category_name": "South Korea",
+            "priority": 25
+        },
+        "825": {
+            "name": "Stars League",
+            "slug": "stars-league",
+            "category_name": "Qatar",
+            "priority": 23
+        },
+        "9": {
+            "name": "Challenger Pro League",
+            "slug": "challenger-pro-league",
+            "category_name": "Belgium",
+            "priority": 11
+        },
+        "13475": {
+            "name": "Copa de la Liga",
+            "slug": "copa-de-la-liga",
+            "category_name": "Argentina",
+            "priority": 0
+        },
+        "703": {
+            "name": "Primera Nacional, Group A",
+            "slug": "primera-nacional-group-a",
+            "category_name": "Argentina",
+            "priority": 0
+        },
+        "135": {
+            "name": "2. Liga",
+            "slug": "2-liga",
+            "category_name": "Austria",
+            "priority": 0
+        },
+        "709": {
+            "name": "Premier League",
+            "slug": "premier-league",
+            "category_name": "Azerbaijan",
+            "priority": 0
+        },
+        "169": {
+            "name": "Vysshaya League",
+            "slug": "vysshaya-league",
+            "category_name": "Belarus",
+            "priority": 0
+        },
+        "222": {
+            "name": "Premijer Liga",
+            "slug": "premijer-liga",
+            "category_name": "Bosnia & Herzegovina",
+            "priority": 0
+        },
+        "1281": {
+            "name": "Brasileiro Serie C, Group B",
+            "slug": "brasileiro-serie-c-group-b",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "247": {
+            "name": "Parva Liga",
+            "slug": "parva-liga",
+            "category_name": "Bulgaria",
+            "priority": 0
+        },
+        "1240": {
+            "name": "Primera B",
+            "slug": "primera-b",
+            "category_name": "Chile",
+            "priority": 0
+        },
+        "782": {
+            "name": "CFA China League",
+            "slug": "cfa-china-league",
+            "category_name": "China",
+            "priority": 0
+        },
+        "1238": {
+            "name": "Primera B, Clausura",
+            "slug": "primera-b-clausura",
+            "category_name": "Colombia",
+            "priority": 0
+        },
+        "11535": {
+            "name": "Primera Division, Apertura",
+            "slug": "primera-division-apertura",
+            "category_name": "Costa Rica",
+            "priority": 0
+        },
+        "171": {
+            "name": "1. Division",
+            "slug": "1-division",
+            "category_name": "Cyprus",
+            "priority": 0
+        },
+        "205": {
+            "name": "FNL",
+            "slug": "fnl",
+            "category_name": "Czech Republic",
+            "priority": 0
+        },
+        "47": {
+            "name": "1st Division",
+            "slug": "1st-division",
+            "category_name": "Denmark",
+            "priority": 0
+        },
+        "65": {
+            "name": "2nd Division",
+            "slug": "2nd-division",
+            "category_name": "Denmark",
+            "priority": 0
+        },
+        "173": {
+            "name": "National League",
+            "slug": "national-league",
+            "category_name": "England",
+            "priority": 0
+        },
+        "178": {
+            "name": "Premium Liiga",
+            "slug": "premium-liiga",
+            "category_name": "Estonia",
+            "priority": 0
+        },
+        "41": {
+            "name": "Veikkausliiga",
+            "slug": "veikkausliiga",
+            "category_name": "Finland",
+            "priority": 0
+        },
+        "55": {
+            "name": "Ykkonen",
+            "slug": "ykkonen",
+            "category_name": "Finland",
+            "priority": 0
+        },
+        "704": {
+            "name": "Erovnuli Liga",
+            "slug": "erovnuli-liga",
+            "category_name": "Georgia",
+            "priority": 0
+        },
+        "491": {
+            "name": "3. Liga",
+            "slug": "3-liga",
+            "category_name": "Germany",
+            "priority": 0
+        },
+        "42": {
+            "name": "Regionalliga North",
+            "slug": "regionalliga-north",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "1083": {
+            "name": "Regionalliga Northeast",
+            "slug": "regionalliga-northeast",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "493": {
+            "name": "Regionalliga West",
+            "slug": "regionalliga-west",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "1079": {
+            "name": "Regionalliga Southwest",
+            "slug": "regionalliga-southwest",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "1085": {
+            "name": "Regionalliga Bavaria",
+            "slug": "regionalliga-bavaria",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "11619": {
+            "name": "Liga Guate Banrural, Apertura",
+            "slug": "liga-guate-banrural-apertura",
+            "category_name": "Guatemala",
+            "priority": 0
+        },
+        "187": {
+            "name": "NB I",
+            "slug": "nb-i",
+            "category_name": "Hungary",
+            "priority": 0
+        },
+        "188": {
+            "name": "Besta deild karla",
+            "slug": "besta-deild-karla",
+            "category_name": "Iceland",
+            "priority": 0
+        },
+        "1015": {
+            "name": "Liga 1",
+            "slug": "liga-1",
+            "category_name": "Indonesia",
+            "priority": 0
+        },
+        "915": {
+            "name": "Persian Gulf Pro League",
+            "slug": "persian-gulf-pro-league",
+            "category_name": "Iran",
+            "priority": 0
+        },
+        "193": {
+            "name": "First Division",
+            "slug": "first-division",
+            "category_name": "Ireland",
+            "priority": 0
+        },
+        "266": {
+            "name": "Premier League",
+            "slug": "premier-league",
+            "category_name": "Israel",
+            "priority": 0
+        },
+        "11445": {
+            "name": "Serie C, Girone A",
+            "slug": "serie-c-girone-a",
+            "category_name": "Italy",
+            "priority": 0
+        },
+        "11447": {
+            "name": "Serie C, Girone B",
+            "slug": "serie-c-girone-b",
+            "category_name": "Italy",
+            "priority": 0
+        },
+        "11446": {
+            "name": "Serie C, Girone C",
+            "slug": "serie-c-girone-c",
+            "category_name": "Italy",
+            "priority": 0
+        },
+        "402": {
+            "name": "J2 League",
+            "slug": "j2-league",
+            "category_name": "Japan",
+            "priority": 0
+        },
+        "197": {
+            "name": "Virsliga",
+            "slug": "virsliga",
+            "category_name": "Latvia",
+            "priority": 0
+        },
+        "198": {
+            "name": "A Lyga",
+            "slug": "a-lyga",
+            "category_name": "Lithuania",
+            "priority": 0
+        },
+        "937": {
+            "name": "Botola",
+            "slug": "botola",
+            "category_name": "Morocco",
+            "priority": 0
+        },
+        "20833": {
+            "name": "Supercup, Women",
+            "slug": "supercup-women",
+            "category_name": "Netherlands",
+            "priority": 0
+        },
+        "199": {
+            "name": "1. MFL",
+            "slug": "1-mfl",
+            "category_name": "North Macedonia",
+            "priority": 0
+        },
+        "22": {
+            "name": "1st Division",
+            "slug": "1st-division",
+            "category_name": "Norway",
+            "priority": 0
+        },
+        "11085": {
+            "name": "2nd Division, Group 1",
+            "slug": "2nd-division-group-1",
+            "category_name": "Norway",
+            "priority": 0
+        },
+        "11090": {
+            "name": "2nd Division, Group 2",
+            "slug": "2nd-division-group-2",
+            "category_name": "Norway",
+            "priority": 0
+        },
+        "201": {
+            "name": "Toppserien, Women",
+            "slug": "toppserien-women",
+            "category_name": "Norway",
+            "priority": 0
+        },
+        "11541": {
+            "name": "Primera Division, Clausura",
+            "slug": "primera-division-clausura",
+            "category_name": "Paraguay",
+            "priority": 0
+        },
+        "229": {
+            "name": "I Liga",
+            "slug": "i-liga",
+            "category_name": "Poland",
+            "priority": 0
+        },
+        "239": {
+            "name": "Liga Portugal 2",
+            "slug": "liga-portugal-2",
+            "category_name": "Portugal",
+            "priority": 0
+        },
+        "204": {
+            "name": "First League",
+            "slug": "first-league",
+            "category_name": "Russia",
+            "priority": 0
+        },
+        "206": {
+            "name": "Championship",
+            "slug": "championship",
+            "category_name": "Scotland",
+            "priority": 0
+        },
+        "207": {
+            "name": "League One",
+            "slug": "league-one",
+            "category_name": "Scotland",
+            "priority": 0
+        },
+        "209": {
+            "name": "League Two",
+            "slug": "league-two",
+            "category_name": "Scotland",
+            "priority": 0
+        },
+        "211": {
+            "name": "Nik\u00e9 liga",
+            "slug": "nike-liga",
+            "category_name": "Slovakia",
+            "priority": 0
+        },
+        "212": {
+            "name": "PrvaLiga",
+            "slug": "prvaliga",
+            "category_name": "Slovenia",
+            "priority": 0
+        },
+        "1125": {
+            "name": "MTN 8",
+            "slug": "mtn-8",
+            "category_name": "South Africa",
+            "priority": 0
+        },
+        "46": {
+            "name": "Superettan",
+            "slug": "superettan",
+            "category_name": "Sweden",
+            "priority": 0
+        },
+        "214": {
+            "name": "Damallsvenskan",
+            "slug": "damallsvenskan",
+            "category_name": "Sweden",
+            "priority": 0
+        },
+        "216": {
+            "name": "Challenge League",
+            "slug": "challenge-league",
+            "category_name": "Switzerland",
+            "priority": 0
+        },
+        "984": {
+            "name": "Ligue 1, Group A",
+            "slug": "ligue-1-group-a",
+            "category_name": "Tunisia",
+            "priority": 0
+        },
+        "218": {
+            "name": "Premier League",
+            "slug": "premier-league",
+            "category_name": "Ukraine",
+            "priority": 0
+        },
+        "278": {
+            "name": "Primera Division, Clausura",
+            "slug": "primera-division-clausura",
+            "category_name": "Uruguay",
+            "priority": 0
+        },
+        "254": {
+            "name": "Cymru Premier",
+            "slug": "cymru-premier",
+            "category_name": "Wales",
+            "priority": 0
+        },
+        "853": {
+            "name": "Club Friendly Games",
+            "slug": "club-friendly-games",
+            "category_name": "World",
+            "priority": 0
+        },
+        "720": {
+            "name": "Kategoria Superiore",
+            "slug": "kategoria-superiore",
+            "category_name": "Albania",
+            "priority": 0
+        },
+        "722": {
+            "name": "Kategoria e Pare",
+            "slug": "kategoria-e-pare",
+            "category_name": "Albania",
+            "priority": 0
+        },
+        "1347": {
+            "name": "Primera B, Clausura",
+            "slug": "primera-b-clausura",
+            "category_name": "Argentina",
+            "priority": 0
+        },
+        "11386": {
+            "name": "Primera C, Apertura",
+            "slug": "primera-c-apertura",
+            "category_name": "Argentina",
+            "priority": 0
+        },
+        "14090": {
+            "name": "Torneo Federal A, Group A",
+            "slug": "torneo-federal-a-group-a",
+            "category_name": "Argentina",
+            "priority": 0
+        },
+        "20877": {
+            "name": "Copa de la Liga, Reserves",
+            "slug": "copa-de-la-liga-reserves",
+            "category_name": "Argentina",
+            "priority": 0
+        },
+        "20899": {
+            "name": "Copa de la Liga, Women",
+            "slug": "copa-de-la-liga-women",
+            "category_name": "Argentina",
+            "priority": 0
+        },
+        "671": {
+            "name": "IDBank Premier League",
+            "slug": "idbank-premier-league",
+            "category_name": "Armenia",
+            "priority": 0
+        },
+        "1260": {
+            "name": "Capital NPL 1",
+            "slug": "capital-npl-1",
+            "category_name": "Australia",
+            "priority": 0
+        },
+        "1274": {
+            "name": "NSW NPL, Rel/Prom Playoff",
+            "slug": "nsw-npl-relprom-playoff",
+            "category_name": "Australia",
+            "priority": 0
+        },
+        "1638": {
+            "name": "Northern NSW NPL, Final Round",
+            "slug": "northern-nsw-npl-final-round",
+            "category_name": "Australia",
+            "priority": 0
+        },
+        "1268": {
+            "name": "Queensland NPL, Final Round",
+            "slug": "queensland-npl-final-round",
+            "category_name": "Australia",
+            "priority": 0
+        },
+        "168": {
+            "name": "Regionalliga Centre",
+            "slug": "regionalliga-centre",
+            "category_name": "Austria Amateur",
+            "priority": 0
+        },
+        "166": {
+            "name": "Regionalliga East",
+            "slug": "regionalliga-east",
+            "category_name": "Austria Amateur",
+            "priority": 0
+        },
+        "167": {
+            "name": "Regionalliga West",
+            "slug": "regionalliga-west",
+            "category_name": "Austria Amateur",
+            "priority": 0
+        },
+        "9415": {
+            "name": "Bundesliga Women",
+            "slug": "bundesliga-women",
+            "category_name": "Austria Amateur",
+            "priority": 0
+        },
+        "21050": {
+            "name": "\u0130kinci liqa",
+            "slug": "ikinci-liqa",
+            "category_name": "Azerbaijan",
+            "priority": 0
+        },
+        "776": {
+            "name": "Pershaya Liga",
+            "slug": "pershaya-liga",
+            "category_name": "Belarus",
+            "priority": 0
+        },
+        "2127": {
+            "name": "Superleague, Women",
+            "slug": "superleague-women",
+            "category_name": "Belgium",
+            "priority": 0
+        },
+        "17211": {
+            "name": "Tweede Afdeling VV B",
+            "slug": "tweede-afdeling-vv-b",
+            "category_name": "Belgium Amateur",
+            "priority": 0
+        },
+        "20696": {
+            "name": "Li\u00e8ge - 3\u00e8me Provencial D",
+            "slug": "liege-3eme-provencial-d",
+            "category_name": "Belgium Amateur",
+            "priority": 0
+        },
+        "19634": {
+            "name": "Li\u00e8ge - 4\u00e8me Provenciale P4G",
+            "slug": "liege-4eme-provenciale-p4g",
+            "category_name": "Belgium Amateur",
+            "priority": 0
+        },
+        "18253": {
+            "name": "Oost-Vlaanderen - 2de Provinciale A",
+            "slug": "oost-vlaanderen-2de-provinciale-a",
+            "category_name": "Belgium Amateur",
+            "priority": 0
+        },
+        "19011": {
+            "name": "Copa Sim\u00f3n Bol\u00edvar, Fase 2 - Grupo A",
+            "slug": "copa-simon-bolivar-fase-2-grupo-a",
+            "category_name": "Bolivia",
+            "priority": 0
+        },
+        "716": {
+            "name": "Prva Liga, Federacije BiH",
+            "slug": "prva-liga-federacije-bih",
+            "category_name": "Bosnia & Herzegovina",
+            "priority": 0
+        },
+        "715": {
+            "name": "Prva Liga, Republike Srpske",
+            "slug": "prva-liga-republike-srpske",
+            "category_name": "Bosnia & Herzegovina",
+            "priority": 0
+        },
+        "16328": {
+            "name": "2. Liga FBIH - Centar",
+            "slug": "2-liga-fbih-centar",
+            "category_name": "Bosnia & Herzegovina Amateur",
+            "priority": 0
+        },
+        "17138": {
+            "name": "2. Liga FBiH Zapad",
+            "slug": "2-liga-fbih-zapad",
+            "category_name": "Bosnia & Herzegovina Amateur",
+            "priority": 0
+        },
+        "16336": {
+            "name": "2. Liga FBIH - Sjever",
+            "slug": "2-liga-fbih-sjever",
+            "category_name": "Bosnia & Herzegovina Amateur",
+            "priority": 0
+        },
+        "16345": {
+            "name": "2. Liga FBIH - Jug",
+            "slug": "2-liga-fbih-jug",
+            "category_name": "Bosnia & Herzegovina Amateur",
+            "priority": 0
+        },
+        "16332": {
+            "name": "2. Liga RS - Zapad",
+            "slug": "2-liga-rs-zapad",
+            "category_name": "Bosnia & Herzegovina Amateur",
+            "priority": 0
+        },
+        "20919": {
+            "name": "Regionalna liga RS - Zapad",
+            "slug": "regionalna-liga-rs-zapad",
+            "category_name": "Bosnia & Herzegovina Amateur",
+            "priority": 0
+        },
+        "16774": {
+            "name": "Regionalna liga RS - Centar",
+            "slug": "regionalna-liga-rs-centar",
+            "category_name": "Bosnia & Herzegovina Amateur",
+            "priority": 0
+        },
+        "20216": {
+            "name": "Regionalna liga RS - Istok",
+            "slug": "regionalna-liga-rs-istok",
+            "category_name": "Bosnia & Herzegovina Amateur",
+            "priority": 0
+        },
+        "19052": {
+            "name": "Kantonalna Liga ZDK",
+            "slug": "kantonalna-liga-zdk",
+            "category_name": "Bosnia & Herzegovina Amateur",
+            "priority": 0
+        },
+        "16658": {
+            "name": "1. \u017dNL Posavina",
+            "slug": "1-znl-posavina",
+            "category_name": "Bosnia & Herzegovina Amateur",
+            "priority": 0
+        },
+        "18284": {
+            "name": "Podru\u010dna liga - Banja Luka",
+            "slug": "podrucna-liga-banja-luka",
+            "category_name": "Bosnia & Herzegovina Amateur",
+            "priority": 0
+        },
+        "20345": {
+            "name": "Podru\u010dna liga RS - Doboj",
+            "slug": "podrucna-liga-rs-doboj",
+            "category_name": "Bosnia & Herzegovina Amateur",
+            "priority": 0
+        },
+        "20487": {
+            "name": "Podru\u010dna liga RS - Gradi\u0161ka",
+            "slug": "podrucna-liga-rs-gradiska",
+            "category_name": "Bosnia & Herzegovina Amateur",
+            "priority": 0
+        },
+        "20527": {
+            "name": "Podru\u010dna liga RS - Modri\u010da-\u0160amac, Group A",
+            "slug": "podrucna-liga-rs-modrica-samac-group-a",
+            "category_name": "Bosnia & Herzegovina Amateur",
+            "priority": 0
+        },
+        "10326": {
+            "name": "Brasileiro Serie D, Knockout Stage",
+            "slug": "brasileiro-serie-d-knockout-stage",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "10257": {
+            "name": "Campeonato Brasileiro, Serie A1, Women, Playoffs",
+            "slug": "campeonato-brasileiro-serie-a1-women-playoffs",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "21009": {
+            "name": "Brasiliense, S\u00e9rie B \u2013 Grupo A",
+            "slug": "brasiliense-serie-b-grupo-a",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "21066": {
+            "name": "Brasiliense, Feminino",
+            "slug": "brasiliense-feminino",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "20806": {
+            "name": "Capixaba, S\u00e9rie B - Grupo Centro-Norte",
+            "slug": "capixaba-serie-b-grupo-centro-norte",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "18897": {
+            "name": "Carioca, Feminino - Qualificat\u00f3ria",
+            "slug": "carioca-feminino-qualificatoria",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "20898": {
+            "name": "Copa Santa Catarina",
+            "slug": "copa-santa-catarina",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "20894": {
+            "name": "Catarinense, Feminino",
+            "slug": "catarinense-feminino",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "20707": {
+            "name": "Ga\u00facho, Feminino",
+            "slug": "gaucho-feminino",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "19220": {
+            "name": "Goiano, Divis\u00e3o de Acesso",
+            "slug": "goiano-divisao-de-acesso",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "21011": {
+            "name": "Goiano, Terceira Divis\u00e3o \u2013 Grupo A",
+            "slug": "goiano-terceira-divisao-grupo-a",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "20895": {
+            "name": "Goiano, Feminino - 1\u00b0 Turno",
+            "slug": "goiano-feminino-1deg-turno",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "21028": {
+            "name": "Copa FMF \u2013 Primeira Fase",
+            "slug": "copa-fmf-primeira-fase",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "20750": {
+            "name": "Mineiro, Segunda Divis\u00e3o - Grupo D",
+            "slug": "mineiro-segunda-divisao-grupo-d",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "20893": {
+            "name": "Paraibano, 2\u00aa Divis\u00e3o",
+            "slug": "paraibano-2a-divisao",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "20058": {
+            "name": "Paulista, Segunda Divisao U23, Playoffs",
+            "slug": "paulista-segunda-divisao-u23-playoffs",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "10383": {
+            "name": "Copa Paulista, Group 1",
+            "slug": "copa-paulista-group-1",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "14448": {
+            "name": "Paulista, Feminino",
+            "slug": "paulista-feminino",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "20825": {
+            "name": "Sergipano, S\u00e9rie A2 - Grupo A",
+            "slug": "sergipano-serie-a2-grupo-a",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "20351": {
+            "name": "U20 Cearense, Playoffs",
+            "slug": "u20-cearense-playoffs",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "10308": {
+            "name": "U20 Paulista, Group 22",
+            "slug": "u20-paulista-group-22",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "20800": {
+            "name": "U20 Potiguar - Playoffs",
+            "slug": "u20-potiguar-playoffs",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "20952": {
+            "name": "Suburbana de Curitiba",
+            "slug": "suburbana-de-curitiba",
+            "category_name": "Brazil Amateur",
+            "priority": 0
+        },
+        "20953": {
+            "name": "Suburbana de Curitiba, S\u00e9rie B - 2\u00aa Fase, Grupo C",
+            "slug": "suburbana-de-curitiba-serie-b-2a-fase-grupo-c",
+            "category_name": "Brazil Amateur",
+            "priority": 0
+        },
+        "19952": {
+            "name": "Super Copa Pioneer - Playoffs",
+            "slug": "super-copa-pioneer-playoffs",
+            "category_name": "Brazil Amateur",
+            "priority": 0
+        },
+        "21058": {
+            "name": "U17 Paranaense \u2013 2\u00aa Fase, Grupo F",
+            "slug": "u17-paranaense-2a-fase-grupo-f",
+            "category_name": "Brazil Amateur",
+            "priority": 0
+        },
+        "1135": {
+            "name": "Vtora Liga",
+            "slug": "vtora-liga",
+            "category_name": "Bulgaria",
+            "priority": 0
+        },
+        "16577": {
+            "name": "Treta Liga - SI",
+            "slug": "treta-liga-si",
+            "category_name": "Bulgaria Amateur",
+            "priority": 0
+        },
+        "17131": {
+            "name": "Treta Liga - SZ",
+            "slug": "treta-liga-sz",
+            "category_name": "Bulgaria Amateur",
+            "priority": 0
+        },
+        "16555": {
+            "name": "Treta Liga - YI",
+            "slug": "treta-liga-yi",
+            "category_name": "Bulgaria Amateur",
+            "priority": 0
+        },
+        "17181": {
+            "name": "Treta Liga - YZ",
+            "slug": "treta-liga-yz",
+            "category_name": "Bulgaria Amateur",
+            "priority": 0
+        },
+        "17208": {
+            "name": "Chetvarta liga - AOG Pazardzhik A",
+            "slug": "chetvarta-liga-aog-pazardzhik-a",
+            "category_name": "Bulgaria Amateur",
+            "priority": 0
+        },
+        "19073": {
+            "name": "Chetvarta liga - A OG Sofia",
+            "slug": "chetvarta-liga-a-og-sofia",
+            "category_name": "Bulgaria Amateur",
+            "priority": 0
+        },
+        "20929": {
+            "name": "Peta liga - B OG Sofia (Sever)",
+            "slug": "peta-liga-b-og-sofia-sever",
+            "category_name": "Bulgaria Amateur",
+            "priority": 0
+        },
+        "16663": {
+            "name": "Primus League",
+            "slug": "primus-league",
+            "category_name": "Burundi",
+            "priority": 0
+        },
+        "20342": {
+            "name": "Ligue1 Qu\u00e9bec",
+            "slug": "ligue1-quebec",
+            "category_name": "Canada",
+            "priority": 0
+        },
+        "20370": {
+            "name": "League1 Ontario - Playoffs",
+            "slug": "league1-ontario-playoffs",
+            "category_name": "Canada",
+            "priority": 0
+        },
+        "18834": {
+            "name": "Segunda Divisi\u00f3n",
+            "slug": "segunda-division",
+            "category_name": "Chile Amateur",
+            "priority": 0
+        },
+        "20308": {
+            "name": "Liga One - Clausura",
+            "slug": "liga-one-clausura",
+            "category_name": "Chile Amateur",
+            "priority": 0
+        },
+        "10580": {
+            "name": "Chinese Super League, Women",
+            "slug": "chinese-super-league-women",
+            "category_name": "China",
+            "priority": 0
+        },
+        "10381": {
+            "name": "China League 2, Relegation Round",
+            "slug": "china-league-2-relegation-round",
+            "category_name": "China",
+            "priority": 0
+        },
+        "11671": {
+            "name": "Liga de Ascenso, Apertura, Group 1",
+            "slug": "liga-de-ascenso-apertura-group-1",
+            "category_name": "Costa Rica",
+            "priority": 0
+        },
+        "724": {
+            "name": "Prva NL",
+            "slug": "prva-nl",
+            "category_name": "Croatia",
+            "priority": 0
+        },
+        "19122": {
+            "name": "2. NL",
+            "slug": "2-nl",
+            "category_name": "Croatia",
+            "priority": 0
+        },
+        "19132": {
+            "name": "3. NL - Centar",
+            "slug": "3-nl-centar",
+            "category_name": "Croatia",
+            "priority": 0
+        },
+        "19114": {
+            "name": "3. NL - Istok",
+            "slug": "3-nl-istok",
+            "category_name": "Croatia",
+            "priority": 0
+        },
+        "19124": {
+            "name": "3. NL - Jug",
+            "slug": "3-nl-jug",
+            "category_name": "Croatia",
+            "priority": 0
+        },
+        "19051": {
+            "name": "3. NL - Sjever",
+            "slug": "3-nl-sjever",
+            "category_name": "Croatia",
+            "priority": 0
+        },
+        "19115": {
+            "name": " 3. NL - Zapad",
+            "slug": "3-nl-zapad",
+            "category_name": "Croatia",
+            "priority": 0
+        },
+        "17212": {
+            "name": "1. HNL\u017d",
+            "slug": "1-hnlz",
+            "category_name": "Croatia",
+            "priority": 0
+        },
+        "19318": {
+            "name": "Prva NL Juniori",
+            "slug": "prva-nl-juniori",
+            "category_name": "Croatia",
+            "priority": 0
+        },
+        "15272": {
+            "name": "4. NL Sredi\u0161te Zagreb - Podskupina A",
+            "slug": "4-nl-srediste-zagreb-podskupina-a",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "15920": {
+            "name": "4. NL BJ-KC-VT",
+            "slug": "4-nl-bj-kc-vt",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "15921": {
+            "name": " Elitna \u017dNL Vara\u017edin",
+            "slug": "elitna-znl-varazdin",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "15919": {
+            "name": "4. NL NS Rijeka ",
+            "slug": "4-nl-ns-rijeka",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "15273": {
+            "name": "M\u017dNL SB-P\u017d",
+            "slug": "mznl-sb-pz",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "15922": {
+            "name": "M\u017dNL Osijek-Vinkovci",
+            "slug": "mznl-osijek-vinkovci",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "15932": {
+            "name": "J\u017dNL Zagreba\u010dka ",
+            "slug": "jznl-zagrebacka",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "20692": {
+            "name": "1. \u017dNL Zagreba\u010dka - Jug",
+            "slug": "1-znl-zagrebacka-jug",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16334": {
+            "name": "1. \u017dNL Zagreba\u010dka - Istok",
+            "slug": "1-znl-zagrebacka-istok",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16361": {
+            "name": "1. \u017dNL Zagreba\u010dka - Zapad",
+            "slug": "1-znl-zagrebacka-zapad",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "15940": {
+            "name": "1. Zagreba\u010dka NL",
+            "slug": "1-zagrebacka-nl",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "15941": {
+            "name": "2. Zagreba\u010dka NL",
+            "slug": "2-zagrebacka-nl",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "18522": {
+            "name": "1. \u017dNL Bjelovarsko-bilogorska",
+            "slug": "1-znl-bjelovarsko-bilogorska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "18278": {
+            "name": "2. \u017dNL Bjelovarsko-bilogorska",
+            "slug": "2-znl-bjelovarsko-bilogorska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "20703": {
+            "name": "3. \u017dNL Bjelovarsko-bilogorska - Jug",
+            "slug": "3-znl-bjelovarsko-bilogorska-jug",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "19069": {
+            "name": "1. \u017dNL Brodsko-posavska",
+            "slug": "1-znl-brodsko-posavska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16840": {
+            "name": "2. \u017dNL Brodsko-posavska - A",
+            "slug": "2-znl-brodsko-posavska-a",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "15992": {
+            "name": "1. \u017dNL Istarska",
+            "slug": "1-znl-istarska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16325": {
+            "name": "2. \u017dNL Istarska",
+            "slug": "2-znl-istarska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "15930": {
+            "name": "1. \u017dNL Karlovac",
+            "slug": "1-znl-karlovac",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "15931": {
+            "name": "2. \u017dNL Karlovac",
+            "slug": "2-znl-karlovac",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16383": {
+            "name": "1. \u017dNL Koprivni\u010dko-kri\u017eeva\u010dka",
+            "slug": "1-znl-koprivnicko-krizevacka",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16977": {
+            "name": "3. \u017dNL Koprivnica",
+            "slug": "3-znl-koprivnica",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16849": {
+            "name": "3. \u017dNL Kri\u017eevci",
+            "slug": "3-znl-krizevci",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "15939": {
+            "name": "1. \u017dNL Krapinsko-zagorska",
+            "slug": "1-znl-krapinsko-zagorska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "15960": {
+            "name": "2. \u017dNL Krapinsko-zagorska",
+            "slug": "2-znl-krapinsko-zagorska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16845": {
+            "name": "Me\u0111imurska Premier NL",
+            "slug": "medimurska-premier-nl",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "18405": {
+            "name": "1. Me\u0111imurska NL",
+            "slug": "1-medimurska-nl",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "15996": {
+            "name": "1. \u017dNL Osje\u010dko-baranjska",
+            "slug": "1-znl-osjecko-baranjska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16627": {
+            "name": "2. \u017dNL Osijek",
+            "slug": "2-znl-osijek",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16637": {
+            "name": "3. \u017dNL Osijek",
+            "slug": "3-znl-osijek",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "17141": {
+            "name": "2. \u017dNL Beli Manastir",
+            "slug": "2-znl-beli-manastir",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "19296": {
+            "name": "2. \u017dNL Donji Miholjac",
+            "slug": "2-znl-donji-miholjac",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16347": {
+            "name": "2. \u017dNL \u0110akovo",
+            "slug": "2-znl-dakovo",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "19216": {
+            "name": "2. \u017dNL Na\u0161ice",
+            "slug": "2-znl-nasice",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16484": {
+            "name": "3. \u017dNL Baranjska liga",
+            "slug": "3-znl-baranjska-liga",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "15983": {
+            "name": "1. \u017dNL Po\u017ee\u0161ko-slavonska",
+            "slug": "1-znl-pozesko-slavonska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "19208": {
+            "name": "2. \u017dNL Po\u017ee\u0161ko-slavonska",
+            "slug": "2-znl-pozesko-slavonska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16479": {
+            "name": "1. \u017dNL Sisa\u010dko-moslava\u010dka",
+            "slug": "1-znl-sisacko-moslavacka",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "17369": {
+            "name": "2. \u017dNL Kutina",
+            "slug": "2-znl-kutina",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16755": {
+            "name": "2. \u017dNL Novska",
+            "slug": "2-znl-novska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16802": {
+            "name": "2. \u017dNL Sisak",
+            "slug": "2-znl-sisak",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "15990": {
+            "name": "1. \u017dNL Vara\u017edinska",
+            "slug": "1-znl-varazdinska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16989": {
+            "name": "2. \u017dNL Vara\u017edinska",
+            "slug": "2-znl-varazdinska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "17173": {
+            "name": "3. \u017dNL Vara\u017edinska - Vara\u017edin",
+            "slug": "3-znl-varazdinska-varazdin",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "20971": {
+            "name": "Premijer \u017dNL Viroviti\u010dko-podravska",
+            "slug": "premijer-znl-viroviticko-podravska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16557": {
+            "name": "1. \u017dNL Viroviti\u010dko-podravska",
+            "slug": "1-znl-viroviticko-podravska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16576": {
+            "name": "2. \u017dNL Viroviti\u010dko-podravska - Istok",
+            "slug": "2-znl-viroviticko-podravska-istok",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "17130": {
+            "name": "2. \u017dNL Viroviti\u010dko-podravska Zapad",
+            "slug": "2-znl-viroviticko-podravska-zapad",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16348": {
+            "name": "1. \u017dNL Vukovarsko-srijemska",
+            "slug": "1-znl-vukovarsko-srijemska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16686": {
+            "name": "2. \u017dNL Vukovar",
+            "slug": "2-znl-vukovar",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16535": {
+            "name": "2. \u017dNL Vinkovci",
+            "slug": "2-znl-vinkovci",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16838": {
+            "name": "2. \u017dNL \u017dupanja",
+            "slug": "2-znl-zupanja",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "9387": {
+            "name": "CFL, Group A",
+            "slug": "cfl-group-a",
+            "category_name": "Czech Republic",
+            "priority": 0
+        },
+        "9386": {
+            "name": "MSFL",
+            "slug": "msfl",
+            "category_name": "Czech Republic",
+            "priority": 0
+        },
+        "823": {
+            "name": "1. Liga, Women",
+            "slug": "1-liga-women",
+            "category_name": "Czech Republic",
+            "priority": 0
+        },
+        "822": {
+            "name": "U19 1st Division",
+            "slug": "u19-1st-division",
+            "category_name": "Czech Republic",
+            "priority": 0
+        },
+        "20867": {
+            "name": "Division A",
+            "slug": "division-a",
+            "category_name": "Czech Republic",
+            "priority": 0
+        },
+        "20946": {
+            "name": "Divize B",
+            "slug": "divize-b",
+            "category_name": "Czech Republic",
+            "priority": 0
+        },
+        "20947": {
+            "name": "Divize C",
+            "slug": "divize-c",
+            "category_name": "Czech Republic",
+            "priority": 0
+        },
+        "20948": {
+            "name": "Divize D",
+            "slug": "divize-d",
+            "category_name": "Czech Republic",
+            "priority": 0
+        },
+        "20949": {
+            "name": "Divize F",
+            "slug": "divize-f",
+            "category_name": "Czech Republic",
+            "priority": 0
+        },
+        "20950": {
+            "name": "Divize E",
+            "slug": "divize-e",
+            "category_name": "Czech Republic",
+            "priority": 0
+        },
+        "16911": {
+            "name": "Linafoot Ligue 1 - Group A",
+            "slug": "linafoot-ligue-1-group-a",
+            "category_name": "DR Congo",
+            "priority": 0
+        },
+        "9412": {
+            "name": "Kvindeligaen",
+            "slug": "kvindeligaen",
+            "category_name": "Denmark",
+            "priority": 0
+        },
+        "17072": {
+            "name": "3rd Division",
+            "slug": "3rd-division",
+            "category_name": "Denmark",
+            "priority": 0
+        },
+        "18913": {
+            "name": "Danmarksserien, Group 1",
+            "slug": "danmarksserien-group-1",
+            "category_name": "Denmark Amateur",
+            "priority": 0
+        },
+        "20209": {
+            "name": "Liga Dominicana de F\u00fatbol - Liguilla",
+            "slug": "liga-dominicana-de-futbol-liguilla",
+            "category_name": "Dominican Republic",
+            "priority": 0
+        },
+        "11537": {
+            "name": "Primera Division, Apertura",
+            "slug": "primera-division-apertura",
+            "category_name": "El Salvador",
+            "priority": 0
+        },
+        "18919": {
+            "name": "Primera Division, Reserves, Apertura",
+            "slug": "primera-division-reserves-apertura",
+            "category_name": "El Salvador",
+            "priority": 0
+        },
+        "19969": {
+            "name": "Segunda Division, Apertura, Group Center-East",
+            "slug": "segunda-division-apertura-group-center-east",
+            "category_name": "El Salvador",
+            "priority": 0
+        },
+        "1696": {
+            "name": "FA Cup, Qualification",
+            "slug": "fa-cup-qualification",
+            "category_name": "England",
+            "priority": 0
+        },
+        "176": {
+            "name": "National League North",
+            "slug": "national-league-north",
+            "category_name": "England Amateur",
+            "priority": 0
+        },
+        "174": {
+            "name": "National League South",
+            "slug": "national-league-south",
+            "category_name": "England Amateur",
+            "priority": 0
+        },
+        "17242": {
+            "name": "Isthmian League, Division One South Central",
+            "slug": "isthmian-league-division-one-south-central",
+            "category_name": "England Amateur",
+            "priority": 0
+        },
+        "1129": {
+            "name": "Premier League 2, Division 1",
+            "slug": "premier-league-2-division-1",
+            "category_name": "England Amateur",
+            "priority": 0
+        },
+        "13946": {
+            "name": "Professional Development League",
+            "slug": "professional-development-league",
+            "category_name": "England Amateur",
+            "priority": 0
+        },
+        "10553": {
+            "name": "FA Womens Super League 2",
+            "slug": "fa-womens-super-league-2",
+            "category_name": "England Amateur",
+            "priority": 0
+        },
+        "678": {
+            "name": "Esiliiga",
+            "slug": "esiliiga",
+            "category_name": "Estonia",
+            "priority": 0
+        },
+        "19886": {
+            "name": "Esiliiga B",
+            "slug": "esiliiga-b",
+            "category_name": "Estonia",
+            "priority": 0
+        },
+        "20426": {
+            "name": "II Liiga - L\u00f5una/L\u00e4\u00e4ne piirkond",
+            "slug": "ii-liiga-lounalaane-piirkond",
+            "category_name": "Estonia",
+            "priority": 0
+        },
+        "673": {
+            "name": "Premier League",
+            "slug": "premier-league",
+            "category_name": "Faroe Islands",
+            "priority": 0
+        },
+        "16437": {
+            "name": "Digicel Premier League",
+            "slug": "digicel-premier-league",
+            "category_name": "Fiji",
+            "priority": 0
+        },
+        "179": {
+            "name": "Kakkonen, Group A",
+            "slug": "kakkonen-group-a",
+            "category_name": "Finland",
+            "priority": 0
+        },
+        "180": {
+            "name": "Kakkonen, Group B",
+            "slug": "kakkonen-group-b",
+            "category_name": "Finland",
+            "priority": 0
+        },
+        "181": {
+            "name": "Kakkonen, Group C",
+            "slug": "kakkonen-group-c",
+            "category_name": "Finland",
+            "priority": 0
+        },
+        "1662": {
+            "name": "Kansallinen Liiga, Women, Relegation group",
+            "slug": "kansallinen-liiga-women-relegation-group",
+            "category_name": "Finland",
+            "priority": 0
+        },
+        "11401": {
+            "name": "Championnat National U19, Group A",
+            "slug": "championnat-national-u19-group-a",
+            "category_name": "France",
+            "priority": 0
+        },
+        "18274": {
+            "name": "National 3 Groupe A",
+            "slug": "national-3-groupe-a",
+            "category_name": "France Amateur",
+            "priority": 0
+        },
+        "18238": {
+            "name": "National 3 Groupe B",
+            "slug": "national-3-groupe-b",
+            "category_name": "France Amateur",
+            "priority": 0
+        },
+        "19703": {
+            "name": "National 3 Groupe C",
+            "slug": "national-3-groupe-c",
+            "category_name": "France Amateur",
+            "priority": 0
+        },
+        "18239": {
+            "name": "National 3 Groupe D",
+            "slug": "national-3-groupe-d",
+            "category_name": "France Amateur",
+            "priority": 0
+        },
+        "18225": {
+            "name": "National 3 Groupe E",
+            "slug": "national-3-groupe-e",
+            "category_name": "France Amateur",
+            "priority": 0
+        },
+        "17402": {
+            "name": "National 3 Groupe F",
+            "slug": "national-3-groupe-f",
+            "category_name": "France Amateur",
+            "priority": 0
+        },
+        "18307": {
+            "name": "National 3 Groupe G",
+            "slug": "national-3-groupe-g",
+            "category_name": "France Amateur",
+            "priority": 0
+        },
+        "18410": {
+            "name": "National 3 Groupe H",
+            "slug": "national-3-groupe-h",
+            "category_name": "France Amateur",
+            "priority": 0
+        },
+        "19943": {
+            "name": "National 3 Groupe I",
+            "slug": "national-3-groupe-i",
+            "category_name": "France Amateur",
+            "priority": 0
+        },
+        "20828": {
+            "name": "National 3 Groupe J",
+            "slug": "national-3-groupe-j",
+            "category_name": "France Amateur",
+            "priority": 0
+        },
+        "18294": {
+            "name": "National 3 Groupe K",
+            "slug": "national-3-groupe-k",
+            "category_name": "France Amateur",
+            "priority": 0
+        },
+        "726": {
+            "name": "Erovnuli Liga 2",
+            "slug": "erovnuli-liga-2",
+            "category_name": "Georgia",
+            "priority": 0
+        },
+        "2288": {
+            "name": "2. Frauen-Bundesliga",
+            "slug": "2-frauen-bundesliga",
+            "category_name": "Germany",
+            "priority": 0
+        },
+        "1089": {
+            "name": "Bayernliga North",
+            "slug": "bayernliga-north",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "1091": {
+            "name": "Bayernliga South",
+            "slug": "bayernliga-south",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "508": {
+            "name": "Bremen-Liga",
+            "slug": "bremen-liga",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "509": {
+            "name": "Oberliga Hamburg",
+            "slug": "oberliga-hamburg",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "512": {
+            "name": "Schleswig-Holstein-Liga",
+            "slug": "schleswig-holstein-liga",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "813": {
+            "name": "Oberliga Niedersachsen",
+            "slug": "oberliga-niedersachsen",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "145": {
+            "name": "Oberliga NOFV North",
+            "slug": "oberliga-nofv-north",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "150": {
+            "name": "Oberliga NOFV South",
+            "slug": "oberliga-nofv-south",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "1103": {
+            "name": "Oberliga Niederrhein",
+            "slug": "oberliga-niederrhein",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "1105": {
+            "name": "Oberliga Mittelrhein",
+            "slug": "oberliga-mittelrhein",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "146": {
+            "name": "Oberliga Westfalen",
+            "slug": "oberliga-westfalen",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "1109": {
+            "name": "Oberliga Rheinland-Pfalz/Saar",
+            "slug": "oberliga-rheinland-pfalzsaar",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "142": {
+            "name": "Oberliga Baden Wuerttemberg",
+            "slug": "oberliga-baden-wuerttemberg",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "184": {
+            "name": "Hessenliga",
+            "slug": "hessenliga",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "17157": {
+            "name": "Westfalenliga - Staffel 1",
+            "slug": "westfalenliga-staffel-1",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "17165": {
+            "name": "Westfalenliga - Staffel 2",
+            "slug": "westfalenliga-staffel-2",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "11403": {
+            "name": "DFB Pokal, Junioren",
+            "slug": "dfb-pokal-junioren",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "19066": {
+            "name": "Landesliga Mittelrhein - Staffel 1",
+            "slug": "landesliga-mittelrhein-staffel-1",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "19375": {
+            "name": "Berlin Verbandsliga",
+            "slug": "berlin-verbandsliga",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "19830": {
+            "name": "Verbandsliga Hessen Mitte",
+            "slug": "verbandsliga-hessen-mitte",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "11414": {
+            "name": "U19 Super League",
+            "slug": "u19-super-league",
+            "category_name": "Greece",
+            "priority": 0
+        },
+        "20797": {
+            "name": "EPS Evoias Cup - Round A",
+            "slug": "eps-evoias-cup-round-a",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "20981": {
+            "name": "EPS Evoias League Cup",
+            "slug": "eps-evoias-league-cup",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "16948": {
+            "name": "Premier League",
+            "slug": "premier-league",
+            "category_name": "Grenada",
+            "priority": 0
+        },
+        "19949": {
+            "name": "Primera Divisi\u00f3n - Group A",
+            "slug": "primera-division-group-a",
+            "category_name": "Guatemala",
+            "priority": 0
+        },
+        "11613": {
+            "name": "Liga Nacional, Apertura",
+            "slug": "liga-nacional-apertura",
+            "category_name": "Honduras",
+            "priority": 0
+        },
+        "947": {
+            "name": "Premier League",
+            "slug": "premier-league",
+            "category_name": "Hong Kong",
+            "priority": 0
+        },
+        "1339": {
+            "name": "NB II",
+            "slug": "nb-ii",
+            "category_name": "Hungary",
+            "priority": 0
+        },
+        "16676": {
+            "name": "NB III Kelet",
+            "slug": "nb-iii-kelet",
+            "category_name": "Hungary",
+            "priority": 0
+        },
+        "16679": {
+            "name": "NB III K\u00f6z\u00e9p",
+            "slug": "nb-iii-kozep",
+            "category_name": "Hungary",
+            "priority": 0
+        },
+        "16682": {
+            "name": "NB III D\u00e9l-Nyugat",
+            "slug": "nb-iii-del-nyugat",
+            "category_name": "Hungary",
+            "priority": 0
+        },
+        "10518": {
+            "name": "NB I, Women",
+            "slug": "nb-i-women",
+            "category_name": "Hungary",
+            "priority": 0
+        },
+        "20224": {
+            "name": "B.A.Z. Megye I. oszt\u00e1ly",
+            "slug": "baz-megye-i-osztaly",
+            "category_name": "Hungary Amateur",
+            "priority": 0
+        },
+        "17114": {
+            "name": "BLSZ I. oszt\u00e1ly",
+            "slug": "blsz-i-osztaly",
+            "category_name": "Hungary Amateur",
+            "priority": 0
+        },
+        "19219": {
+            "name": "Ny\u00edr-Wetland Megyei I. oszt\u00e1ly",
+            "slug": "nyir-wetland-megyei-i-osztaly",
+            "category_name": "Hungary Amateur",
+            "priority": 0
+        },
+        "16786": {
+            "name": "Pest Megye I. oszt\u00e1ly",
+            "slug": "pest-megye-i-osztaly",
+            "category_name": "Hungary Amateur",
+            "priority": 0
+        },
+        "21033": {
+            "name": "Heves V\u00e1rmegyei I. oszt\u00e1ly",
+            "slug": "heves-varmegyei-i-osztaly",
+            "category_name": "Hungary Amateur",
+            "priority": 0
+        },
+        "675": {
+            "name": "1 deild",
+            "slug": "1-deild",
+            "category_name": "Iceland",
+            "priority": 0
+        },
+        "10309": {
+            "name": "2. deild",
+            "slug": "2-deild",
+            "category_name": "Iceland",
+            "priority": 0
+        },
+        "13578": {
+            "name": "3 deild",
+            "slug": "3-deild",
+            "category_name": "Iceland",
+            "priority": 0
+        },
+        "10496": {
+            "name": "1. deild, Women",
+            "slug": "1-deild-women",
+            "category_name": "Iceland",
+            "priority": 0
+        },
+        "10307": {
+            "name": "Besta deild, Women, Relegation round",
+            "slug": "besta-deild-women-relegation-round",
+            "category_name": "Iceland",
+            "priority": 0
+        },
+        "20809": {
+            "name": "Durand Cup, Knockout Stage",
+            "slug": "durand-cup-knockout-stage",
+            "category_name": "India",
+            "priority": 0
+        },
+        "2289": {
+            "name": "Calcutta Premier Division",
+            "slug": "calcutta-premier-division",
+            "category_name": "India",
+            "priority": 0
+        },
+        "11338": {
+            "name": "Azadegan League",
+            "slug": "azadegan-league",
+            "category_name": "Iran",
+            "priority": 0
+        },
+        "20065": {
+            "name": "Premier Division, Women",
+            "slug": "premier-division-women",
+            "category_name": "Ireland",
+            "priority": 0
+        },
+        "370": {
+            "name": "State Cup",
+            "slug": "state-cup",
+            "category_name": "Israel",
+            "priority": 0
+        },
+        "2292": {
+            "name": "Campionato Primavera 1",
+            "slug": "campionato-primavera-1",
+            "category_name": "Italy",
+            "priority": 0
+        },
+        "20001": {
+            "name": "Coppa Italia Serie D",
+            "slug": "coppa-italia-serie-d",
+            "category_name": "Italy",
+            "priority": 0
+        },
+        "16788": {
+            "name": "Eccellenza Abruzzo",
+            "slug": "eccellenza-abruzzo",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "20992": {
+            "name": "Coppa Italia Eccellenza Campania - Qualifying",
+            "slug": "coppa-italia-eccellenza-campania-qualifying",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "17229": {
+            "name": "Eccellenza Emilia-Romagna Girone A",
+            "slug": "eccellenza-emilia-romagna-girone-a",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "17230": {
+            "name": "Eccellenza Emilia-Romagna Girone B",
+            "slug": "eccellenza-emilia-romagna-girone-b",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "16835": {
+            "name": "Eccellenza Lazio Girone A",
+            "slug": "eccellenza-lazio-girone-a",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "16848": {
+            "name": "Eccellenza Lazio Girone B",
+            "slug": "eccellenza-lazio-girone-b",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "16877": {
+            "name": "Eccellenza Trentino - Alto Adige",
+            "slug": "eccellenza-trentino-alto-adige",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "20066": {
+            "name": "Promozione Alto Adige - Landesliga",
+            "slug": "promozione-alto-adige-landesliga",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "21031": {
+            "name": "Coppa Italia Eccellenza Veneto",
+            "slug": "coppa-italia-eccellenza-veneto",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "21032": {
+            "name": "Coppa Italia Eccellenza Sicilia ",
+            "slug": "coppa-italia-eccellenza-sicilia",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "2293": {
+            "name": "J3 League",
+            "slug": "j3-league",
+            "category_name": "Japan",
+            "priority": 0
+        },
+        "3085": {
+            "name": "Nadeshiko League, Div. 1, Women",
+            "slug": "nadeshiko-league-div-1-women",
+            "category_name": "Japan",
+            "priority": 0
+        },
+        "13361": {
+            "name": "Jordan 1st Division",
+            "slug": "jordan-1st-division",
+            "category_name": "Jordan",
+            "priority": 0
+        },
+        "1644": {
+            "name": "Premier League",
+            "slug": "premier-league",
+            "category_name": "Kenya",
+            "priority": 0
+        },
+        "9413": {
+            "name": "Superliga",
+            "slug": "superliga",
+            "category_name": "Kosovo",
+            "priority": 0
+        },
+        "16702": {
+            "name": "Liga e Dyt\u00eb",
+            "slug": "liga-e-dyte",
+            "category_name": "Kosovo",
+            "priority": 0
+        },
+        "9426": {
+            "name": "First League, Group A",
+            "slug": "first-league-group-a",
+            "category_name": "Kosovo",
+            "priority": 0
+        },
+        "677": {
+            "name": "1.Liga",
+            "slug": "1liga",
+            "category_name": "Latvia",
+            "priority": 0
+        },
+        "20346": {
+            "name": "Second Division - West",
+            "slug": "second-division-west",
+            "category_name": "Libya",
+            "priority": 0
+        },
+        "20495": {
+            "name": "Third Division - Al Jabal Alakhdar, Group B",
+            "slug": "third-division-al-jabal-alakhdar-group-b",
+            "category_name": "Libya",
+            "priority": 0
+        },
+        "20875": {
+            "name": "Third Division - Benghazi, Group 1",
+            "slug": "third-division-benghazi-group-1",
+            "category_name": "Libya",
+            "priority": 0
+        },
+        "676": {
+            "name": "Pirma Lyga",
+            "slug": "pirma-lyga",
+            "category_name": "Lithuania",
+            "priority": 0
+        },
+        "16785": {
+            "name": "II Lyga",
+            "slug": "ii-lyga",
+            "category_name": "Lithuania",
+            "priority": 0
+        },
+        "690": {
+            "name": "Division Nationale",
+            "slug": "division-nationale",
+            "category_name": "Luxembourg",
+            "priority": 0
+        },
+        "723": {
+            "name": "Promotion d\u2019Honneur",
+            "slug": "promotion-d-honneur",
+            "category_name": "Luxembourg",
+            "priority": 0
+        },
+        "13593": {
+            "name": "Liga MX, Women, Apertura",
+            "slug": "liga-mx-women-apertura",
+            "category_name": "Mexico",
+            "priority": 0
+        },
+        "20710": {
+            "name": "U23 Liga MX, Apertura",
+            "slug": "u23-liga-mx-apertura",
+            "category_name": "Mexico",
+            "priority": 0
+        },
+        "20870": {
+            "name": "Liga Premier Serie A, Group 1",
+            "slug": "liga-premier-serie-a-group-1",
+            "category_name": "Mexico",
+            "priority": 0
+        },
+        "20871": {
+            "name": "Liga Premier Serie B",
+            "slug": "liga-premier-serie-b",
+            "category_name": "Mexico",
+            "priority": 0
+        },
+        "710": {
+            "name": "Liga 1, Group A",
+            "slug": "liga-1-group-a",
+            "category_name": "Moldova",
+            "priority": 0
+        },
+        "154": {
+            "name": "Meridianbet 1. CFL",
+            "slug": "meridianbet-1-cfl",
+            "category_name": "Montenegro",
+            "priority": 0
+        },
+        "717": {
+            "name": "Amplitudo 2. CFL",
+            "slug": "amplitudo-2-cfl",
+            "category_name": "Montenegro",
+            "priority": 0
+        },
+        "10554": {
+            "name": "Botola 2",
+            "slug": "botola-2",
+            "category_name": "Morocco",
+            "priority": 0
+        },
+        "11402": {
+            "name": "Tweede Divisie",
+            "slug": "tweede-divisie",
+            "category_name": "Netherlands",
+            "priority": 0
+        },
+        "17143": {
+            "name": "U21 KNVB, Divisie 1",
+            "slug": "u21-knvb-divisie-1",
+            "category_name": "Netherlands",
+            "priority": 0
+        },
+        "594": {
+            "name": "National League, Southern League",
+            "slug": "national-league-southern-league",
+            "category_name": "New Zealand",
+            "priority": 0
+        },
+        "10533": {
+            "name": "Primera Division, Apertura",
+            "slug": "primera-division-apertura",
+            "category_name": "Nicaragua",
+            "priority": 0
+        },
+        "718": {
+            "name": "2. MFL",
+            "slug": "2-mfl",
+            "category_name": "North Macedonia",
+            "priority": 0
+        },
+        "200": {
+            "name": "Premiership",
+            "slug": "premiership",
+            "category_name": "Northern Ireland",
+            "priority": 0
+        },
+        "701": {
+            "name": "Championship",
+            "slug": "championship",
+            "category_name": "Northern Ireland",
+            "priority": 0
+        },
+        "10607": {
+            "name": "1st Division, Women",
+            "slug": "1st-division-women",
+            "category_name": "Norway",
+            "priority": 0
+        },
+        "11084": {
+            "name": "3rd Division, Group 1",
+            "slug": "3rd-division-group-1",
+            "category_name": "Norway",
+            "priority": 0
+        },
+        "11086": {
+            "name": "3rd Division, Group 2",
+            "slug": "3rd-division-group-2",
+            "category_name": "Norway",
+            "priority": 0
+        },
+        "11083": {
+            "name": "3rd Division, Group 3",
+            "slug": "3rd-division-group-3",
+            "category_name": "Norway",
+            "priority": 0
+        },
+        "11087": {
+            "name": "3rd Division, Group 4",
+            "slug": "3rd-division-group-4",
+            "category_name": "Norway",
+            "priority": 0
+        },
+        "11088": {
+            "name": "3rd Division, Group 5",
+            "slug": "3rd-division-group-5",
+            "category_name": "Norway",
+            "priority": 0
+        },
+        "11082": {
+            "name": "3rd Division, Group 6",
+            "slug": "3rd-division-group-6",
+            "category_name": "Norway",
+            "priority": 0
+        },
+        "19869": {
+            "name": "4th Division - Indre \u00d8stland",
+            "slug": "4th-division-indre-ostland",
+            "category_name": "Norway Amateur",
+            "priority": 0
+        },
+        "2142": {
+            "name": "Gaza Strip Premier League",
+            "slug": "gaza-strip-premier-league",
+            "category_name": "Palestine",
+            "priority": 0
+        },
+        "11533": {
+            "name": "Liga Paname\u00f1a de F\u00fatbol, Clausura",
+            "slug": "liga-panamena-de-futbol-clausura",
+            "category_name": "Panama",
+            "priority": 0
+        },
+        "10552": {
+            "name": "Liga Nacional de Ascenso",
+            "slug": "liga-nacional-de-ascenso",
+            "category_name": "Panama",
+            "priority": 0
+        },
+        "1254": {
+            "name": "Division Intermedia",
+            "slug": "division-intermedia",
+            "category_name": "Paraguay",
+            "priority": 0
+        },
+        "18718": {
+            "name": "Liga Femenina, Playoff",
+            "slug": "liga-femenina-playoff",
+            "category_name": "Peru",
+            "priority": 0
+        },
+        "515": {
+            "name": "II Liga",
+            "slug": "ii-liga",
+            "category_name": "Poland",
+            "priority": 0
+        },
+        "11316": {
+            "name": "III Liga, Group 1",
+            "slug": "iii-liga-group-1",
+            "category_name": "Poland",
+            "priority": 0
+        },
+        "11317": {
+            "name": "III Liga, Group 2",
+            "slug": "iii-liga-group-2",
+            "category_name": "Poland",
+            "priority": 0
+        },
+        "11315": {
+            "name": "III Liga, Group 3",
+            "slug": "iii-liga-group-3",
+            "category_name": "Poland",
+            "priority": 0
+        },
+        "11318": {
+            "name": "III Liga, Group 4",
+            "slug": "iii-liga-group-4",
+            "category_name": "Poland",
+            "priority": 0
+        },
+        "1365": {
+            "name": "U19 CLJ",
+            "slug": "u19-clj",
+            "category_name": "Poland",
+            "priority": 0
+        },
+        "10499": {
+            "name": "Ekstraliga, Women",
+            "slug": "ekstraliga-women",
+            "category_name": "Poland",
+            "priority": 0
+        },
+        "19339": {
+            "name": "IV. Liga - Kujawsko-pomorska",
+            "slug": "iv-liga-kujawsko-pomorska",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "19427": {
+            "name": "Klasa Okr\u0119gowa - Group 1",
+            "slug": "klasa-okregowa-group-1",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "20094": {
+            "name": "IV. Liga - Lubelska",
+            "slug": "iv-liga-lubelska",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "19086": {
+            "name": "IV. Liga - Mazowiecka",
+            "slug": "iv-liga-mazowiecka",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "20222": {
+            "name": "Kezza Klasa Okr\u0119gowa - Bia\u0142a Podlaska",
+            "slug": "kezza-klasa-okregowa-biala-podlaska",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "20137": {
+            "name": "Keeza Liga Okr\u0119gowa - Ciechan\u00f3w-Ostro\u0142\u0119ka",
+            "slug": "keeza-liga-okregowa-ciechanow-ostroleka",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "19570": {
+            "name": "Liga Okr\u0119gowa - Siedlce",
+            "slug": "liga-okregowa-siedlce",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "19071": {
+            "name": "IV. Liga - Ma\u0142opolska",
+            "slug": "iv-liga-malopolska",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "20436": {
+            "name": "Klasa Okr\u0119gowa - Chrzan\u00f3w",
+            "slug": "klasa-okregowa-chrzanow",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "17225": {
+            "name": "IV. Liga - Podkarpacka",
+            "slug": "iv-liga-podkarpacka",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "20292": {
+            "name": "Klasa Okr\u0119gowa - Krosno",
+            "slug": "klasa-okregowa-krosno",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "20917": {
+            "name": "Klasa Okr\u0119gowa - Lublin",
+            "slug": "klasa-okregowa-lublin",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "20167": {
+            "name": "Klasa Okr\u0119gowa - Stalowa Wola",
+            "slug": "klasa-okregowa-stalowa-wola",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "17160": {
+            "name": "IV. Liga - Podlaska",
+            "slug": "iv-liga-podlaska",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "17313": {
+            "name": "IV. Liga - Pomorska",
+            "slug": "iv-liga-pomorska",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "17210": {
+            "name": "IV. Liga - \u015awi\u0119tokrzyska",
+            "slug": "iv-liga-swietokrzyska",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "20095": {
+            "name": "Klasa Okr\u0119gowa - \u015awi\u0119tokrzyska",
+            "slug": "klasa-okregowa-swietokrzyska",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "17255": {
+            "name": "IV. Liga - Wielkopolska ",
+            "slug": "iv-liga-wielkopolska",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "19015": {
+            "name": "V. Liga - Wielkopolska - Group 1",
+            "slug": "v-liga-wielkopolska-group-1",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "20373": {
+            "name": "Klasa Okr\u0119gowa - Zachodniopomorska Group 1",
+            "slug": "klasa-okregowa-zachodniopomorska-group-1",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "20722": {
+            "name": "Klasa A - Stalowa Wola I",
+            "slug": "klasa-a-stalowa-wola-i",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "20964": {
+            "name": "V. Liga - Ma\u0142opolska, Wsch\u00f3d",
+            "slug": "v-liga-malopolska-wschod",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "21005": {
+            "name": "Klasa Okr\u0119gowa: Nowy S\u0105cz I",
+            "slug": "klasa-okregowa-nowy-sacz-i",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "17101": {
+            "name": "Liga 3, Group A",
+            "slug": "liga-3-group-a",
+            "category_name": "Portugal",
+            "priority": 0
+        },
+        "10093": {
+            "name": "Campeonato de Portugal, Group A",
+            "slug": "campeonato-de-portugal-group-a",
+            "category_name": "Portugal",
+            "priority": 0
+        },
+        "1133": {
+            "name": "U19 Championship, Phase 1, Group North",
+            "slug": "u19-championship-phase-1-group-north",
+            "category_name": "Portugal",
+            "priority": 0
+        },
+        "16410": {
+            "name": "A.F. Porto Divis\u00e3o de Elite Serie 1",
+            "slug": "af-porto-divisao-de-elite-serie-1",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "16412": {
+            "name": "A.F. Porto Divis\u00e3o de Elite Serie 2",
+            "slug": "af-porto-divisao-de-elite-serie-2",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "14627": {
+            "name": "Qatar Cup",
+            "slug": "qatar-cup",
+            "category_name": "Qatar",
+            "priority": 0
+        },
+        "562": {
+            "name": "Liga 2",
+            "slug": "liga-2",
+            "category_name": "Romania",
+            "priority": 0
+        },
+        "16797": {
+            "name": "Liga III Seria 1",
+            "slug": "liga-iii-seria-1",
+            "category_name": "Romania",
+            "priority": 0
+        },
+        "16804": {
+            "name": "Liga III Seria 2",
+            "slug": "liga-iii-seria-2",
+            "category_name": "Romania",
+            "priority": 0
+        },
+        "16826": {
+            "name": "Liga III Seria 3",
+            "slug": "liga-iii-seria-3",
+            "category_name": "Romania",
+            "priority": 0
+        },
+        "16779": {
+            "name": "Liga III Seria 4",
+            "slug": "liga-iii-seria-4",
+            "category_name": "Romania",
+            "priority": 0
+        },
+        "16787": {
+            "name": "Liga III Seria 5",
+            "slug": "liga-iii-seria-5",
+            "category_name": "Romania",
+            "priority": 0
+        },
+        "16809": {
+            "name": "Liga III Seria 6",
+            "slug": "liga-iii-seria-6",
+            "category_name": "Romania",
+            "priority": 0
+        },
+        "16892": {
+            "name": "Liga III Seria 7",
+            "slug": "liga-iii-seria-7",
+            "category_name": "Romania",
+            "priority": 0
+        },
+        "16796": {
+            "name": "Liga III Seria 8",
+            "slug": "liga-iii-seria-8",
+            "category_name": "Romania",
+            "priority": 0
+        },
+        "16816": {
+            "name": "Liga III Seria 9",
+            "slug": "liga-iii-seria-9",
+            "category_name": "Romania",
+            "priority": 0
+        },
+        "16822": {
+            "name": "Liga III Seria 10",
+            "slug": "liga-iii-seria-10",
+            "category_name": "Romania",
+            "priority": 0
+        },
+        "18369": {
+            "name": "Liga 4 Alba",
+            "slug": "liga-4-alba",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19346": {
+            "name": "Liga 5 Alba - Seria 1",
+            "slug": "liga-5-alba-seria-1",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "18398": {
+            "name": "Liga 4 Arad",
+            "slug": "liga-4-arad",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19336": {
+            "name": "Liga 5 Arad - Seria A",
+            "slug": "liga-5-arad-seria-a",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "18320": {
+            "name": "Liga 4 Bacau - Seria 1",
+            "slug": "liga-4-bacau-seria-1",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "18355": {
+            "name": "Liga 4 Bihor Seria Nord",
+            "slug": "liga-4-bihor-seria-nord",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19277": {
+            "name": "Liga 5 Bihor",
+            "slug": "liga-5-bihor",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "18408": {
+            "name": "Liga 4 Bistrita-Nasaud Nord",
+            "slug": "liga-4-bistrita-nasaud-nord",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "18358": {
+            "name": "Liga 4 Boto\u0219ani",
+            "slug": "liga-4-botosani",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19394": {
+            "name": "Liga 5 Boto\u0219ani - Sud",
+            "slug": "liga-5-botosani-sud",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19403": {
+            "name": "Liga 5 Braila - Seria 1",
+            "slug": "liga-5-braila-seria-1",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "18387": {
+            "name": "Zona Fagaras",
+            "slug": "zona-fagaras",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "18302": {
+            "name": "Liga 4 Bucure\u0219ti",
+            "slug": "liga-4-bucuresti",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19438": {
+            "name": "Liga 5 Bucure\u0219ti",
+            "slug": "liga-5-bucuresti",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "18425": {
+            "name": "Liga 4 Buzau",
+            "slug": "liga-4-buzau",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "18288": {
+            "name": "Liga 4 Calarasi Serie A",
+            "slug": "liga-4-calarasi-serie-a",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19548": {
+            "name": "Liga 5 Calarasi - Seria Vest",
+            "slug": "liga-5-calarasi-seria-vest",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19010": {
+            "name": "Liga 4 Caras Severin",
+            "slug": "liga-4-caras-severin",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19016": {
+            "name": "Liga 4 Cluj",
+            "slug": "liga-4-cluj",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19411": {
+            "name": "Liga 5 Cluj - Zona Gherla",
+            "slug": "liga-5-cluj-zona-gherla",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19029": {
+            "name": "Liga 4 Constanta",
+            "slug": "liga-4-constanta",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19301": {
+            "name": "Liga 5 Constanta - Seria Nord",
+            "slug": "liga-5-constanta-seria-nord",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19325": {
+            "name": "Liga 4 Covasna",
+            "slug": "liga-4-covasna",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19632": {
+            "name": "Liga 5 Dambovita - Nord",
+            "slug": "liga-5-dambovita-nord",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19636": {
+            "name": "Liga 6 Dambovita - Est",
+            "slug": "liga-6-dambovita-est",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19065": {
+            "name": "Liga 4 Dolj",
+            "slug": "liga-4-dolj",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19638": {
+            "name": "Liga 5 Dolj - Seria 1",
+            "slug": "liga-5-dolj-seria-1",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "18283": {
+            "name": "Liga 4 Galati",
+            "slug": "liga-4-galati",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "18301": {
+            "name": "Liga 5 Galati",
+            "slug": "liga-5-galati",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19253": {
+            "name": "Liga 5 Giurgiu North",
+            "slug": "liga-5-giurgiu-north",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19087": {
+            "name": "Liga 4 Gorj",
+            "slug": "liga-4-gorj",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "18285": {
+            "name": "Liga 4 Harghita",
+            "slug": "liga-4-harghita",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19524": {
+            "name": "Liga 5 Harghita Zona Ciuc",
+            "slug": "liga-5-harghita-zona-ciuc",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19109": {
+            "name": "Liga 4 Hunedoara",
+            "slug": "liga-4-hunedoara",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "17372": {
+            "name": "Liga 4 Ialomita - Seria Est",
+            "slug": "liga-4-ialomita-seria-est",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19674": {
+            "name": "Liga 5 Ialomita - Seria 1",
+            "slug": "liga-5-ialomita-seria-1",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19137": {
+            "name": "Liga 4 Iasi",
+            "slug": "liga-4-iasi",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19677": {
+            "name": "Liga 5 Iasi - Seria 1",
+            "slug": "liga-5-iasi-seria-1",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "18360": {
+            "name": "Liga 4 Ilfov",
+            "slug": "liga-4-ilfov",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19585": {
+            "name": "Liga 5 Ilfov",
+            "slug": "liga-5-ilfov",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19235": {
+            "name": "Liga 4 Neamt - Est",
+            "slug": "liga-4-neamt-est",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19282": {
+            "name": "Liga 5 Maramure\u0219 - Seria 1",
+            "slug": "liga-5-maramures-seria-1",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19716": {
+            "name": "Liga 5 Olt - Seria 1",
+            "slug": "liga-5-olt-seria-1",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19251": {
+            "name": "Liga 4 Prahova",
+            "slug": "liga-4-prahova",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19757": {
+            "name": "Liga 5 Prahova",
+            "slug": "liga-5-prahova",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19761": {
+            "name": "Liga 6 Prahova - Est",
+            "slug": "liga-6-prahova-est",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19859": {
+            "name": "Liga 7 Prahova - Seria Est",
+            "slug": "liga-7-prahova-seria-est",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19033": {
+            "name": "Liga 4 S\u0103laj",
+            "slug": "liga-4-salaj",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19404": {
+            "name": "Liga 5 S\u0103laj - Seria Est",
+            "slug": "liga-5-salaj-seria-est",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19867": {
+            "name": "Liga 5 Sibiu - Seria Medias",
+            "slug": "liga-5-sibiu-seria-medias",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19276": {
+            "name": "Liga 4 Suceava ",
+            "slug": "liga-4-suceava",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "18330": {
+            "name": "Liga 4 Elite Satu Mare",
+            "slug": "liga-4-elite-satu-mare",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19563": {
+            "name": "Liga 5 Teleorman",
+            "slug": "liga-5-teleorman",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19027": {
+            "name": "Liga 4 Timi\u0219",
+            "slug": "liga-4-timis",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19293": {
+            "name": "Liga 5 Timi\u0219 - Seria 1",
+            "slug": "liga-5-timis-seria-1",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19315": {
+            "name": "Liga 6 Timi\u0219 - Seria 5",
+            "slug": "liga-6-timis-seria-5",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "18480": {
+            "name": "Liga 4 V\u00e2lcea",
+            "slug": "liga-4-valcea",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19587": {
+            "name": "\ufeffLiga 5 V\u00e2lcea",
+            "slug": "liga-5-valcea",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "1093": {
+            "name": "2. Liga, Division B, Group 1A",
+            "slug": "2-liga-division-b-group-1a",
+            "category_name": "Russia",
+            "priority": 0
+        },
+        "1099": {
+            "name": "2. Liga, Division B, Group 2",
+            "slug": "2-liga-division-b-group-2",
+            "category_name": "Russia",
+            "priority": 0
+        },
+        "1095": {
+            "name": "2. Liga, Division B, Group 3",
+            "slug": "2-liga-division-b-group-3",
+            "category_name": "Russia",
+            "priority": 0
+        },
+        "20706": {
+            "name": "2. Liga, Division A, Stage 1, Group Gold",
+            "slug": "2-liga-division-a-stage-1-group-gold",
+            "category_name": "Russia",
+            "priority": 0
+        },
+        "1097": {
+            "name": "2. Liga, Division B, Group 4",
+            "slug": "2-liga-division-b-group-4",
+            "category_name": "Russia",
+            "priority": 0
+        },
+        "6783": {
+            "name": "Premier League, Women",
+            "slug": "premier-league-women",
+            "category_name": "Russia",
+            "priority": 0
+        },
+        "18892": {
+            "name": "Winline Media Football League - Group A",
+            "slug": "winline-media-football-league-group-a",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "20805": {
+            "name": "Moscow Oblast Championship - League A",
+            "slug": "moscow-oblast-championship-league-a",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "20796": {
+            "name": "Championship MOO UFO-SKFO - North",
+            "slug": "championship-moo-ufo-skfo-north",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "18772": {
+            "name": "Championship SFF Center",
+            "slug": "championship-sff-center",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "20857": {
+            "name": "St. Petersburg First League",
+            "slug": "st-petersburg-first-league",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "20751": {
+            "name": "Championship OFF North-West",
+            "slug": "championship-off-north-west",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "20784": {
+            "name": "Championship MOO Ural-Western Siberia",
+            "slug": "championship-moo-ural-western-siberia",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "20465": {
+            "name": "Belgorod Oblast Liga - Final stage",
+            "slug": "belgorod-oblast-liga-final-stage",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "20758": {
+            "name": "Bryansk Oblast Liga - Division 1",
+            "slug": "bryansk-oblast-liga-division-1",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "20913": {
+            "name": "Volgograd Oblast Liga - Group 1",
+            "slug": "volgograd-oblast-liga-group-1",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "16995": {
+            "name": "Voronezh Oblast Liga",
+            "slug": "voronezh-oblast-liga",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "20338": {
+            "name": "Voronezh Oblast Championship - Group 1",
+            "slug": "voronezh-oblast-championship-group-1",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "18835": {
+            "name": "Voronezh Oblast Prosyanoy Championship - South",
+            "slug": "voronezh-oblast-prosyanoy-championship-south",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "20932": {
+            "name": "Kaluga Oblast Liga",
+            "slug": "kaluga-oblast-liga",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "20510": {
+            "name": "Kursk Oblast Liga - Final Round",
+            "slug": "kursk-oblast-liga-final-round",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "19092": {
+            "name": "Lipetsk Oblast Liga",
+            "slug": "lipetsk-oblast-liga",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "20361": {
+            "name": "Lipetsk Oblast Championship",
+            "slug": "lipetsk-oblast-championship",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "20930": {
+            "name": "Smolensk Oblast Liga",
+            "slug": "smolensk-oblast-liga",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "19424": {
+            "name": "Stavropol Krai Championship - Gold Group",
+            "slug": "stavropol-krai-championship-gold-group",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "20694": {
+            "name": "Tula Oblast Liga - Group A",
+            "slug": "tula-oblast-liga-group-a",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "10608": {
+            "name": "Premier League",
+            "slug": "premier-league",
+            "category_name": "Rwanda",
+            "priority": 0
+        },
+        "16732": {
+            "name": "SKNFA Premier League - Championship Round",
+            "slug": "sknfa-premier-league-championship-round",
+            "category_name": "Saint Kitts and Nevis",
+            "priority": 0
+        },
+        "18272": {
+            "name": "Campeonato Nacional",
+            "slug": "campeonato-nacional",
+            "category_name": "Sao Tome and Principe",
+            "priority": 0
+        },
+        "2120": {
+            "name": "Division 1",
+            "slug": "division-1",
+            "category_name": "Saudi Arabia",
+            "priority": 0
+        },
+        "2054": {
+            "name": "Premier League 1, Women",
+            "slug": "premier-league-1-women",
+            "category_name": "Scotland",
+            "priority": 0
+        },
+        "19653": {
+            "name": "Highland League",
+            "slug": "highland-league",
+            "category_name": "Scotland Amateur",
+            "priority": 0
+        },
+        "19291": {
+            "name": "Lowland League",
+            "slug": "lowland-league",
+            "category_name": "Scotland Amateur",
+            "priority": 0
+        },
+        "721": {
+            "name": "Prva Liga",
+            "slug": "prva-liga",
+            "category_name": "Serbia",
+            "priority": 0
+        },
+        "16508": {
+            "name": "Srpska Liga Beograd",
+            "slug": "srpska-liga-beograd",
+            "category_name": "Serbia",
+            "priority": 0
+        },
+        "16509": {
+            "name": "Srpska Liga Istok",
+            "slug": "srpska-liga-istok",
+            "category_name": "Serbia",
+            "priority": 0
+        },
+        "16510": {
+            "name": "Srpska Liga Vojvodina",
+            "slug": "srpska-liga-vojvodina",
+            "category_name": "Serbia",
+            "priority": 0
+        },
+        "16511": {
+            "name": "Srpska Liga Zapad",
+            "slug": "srpska-liga-zapad",
+            "category_name": "Serbia",
+            "priority": 0
+        },
+        "16498": {
+            "name": "Zona Zapadno-Moravska",
+            "slug": "zona-zapadno-moravska",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "20982": {
+            "name": "Moravi\u010dka Okru\u017ena Liga",
+            "slug": "moravicka-okruzna-liga",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16918": {
+            "name": "Op\u0161tinska liga Lu\u010dani",
+            "slug": "opstinska-liga-lucani",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "15928": {
+            "name": "Zona Podunavsko-\u0160umadijska",
+            "slug": "zona-podunavsko-sumadijska",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "17166": {
+            "name": "Brani\u010devska Okru\u017ena Liga",
+            "slug": "branicevska-okruzna-liga",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16482": {
+            "name": "Me\u0111uop\u0161tinska liga Dunav",
+            "slug": "meduopstinska-liga-dunav",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "15936": {
+            "name": "\u0160umadijska Okru\u017ena Liga",
+            "slug": "sumadijska-okruzna-liga",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16431": {
+            "name": "Me\u0111uop\u0161tinska Liga Aran\u0111elovac-Topola",
+            "slug": "meduopstinska-liga-arandelovac-topola",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16390": {
+            "name": "Zona Kolubarsko-Ma\u010dvanska",
+            "slug": "zona-kolubarsko-macvanska",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16773": {
+            "name": "Me\u0111uop\u0161tinska liga Kolubara - Istok",
+            "slug": "meduopstinska-liga-kolubara-istok",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16752": {
+            "name": "Zona \u0160umadijsko-Ra\u0161ka",
+            "slug": "zona-sumadijsko-raska",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16872": {
+            "name": "Prva Rasinska Okru\u017ena Liga",
+            "slug": "prva-rasinska-okruzna-liga",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16611": {
+            "name": "Zona \"Istok\"",
+            "slug": "zona-istok",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16545": {
+            "name": "Borska Okru\u017ena Liga",
+            "slug": "borska-okruzna-liga",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16864": {
+            "name": "Zaje\u010darska Okru\u017ena Liga",
+            "slug": "zajecarska-okruzna-liga",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16424": {
+            "name": "Zonska Liga Beograd",
+            "slug": "zonska-liga-beograd",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16466": {
+            "name": "Prva Beogradska Liga A",
+            "slug": "prva-beogradska-liga-a",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "18448": {
+            "name": "Me\u0111uop\u0161tinska liga Beograd - Grupa A",
+            "slug": "meduopstinska-liga-beograd-grupa-a",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16533": {
+            "name": "Prva Beogradska Liga B",
+            "slug": "prva-beogradska-liga-b",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "15927": {
+            "name": "Vojvo\u0111anska Liga \"Sever\"",
+            "slug": "vojvodanska-liga-sever",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16401": {
+            "name": "PFL Sombor",
+            "slug": "pfl-sombor",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "21004": {
+            "name": "MFL Sombor - 1. razred",
+            "slug": "mfl-sombor-1-razred",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16652": {
+            "name": "PFL Subotica",
+            "slug": "pfl-subotica",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16357": {
+            "name": "Vojvo\u0111anska Liga \"Istok\"",
+            "slug": "vojvodanska-liga-istok",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16607": {
+            "name": "PFL Pan\u010devo",
+            "slug": "pfl-pancevo",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16657": {
+            "name": "2. Ju\u017enobanatska liga \"Istok\"",
+            "slug": "2-juznobanatska-liga-istok",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16337": {
+            "name": "Vojvo\u0111anska Liga \"Jug\"",
+            "slug": "vojvodanska-liga-jug",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16430": {
+            "name": "Prva Novosadska Liga",
+            "slug": "prva-novosadska-liga",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16671": {
+            "name": "Druga Novosadska liga",
+            "slug": "druga-novosadska-liga",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16505": {
+            "name": "Sremska Liga",
+            "slug": "sremska-liga",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "20168": {
+            "name": "Me\u0111uop\u0161tinska liga Srem - Istok",
+            "slug": "meduopstinska-liga-srem-istok",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "20213": {
+            "name": "Op\u0161tinska liga Ruma",
+            "slug": "opstinska-liga-ruma",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "20369": {
+            "name": "Op\u0161tinska Liga Topola",
+            "slug": "opstinska-liga-topola",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "21025": {
+            "name": "GFL Sremska Mitrovica",
+            "slug": "gfl-sremska-mitrovica",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "21054": {
+            "name": "Me\u0111uop\u0161tinska Liga \"Pocerina\"",
+            "slug": "meduopstinska-liga-pocerina",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "21092": {
+            "name": "Op\u0161tinska liga Obrenovac",
+            "slug": "opstinska-liga-obrenovac",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "224": {
+            "name": "2. Liga",
+            "slug": "2-liga",
+            "category_name": "Slovakia",
+            "priority": 0
+        },
+        "10560": {
+            "name": "1. Liga, Women",
+            "slug": "1-liga-women",
+            "category_name": "Slovakia",
+            "priority": 0
+        },
+        "20766": {
+            "name": "3. Liga, West",
+            "slug": "3-liga-west",
+            "category_name": "Slovakia",
+            "priority": 0
+        },
+        "20814": {
+            "name": "3. Liga, East",
+            "slug": "3-liga-east",
+            "category_name": "Slovakia",
+            "priority": 0
+        },
+        "532": {
+            "name": "2. SNL",
+            "slug": "2-snl",
+            "category_name": "Slovenia",
+            "priority": 0
+        },
+        "17219": {
+            "name": "Pomurska nogometna liga",
+            "slug": "pomurska-nogometna-liga",
+            "category_name": "Slovenia Amateur",
+            "priority": 0
+        },
+        "17241": {
+            "name": "MNL Lendava",
+            "slug": "mnl-lendava",
+            "category_name": "Slovenia Amateur",
+            "priority": 0
+        },
+        "17297": {
+            "name": "1. MNL Murska Sobota",
+            "slug": "1-mnl-murska-sobota",
+            "category_name": "Slovenia Amateur",
+            "priority": 0
+        },
+        "21064": {
+            "name": "3. SNL Vzhod",
+            "slug": "3-snl-vzhod",
+            "category_name": "Slovenia Amateur",
+            "priority": 0
+        },
+        "16439": {
+            "name": "Telekom S-League",
+            "slug": "telekom-s-league",
+            "category_name": "Solomon Islands",
+            "priority": 0
+        },
+        "1906": {
+            "name": "Championship",
+            "slug": "championship",
+            "category_name": "South Africa",
+            "priority": 0
+        },
+        "2284": {
+            "name": "WK-League",
+            "slug": "wk-league",
+            "category_name": "South Korea",
+            "priority": 0
+        },
+        "10268": {
+            "name": "K3 League",
+            "slug": "k3-league",
+            "category_name": "South Korea",
+            "priority": 0
+        },
+        "17073": {
+            "name": "Primera Federaci\u00f3n, Group 1",
+            "slug": "primera-federacion-group-1",
+            "category_name": "Spain",
+            "priority": 0
+        },
+        "544": {
+            "name": "Segunda Federacion, Group I",
+            "slug": "segunda-federacion-group-i",
+            "category_name": "Spain",
+            "priority": 0
+        },
+        "18452": {
+            "name": "MTN Premier League",
+            "slug": "mtn-premier-league",
+            "category_name": "Swaziland",
+            "priority": 0
+        },
+        "67": {
+            "name": "Ettan, Norra",
+            "slug": "ettan-norra",
+            "category_name": "Sweden",
+            "priority": 0
+        },
+        "68": {
+            "name": "Ettan, S\u00f6dra",
+            "slug": "ettan-sodra",
+            "category_name": "Sweden",
+            "priority": 0
+        },
+        "71": {
+            "name": "Division 2, Norrland",
+            "slug": "division-2-norrland",
+            "category_name": "Sweden",
+            "priority": 0
+        },
+        "70": {
+            "name": "Division 2, Norra Svealand",
+            "slug": "division-2-norra-svealand",
+            "category_name": "Sweden",
+            "priority": 0
+        },
+        "74": {
+            "name": "Division 2, S\u00f6dra Svealand",
+            "slug": "division-2-sodra-svealand",
+            "category_name": "Sweden",
+            "priority": 0
+        },
+        "868": {
+            "name": "Division 2, Norra G\u00f6taland",
+            "slug": "division-2-norra-gotaland",
+            "category_name": "Sweden",
+            "priority": 0
+        },
+        "73": {
+            "name": "Division 2, V\u00e4stra G\u00f6taland ",
+            "slug": "division-2-vastra-gotaland",
+            "category_name": "Sweden",
+            "priority": 0
+        },
+        "72": {
+            "name": "Division 2, S\u00f6dra G\u00f6taland",
+            "slug": "division-2-sodra-gotaland",
+            "category_name": "Sweden",
+            "priority": 0
+        },
+        "20963": {
+            "name": "Division 3 S\u00f6dra Norrland",
+            "slug": "division-3-sodra-norrland",
+            "category_name": "Sweden Amateur",
+            "priority": 0
+        },
+        "3090": {
+            "name": "U19 Allsvenskan",
+            "slug": "u19-allsvenskan",
+            "category_name": "Sweden Amateur",
+            "priority": 0
+        },
+        "1016": {
+            "name": "U21 Allsvenskan, Norra",
+            "slug": "u21-allsvenskan-norra",
+            "category_name": "Sweden Amateur",
+            "priority": 0
+        },
+        "19860": {
+            "name": "Elitettan, Women",
+            "slug": "elitettan-women",
+            "category_name": "Sweden Amateur",
+            "priority": 0
+        },
+        "1101": {
+            "name": "Promotion League",
+            "slug": "promotion-league",
+            "category_name": "Switzerland",
+            "priority": 0
+        },
+        "13994": {
+            "name": "Women's Super League",
+            "slug": "womens-super-league",
+            "category_name": "Switzerland",
+            "priority": 0
+        },
+        "19183": {
+            "name": "Erste Liga Classic - Gruppe 1",
+            "slug": "erste-liga-classic-gruppe-1",
+            "category_name": "Switzerland Amateur",
+            "priority": 0
+        },
+        "19684": {
+            "name": "2. Liga FTC",
+            "slug": "2-liga-ftc",
+            "category_name": "Switzerland Amateur",
+            "priority": 0
+        },
+        "19289": {
+            "name": "2. Liga FVRZ - Gruppe 1",
+            "slug": "2-liga-fvrz-gruppe-1",
+            "category_name": "Switzerland Amateur",
+            "priority": 0
+        },
+        "19393": {
+            "name": "2. Liga IFV",
+            "slug": "2-liga-ifv",
+            "category_name": "Switzerland Amateur",
+            "priority": 0
+        },
+        "19571": {
+            "name": "2. Liga OFV - Gruppe 1",
+            "slug": "2-liga-ofv-gruppe-1",
+            "category_name": "Switzerland Amateur",
+            "priority": 0
+        },
+        "20271": {
+            "name": "2. Liga ACVF - Groupe 1",
+            "slug": "2-liga-acvf-groupe-1",
+            "category_name": "Switzerland Amateur",
+            "priority": 0
+        },
+        "10511": {
+            "name": "Thai League 2",
+            "slug": "thai-league-2",
+            "category_name": "Thailand",
+            "priority": 0
+        },
+        "97": {
+            "name": "2nd Lig, Beyaz Grup",
+            "slug": "2nd-lig-beyaz-grup",
+            "category_name": "Turkey",
+            "priority": 0
+        },
+        "13959": {
+            "name": "U19 Elit A, Group 1",
+            "slug": "u19-elit-a-group-1",
+            "category_name": "Turkey",
+            "priority": 0
+        },
+        "13960": {
+            "name": "U19 1. Lig",
+            "slug": "u19-1-lig",
+            "category_name": "Turkey",
+            "priority": 0
+        },
+        "18229": {
+            "name": "\u00ddokary Liga",
+            "slug": "yokary-liga",
+            "category_name": "Turkmenistan",
+            "priority": 0
+        },
+        "18641": {
+            "name": "MLS Next Pro",
+            "slug": "mls-next-pro",
+            "category_name": "USA",
+            "priority": 0
+        },
+        "18642": {
+            "name": "NISA",
+            "slug": "nisa",
+            "category_name": "USA",
+            "priority": 0
+        },
+        "11314": {
+            "name": "Super 8",
+            "slug": "super-8",
+            "category_name": "Uganda",
+            "priority": 0
+        },
+        "691": {
+            "name": "Persha Liga, Group A",
+            "slug": "persha-liga-group-a",
+            "category_name": "Ukraine",
+            "priority": 0
+        },
+        "19980": {
+            "name": "Druha Liga",
+            "slug": "druha-liga",
+            "category_name": "Ukraine",
+            "priority": 0
+        },
+        "1307": {
+            "name": "U19 Championship",
+            "slug": "u19-championship",
+            "category_name": "Ukraine",
+            "priority": 0
+        },
+        "1908": {
+            "name": "Segunda Divisi\u00f3n",
+            "slug": "segunda-division",
+            "category_name": "Uruguay",
+            "priority": 0
+        },
+        "20023": {
+            "name": "Primera Divisi\u00f3n Amateur, Liguilla",
+            "slug": "primera-division-amateur-liguilla",
+            "category_name": "Uruguay",
+            "priority": 0
+        },
+        "20938": {
+            "name": "Divisional D AUF - Grupo A",
+            "slug": "divisional-d-auf-grupo-a",
+            "category_name": "Uruguay",
+            "priority": 0
+        },
+        "18559": {
+            "name": "Pro Liga",
+            "slug": "pro-liga",
+            "category_name": "Uzbekistan",
+            "priority": 0
+        },
+        "231": {
+            "name": "Primera Division",
+            "slug": "primera-division",
+            "category_name": "Venezuela",
+            "priority": 0
+        },
+        "10456": {
+            "name": "Segunda Divisi\u00f3n",
+            "slug": "segunda-division",
+            "category_name": "Venezuela",
+            "priority": 0
+        },
+        "2065": {
+            "name": "Super League",
+            "slug": "super-league",
+            "category_name": "Zambia",
+            "priority": 0
+        },
+        "11033": {
+            "name": "Premier Soccer League",
+            "slug": "premier-soccer-league",
+            "category_name": "Zimbabwe",
+            "priority": 0
+        },
+        "2132": {
+            "name": "UEFA Youth League, Knockout stage",
+            "slug": "uefa-youth-league-knockout-stage",
+            "category_name": "Europe",
+            "priority": 424
+        },
+        "1054": {
+            "name": "CAF Champions League, Qualification",
+            "slug": "caf-champions-league-qualification",
+            "category_name": "Africa",
+            "priority": 353
+        },
+        "16736": {
+            "name": "Division Profesional",
+            "slug": "division-profesional",
+            "category_name": "Bolivia",
+            "priority": 203
+        },
+        "1900": {
+            "name": "Super League",
+            "slug": "super-league",
+            "category_name": "India",
+            "priority": 185
+        },
+        "463": {
+            "name": "AFC Champions League, Group B",
+            "slug": "afc-champions-league-group-b",
+            "category_name": "Asia",
+            "priority": 138
+        },
+        "1032": {
+            "name": "Thai League 1",
+            "slug": "thai-league-1",
+            "category_name": "Thailand",
+            "priority": 22
+        },
+        "1044": {
+            "name": "The FA Women's Super League",
+            "slug": "the-fa-womens-super-league",
+            "category_name": "England",
+            "priority": 18
+        },
+        "1139": {
+            "name": "Division 1, Women",
+            "slug": "division-1-women",
+            "category_name": "France",
+            "priority": 9
+        },
+        "10640": {
+            "name": "Serie A, Women",
+            "slug": "serie-a-women",
+            "category_name": "Italy",
+            "priority": 6
+        },
+        "232": {
+            "name": "Frauen-Bundesliga",
+            "slug": "frauen-bundesliga",
+            "category_name": "Germany",
+            "priority": 2
+        },
+        "1127": {
+            "name": "Liga F",
+            "slug": "liga-f",
+            "category_name": "Spain",
+            "priority": 1
+        },
+        "1115": {
+            "name": "CAF Confederations Cup, Qualification",
+            "slug": "caf-confederations-cup-qualification",
+            "category_name": "Africa",
+            "priority": 0
+        },
+        "668": {
+            "name": "AFC Cup, Group A",
+            "slug": "afc-cup-group-a",
+            "category_name": "Asia",
+            "priority": 0
+        },
+        "1862": {
+            "name": "Asian Games, Knockout stage",
+            "slug": "asian-games-knockout-stage",
+            "category_name": "Asia",
+            "priority": 0
+        },
+        "183": {
+            "name": "National 1",
+            "slug": "national-1",
+            "category_name": "France",
+            "priority": 0
+        },
+        "1191": {
+            "name": "Premier League",
+            "slug": "premier-league",
+            "category_name": "Ghana",
+            "priority": 0
+        },
+        "186": {
+            "name": "Super League 2, Group A",
+            "slug": "super-league-2-group-a",
+            "category_name": "Greece",
+            "priority": 0
+        },
+        "824": {
+            "name": "Coppa Italia Serie C, Knockout stage",
+            "slug": "coppa-italia-serie-c-knockout-stage",
+            "category_name": "Italy",
+            "priority": 0
+        },
+        "1000": {
+            "name": "Malaysia Super League",
+            "slug": "malaysia-super-league",
+            "category_name": "Malaysia",
+            "priority": 0
+        },
+        "629": {
+            "name": "Premier League",
+            "slug": "premier-league",
+            "category_name": "Malta",
+            "priority": 0
+        },
+        "11611": {
+            "name": "Liga de Expansi\u00f3n MX, Apertura",
+            "slug": "liga-de-expansion-mx-apertura",
+            "category_name": "Mexico",
+            "priority": 0
+        },
+        "685": {
+            "name": "Super Liga",
+            "slug": "super-liga",
+            "category_name": "Moldova",
+            "priority": 0
+        },
+        "91": {
+            "name": "Russian Cup, Group B",
+            "slug": "russian-cup-group-b",
+            "category_name": "Russia",
+            "priority": 0
+        },
+        "16672": {
+            "name": "Kategoria e Dyt\u00eb, Group A",
+            "slug": "kategoria-e-dyte-group-a",
+            "category_name": "Albania",
+            "priority": 0
+        },
+        "742": {
+            "name": "Primera Divisio",
+            "slug": "primera-divisio",
+            "category_name": "Andorra",
+            "priority": 0
+        },
+        "743": {
+            "name": "Segona Divisio",
+            "slug": "segona-divisio",
+            "category_name": "Andorra",
+            "priority": 0
+        },
+        "14101": {
+            "name": "Primera D Metropolitana, Clausura",
+            "slug": "primera-d-metropolitana-clausura",
+            "category_name": "Argentina",
+            "priority": 0
+        },
+        "672": {
+            "name": "First League",
+            "slug": "first-league",
+            "category_name": "Armenia",
+            "priority": 0
+        },
+        "19345": {
+            "name": "Division di Honor",
+            "slug": "division-di-honor",
+            "category_name": "Aruba",
+            "priority": 0
+        },
+        "11330": {
+            "name": "Asian Games, Women, Knockout stage",
+            "slug": "asian-games-women-knockout-stage",
+            "category_name": "Asia",
+            "priority": 0
+        },
+        "1117": {
+            "name": "U21 Pro League",
+            "slug": "u21-pro-league",
+            "category_name": "Belgium",
+            "priority": 0
+        },
+        "20697": {
+            "name": "Nationale 1",
+            "slug": "nationale-1",
+            "category_name": "Belgium",
+            "priority": 0
+        },
+        "19532": {
+            "name": "Kantonalna liga SBK - Liga A",
+            "slug": "kantonalna-liga-sbk-liga-a",
+            "category_name": "Bosnia & Herzegovina Amateur",
+            "priority": 0
+        },
+        "20980": {
+            "name": "Kantonalna liga Sarajevo - Grupa A",
+            "slug": "kantonalna-liga-sarajevo-grupa-a",
+            "category_name": "Bosnia & Herzegovina Amateur",
+            "priority": 0
+        },
+        "16681": {
+            "name": "Kantonalna liga HNK",
+            "slug": "kantonalna-liga-hnk",
+            "category_name": "Bosnia & Herzegovina Amateur",
+            "priority": 0
+        },
+        "16882": {
+            "name": "M\u017dNL HB\u017d/ZH\u017d",
+            "slug": "mznl-hbzzhz",
+            "category_name": "Bosnia & Herzegovina Amateur",
+            "priority": 0
+        },
+        "21080": {
+            "name": "Kantonalna liga USK",
+            "slug": "kantonalna-liga-usk",
+            "category_name": "Bosnia & Herzegovina Amateur",
+            "priority": 0
+        },
+        "20902": {
+            "name": "Carioca, S\u00e9rie B1 ",
+            "slug": "carioca-serie-b1",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "20903": {
+            "name": "Carioca, S\u00e9rie B2 ",
+            "slug": "carioca-serie-b2",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "21065": {
+            "name": "Catarinense, S\u00e9rie C",
+            "slug": "catarinense-serie-c",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "21133": {
+            "name": "Ga\u00facho, S\u00e9rie B \u2013 Grupo A",
+            "slug": "gaucho-serie-b-grupo-a",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "20891": {
+            "name": "Maranhense, S\u00e9rie B - Grupo A",
+            "slug": "maranhense-serie-b-grupo-a",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "20976": {
+            "name": "Mineiro, Feminino",
+            "slug": "mineiro-feminino",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "20584": {
+            "name": "Paraense, S\u00e9rie B1 - Playoffs ",
+            "slug": "paraense-serie-b1-playoffs",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "21143": {
+            "name": "Paranaense, 3\u00aa Divis\u00e3o \u2013 Grupo A",
+            "slug": "paranaense-3a-divisao-grupo-a",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "21075": {
+            "name": "Pernambucano, S\u00e9rie A2",
+            "slug": "pernambucano-serie-a2",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "21151": {
+            "name": "Piauiense, S\u00e9rie B",
+            "slug": "piauiense-serie-b",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "21150": {
+            "name": "Potiguar, 2\u00aa Divis\u00e3o",
+            "slug": "potiguar-2a-divisao",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "9491": {
+            "name": "U20 Copa do Brasil",
+            "slug": "u20-copa-do-brasil",
+            "category_name": "Brazil",
+            "priority": 0
+        },
+        "20977": {
+            "name": "Campeonato Regional da LAU \u2013 Grupo A",
+            "slug": "campeonato-regional-da-lau-grupo-a",
+            "category_name": "Brazil Amateur",
+            "priority": 0
+        },
+        "19237": {
+            "name": "Peta liga - BOG Pazardzhik ",
+            "slug": "peta-liga-bog-pazardzhik",
+            "category_name": "Bulgaria Amateur",
+            "priority": 0
+        },
+        "20307": {
+            "name": "Liga One - Clausura, Group A",
+            "slug": "liga-one-clausura-group-a",
+            "category_name": "Chile Amateur",
+            "priority": 0
+        },
+        "21172": {
+            "name": "Asociaci\u00f3n de F\u00fatbol Barrio Sur - Punta Arenas, Apertura \u2013 Grupo A",
+            "slug": "asociacion-de-futbol-barrio-sur-punta-arenas-apertura-grupo-a",
+            "category_name": "Chile Amateur",
+            "priority": 0
+        },
+        "16338": {
+            "name": "1. \u017dNL Dubrova\u010dko-neretvanska",
+            "slug": "1-znl-dubrovacko-neretvanska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16368": {
+            "name": "2. \u017dNL Dubrova\u010dko-neretvanska",
+            "slug": "2-znl-dubrovacko-neretvanska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16405": {
+            "name": "3. \u017dNL Istarska - Sjever",
+            "slug": "3-znl-istarska-sjever",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16406": {
+            "name": "3. \u017dNL Istarska - Jug",
+            "slug": "3-znl-istarska-jug",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16467": {
+            "name": "1. \u017dNL Li\u010dko-senjska",
+            "slug": "1-znl-licko-senjska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "15935": {
+            "name": "1. \u017dNL Primorsko-goranska",
+            "slug": "1-znl-primorsko-goranska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "15981": {
+            "name": "2. \u017dNL Primorsko-goranska",
+            "slug": "2-znl-primorsko-goranska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "15979": {
+            "name": "1. \u017dNL Splitsko-dalmatinska",
+            "slug": "1-znl-splitsko-dalmatinska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16327": {
+            "name": "2. \u017dNL Splitsko-dalmatinska",
+            "slug": "2-znl-splitsko-dalmatinska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "17280": {
+            "name": "3. \u017dNL Vara\u017edinska - Ludbreg",
+            "slug": "3-znl-varazdinska-ludbreg",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16689": {
+            "name": "3. \u017dNL Vukovar",
+            "slug": "3-znl-vukovar",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "15934": {
+            "name": "1. \u017dNL Zadarska",
+            "slug": "1-znl-zadarska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "692": {
+            "name": "2nd Division",
+            "slug": "2nd-division",
+            "category_name": "Cyprus",
+            "priority": 0
+        },
+        "1460": {
+            "name": "3rd Division",
+            "slug": "3rd-division",
+            "category_name": "Cyprus",
+            "priority": 0
+        },
+        "10536": {
+            "name": "2. Division A",
+            "slug": "2-division-a",
+            "category_name": "Egypt",
+            "priority": 0
+        },
+        "16601": {
+            "name": "Premier League",
+            "slug": "premier-league",
+            "category_name": "Ethiopia",
+            "priority": 0
+        },
+        "755": {
+            "name": "U17 UEFA European Championship, Qualif. Gr. 2",
+            "slug": "u17-uefa-european-championship-qualif-gr-2",
+            "category_name": "Europe",
+            "priority": 0
+        },
+        "753": {
+            "name": "U17 EURO Women's Qualifiers, Group B1",
+            "slug": "u17-euro-womens-qualifiers-group-b1",
+            "category_name": "Europe",
+            "priority": 0
+        },
+        "21111": {
+            "name": "Berlin Herren Kreisliga B Stufe 2",
+            "slug": "berlin-herren-kreisliga-b-stufe-2",
+            "category_name": "Germany Amateur",
+            "priority": 0
+        },
+        "20862": {
+            "name": "Gamma Ethniki - Group 1",
+            "slug": "gamma-ethniki-group-1",
+            "category_name": "Greece",
+            "priority": 0
+        },
+        "10609": {
+            "name": "1. Division, Women",
+            "slug": "1-division-women",
+            "category_name": "Greece",
+            "priority": 0
+        },
+        "20337": {
+            "name": "EPS Arcadias Cup",
+            "slug": "eps-arcadias-cup",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "18437": {
+            "name": "A EPS Athens - Group 1",
+            "slug": "a-eps-athens-group-1",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "18352": {
+            "name": "A EPS Chanion",
+            "slug": "a-eps-chanion",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "18489": {
+            "name": "B EPS Chanion",
+            "slug": "b-eps-chanion",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "17395": {
+            "name": "A EPS Dodekanisou",
+            "slug": "a-eps-dodekanisou",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "18449": {
+            "name": "A EPS Evoias",
+            "slug": "a-eps-evoias",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "18392": {
+            "name": "B EPS Evoias Group A",
+            "slug": "b-eps-evoias-group-a",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "19957": {
+            "name": "A EPS Evros",
+            "slug": "a-eps-evros",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "20087": {
+            "name": "EPS Evros Cup",
+            "slug": "eps-evros-cup",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "17403": {
+            "name": "A EPS Ilias ",
+            "slug": "a-eps-ilias",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "18218": {
+            "name": "B EPS Ilias",
+            "slug": "b-eps-ilias",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "21045": {
+            "name": "EPS Kerkyras Cup",
+            "slug": "eps-kerkyras-cup",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "18333": {
+            "name": "A1 EPS Makedonias Group 1",
+            "slug": "a1-eps-makedonias-group-1",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "18432": {
+            "name": "A EPS Makedonias - Group 3",
+            "slug": "a-eps-makedonias-group-3",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "19944": {
+            "name": "A EPS Messinias",
+            "slug": "a-eps-messinias",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "19968": {
+            "name": "B EPS Messinias",
+            "slug": "b-eps-messinias",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "18287": {
+            "name": "A1 EPS Pellas ",
+            "slug": "a1-eps-pellas",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "18470": {
+            "name": "A EPS Pellas",
+            "slug": "a-eps-pellas",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "18221": {
+            "name": "B EPS Pierias",
+            "slug": "b-eps-pierias",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "19866": {
+            "name": "A EPS Piraeus - Group 1",
+            "slug": "a-eps-piraeus-group-1",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "10622": {
+            "name": "Indonesia Liga 2 ",
+            "slug": "indonesia-liga-2",
+            "category_name": "Indonesia",
+            "priority": 0
+        },
+        "727": {
+            "name": "National League",
+            "slug": "national-league",
+            "category_name": "Israel",
+            "priority": 0
+        },
+        "14586": {
+            "name": "Ligat Al, Women",
+            "slug": "ligat-al-women",
+            "category_name": "Israel",
+            "priority": 0
+        },
+        "2290": {
+            "name": "Liga Bet South A",
+            "slug": "liga-bet-south-a",
+            "category_name": "Israel",
+            "priority": 0
+        },
+        "1374": {
+            "name": "Serie D, Girone A",
+            "slug": "serie-d-girone-a",
+            "category_name": "Italy",
+            "priority": 0
+        },
+        "1376": {
+            "name": "Serie D, Girone B",
+            "slug": "serie-d-girone-b",
+            "category_name": "Italy",
+            "priority": 0
+        },
+        "1378": {
+            "name": "Serie D, Girone C",
+            "slug": "serie-d-girone-c",
+            "category_name": "Italy",
+            "priority": 0
+        },
+        "1380": {
+            "name": "Serie D, Girone D",
+            "slug": "serie-d-girone-d",
+            "category_name": "Italy",
+            "priority": 0
+        },
+        "1382": {
+            "name": "Serie D, Girone E",
+            "slug": "serie-d-girone-e",
+            "category_name": "Italy",
+            "priority": 0
+        },
+        "1384": {
+            "name": "Serie D, Girone F",
+            "slug": "serie-d-girone-f",
+            "category_name": "Italy",
+            "priority": 0
+        },
+        "1386": {
+            "name": "Serie D, Girone G",
+            "slug": "serie-d-girone-g",
+            "category_name": "Italy",
+            "priority": 0
+        },
+        "1388": {
+            "name": "Serie D, Girone H",
+            "slug": "serie-d-girone-h",
+            "category_name": "Italy",
+            "priority": 0
+        },
+        "1390": {
+            "name": "Serie D, Girone I",
+            "slug": "serie-d-girone-i",
+            "category_name": "Italy",
+            "priority": 0
+        },
+        "17270": {
+            "name": "Eccellenza Basilicata",
+            "slug": "eccellenza-basilicata",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "16865": {
+            "name": "Eccellenza Calabria",
+            "slug": "eccellenza-calabria",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "17340": {
+            "name": "Promozione Calabria - Girone A",
+            "slug": "promozione-calabria-girone-a",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "18323": {
+            "name": "Prima Categoria Calabria Girone C",
+            "slug": "prima-categoria-calabria-girone-c",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "16829": {
+            "name": "Eccellenza Campania Girone A",
+            "slug": "eccellenza-campania-girone-a",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "16832": {
+            "name": "Eccellenza Campania Girone B",
+            "slug": "eccellenza-campania-girone-b",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "18293": {
+            "name": "Prima Categoria Emilia-Romagna Girone D",
+            "slug": "prima-categoria-emilia-romagna-girone-d",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "18289": {
+            "name": "Seconda Categoria Forl\u00ec Cesena Girone O",
+            "slug": "seconda-categoria-forli-cesena-girone-o",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "20740": {
+            "name": "Seconda Categoria Emilia-Romagna Girone P",
+            "slug": "seconda-categoria-emilia-romagna-girone-p",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "18205": {
+            "name": "Eccellenza Friuli-Venezia Giulia ",
+            "slug": "eccellenza-friuli-venezia-giulia",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "16906": {
+            "name": "Eccellenza Liguria",
+            "slug": "eccellenza-liguria",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "16873": {
+            "name": "Eccellenza Lombardia Girone A",
+            "slug": "eccellenza-lombardia-girone-a",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "16878": {
+            "name": "Eccellenza Lombardia Girone B",
+            "slug": "eccellenza-lombardia-girone-b",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "16879": {
+            "name": "Eccellenza Lombardia Girone C",
+            "slug": "eccellenza-lombardia-girone-c",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "16806": {
+            "name": "Eccellenza Marche ",
+            "slug": "eccellenza-marche",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "16869": {
+            "name": "Eccellenza Molise",
+            "slug": "eccellenza-molise",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "18282": {
+            "name": "Promozione Molise",
+            "slug": "promozione-molise",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "16841": {
+            "name": "Eccellenza Piemonte - Girone A",
+            "slug": "eccellenza-piemonte-girone-a",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "16837": {
+            "name": "Eccellenza Puglia - Girone A",
+            "slug": "eccellenza-puglia-girone-a",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "20698": {
+            "name": "Promozione Puglia, Girone A",
+            "slug": "promozione-puglia-girone-a",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "16846": {
+            "name": "Eccellenza Sardegna",
+            "slug": "eccellenza-sardegna",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "17256": {
+            "name": "Promozione Sardegna - Girone A",
+            "slug": "promozione-sardegna-girone-a",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "21029": {
+            "name": "Prima Categoria Sardegna - Girone A",
+            "slug": "prima-categoria-sardegna-girone-a",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "17226": {
+            "name": "Eccellenza Sicilia - Girone A",
+            "slug": "eccellenza-sicilia-girone-a",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "16847": {
+            "name": "Eccellenza Toscana Girone A",
+            "slug": "eccellenza-toscana-girone-a",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "16924": {
+            "name": "Eccellenza Toscana Girone B",
+            "slug": "eccellenza-toscana-girone-b",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "16839": {
+            "name": "Eccellenza Umbria",
+            "slug": "eccellenza-umbria",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "16893": {
+            "name": "Eccellenza Veneto - Girone A",
+            "slug": "eccellenza-veneto-girone-a",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "18440": {
+            "name": "Promozione Veneto Girone C",
+            "slug": "promozione-veneto-girone-c",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "785": {
+            "name": "First Division",
+            "slug": "first-division",
+            "category_name": "Kazakhstan",
+            "priority": 0
+        },
+        "16540": {
+            "name": "National Super League",
+            "slug": "national-super-league",
+            "category_name": "Kenya",
+            "priority": 0
+        },
+        "16778": {
+            "name": "Division One League - Zone A",
+            "slug": "division-one-league-zone-a",
+            "category_name": "Kenya",
+            "priority": 0
+        },
+        "2295": {
+            "name": "Premier League",
+            "slug": "premier-league",
+            "category_name": "Lebanon",
+            "priority": 0
+        },
+        "812": {
+            "name": "LFF Cup",
+            "slug": "lff-cup",
+            "category_name": "Lithuania",
+            "priority": 0
+        },
+        "630": {
+            "name": "Challenge League",
+            "slug": "challenge-league",
+            "category_name": "Malta",
+            "priority": 0
+        },
+        "16504": {
+            "name": "Gozo Football League First Division",
+            "slug": "gozo-football-league-first-division",
+            "category_name": "Malta",
+            "priority": 0
+        },
+        "20172": {
+            "name": "National Amateur Cup",
+            "slug": "national-amateur-cup",
+            "category_name": "Malta",
+            "priority": 0
+        },
+        "741": {
+            "name": "Cupa Moldova",
+            "slug": "cupa-moldova",
+            "category_name": "Moldova",
+            "priority": 0
+        },
+        "18725": {
+            "name": "Premier League",
+            "slug": "premier-league",
+            "category_name": "Mongolia",
+            "priority": 0
+        },
+        "18430": {
+            "name": "National",
+            "slug": "national",
+            "category_name": "Morocco Amateur",
+            "priority": 0
+        },
+        "16642": {
+            "name": "Mo\u00e7ambola",
+            "slug": "mocambola",
+            "category_name": "Mozambique",
+            "priority": 0
+        },
+        "2123": {
+            "name": "Vrouwen Eredivisie",
+            "slug": "vrouwen-eredivisie",
+            "category_name": "Netherlands",
+            "priority": 0
+        },
+        "18497": {
+            "name": "Derde Divisie Zondag",
+            "slug": "derde-divisie-zondag",
+            "category_name": "Netherlands Amateur",
+            "priority": 0
+        },
+        "19981": {
+            "name": "1e Klasse Zondag - A West",
+            "slug": "1e-klasse-zondag-a-west",
+            "category_name": "Netherlands Amateur",
+            "priority": 0
+        },
+        "20232": {
+            "name": "1e Klasse - H",
+            "slug": "1e-klasse-h",
+            "category_name": "Netherlands Amateur",
+            "priority": 0
+        },
+        "21082": {
+            "name": "4e Klasse Zaterdag - 10",
+            "slug": "4e-klasse-zaterdag-10",
+            "category_name": "Netherlands Amateur",
+            "priority": 0
+        },
+        "19035": {
+            "name": "4e Klasse Zondag - A",
+            "slug": "4e-klasse-zondag-a",
+            "category_name": "Netherlands Amateur",
+            "priority": 0
+        },
+        "18252": {
+            "name": "5e Klasse Zondag - A",
+            "slug": "5e-klasse-zondag-a",
+            "category_name": "Netherlands Amateur",
+            "priority": 0
+        },
+        "2060": {
+            "name": "Professional Football League",
+            "slug": "professional-football-league",
+            "category_name": "Nigeria",
+            "priority": 0
+        },
+        "611": {
+            "name": "League Cup",
+            "slug": "league-cup",
+            "category_name": "Northern Ireland",
+            "priority": 0
+        },
+        "965": {
+            "name": "Omani League",
+            "slug": "omani-league",
+            "category_name": "Oman",
+            "priority": 0
+        },
+        "2306": {
+            "name": "Sultan Cup",
+            "slug": "sultan-cup",
+            "category_name": "Oman",
+            "priority": 0
+        },
+        "2296": {
+            "name": "West Bank Premier League",
+            "slug": "west-bank-premier-league",
+            "category_name": "Palestine",
+            "priority": 0
+        },
+        "11563": {
+            "name": "Primera Division Reserve",
+            "slug": "primera-division-reserve",
+            "category_name": "Paraguay",
+            "priority": 0
+        },
+        "10297": {
+            "name": "Segunda Division",
+            "slug": "segunda-division",
+            "category_name": "Peru",
+            "priority": 0
+        },
+        "21191": {
+            "name": "Copa Per\u00fa, Etapa Nacional",
+            "slug": "copa-peru-etapa-nacional",
+            "category_name": "Peru",
+            "priority": 0
+        },
+        "21201": {
+            "name": "Klasa Okr\u0119gowa - Tarn\u00f3w 1",
+            "slug": "klasa-okregowa-tarnow-1",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "10527": {
+            "name": "Campeonato Nacional, Women",
+            "slug": "campeonato-nacional-women",
+            "category_name": "Portugal",
+            "priority": 0
+        },
+        "11341": {
+            "name": "U23 Liga Revela\u00e7\u00e3o, 1st Phase, South",
+            "slug": "u23-liga-revelacao-1st-phase-south",
+            "category_name": "Portugal",
+            "priority": 0
+        },
+        "16432": {
+            "name": "A.F. Aveiro Campeonato Sabseg ",
+            "slug": "af-aveiro-campeonato-sabseg",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "18261": {
+            "name": "A.F. Aveiro I Divis\u00e3o Zona Norte",
+            "slug": "af-aveiro-i-divisao-zona-norte",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "18277": {
+            "name": "A.F. Aveiro I Divis\u00e3o Zona Sul",
+            "slug": "af-aveiro-i-divisao-zona-sul",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "18316": {
+            "name": "A.F. Aveiro II Divis\u00e3o Zona Norte",
+            "slug": "af-aveiro-ii-divisao-zona-norte",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "18339": {
+            "name": "A.F. Aveiro II Divis\u00e3o Zona Sul",
+            "slug": "af-aveiro-ii-divisao-zona-sul",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "16421": {
+            "name": "A.F. Beja I Divis\u00e3o",
+            "slug": "af-beja-i-divisao",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "16496": {
+            "name": "A.F. Beja II Divis\u00e3o S\u00e9rie C",
+            "slug": "af-beja-ii-divisao-serie-c",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "16428": {
+            "name": "A.F. Bragan\u00e7a Divis\u00e3o de Honra",
+            "slug": "af-braganca-divisao-de-honra",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "17311": {
+            "name": "A.F. Castelo Branco I Divis\u00e3o",
+            "slug": "af-castelo-branco-i-divisao",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "20983": {
+            "name": "A.F.  Liga Elite Coimbra",
+            "slug": "af-liga-elite-coimbra",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "17191": {
+            "name": "A.F. \u00c9vora Liga Elite",
+            "slug": "af-evora-liga-elite",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "17209": {
+            "name": "A.F \u00c9vora Liga AFE - Group A",
+            "slug": "af-evora-liga-afe-group-a",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "16433": {
+            "name": "A.F. Leiria Divis\u00e3o de Honra LizSport",
+            "slug": "af-leiria-divisao-de-honra-lizsport",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "16407": {
+            "name": "A.F. Lisboa I Divis\u00e3o",
+            "slug": "af-lisboa-i-divisao",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "20050": {
+            "name": "A.F. Lisboa II Divis\u00e3o - Serie 1",
+            "slug": "af-lisboa-ii-divisao-serie-1",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "16420": {
+            "name": "A.F. Santar\u00e9m I Divis\u00e3o",
+            "slug": "af-santarem-i-divisao",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "21148": {
+            "name": "A.F. Santarem Ta\u00e7a do Ribatejo - Serie 1",
+            "slug": "af-santarem-taca-do-ribatejo-serie-1",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "16408": {
+            "name": "A.F. Setubal I Divis\u00e3o",
+            "slug": "af-setubal-i-divisao",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "16409": {
+            "name": "A.F. Setubal II Divis\u00e3o ",
+            "slug": "af-setubal-ii-divisao",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "16655": {
+            "name": "A.F. Viana Castelo I Divis\u00e3o",
+            "slug": "af-viana-castelo-i-divisao",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "16434": {
+            "name": "A.F. Viseu Divis\u00e3o de Honra",
+            "slug": "af-viseu-divisao-de-honra",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "17371": {
+            "name": "Zona Norte",
+            "slug": "zona-norte",
+            "category_name": "Portugal Amateur",
+            "priority": 0
+        },
+        "19363": {
+            "name": "Liga 6 Arad - Seria A",
+            "slug": "liga-6-arad-seria-a",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19493": {
+            "name": "Liga 5 Buzau - Seria 1",
+            "slug": "liga-5-buzau-seria-1",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19543": {
+            "name": "Liga 5 Caras Severin",
+            "slug": "liga-5-caras-severin",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19028": {
+            "name": "Liga 4 Maramure\u0219 Nord",
+            "slug": "liga-4-maramures-nord",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19657": {
+            "name": "Liga 5 Mure\u0219",
+            "slug": "liga-5-mures",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19162": {
+            "name": "Liga 4 Mehedinti - Seria 1",
+            "slug": "liga-4-mehedinti-seria-1",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19398": {
+            "name": "Liga 4 Satu Mare - Seria A",
+            "slug": "liga-4-satu-mare-seria-a",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "19568": {
+            "name": "Liga 5 Vaslui - Series Vaslui",
+            "slug": "liga-5-vaslui-series-vaslui",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "20768": {
+            "name": "Championship SFF Sibir",
+            "slug": "championship-sff-sibir",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "18908": {
+            "name": "Voronezh Oblast Cup",
+            "slug": "voronezh-oblast-cup",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "738": {
+            "name": "Campionato Sammarinese",
+            "slug": "campionato-sammarinese",
+            "category_name": "San Marino",
+            "priority": 0
+        },
+        "11392": {
+            "name": "Reserve League",
+            "slug": "reserve-league",
+            "category_name": "Scotland",
+            "priority": 0
+        },
+        "18503": {
+            "name": "Cup, Women",
+            "slug": "cup-women",
+            "category_name": "Scotland",
+            "priority": 0
+        },
+        "16363": {
+            "name": "Zona \"Zapad\"",
+            "slug": "zona-zapad",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "16471": {
+            "name": "Druga Rasinska Okru\u017ena Liga",
+            "slug": "druga-rasinska-okruzna-liga",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "18455": {
+            "name": "Me\u0111uop\u0161tinska liga Beograd - Grupa B",
+            "slug": "meduopstinska-liga-beograd-grupa-b",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "21010": {
+            "name": "Me\u0111uop\u0161tinska liga Beograd - Grupa C",
+            "slug": "meduopstinska-liga-beograd-grupa-c",
+            "category_name": "Serbia Amateur",
+            "priority": 0
+        },
+        "303": {
+            "name": "Slovensky Pohar",
+            "slug": "slovensky-pohar",
+            "category_name": "Slovakia",
+            "priority": 0
+        },
+        "19131": {
+            "name": "MNZ Nova Gorica",
+            "slug": "mnz-nova-gorica",
+            "category_name": "Slovenia Amateur",
+            "priority": 0
+        },
+        "19893": {
+            "name": "Kings Cup Group A",
+            "slug": "kings-cup-group-a",
+            "category_name": "Spain Amateur",
+            "priority": 0
+        },
+        "11346": {
+            "name": "Tercera Federaci\u00f3n, Group 1",
+            "slug": "tercera-federacion-group-1",
+            "category_name": "Spain Amateur",
+            "priority": 0
+        },
+        "11347": {
+            "name": "Tercera Federacion, Group 2",
+            "slug": "tercera-federacion-group-2",
+            "category_name": "Spain Amateur",
+            "priority": 0
+        },
+        "11348": {
+            "name": "Tercera Federaci\u00f3n, Group 3",
+            "slug": "tercera-federacion-group-3",
+            "category_name": "Spain Amateur",
+            "priority": 0
+        },
+        "11349": {
+            "name": "Tercera Federaci\u00f3n, Group 4",
+            "slug": "tercera-federacion-group-4",
+            "category_name": "Spain Amateur",
+            "priority": 0
+        },
+        "11350": {
+            "name": "Tercera Federaci\u00f3n, Group 5",
+            "slug": "tercera-federacion-group-5",
+            "category_name": "Spain Amateur",
+            "priority": 0
+        },
+        "11351": {
+            "name": "Tercera Federaci\u00f3n, Group 6",
+            "slug": "tercera-federacion-group-6",
+            "category_name": "Spain Amateur",
+            "priority": 0
+        },
+        "11356": {
+            "name": "Tercera Federaci\u00f3n, Group 7",
+            "slug": "tercera-federacion-group-7",
+            "category_name": "Spain Amateur",
+            "priority": 0
+        },
+        "11357": {
+            "name": "Tercera Federaci\u00f3n, Group 8",
+            "slug": "tercera-federacion-group-8",
+            "category_name": "Spain Amateur",
+            "priority": 0
+        },
+        "11358": {
+            "name": "Tercera Federaci\u00f3n, Group 9",
+            "slug": "tercera-federacion-group-9",
+            "category_name": "Spain Amateur",
+            "priority": 0
+        },
+        "11359": {
+            "name": "Tercera Federaci\u00f3n, Group 10",
+            "slug": "tercera-federacion-group-10",
+            "category_name": "Spain Amateur",
+            "priority": 0
+        },
+        "11360": {
+            "name": "Tercera Federaci\u00f3n, Group 11",
+            "slug": "tercera-federacion-group-11",
+            "category_name": "Spain Amateur",
+            "priority": 0
+        },
+        "11362": {
+            "name": "Tercera Federaci\u00f3n, Group 13",
+            "slug": "tercera-federacion-group-13",
+            "category_name": "Spain Amateur",
+            "priority": 0
+        },
+        "11363": {
+            "name": "Tercera Federaci\u00f3n, Group 14",
+            "slug": "tercera-federacion-group-14",
+            "category_name": "Spain Amateur",
+            "priority": 0
+        },
+        "11365": {
+            "name": "Tercera Federaci\u00f3n, Group 16",
+            "slug": "tercera-federacion-group-16",
+            "category_name": "Spain Amateur",
+            "priority": 0
+        },
+        "11366": {
+            "name": "Tercera Federaci\u00f3n, Group 17",
+            "slug": "tercera-federacion-group-17",
+            "category_name": "Spain Amateur",
+            "priority": 0
+        },
+        "11367": {
+            "name": "Tercera Federaci\u00f3n, Group 18",
+            "slug": "tercera-federacion-group-18",
+            "category_name": "Spain Amateur",
+            "priority": 0
+        },
+        "20720": {
+            "name": "Lliga Elit Catalana",
+            "slug": "lliga-elit-catalana",
+            "category_name": "Spain Amateur",
+            "priority": 0
+        },
+        "20803": {
+            "name": "Preferente Galicia - Grupo Norte",
+            "slug": "preferente-galicia-grupo-norte",
+            "category_name": "Spain Amateur",
+            "priority": 0
+        },
+        "19257": {
+            "name": "Regional Preferente Arag\u00f3n - Grupo 2",
+            "slug": "regional-preferente-aragon-grupo-2",
+            "category_name": "Spain Amateur",
+            "priority": 0
+        },
+        "21209": {
+            "name": "2. Liga FVNWS",
+            "slug": "2-liga-fvnws",
+            "category_name": "Switzerland Amateur",
+            "priority": 0
+        },
+        "2353": {
+            "name": "Premier League",
+            "slug": "premier-league",
+            "category_name": "Tanzania",
+            "priority": 0
+        },
+        "11417": {
+            "name": "TFF 3. Lig, Grup 1",
+            "slug": "tff-3-lig-grup-1",
+            "category_name": "Turkey",
+            "priority": 0
+        },
+        "11416": {
+            "name": "TFF 3. Lig, Grup 2",
+            "slug": "tff-3-lig-grup-2",
+            "category_name": "Turkey",
+            "priority": 0
+        },
+        "11415": {
+            "name": "TFF 3. Lig, Grup 3",
+            "slug": "tff-3-lig-grup-3",
+            "category_name": "Turkey",
+            "priority": 0
+        },
+        "15938": {
+            "name": "TFF 3. Lig, Grup 4",
+            "slug": "tff-3-lig-grup-4",
+            "category_name": "Turkey",
+            "priority": 0
+        },
+        "10166": {
+            "name": "Premier League",
+            "slug": "premier-league",
+            "category_name": "Uganda",
+            "priority": 0
+        },
+        "19410": {
+            "name": "Big League",
+            "slug": "big-league",
+            "category_name": "Uganda",
+            "priority": 0
+        },
+        "10665": {
+            "name": "Division 1",
+            "slug": "division-1",
+            "category_name": "United Arab Emirates",
+            "priority": 0
+        },
+        "20439": {
+            "name": "Division 3, Group A",
+            "slug": "division-3-group-a",
+            "category_name": "United Arab Emirates",
+            "priority": 0
+        },
+        "21123": {
+            "name": "Liga de F\u00fatbol de Florida, Divisional A \u2013 Apertura",
+            "slug": "liga-de-futbol-de-florida-divisional-a-apertura",
+            "category_name": "Uruguay Amateur",
+            "priority": 0
+        },
+        "696": {
+            "name": "UEFA Champions League, Women, Qualification",
+            "slug": "uefa-champions-league-women-qualification",
+            "category_name": "Europe",
+            "priority": 323
+        },
+        "334": {
+            "name": "EFL Trophy, Northern Group A",
+            "slug": "efl-trophy-northern-group-a",
+            "category_name": "England",
+            "priority": 82
+        },
+        "1024": {
+            "name": "Copa Argentina",
+            "slug": "copa-argentina",
+            "category_name": "Argentina",
+            "priority": 0
+        },
+        "282": {
+            "name": "Cup",
+            "slug": "cup",
+            "category_name": "Czech Republic",
+            "priority": 0
+        },
+        "375": {
+            "name": "Novibet Greek Cup",
+            "slug": "novibet-greek-cup",
+            "category_name": "Greece",
+            "priority": 0
+        },
+        "101": {
+            "name": "J. League Cup, Playoffs",
+            "slug": "j-league-cup-playoffs",
+            "category_name": "Japan",
+            "priority": 0
+        },
+        "96": {
+            "name": "Turkiye Kupasi, Knockout stage",
+            "slug": "turkiye-kupasi-knockout-stage",
+            "category_name": "Turkey",
+            "priority": 0
+        },
+        "778": {
+            "name": "Armenian Cup",
+            "slug": "armenian-cup",
+            "category_name": "Armenia",
+            "priority": 0
+        },
+        "20360": {
+            "name": "Kup Republike Srpske",
+            "slug": "kup-republike-srpske",
+            "category_name": "Bosnia & Herzegovina Amateur",
+            "priority": 0
+        },
+        "1006": {
+            "name": "Elite One, Group B",
+            "slug": "elite-one-group-b",
+            "category_name": "Cameroon",
+            "priority": 0
+        },
+        "20309": {
+            "name": "Kup NS-PG\u017d",
+            "slug": "kup-ns-pgz",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "15991": {
+            "name": "1. \u017dNL \u0160ibensko-kninska",
+            "slug": "1-znl-sibensko-kninska",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "21235": {
+            "name": "Liga Veterana Vukovarsko - Srijemske \u017dupanije",
+            "slug": "liga-veterana-vukovarsko-srijemske-zupanije",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "21238": {
+            "name": "Liga Veterana Zagreba\u010dke \u017dupanije Istok",
+            "slug": "liga-veterana-zagrebacke-zupanije-istok",
+            "category_name": "Croatia Amateur",
+            "priority": 0
+        },
+        "16704": {
+            "name": "Prom\u00e9 Divishon",
+            "slug": "prome-divishon",
+            "category_name": "Curacao",
+            "priority": 0
+        },
+        "10240": {
+            "name": "LigaPro Serie B",
+            "slug": "ligapro-serie-b",
+            "category_name": "Ecuador",
+            "priority": 0
+        },
+        "1111": {
+            "name": "Northern Premier League, Premier Division",
+            "slug": "northern-premier-league-premier-division",
+            "category_name": "England Amateur",
+            "priority": 0
+        },
+        "11340": {
+            "name": "Southern League, Premier Division South",
+            "slug": "southern-league-premier-division-south",
+            "category_name": "England Amateur",
+            "priority": 0
+        },
+        "19275": {
+            "name": "Isthmian League, Division One North",
+            "slug": "isthmian-league-division-one-north",
+            "category_name": "England Amateur",
+            "priority": 0
+        },
+        "1131": {
+            "name": "Isthmian League, Premier Division",
+            "slug": "isthmian-league-premier-division",
+            "category_name": "England Amateur",
+            "priority": 0
+        },
+        "19126": {
+            "name": "Isthmian League, South East Division",
+            "slug": "isthmian-league-south-east-division",
+            "category_name": "England Amateur",
+            "priority": 0
+        },
+        "1592": {
+            "name": "U21 Premier League Cup, Group B",
+            "slug": "u21-premier-league-cup-group-b",
+            "category_name": "England Amateur",
+            "priority": 0
+        },
+        "748": {
+            "name": "U19 UEFA European Championship Qualif. Gr. 2",
+            "slug": "u19-uefa-european-championship-qualif-gr-2",
+            "category_name": "Europe",
+            "priority": 0
+        },
+        "17027": {
+            "name": "Liga 4",
+            "slug": "liga-4",
+            "category_name": "Georgia",
+            "priority": 0
+        },
+        "19752": {
+            "name": "Division One - Zone One B",
+            "slug": "division-one-zone-one-b",
+            "category_name": "Ghana",
+            "priority": 0
+        },
+        "21181": {
+            "name": "EPS Athens Cup - Qualifiers ",
+            "slug": "eps-athens-cup-qualifiers",
+            "category_name": "Greece Amateur",
+            "priority": 0
+        },
+        "13354": {
+            "name": "Coppa Italia, Women",
+            "slug": "coppa-italia-women",
+            "category_name": "Italy",
+            "priority": 0
+        },
+        "1554": {
+            "name": "Primavera Cup",
+            "slug": "primavera-cup",
+            "category_name": "Italy",
+            "priority": 0
+        },
+        "21137": {
+            "name": "Coppa Italia Dilettanti Calabria",
+            "slug": "coppa-italia-dilettanti-calabria",
+            "category_name": "Italy Amateur",
+            "priority": 0
+        },
+        "1211": {
+            "name": "Ligue 1",
+            "slug": "ligue-1",
+            "category_name": "Ivory Coast",
+            "priority": 0
+        },
+        "20916": {
+            "name": "Puchar Polski PomZPN - Gda\u0144sk",
+            "slug": "puchar-polski-pomzpn-gdansk",
+            "category_name": "Poland Amateur",
+            "priority": 0
+        },
+        "18315": {
+            "name": "Liga 4 Giurgiu Seria Nord",
+            "slug": "liga-4-giurgiu-seria-nord",
+            "category_name": "Romania Amateur",
+            "priority": 0
+        },
+        "18836": {
+            "name": "Moscow Championship - Division A",
+            "slug": "moscow-championship-division-a",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "19719": {
+            "name": "Moscow Championship - Division B",
+            "slug": "moscow-championship-division-b",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "20741": {
+            "name": "Championship MFF Golden Ring",
+            "slug": "championship-mff-golden-ring",
+            "category_name": "Russia Amateur",
+            "priority": 0
+        },
+        "19034": {
+            "name": "Upolu National League",
+            "slug": "upolu-national-league",
+            "category_name": "Samoa",
+            "priority": 0
+        },
+        "10602": {
+            "name": " Copa Libertadores Femenina, Group C",
+            "slug": "copa-libertadores-femenina-group-c",
+            "category_name": "South America",
+            "priority": 0
+        },
+        "11126": {
+            "name": "Copa de SM La Reina",
+            "slug": "copa-de-sm-la-reina",
+            "category_name": "Spain",
+            "priority": 0
+        },
+        "17243": {
+            "name": "Premier League",
+            "slug": "premier-league",
+            "category_name": "Syria",
+            "priority": 0
+        },
+        "20434": {
+            "name": "Division 2",
+            "slug": "division-2",
+            "category_name": "United Arab Emirates",
+            "priority": 0
+        },
+        "13820": {
+            "name": "Cymru North",
+            "slug": "cymru-north",
+            "category_name": "Wales",
+            "priority": 0
+        }
+    }
+}

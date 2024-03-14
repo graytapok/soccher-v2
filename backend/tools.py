@@ -4,6 +4,9 @@ from flask_login import *
 from app import app
 from functools import wraps
 
+class UnexpectedError(Exception):
+    pass
+
 def create_response(message: str, **kwargs):
     if "data" in kwargs:
         if kwargs["data"] == {}:
