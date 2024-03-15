@@ -160,7 +160,7 @@ function RegisterForm() {
   const createUser = (event) => {
     setLoading(true);
     event.preventDefault();
-    fetch(`/auth/register`, {
+    fetch(`/api/auth/register`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

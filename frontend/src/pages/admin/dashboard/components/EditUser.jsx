@@ -150,7 +150,7 @@ function EditUser() {
   const editUser = (event) => {
     setLoading(true);
     event.preventDefault();
-    fetch(`/admin/edit/user`, {
+    fetch(`/api/admin/edit/user`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

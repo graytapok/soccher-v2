@@ -206,4 +206,4 @@ def admin_delete(request_type, id):
 
             return create_response(message)
         
-    raise UnexpectedError
+    raise UnexpectedError(request_type)

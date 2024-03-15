@@ -136,7 +136,7 @@ const AdminTable = ({ head, tbody, sorting, settings }) => {
   };
 
   const deleteItem = (id) => {
-    fetch(`${settings.delete}/${id}`, { method: "DELETE" })
+    fetch(`/api${settings.delete}/${id}`, { method: "DELETE" })
       .then((res) => res.json())
       .then((res) =>
         res.success

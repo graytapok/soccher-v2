@@ -134,7 +134,7 @@ function ForgotPasswordForm() {
   const changePassword = (event) => {
     event.preventDefault();
     setLoading(true);
-    fetch(`/auth/forgot_password/${loginData}`)
+    fetch(`/api/auth/forgot_password/${loginData}`)
       .then((response) => response.json())
       .then((res) => {
         console.log(res);

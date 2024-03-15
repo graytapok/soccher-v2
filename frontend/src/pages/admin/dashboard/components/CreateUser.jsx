@@ -148,7 +148,7 @@ function CreateUser() {
   const createUser = (event) => {
     setLoading(true);
     event.preventDefault();
-    fetch(`/admin/create/user`, {
+    fetch(`/api/admin/create/user`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

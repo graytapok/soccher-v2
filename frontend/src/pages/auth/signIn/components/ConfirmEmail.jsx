@@ -51,7 +51,7 @@ const ConfirmEmailComponent = styled.div`
 function ConfirmEmail() {
   const { userLogin } = useContext(LoginContext);
   useEffect(() => {
-    fetch(`/auth/resend_email/${userLogin}`);
+    fetch(`/api/auth/resend_email/${userLogin}`);
   }, [userLogin]);
   return (
     <ConfirmEmailComponent>

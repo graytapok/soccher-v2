@@ -6,7 +6,7 @@ function CountryRankingPage() {
   const [rankingData, setRankingData] = useState({});
 
   useEffect(() => {
-    fetch("/countrys_ranking")
+    fetch("/api/countrys_ranking")
       .then((res) => res.json())
       .then((res) => setRankingData(res.data.countrys));
   }, []);

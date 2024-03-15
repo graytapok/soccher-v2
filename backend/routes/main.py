@@ -31,6 +31,8 @@ def index():
     # Open or create JSON file for today's matches.
     d, m, y = datetime.now().day, datetime.now().month, datetime.now().year
     todays_json = ApiData(day=d, month=m, year=y, timeframe=60*60).match("date")
+    country_list = ApiData().other("country_codes")["country_codes"]
+    league_id_list = ApiData().league("leagues")["leagues"]
         
     # Creating a dict of today's most important matches by "priority".
     matches = []
@@ -123,14 +125,11 @@ def index():
 @app.route("/league/<league_id>", methods=["GET"])
 def league(league_id):
     message = ""
-    league_id = int(league_id)
+    league_id = league_id
     
     # Open or create JSON file for league_id.
-    api_request = ApiData(id=league_id).league("standings")
-    standings_json = api_request["json"]
-    season = api_request["season"]
-        
-    json_data = standings_json["standings"][0]
+    json_data = ApiData(id=league_id).league("standings")["standings"][0]
+    league_id_list = ApiData().league("leagues")["leagues"]
     
     standings = []
     for row in json_data["rows"]:
@@ -160,7 +159,7 @@ def league(league_id):
     standings = sorted(standings, key = lambda k: k["position"], reverse=False)
     
     league = {
-        "id": league_id, 
+        "id": int(league_id),
         "name": json_data["name"], 
         "type": json_data["type"], 
         "slug": league_id_list[league_id]["slug"],

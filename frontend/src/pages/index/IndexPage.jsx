@@ -18,7 +18,7 @@ function IndexPage() {
   const [leaguesData, setLeaguesData] = useState([]);
 
   useEffect(() => {
-    fetch("/index")
+    fetch("/api/index")
       .then((res) => res.json())
       .then((res) => {
         if (res.success) {

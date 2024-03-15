@@ -245,7 +245,7 @@ function LoginForm() {
   const loginUser = (event) => {
     event.preventDefault();
     setLoading(true);
-    fetch(`/auth/login`, {
+    fetch(`/api/auth/login`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

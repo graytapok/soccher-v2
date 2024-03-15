@@ -54,7 +54,7 @@ function ConfirmEmailPage() {
 
   useEffect(() => {
     if (render) {
-      fetch(`/auth/confirm_email/${token}`)
+      fetch(`/api/auth/confirm_email/${token}`)
         .then((res) => res.json())
         .then((res) => {
           updateAuth();

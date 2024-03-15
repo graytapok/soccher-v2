@@ -7,7 +7,7 @@ export const Context = createContext();
 const App = () => {
   const [user, setUser] = useState({ auth: false });
   const updateAuth = () => {
-    fetch("/auth")
+    fetch("/api/auth")
       .then((res) => res.json())
       .then((res) => setUser(res.data));
   };
@@ -15,7 +15,7 @@ const App = () => {
     setUser({ ...user, auth: true });
   };
   const logout = () => {
-    fetch("/auth/logout")
+    fetch("/api/auth/logout")
       .then((res) => res.json())
       .then((res) => res.success && setUser({ ...user, auth: false }));
   };
@@ -23,21 +23,21 @@ const App = () => {
   const [followedMatches, setFollowedMatches] = useState({});
   const [followedLeagues, setFollowedLeagues] = useState({});
   const updateFollowedMatches = () => {
-    fetch("/auth/followed_matches")
+    fetch("/api/auth/followed_matches")
       .then((res) => res.json())
       .then((res) => {
         setFollowedMatches(res.data);
       });
   };
   const updateFollowedLeagues = () => {
-    fetch("/auth/followed_leagues")
+    fetch("/api/auth/followed_leagues")
       .then((res) => res.json())
       .then((res) => {
         setFollowedLeagues(res.data);
       });
   };
   const followMatch = (details = {}) => {
-    fetch("/auth/follow_match", {
+    fetch("/api/auth/follow_match", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -53,7 +53,7 @@ const App = () => {
       .catch((error) => console.error(error));
   };
   const unFollowMatch = (id) => {
-    fetch(`/auth/follow_match?id=${id}`, {
+    fetch(`/api/auth/follow_match?id=${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",
@@ -66,7 +66,7 @@ const App = () => {
       .catch((error) => console.error(error));
   };
   const followLeague = (details = {}) => {
-    fetch("/auth/follow_league", {
+    fetch("/api/auth/follow_league", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -82,7 +82,7 @@ const App = () => {
       .catch((error) => console.error(error));
   };
   const unFollowLeague = (id) => {
-    fetch(`/auth/follow_league?id=${id}`, {
+    fetch(`/api/auth/follow_league?id=${id}`, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

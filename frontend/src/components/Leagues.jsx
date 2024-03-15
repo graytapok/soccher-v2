@@ -87,8 +87,8 @@ function Leagues({ leagues, title, message }) {
   const navigate = useNavigate();
 
   const checkFollow = (id) => {
-    for (let match in followedLeagues) {
-      if (followedLeagues[match].leagueId === id) {
+    for (let league in followedLeagues) {
+      if (followedLeagues[league].leagueId === parseInt(id)) {
         return true;
       }
     }

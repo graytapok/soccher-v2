@@ -39,7 +39,7 @@ function DashboardPage() {
   };
 
   const updateData = () => {
-    fetch("/admin/dashboard")
+    fetch("/api/admin/dashboard")
       .then((res) => res.json())
       .then((res) => {
         setData(res.data);

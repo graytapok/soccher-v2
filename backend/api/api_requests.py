@@ -275,8 +275,8 @@ class ApiData:
                 elif self.season not in available_seasons:
                     raise self.Errors.IncorrectFunctionArgument(f"season '{self.season}' for league '{self.id}' is not available")
                 
-                path = f"api/json/league/seasons/{self.id}.json"
-                url = f'https://footapi7.p.rapidapi.com/api/tournament/{self.id}/seasons'
+                path = f"api/json/league/standings/{self.id}/{self.season}.json"
+                url = f'https://footapi7.p.rapidapi.com/api/tournament/{self.id}/season/{self.season}/standings/total'
                 
                 return self.create_open_update(path, url, 60*60*24)
                 

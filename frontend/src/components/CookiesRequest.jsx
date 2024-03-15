@@ -42,7 +42,7 @@ function CookiesRequest() {
   const { toggleCookiesRequest, darkmode } = useContext(Context);
 
   const cookies = () => {
-    fetch("/cookies", {
+    fetch("/api/cookies", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

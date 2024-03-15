@@ -14,7 +14,7 @@ const LogoutMenu = ({ showLogoutMenu, showDropdown, toggleLogoutMenu }) => {
   };
 
   const logoutUser = () => {
-    fetch(`/auth/logout`)
+    fetch(`/api/auth/logout`)
       .then((response) => response.json())
       .then((res) => navigate("/"));
     logout();

@@ -15,7 +15,7 @@ function MatchDetails() {
   const [lineups, setLineups] = useState();
 
   useEffect(() => {
-    fetch(`/match_details/${match_id}`)
+    fetch(`/api/match_details/${match_id}`)
       .then((res) => res.json())
       .then((res) => {
         setMatch(res.data.match);

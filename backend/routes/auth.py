@@ -286,6 +286,7 @@ def follow_match():
 @app.route("/auth/follow_league", methods=["POST", "DELETE"])
 @login_required
 def follow_league():
+    print("assfsdf")
     if request.method == "POST":  
         message = ""      
         details = request.json["details"]

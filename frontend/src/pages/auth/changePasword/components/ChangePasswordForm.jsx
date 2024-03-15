@@ -159,7 +159,7 @@ function ChangePasswordForm({ token }) {
   const changePassword = (event) => {
     event.preventDefault();
     setLoading(true);
-    fetch(`/auth/change_password/${token}`, {
+    fetch(`/api/auth/change_password/${token}`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

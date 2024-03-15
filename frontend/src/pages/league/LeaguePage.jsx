@@ -1,11 +1,9 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import styled from "styled-components";
 
-import Button from "../../components/Button";
 import Ranking from "../../components/Ranking";
 import Heading from "../../components/Heading";
-import { Context } from "../../App";
 
 const LeagueComponent = styled.div``;
 
@@ -13,13 +11,11 @@ function LeaguePage() {
   const url = useLocation();
   const league_id = url.pathname.slice(8);
 
-  const { user } = useContext(Context);
-
   const [standings, setStandings] = useState({});
   const [leagueInfo, setLeagueInfo] = useState({});
 
   const updateStandings = () => {
-    fetch(`/league/${league_id}`)
+    fetch(`/api/league/${league_id}`)
       .then((res) => res.json())
       .then((res) => {
         setStandings(res.data.standings);
@@ -31,16 +27,6 @@ function LeaguePage() {
     updateStandings();
   }, [league_id]);
 
-  const update = () => {
-    fetch(`/soccer_api/league/${league_id}`)
-      .then((res) => res.json())
-      .then((res) => {
-        if (res.success == true) {
-          updateStandings();
-        }
-      });
-  };
-
   return (
     <LeagueComponent>
       <Heading
@@ -49,9 +35,7 @@ function LeaguePage() {
           alt: leagueInfo.slug,
         }}
         title={leagueInfo.name}
-      >
-        {user.admin && <Button onClick={update}>Update</Button>}
-      </Heading>
+      ></Heading>
       <Ranking
         head={{
           0: {
