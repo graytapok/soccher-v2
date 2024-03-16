@@ -237,14 +237,14 @@ const AdminTable = ({ head, tbody, sorting, settings }) => {
                     variant="primary"
                     onClick={() => settings.edit(body[i])}
                   >
-                    <i class="fa-solid fa-pen-to-square"></i>
+                    <i className="fa-solid fa-pen-to-square"></i>
                   </Button>
                   <Button
                     size="mini"
                     variant="danger"
                     onClick={() => deleteItem(body[i].id)}
                   >
-                    <i class="fa-solid fa-trash"></i>
+                    <i className="fa-solid fa-trash"></i>
                   </Button>
                 </td>
                 {Object.keys(head).map((j) => (
@@ -279,12 +279,12 @@ const AdminTable = ({ head, tbody, sorting, settings }) => {
                         body[i][head[j].atribute] ? (
                           <i
                             style={{ color: "rgb(var(--success))" }}
-                            class="fa-solid fa-check"
+                            className="fa-solid fa-check"
                           ></i>
                         ) : (
                           <i
                             style={{ color: "rgb(var(--danger))" }}
-                            class="fa-solid fa-xmark"
+                            className="fa-solid fa-xmark"
                           ></i>
                         )
                       ) : (

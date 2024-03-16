@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../App";
@@ -80,9 +81,13 @@ const LeaguesComponent = styled.div`
   .leagues .league .message {
     padding: 5px;
   }
+
+  .leagues .league .loader {
+    margin: 10px auto 10px auto;
+  }
 `;
 
-function Leagues({ leagues, title, message }) {
+function Leagues({ leagues, title, message, loading }) {
   const { followLeague, unFollowLeague, followedLeagues } = useContext(Context);
   const navigate = useNavigate();
 
@@ -127,11 +132,20 @@ function Leagues({ leagues, title, message }) {
             </div>
           ))
         ) : (
-          <>
-            <div className="league">
+          <div className="league">
+            {loading ? (
+              <ClipLoader
+                size={40}
+                color="white"
+                speedMultiplier={1}
+                aria-label="Loading Spinner"
+                data-testid="loader"
+                className="loader"
+              />
+            ) : (
               <span className="message">{message}</span>
-            </div>
-          </>
+            )}
+          </div>
         )}
       </div>
     </LeaguesComponent>

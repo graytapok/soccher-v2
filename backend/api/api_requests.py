@@ -12,14 +12,13 @@ headers = {
 } 
  
 class ApiData:
-    def __init__(self, day=None, month=None, year=None, id=None, season=None, update=False, timeframe=None):
+    def __init__(self, day=None, month=None, year=None, id=None, season=None, timeframe=None):
         self.day = day
         self.month = month
         self.year = year
         self.id = id
         self.season = season
      
-        self.update = update
         self.timeframe = timeframe
         
     class Errors:   
@@ -54,7 +53,10 @@ class ApiData:
                         data = data[i]
                 
                 time_now = time.time()
-                time_from_timestamp = data["timestamp"]
+                if "timestamp" in data:
+                    time_from_timestamp = data["timestamp"]
+                else:
+                    return True
 
                 diff = time_now - time_from_timestamp
                 
@@ -94,9 +96,8 @@ class ApiData:
              
             if not os.path.exists(path):
                 make_request()
-            elif self.update:
-                if check_timestamp(list_of_json_keys):
-                    make_request()
+            elif check_timestamp(list_of_json_keys):
+                make_request()
 
             outfile.seek(0) 
             j.dump(file, outfile)
@@ -259,7 +260,7 @@ class ApiData:
                 path = f"api/json/league/seasons/{self.id}.json"
                 url = f'https://footapi7.p.rapidapi.com/api/tournament/{self.id}/seasons'
                 
-                return self.create_open_update(path, url, 60*60*24*31)
+                return self.create_open_update(path, url, 60*60*24*31*3)
                 
             case "standings":
                 self.check_missing_args(id=self.id)
@@ -278,7 +279,7 @@ class ApiData:
                 path = f"api/json/league/standings/{self.id}/{self.season}.json"
                 url = f'https://footapi7.p.rapidapi.com/api/tournament/{self.id}/season/{self.season}/standings/total'
                 
-                return self.create_open_update(path, url, 60*60*24)
+                return self.create_open_update(path, url, 60*60*24*3)
                 
             case "media":
                 self.check_missing_args(id=self.id)

@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ClipLoader from "react-spinners/ClipLoader";
 import styled from "styled-components";
 
 const RankingComponent = styled.div`
@@ -34,6 +35,11 @@ const RankingComponent = styled.div`
   .ranking_table tbody tr:hover {
     background-color: rgba(var(--secondary), 0.5);
   }
+  .ranking_table tbody .loader {
+    justify-self: center;
+    align-self: center;
+    margin: 100% 500% 100% 500%;
+  }
 
   .ranking_table .td_item {
     display: flex;
@@ -65,7 +71,7 @@ const TdItemComponent = styled.span`
       : null}
 `;
 
-const Ranking = ({ head, tbody, sorting }) => {
+const Ranking = ({ head, tbody, sorting, loading }) => {
   /* 
   
   head={
@@ -190,37 +196,48 @@ const Ranking = ({ head, tbody, sorting }) => {
           </tr>
         </thead>
         <tbody>
-          {Object.keys(body).map((i) => (
-            <tr key={i}>
-              {Object.keys(head).map((j) => (
-                <td key={j}>
-                  <TdItemComponent
-                    className="td_item"
-                    head={head}
-                    body={body}
-                    j={j}
-                    i={i}
-                    background_colors={
-                      head[j].background
-                        ? findValue(body[i], head[j].background)
-                        : null
-                    }
-                  >
-                    {head[j].img ? (
-                      <img
-                        className="td_item_img"
-                        src={`${head[j].img}/${body[i].img}`}
-                        alt="img"
-                      />
-                    ) : null}
-                    {Array.isArray(head[j].atribute)
-                      ? findValue(body[i], head[j].atribute)
-                      : body[i][head[j].atribute]}
-                  </TdItemComponent>
-                </td>
-              ))}
-            </tr>
-          ))}
+          {loading ? (
+            <ClipLoader
+              size={40}
+              color="white"
+              speedMultiplier={1}
+              aria-label="Loading Spinner"
+              data-testid="loader"
+              className="loader"
+            />
+          ) : (
+            Object.keys(body).map((i) => (
+              <tr key={i}>
+                {Object.keys(head).map((j) => (
+                  <td key={j}>
+                    <TdItemComponent
+                      className="td_item"
+                      head={head}
+                      body={body}
+                      j={j}
+                      i={i}
+                      background_colors={
+                        head[j].background
+                          ? findValue(body[i], head[j].background)
+                          : null
+                      }
+                    >
+                      {head[j].img ? (
+                        <img
+                          className="td_item_img"
+                          src={`${head[j].img}/${body[i].img}`}
+                          alt="img"
+                        />
+                      ) : null}
+                      {Array.isArray(head[j].atribute)
+                        ? findValue(body[i], head[j].atribute)
+                        : body[i][head[j].atribute]}
+                    </TdItemComponent>
+                  </td>
+                ))}
+              </tr>
+            ))
+          )}
         </tbody>
       </table>
     </RankingComponent>

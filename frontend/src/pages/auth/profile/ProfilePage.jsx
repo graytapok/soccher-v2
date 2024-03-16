@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import styled from "styled-components";
 
 import { Context } from "../../../App";
@@ -26,16 +26,22 @@ function ProfilePage() {
         <div className="profile">
           <Leagues
             title="Followed leagues"
-            leagues={followedLeagues.map((element) => {
-              return element.details;
-            })}
+            leagues={
+              Array.isArray(followedLeagues) &&
+              followedLeagues.map((element) => {
+                return element.details;
+              })
+            }
             message="Your followed leagues will apear here!"
           />
           <Matches
             title="Followed matches"
-            matches={followedMatches.map((element) => {
-              return element.details;
-            })}
+            matches={
+              Array.isArray(followedMatches) &&
+              followedMatches.map((element) => {
+                return element.details;
+              })
+            }
             message="Your followed matches will apear here!"
           />
         </div>

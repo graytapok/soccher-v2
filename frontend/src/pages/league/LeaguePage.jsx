@@ -10,21 +10,20 @@ const LeagueComponent = styled.div``;
 function LeaguePage() {
   const url = useLocation();
   const league_id = url.pathname.slice(8);
+  const [loading, setLoading] = useState(true);
 
   const [standings, setStandings] = useState({});
   const [leagueInfo, setLeagueInfo] = useState({});
 
-  const updateStandings = () => {
+  useEffect(() => {
+    setLoading(true);
     fetch(`/api/league/${league_id}`)
       .then((res) => res.json())
       .then((res) => {
         setStandings(res.data.standings);
         setLeagueInfo(res.data.league);
+        setLoading(false);
       });
-  };
-
-  useEffect(() => {
-    updateStandings();
   }, [league_id]);
 
   return (
@@ -36,6 +35,7 @@ function LeaguePage() {
         }}
         title={leagueInfo.name}
       ></Heading>
+
       <Ranking
         head={{
           0: {
@@ -64,6 +64,7 @@ function LeaguePage() {
         }}
         sorting={{ by: "position", order: "desc" }}
         tbody={standings}
+        loading={loading}
       />
     </LeagueComponent>
   );

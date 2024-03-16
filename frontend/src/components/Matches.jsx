@@ -1,7 +1,8 @@
-import React, { useContext } from "react";
-import { Context } from "../App";
+import ClipLoader from "react-spinners/ClipLoader";
 import { useNavigate } from "react-router-dom";
+import React, { useContext } from "react";
 import styled from "styled-components";
+import { Context } from "../App";
 
 const MatchesComponent = styled.div`
   .matches {
@@ -18,7 +19,7 @@ const MatchesComponent = styled.div`
   .matches .topping {
     padding: 10px;
     margin: 0;
-    color: #fff;
+    color: rgba(255, 255, 255, 0.8);
     font-weight: normal;
   }
 
@@ -106,9 +107,12 @@ const MatchesComponent = styled.div`
       opacity: 1;
     }
   }
+  .matches .match .loader {
+    margin: 10px auto 10px auto;
+  }
 `;
 
-function Matches({ title, matches, message }) {
+function Matches({ title, matches, message, loading }) {
   const { followMatch, unFollowMatch, followedMatches } = useContext(Context);
   const navigate = useNavigate();
 
@@ -166,7 +170,7 @@ function Matches({ title, matches, message }) {
                   )}
               </span>
 
-              <p
+              <div
                 className="teams"
                 onClick={() => navigate("/match_details/" + matches[id].id)}
               >
@@ -213,13 +217,24 @@ function Matches({ title, matches, message }) {
                     {matches[id].away.score}
                   </span>
                 </div>
-              </p>
+              </div>
             </div>
           ))
         ) : (
           <>
             <div className="match">
-              <span className="message">{message}</span>
+              {loading ? (
+                <ClipLoader
+                  size={40}
+                  color="white"
+                  speedMultiplier={1}
+                  aria-label="Loading Spinner"
+                  data-testid="loader"
+                  className="loader"
+                />
+              ) : (
+                <span className="message">{message}</span>
+              )}
             </div>
           </>
         )}

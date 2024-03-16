@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext } from "react";
 import { Context } from "../App";
 import { Routes, Route, BrowserRouter, Navigate } from "react-router-dom";
 
@@ -23,26 +23,19 @@ import "../index.css";
 
 const ProtectedRoute = ({
   anti = false,
-  children,
   admin = false,
   confirmed = false,
+  children,
 }) => {
-  const { user, updateAuth } = useContext(Context);
+  const { user } = useContext(Context);
 
-  useEffect(() => {
-    if (user === null) {
-      updateAuth();
-    }
-  }, [user, updateAuth]);
-
-  if (admin && !user.admin) {
-    return <Navigate to="/" replace />;
-  } else if (user.auth && anti) {
-    return <Navigate to="/" replace />;
-  } else if (user.auth === false && anti === false && confirmed === false) {
+  if (
+    (user.admin === false && admin) ||
+    (user.auth && anti) ||
+    (user.auth === false && anti === false && confirmed === false)
+  ) {
     return <Navigate to="/" replace />;
   }
-
   return children;
 };
 
@@ -112,15 +105,7 @@ function AppRoutes() {
             <Route
               path="/admin/dashboard"
               element={
-                <ProtectedRoute admin={true}>
-                  <DashboardPage />
-                </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/admin/followedMatches"
-              element={
-                <ProtectedRoute admin={true}>
+                <ProtectedRoute admin>
                   <DashboardPage />
                 </ProtectedRoute>
               }

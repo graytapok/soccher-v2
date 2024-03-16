@@ -42,6 +42,10 @@ const ButtonComponent = styled.button`
       ? `border: 2px solid rgba(var(--${props.variant})); background-color: var(--transparent); color: rgb(var(--${props.variant}));`
       : "border: 2px solid rgba(var(--transparent));"}
   ${(props) => (props.variant === "light" ? "color: var(--navbar_color);" : "")}
+  ${(props) =>
+    props.size === "nav_icon" || props.size === "icon"
+      ? "i {font-size: 25px;};"
+      : ""}
   &:hover {
     ${(props) =>
       props.size === "nav_icon"
@@ -58,16 +62,12 @@ const ButtonComponent = styled.button`
     ${(props) =>
       props.variant === "light" ? "color: black;" : "color: white;"}
   }
-  ${(props) =>
-    props.size === "nav_icon" || props.size === "icon"
-      ? "i {font-size: 25px;};"
-      : ""}
 `;
 
 function Button({
   type,
   variant,
-  outline = false,
+  outline = null,
   id,
   className,
   onClick,
@@ -82,7 +82,7 @@ function Button({
       onClick={onClick}
       size={size}
       variant={variant}
-      outline={outline}
+      outline={outline ? true : false}
     >
       {children}
     </ButtonComponent>

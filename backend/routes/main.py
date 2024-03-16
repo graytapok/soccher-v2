@@ -20,7 +20,6 @@ with app.app_context():
         day = day,
         month = month,
         year = year,
-        update=True,
         timeframe = 60*60
     ).match("date")
 

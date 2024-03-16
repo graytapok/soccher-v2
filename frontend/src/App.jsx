@@ -5,23 +5,22 @@ import "./index.css";
 export const Context = createContext();
 
 const App = () => {
-  const [user, setUser] = useState({ auth: false });
-  const updateAuth = () => {
-    fetch("/api/auth")
-      .then((res) => res.json())
-      .then((res) => setUser(res.data));
+  const [user, setUser] = useState({});
+
+  const updateAuth = async () => {
+    let res = await fetch("/api/auth");
+    res = await res.json();
+    setUser(res.data);
   };
-  const login = () => {
-    setUser({ ...user, auth: true });
-  };
+
   const logout = () => {
     fetch("/api/auth/logout")
       .then((res) => res.json())
       .then((res) => res.success && setUser({ ...user, auth: false }));
   };
 
-  const [followedMatches, setFollowedMatches] = useState({});
-  const [followedLeagues, setFollowedLeagues] = useState({});
+  const [followedMatches, setFollowedMatches] = useState([]);
+  const [followedLeagues, setFollowedLeagues] = useState([]);
   const updateFollowedMatches = () => {
     fetch("/api/auth/followed_matches")
       .then((res) => res.json())
@@ -29,6 +28,7 @@ const App = () => {
         setFollowedMatches(res.data);
       });
   };
+
   const updateFollowedLeagues = () => {
     fetch("/api/auth/followed_leagues")
       .then((res) => res.json())
@@ -36,6 +36,7 @@ const App = () => {
         setFollowedLeagues(res.data);
       });
   };
+
   const followMatch = (details = {}) => {
     fetch("/api/auth/follow_match", {
       method: "POST",
@@ -136,7 +137,6 @@ const App = () => {
       value={{
         user,
         updateAuth,
-        login,
         logout,
 
         followLeague,

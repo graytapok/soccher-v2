@@ -47,6 +47,7 @@ function DashboardPage() {
   };
 
   useEffect(() => {
+    console.log("asdfpsidfupsiduf");
     updateData();
   }, [showCreateUser, showEditUser]);
 

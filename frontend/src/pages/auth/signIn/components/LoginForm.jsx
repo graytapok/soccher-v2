@@ -254,7 +254,6 @@ function LoginForm() {
     })
       .then((response) => response.json())
       .then((res) => {
-        console.log(res);
         if (res.success) {
           setCorrectInput(true);
           updateAuth();

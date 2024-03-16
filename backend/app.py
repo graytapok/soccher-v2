@@ -16,7 +16,6 @@ import os
 load_dotenv()
 
 app = Flask("soccher-v2")
-app.debug = True
 app.wsgi_app = PrefixMiddleware(app.wsgi_app, prefix="/api")
 app.config.from_object(Config)
 

@@ -3,20 +3,6 @@ from flask import request
 from app import app
 from tools import create_response
 
-from icecream import ic
-
-@app.route("/manifest.json")
-def react_error_1():
-    return {}
-
-@app.route("/react_devtools_backend_compact.js.map")
-def react_error_2():
-    return {}
-
-@app.route("/favicon.ico")
-def react_error_3():
-    return {}
-
 @app.errorhandler(400)
 def bad_request(e):
     print(f"""

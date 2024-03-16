@@ -17,13 +17,17 @@ function IndexPage() {
   const [matchesData, setMatchesData] = useState([]);
   const [leaguesData, setLeaguesData] = useState([]);
 
+  const [loading, setLoading] = useState(false);
+
   useEffect(() => {
+    setLoading(true);
     fetch("/api/index")
       .then((res) => res.json())
       .then((res) => {
         if (res.success) {
           setMatchesData(res.data.matches);
           setLeaguesData(res.data.leagues);
+          setLoading(false);
         } else {
           console.log(res.message);
         }
@@ -38,11 +42,13 @@ function IndexPage() {
             leagues={leaguesData}
             message="Leagues not Found"
             title="Leagues"
+            loading={loading}
           />
           <Matches
             title="Today's matches"
             matches={matchesData}
             message="Matches not Found"
+            loading={loading}
           />
         </div>
       </IndexComponent>
