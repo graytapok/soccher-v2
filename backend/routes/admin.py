@@ -165,7 +165,7 @@ def admin_create_user():
 def admin_delete(request_type, id):
     request_types = ["user", "followed_match", "followed_league"]
     if request_type not in request_types:
-        return create_response(f"wrong request type: {request_type}, possible options: {request_types}")
+        return create_response(f"wrong request type: {request_type}", data={"request_types": request_types})
     
     match request_type:
         case "user":
@@ -205,5 +205,3 @@ def admin_delete(request_type, id):
                 db.session.commit()
 
             return create_response(message)
-        
-    raise UnexpectedError(request_type)

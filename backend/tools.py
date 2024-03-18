@@ -4,9 +4,11 @@ from flask_login import *
 from app import app
 from functools import wraps
 
+'''ERRORS'''
 class UnexpectedError(Exception):
     pass
 
+'''FUNCTIONS'''
 def create_response(message: str, **kwargs):
     if "data" in kwargs:
         if kwargs["data"] == {}:
@@ -19,6 +21,12 @@ def create_response(message: str, **kwargs):
         "success": True if message == "" else False
     }
 
+def check_request_type(request_type: str, request_types: list[str]):
+    if request_type not in request_types:
+        return create_response("wrong request type", data={"request_types": request_types, "request_type": request_type})
+    return None
+
+'''DECORATORS'''
 def login_required(func):
     @wraps(func)
     def wrapped(*args, **kwargs):

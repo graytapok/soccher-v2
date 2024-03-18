@@ -249,91 +249,6 @@ def change_password(email, token):
             
     return create_response(message, data=data)
 
-@app.route("/auth/follow_match", methods=["POST", "DELETE"])
-@login_required
-def follow_match():
-    if request.method == "POST":        
-        message = ""
-        details = request.json["details"]
-        
-        row = FollowedMatch.query.filter_by(user_id=current_user.id).filter_by(match_id=int(details["id"])).first()
-        if row is not None:
-            message = "already followed"
-        else:
-            match = FollowedMatch(
-                user_id=current_user.id, 
-                match_id=details["id"],
-                details=details
-            )
-            db.session.add(match)
-            db.session.commit()
-        
-        return create_response(message)
-    if request.method == "DELETE":
-        message = ""
-        match_id = int(request.args["id"])
-        
-        match = FollowedMatch.query.filter_by(user_id=current_user.id).filter_by(match_id=match_id).first()
-        
-        if match is not None:
-            db.session.delete(match)
-            db.session.commit()
-        else:
-            message = "match not found"
-        
-        return create_response(message)
-    
-@app.route("/auth/follow_league", methods=["POST", "DELETE"])
-@login_required
-def follow_league():
-    print("assfsdf")
-    if request.method == "POST":  
-        message = ""      
-        details = request.json["details"]
-        
-        row = FollowedLeague.query.filter_by(user_id=current_user.id).filter_by(league_id=int(details["id"])).first()
-        if row is not None:
-            message = "already followed"
-        else:
-            league = FollowedLeague(
-                user_id=current_user.id, 
-                league_id=details["id"],
-                details=details
-            )
-            db.session.add(league)
-            db.session.commit()
-        
-        return create_response(message)   
-    if request.method == "DELETE":
-        message = ""
-        league_id = int(request.args["id"])
-        
-        league = FollowedLeague.query.filter_by(user_id=current_user.id).filter_by(league_id=league_id).first()
-        
-        if league is not None:
-            db.session.delete(league)
-            db.session.commit()
-        else:
-            message = "league not found"
-        
-        return create_response(message) 
-        
-@app.route("/auth/followed_matches", methods=["GET"])
-@login_required
-def followed_matches():
-    followed_schema = FollowedMatchSchema(many=True)
-    matches = followed_schema.dump(current_user.followed_matches)
-    
-    return create_response("", data=matches) 
-    
-@app.route("/auth/followed_leagues", methods=["GET"])
-@login_required
-def followed_leagues():
-    followed_schema = FollowedLeagueSchema(many=True)
-    leagues = followed_schema.dump(current_user.followed_leagues)
-    
-    return create_response("", data=leagues)
-
 @app.route("/cookies", methods=["POST"])
 def cookies():
     res = make_response({
@@ -349,3 +264,96 @@ def cookies():
             darkmode = "lightmode"
         res.set_cookie("darkmode", darkmode, max_age=60*60*24*365)
     return res
+
+@app.route("/auth/followed/<request_type>", methods=["GET"])
+@login_required
+def followed(request_type):
+    request_types = ["matches", "leagues"]
+    if request_type not in request_types:
+        return create_response("incorrect request type", data={"requst_type": request_type, "request_types": request_types})
+    
+    match request_type:
+        case "matches":
+            followed_schema = FollowedMatchSchema(many=True)
+            matches = followed_schema.dump(current_user.followed_matches)
+            return create_response("", data=matches) 
+        
+        case "leagues":
+            followed_schema = FollowedLeagueSchema(many=True)
+            leagues = followed_schema.dump(current_user.followed_leagues)
+            return create_response("", data=leagues)
+        
+@app.route("/auth/follow/<request_type>", methods=["DELETE", "POST"])
+@login_required
+def follow(request_type):
+    request_types = ["match", "league"]
+    if request_type not in request_types:
+        return create_response("incorrect request type", data={"requst_type": request_type, "request_types": request_types})
+    
+    match request_type:
+        case "match":
+            if request.method == "POST":        
+                message = ""
+                details = request.json["details"]
+
+                row = FollowedMatch.query.filter_by(user_id=current_user.id).filter_by(match_id=int(details["id"])).first()
+                if row is not None:
+                    message = "already followed"
+                else:
+                    match = FollowedMatch(
+                        user_id=current_user.id, 
+                        match_id=details["id"],
+                        details=details
+                    )
+                    db.session.add(match)
+                    db.session.commit()
+                    return redirect("/api/auth/followed/matches")
+
+                return create_response(message)      
+            if request.method == "DELETE":
+                message = ""
+                match_id = int(request.args["id"])
+
+                match = FollowedMatch.query.filter_by(user_id=current_user.id).filter_by(match_id=match_id).first()
+
+                if match is not None:
+                    db.session.delete(match)
+                    db.session.commit()
+                    return redirect("/api/auth/followed/matches", code=303)
+                else:
+                    message = "match not found"
+
+                return create_response(message)
+            
+        case "league":
+            if request.method == "POST":  
+                message = ""      
+                details = request.json["details"]
+
+                row = FollowedLeague.query.filter_by(user_id=current_user.id).filter_by(league_id=int(details["id"])).first()
+                if row is not None:
+                    message = "already followed"
+                else:
+                    league = FollowedLeague(
+                        user_id=current_user.id, 
+                        league_id=details["id"],
+                        details=details
+                    )
+                    db.session.add(league)
+                    db.session.commit()
+                    return redirect("/api/auth/followed/leagues")
+
+                return create_response(message)   
+            if request.method == "DELETE":
+                message = ""
+                league_id = int(request.args["id"])
+
+                league = FollowedLeague.query.filter_by(user_id=current_user.id).filter_by(league_id=league_id).first()
+
+                if league is not None:
+                    db.session.delete(league)
+                    db.session.commit()
+                    return redirect("/api/auth/followed/leagues", code=303)
+                else:
+                    message = "league not found"
+                    return create_response(message) 
