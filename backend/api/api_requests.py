@@ -1,4 +1,5 @@
 from app import app
+
 from icecream import ic
 from datetime import *
 import json as j
@@ -12,12 +13,13 @@ headers = {
 } 
  
 class ApiData:
-    def __init__(self, day=None, month=None, year=None, id=None, season=None, timeframe=None):
+    def __init__(self, day=None, month=None, year=None, id=None, season=None, timeframe=None, update=False):
         self.day = day
         self.month = month
         self.year = year
         self.id = id
         self.season = season
+        self.update = update
      
         self.timeframe = timeframe
         
@@ -29,6 +31,9 @@ class ApiData:
             pass
         
         class IncorrectFunctionArgument(Exception):
+            pass
+        
+        class NoResponseFromApi(Exception):
             pass
         
     def check_missing_args(self, **kwargs):
@@ -70,7 +75,7 @@ class ApiData:
                         return True
                     else:
                         return False
-              
+
             def make_request():
                 def update_changes(arr, json):
                     data = json 
@@ -88,15 +93,18 @@ class ApiData:
                 response = requests.get(url, headers=headers)
                 os.makedirs(os.path.dirname(path), exist_ok=True)
                 with open(path, 'w+') as on_path:
-                    print(f"--- Creating '{path}' ... ", end="")
-                    j.dump(response.json(), on_path)
-                    print("Done!")
-                    
+                    try:
+                        print(f"--- Creating '{path}' ... ", end="")
+                        j.dump(response.json(), on_path)
+                        print("Done!")
+                    except:
+                        return None
+                                            
                 update_changes(list_of_json_keys, file)
              
             if not os.path.exists(path):
                 make_request()
-            elif check_timestamp(list_of_json_keys):
+            elif check_timestamp(list_of_json_keys) or self.update:
                 make_request()
 
             outfile.seek(0) 
@@ -104,8 +112,11 @@ class ApiData:
             outfile.truncate()
 
         with open(path, 'rb') as outfile:
-            data = outfile.read()
-            data_json = j.loads(data) 
+            try:
+                data = outfile.read()
+                data_json = j.loads(data) 
+            except: 
+                return None
 
         return data_json 
     
