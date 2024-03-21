@@ -1,38 +1,24 @@
-from flask import Flask, render_template, flash, redirect, url_for, request, jsonify
-from flask_login import current_user
-
-from app import app, db
-from app.tools import create_response
-from database.models import User, FollowedMatch
-from api.api_requests import ApiData
+from flask import request
 
 from PIL import ImageColor
-from icecream import ic
 from datetime import *
-import requests
 import time
 import json
-import os
 
-with app.app_context(): 
-    day, month, year = datetime.now().day, datetime.now().month, datetime.now().year
-    ApiData(
-        day = day,
-        month = month,
-        year = year,
-        timeframe = 60*60
-    ).match("date")
+from ..main import main_bp
+from ...tools import create_response
+from ....api import ApiData
 
-@app.route("/index", methods=["GET"])
+@main_bp.route("/index", methods=["GET"])
 def index():
     message = ""
-    
+
     # Open or create JSON file for today's matches.
     d, m, y = datetime.now().day, datetime.now().month, datetime.now().year
-    todays_json = ApiData(day=d, month=m, year=y, timeframe=60*60).match("date")
+    todays_json = ApiData(day=d, month=m, year=y, timeframe=60 * 60).match("date")
     country_list = ApiData().other("country_codes")["country_codes"]
     league_id_list = ApiData().league("leagues")["leagues"]
-        
+
     # Creating a dict of today's most important matches by "priority".
     matches = []
     priority = 550
@@ -49,13 +35,15 @@ def index():
                 user_current_time = datetime.now()
 
                 day = datetime.fromtimestamp(timestamp).day
-                if ((day == 31 or day == 30 or day == 29 or day == 28) and day > user_current_time.day) or day < user_current_time.day:
+                if ((
+                            day == 31 or day == 30 or day == 29 or day == 28) and day > user_current_time.day) or day < user_current_time.day:
                     continue
-                    
+
                 current_time = event["status"]["description"]
                 extra_time = None
                 if event["status"]["type"] == "inprogress" and "statusTime" in event:
-                    current_time = (current_timestamp - event["statusTime"]["timestamp"]) + event["statusTime"]["initial"]
+                    current_time = (current_timestamp - event["statusTime"]["timestamp"]) + event["statusTime"][
+                        "initial"]
                     current_time //= 60
                     if (current_timestamp - event["statusTime"]["timestamp"]) > event["statusTime"]["max"]:
                         extra_time = (current_timestamp - event["statusTime"]["timestamp"]) - event["statusTime"]["max"]
@@ -72,11 +60,11 @@ def index():
 
                 minutes = datetime.fromtimestamp(timestamp).minute
                 minutes = minutes = "0" + str(minutes) if minutes < 10 else minutes
-                
+
                 country = False
                 if event['homeTeam']['name'] in country_list or event['awayTeam']['name'] in country_list:
                     country = True
-                
+
                 matches.append({
                     "id": int(event['id']),
                     "home": {
@@ -90,17 +78,17 @@ def index():
                         "score": away_score
                     },
                     "startTime": f'{hour}:{minutes}',
-                    "currentTime": current_time, 
-                    "extraTime": extra_time,            
+                    "currentTime": current_time,
+                    "extraTime": extra_time,
                     "status": event["status"]["type"],
                     "country": country
                 })
-        priority -= 50  
+        priority -= 50
         counter += 1
-        
+
     # Sort matches
-    matches = sorted(matches, key = lambda k: k["startTime"], reverse=False)
-        
+    matches = sorted(matches, key=lambda k: k["startTime"], reverse=False)
+
     # leagues overview
     leagues = []
     for i in league_id_list:
@@ -112,24 +100,25 @@ def index():
                 "categoryName": league_id_list[i]["category_name"],
                 "priority": league_id_list[i]["priority"]}
             )
-    
+
     return create_response(
-        message, 
+        message,
         data={
-            "matches": matches, 
+            "matches": matches,
             "leagues": leagues
         }
     )
 
-@app.route("/league/<league_id>", methods=["GET"])
+
+@main_bp.route("/league/<league_id>", methods=["GET"])
 def league(league_id):
     message = ""
     league_id = league_id
-    
+
     # Open or create JSON file for league_id.
     json_data = ApiData(id=league_id).league("standings")["standings"][0]
     league_id_list = ApiData().league("leagues")["leagues"]
-    
+
     standings = []
     for row in json_data["rows"]:
         goals_diff = row["scoresFor"] - row["scoresAgainst"]
@@ -138,14 +127,14 @@ def league(league_id):
         standings.append({
             "position": row["position"],
             "name": row["team"]["name"],
-            "team": { 
+            "team": {
                 "id": row["team"]["id"],
                 "colors": {
                     "primary": ImageColor.getcolor(row["team"]["teamColors"]["primary"], "RGB"),
                     "secondary": ImageColor.getcolor(row["team"]["teamColors"]["secondary"], "RGB"),
                     "text": ImageColor.getcolor(row["team"]["teamColors"]["primary"], "RGB"),
                 }
-            }, # promotion Error
+            },  # promotion Error
             "points": row["points"],
             "wins": row["wins"],
             "draws": row["draws"],
@@ -153,35 +142,36 @@ def league(league_id):
             "scored": row["scoresFor"],
             "recieved": row["scoresAgainst"],
             "diff": goals_diff})
-    
-    # sort standings  
-    standings = sorted(standings, key = lambda k: k["position"], reverse=False)
-    
+
+    # sort standings
+    standings = sorted(standings, key=lambda k: k["position"], reverse=False)
+
     league = {
         "id": int(league_id),
-        "name": json_data["name"], 
-        "type": json_data["type"], 
+        "name": json_data["name"],
+        "type": json_data["type"],
         "slug": league_id_list[league_id]["slug"],
         "categoryName": league_id_list[league_id]["category_name"],
         "priority": league_id_list[league_id]["priority"]
     }
-    
+
     return create_response(
-        message, 
+        message,
         data={
-            "league": league, 
+            "league": league,
             "standings": standings
         }
     )
 
-@app.route("/match_details/<match_id>", methods=["GET"])
+
+@main_bp.route("/match_details/<match_id>", methods=["GET"])
 def match_details(match_id):
     message = ""
-    
+
     # Open JSON files.
     details_json = ApiData(id=match_id).match("details")
     statistics_json = ApiData(id=match_id).match("statistics")
-    
+
     preform_json = ApiData(id=match_id).match("preform")
     lineups_json = ApiData(id=match_id).match("lineups")
 
@@ -191,7 +181,7 @@ def match_details(match_id):
     match = {}
     if details_json != None:
         t = details_json["event"]["startTimestamp"]
-        
+
         start_time = datetime.fromtimestamp(t)
         hour = start_time.hour
         minutes = start_time.minute
@@ -231,9 +221,9 @@ def match_details(match_id):
         match.update({
             "id": details_json["event"]["id"],
             "startTime": {
-                "time": f"{hour}:{minutes}", 
+                "time": f"{hour}:{minutes}",
                 "date": date,
-            }, 
+            },
             "round": details_json["event"]["roundInfo"]["round"],
             "place": details_json["event"]["venue"] if "venue" in details_json["event"] else None,
             "referee": {
@@ -252,7 +242,12 @@ def match_details(match_id):
                     "name": details_json["event"]["homeTeam"]["name"],
                     "manager": {
                         "name": details_json["event"]["homeTeam"]["manager"]["name"],
-                        "country": details_json["event"]["homeTeam"]["manager"]["country"]["name"] if "name" in details_json["event"]["homeTeam"]["manager"]["country"] else None,
+                        "country": details_json["event"]["homeTeam"]["manager"]["country"]["name"] if "name" in
+                                                                                                      details_json[
+                                                                                                          "event"][
+                                                                                                          "homeTeam"][
+                                                                                                          "manager"][
+                                                                                                          "country"] else None,
                         "id": details_json["event"]["homeTeam"]["manager"]["id"]
                     } if "manager" in details_json["event"]["homeTeam"] else None,
                     "id": details_json["event"]["homeTeam"]["id"],
@@ -264,7 +259,12 @@ def match_details(match_id):
                     "name": details_json["event"]["awayTeam"]["name"],
                     "manager": {
                         "name": details_json["event"]["awayTeam"]["manager"]["name"],
-                        "country": details_json["event"]["awayTeam"]["manager"]["country"]["name"] if "name" in details_json["event"]["awayTeam"]["manager"]["country"] else None,
+                        "country": details_json["event"]["awayTeam"]["manager"]["country"]["name"] if "name" in
+                                                                                                      details_json[
+                                                                                                          "event"][
+                                                                                                          "awayTeam"][
+                                                                                                          "manager"][
+                                                                                                          "country"] else None,
                         "id": details_json["event"]["awayTeam"]["manager"]["id"]
                     } if "manager" in details_json["event"]["awayTeam"] else None,
                     "id": details_json["event"]["awayTeam"]["id"],
@@ -289,13 +289,13 @@ def match_details(match_id):
                     if i["name"] == atr:
                         return i[team]
                 return None
-            
+
             def convert_prc(num, base):
                 if int(base) > 0:
                     return f"{int(round((int(num)/ int(base)), 2) * 100)}%"
                 else:
                     return None
-            
+
             data = {}
             for i in ["home", "away"]:
                 data.update({
@@ -335,14 +335,14 @@ def match_details(match_id):
                         },
                     },
                 })
-                
+
             statistics.update({
                 period["period"]: data
             })
     else:
         statistics.update({"status": "notstarted"})
     """
-        
+
     """MATCH LINEUPS"""
     lineups = {}
     lineups_team = {}
@@ -354,7 +354,7 @@ def match_details(match_id):
                     rating = j["statistics"]["rating"]
                 elif "statistics" not in j and "avgRating" in j:
                     rating = j["avgRating"]
-                else: 
+                else:
                     rating = None
                 name = j["player"]["name"].split(" ")
                 players.append({
@@ -371,26 +371,27 @@ def match_details(match_id):
                     "formation": lineups_json[i]["formation"],
                     "player": lineups_json[i]["playerColor"],
                     "goalkeeper": lineups_json[i]["goalkeeperColor"]
-                }, 
+                },
             })
         lineups.update({"confirmed": lineups_json["confirmed"], "teams": lineups_team})
     else:
         lineups = None
-    
+
     return create_response(
         message,
         data={
-            "match": match, 
-            "statistics": None, #statistics, 
+            "match": match,
+            "statistics": None,  # statistics,
             "preform": preform_json,
             "lineups": lineups
         }
     )
 
-@app.route("/countrys_ranking", methods=["GET"])
+
+@main_bp.route("/countrys_ranking", methods=["GET"])
 def countrys_ranking():
     message = ""
-    
+
     # Open or create the ranking JSON file.
     json_data = ApiData().othe("fifa")
 
@@ -403,25 +404,25 @@ def countrys_ranking():
             diff_points = f"+{round(country['points'] - country['previousPoints'], 2)}"
         else:
             diff_points = round(country["points"] - country["previousPoints"], 2)
-            
+
         if (country["previousRanking"] - country['team']['ranking']) > 0:
             diff_ranking = f"+{country['previousRanking'] - country['team']['ranking']}"
         else:
             diff_ranking = country["previousRanking"] - country['team']['ranking']
-            
+
         countrys.append({
-            "rank":country['team']['ranking'],
+            "rank": country['team']['ranking'],
             "name": country['team']['name'],
             "color":
                 ImageColor.getcolor(country['team']['teamColors']['primary'], "RGB"),
             "img": country_list[country['team']['name']] + ".png",
             "points": country["points"],
-            "prevPoints": country["previousPoints"],   #
+            "prevPoints": country["previousPoints"],  #
             "prevRanking": country["previousRanking"],  #
-            "diffPoints": diff_points,   #
-            "diffRanking": diff_ranking   #
+            "diffPoints": diff_points,  #
+            "diffRanking": diff_ranking  #
         })
-        
+
     return create_response(
         messgae,
         data={
@@ -429,7 +430,8 @@ def countrys_ranking():
         }
     )
 
-@app.route("/countrys_ranking/<country_name>")
+
+@main_bp.route("/countrys_ranking/<country_name>")
 def country(country_name):
     file = "api/json/ranking.json"
     with open(file, 'rb') as f:
@@ -437,7 +439,8 @@ def country(country_name):
         json_data = json.loads(data)
     return create_response("")
 
-@app.route("/cookies", methods=["POST"])
+
+@main_bp.route("/cookies", methods=["POST"])
 def cookies():
     res = make_response({
         "message": "",
@@ -450,5 +453,5 @@ def cookies():
             darkmode = "darkmode"
         else:
             darkmode = "lightmode"
-        res.set_cookie("darkmode", darkmode, max_age=60*60*24*365)
+        res.set_cookie("darkmode", darkmode, max_age=60 * 60 * 24 * 365)
     return res

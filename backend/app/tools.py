@@ -1,7 +1,5 @@
-from flask import *
-from flask_login import *
+from flask_login import current_user
 
-from app import app
 from functools import wraps
 
 '''ERRORS'''
@@ -10,10 +8,9 @@ class UnexpectedError(Exception):
 
 '''FUNCTIONS'''
 def create_response(message: str, **kwargs):
+    data = None
     if "data" in kwargs:
-        if kwargs["data"] == {}:
-            data = None
-        else:
+        if kwargs["data"] != {}:
             data = kwargs["data"]
     return {
         "message": message,

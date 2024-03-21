@@ -8,7 +8,7 @@ const App = () => {
   const [user, setUser] = useState({});
 
   const updateAuth = async () => {
-    let res = await fetch("/api/auth");
+    let res = await fetch("/api/auth/");
     res = await res.json();
     setUser(res.data);
   };

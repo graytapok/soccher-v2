@@ -1,35 +1,38 @@
 from flask import Flask
-from flask_mail import Mail
-from flask_migrate import Migrate
-from flask_login import LoginManager
-from flask_sqlalchemy import SQLAlchemy
 
-from itsdangerous import URLSafeTimedSerializer
-from config import Config, PrefixMiddleware
-from shutil import get_terminal_size
-from dotenv import load_dotenv
-from threading import Thread
-from itertools import cycle
-import sys
-import os
+from datetime import datetime
 
-load_dotenv()
+from ..config import Config, PrefixMiddleware
+from .extensions import db, migrate, mail, login
+from ..api import ApiData
 
-app = Flask("soccher-v2")
-app.wsgi_app = PrefixMiddleware(app.wsgi_app, prefix="/api")
-app.config.from_object(Config)
+from .blueprints.main import main_bp
+from .blueprints.auth import auth_bp
+from .blueprints.admin import admin_bp
+from .blueprints.errors import errors_bp
 
-db = SQLAlchemy(app)
-migrate = Migrate(app, db)
-login = LoginManager(app)
-mail = Mail(app)
-safe = URLSafeTimedSerializer(app.config["SECRET_KEY"])
+def create_app():
+    app = Flask("soccher-v2")
+    app.config.from_object(Config)
+    app.wsgi_app = PrefixMiddleware(app.wsgi_app, prefix="/api")
 
-from database.models import *
+    db.init_app(app)
+    migrate.init_app(app, db)
+    mail.init_app(app)
+    login.init_app(app)
 
-with app.app_context():
-    print("Creating Database ... ", end="")
-    db.create_all()
-    print("Done!")
+    app.register_blueprint(main_bp)
+    app.register_blueprint(errors_bp)
+    app.register_blueprint(auth_bp, url_prefix="/auth")
+    app.register_blueprint(admin_bp, url_prefix="/admin")
 
-from app.routes import main, auth, admin, errors
+    with app.app_context():
+        day, month, year = datetime.now().day, datetime.now().month, datetime.now().year
+        ApiData(
+            day=day,
+            month=month,
+            year=year,
+            timeframe=60 * 60
+        ).match("date")
+
+    return app
